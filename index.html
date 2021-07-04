@@ -19,23 +19,53 @@
                     <br/>
 
                     <div class='links text'>
-                        <a href='https://osu.ppy.sh/u/FireRedz'> osu! </a>
-                        <a href='https://github/FireRedz'> Github </a>
-                        <a href='dsc.bio/redz'> Discord </a>
+
+                        <a href='https://osu.ppy.sh/u/FireRedz'>
+                            <i class="bi bi-play-circle-fill"></i>
+                            osu! 
+                        </a>
+
+                        <a href='https://github/FireRedz'>
+                            <i class="bi bi-github"></i>
+                            Github
+                        </a>
+
+                        <a href='dsc.bio/redz'>
+                            <i class="bi bi-discord"></i>
+                            Discord
+                        </a>
+
                     </div>
                 </div>
             </div>
         </div>
-            
+
+        <div class='footer center-content'>
+            <p> Last updated: 5th July 2021 </p>
+        </div>
+        
     </body>
 
     <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
         .main {
             margin: 10% auto; /* To _almost_ center the whole thing */
         }
 
         body {
             background: black;
+        }
+
+        .footer {
+            position: absolute;
+            width: 99%; /* The not so centered but good enough; dont ask why its like this */
+            bottom: 0;
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
         }
 
         .avatar {
