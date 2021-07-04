@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>bruh momento numero dos</title>
-</head>
+    <head>
+        <title> FireRedz | Home </title>
+    </head>
 
-<body>
-<div class='container'>
-	<img src="https://s.gravatar.com/avatar/35da3c1a5130111d0e3a5f353389b476?s=512">
-	<a>FireRedz's shit website</a>
-	</br></br>
-	<div class='hrefshit'>
-		<a href='https://osu.ppy.sh/u/FireRedz'>osu!</a>
-		<a href='https://github.com/FireRedz'>Github</a>
-		
-	</div>
-</div>
-</body>
+    <body>
+        <br/> <!-- No one noticed this -->
 
-<style>
-   .container {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 500px;
-		height: 500px;
-		margin-top: -250px; /* Half the height */
-		margin-left: -250px; /* Half the width */
-   }
-   
-   a, h1, h2, h3, h4{
-    color: white;
-    font-family: Tahoma;
-    padding-left: 3%;
-    text-decoration: none;
-    transition: color .25s ease-in-out;
-   }
+        <div class='main'>
+            <div class='grid'>
+                <div class='avatar outline'></div>
+                
+                <div class='grid-down'>
+                    <div class='title text'>
+                        <a> FireRedz's epic website </a>
+                    </div>
 
-   body {
-   	background: #000;
-   }
+                    <br/>
 
-   img {
-	position: relative;
-   	max-width: 240px;
-    border: 1px solid white;
-    float: left;
-	display: block;
-	
-   }
+                    <div class='links text'>
+                        <a href='https://osu.ppy.sh/u/FireRedz'> osu! </a>
+                        <a href='https://github/FireRedz'> Github </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </body>
 
-   .hrefshit {
-   	display: flex;
-   	flex-direction: column;
+    <style>
+        .main {
+            margin: 10% auto; /* To _almost_ center the whole thing */
+        }
 
-   }
-   .hrefshit a {
-   	transition: color .25s ease-in-out;
-   }
-   .hrefshit a:hover {
-   	transition: color .25s ease-in-out;
-   	color: yellow;
-   }
+        body {
+            background: black;
+        }
 
+        .avatar {
+            background-image: url("https://s.gravatar.com/avatar/35da3c1a5130111d0e3a5f353389b476?s=512");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 240px;
+            height: 240px;
+            margin-right: 10px;
+            padding: 0;
+        }
 
+        .outline {
+            border: 1px solid white;
+        }
 
+        .grid {
+            display: flex;            
+            justify-content: center;
+        }
 
-   
-  </style>
+        .text a, p, h1, h2, h3, h4 {
+            color: white;
+            font-family: Tahoma;
+            text-decoration: none;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .links a:hover {
+            transition: color .25s ease-in-out;
+            color: yellow;
+        }
+
+        .title {
+            margin-left: 5px;
+        }
+        
+    </style>
 </html>
-
-
