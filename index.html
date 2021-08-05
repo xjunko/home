@@ -35,16 +35,32 @@
                             Discord
                         </a>
 
+                        <a href='#' onclick='fucking_theme();'>
+                            <i class="bi bi-brush"></i>
+                            Switch
+                        </a>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <div class='footer center-content'>
-            <p> Last updated: 5th July 2021 </p>
+            <p> Last updated: 6th August 2021 </p>
         </div>
         
     </body>
+
+    <script lang="text/javascript">
+        var bgs = ['https://cdn.discordapp.com/attachments/703552229680087042/861339428424253510/unknown.png', 'https://cdn.discordapp.com/attachments/728233994470293554/820955850554343425/hero.png'];
+        var does_the_fucking_thing_changed = false;
+
+        function fucking_theme() {
+            does_the_fucking_thing_changed = !does_the_fucking_thing_changed;
+            document.body.style.backgroundImage = `url(${bgs[Number(does_the_fucking_thing_changed)]})`;
+        }
+    </script>
+
 
     <style>
         @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
@@ -110,6 +126,7 @@
         .title {
             margin-left: 5px;
         }
+
         
     </style>
 </html>
