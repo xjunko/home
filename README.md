@@ -1,4 +1,3 @@
 <h2 align="center"> FireRedz's homepage </h2>
 
-
-![preview](https://cdn.discordapp.com/attachments/774308503702470666/956492190396321852/unknown.png)
+![preview](https://user-images.githubusercontent.com/44401509/190840620-459af26b-6c0a-407d-bc1b-bb5c3b417d13.png)
