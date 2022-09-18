@@ -1,0 +1,169 @@
+/* Fonts */
+@font-face {
+    font-family: "Unifont";
+    src: url("../../assets/fonts/unifont-13.0.04.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --font: Unifont;
+
+    --darkest-color: #070707;
+    --not-so-dark-color: #202123;
+    --middle-color: #A0A8AE;
+    --not-so-bright-color: #63687B;
+    --brightest-color: #FAFBF8;
+}
+
+
+/* Styles */
+body {
+    font-family: var(--font);
+    background-color: var(--darkest-color);
+}
+
+/* Texts */
+a,
+p,
+h1 {
+    text-decoration: none;
+    color: var(--brightest-color);
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+hr {
+    color: var(--brightest-color);
+    opacity: 25%;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.lowkey {
+    color: var(--middle-color);
+    opacity: 0.5;
+    font-size: 12pt;
+}
+
+/* Elements */
+.nav {
+    text-align: center;
+    align-content: center;
+}
+
+.content {
+    align-content: center;
+    text-align: center;
+    font-size: 14pt;
+    margin-top: 15px;
+}
+
+.links {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.link-title {
+    color: var(--brightest-color);
+    text-align: center !important;
+}
+
+.link-description {
+    color: var(--middle-color);
+}
+
+.junko-main {
+    /* Image */
+    background-image: url("../img/junko_main.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    /* Position */
+    position: relative;
+    width: 165px;
+    height: 493px;
+    margin: 20px auto;
+}
+
+.junko {
+    /* Image */
+    background-image: url("../img/junko_right.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.5;
+
+    /* Position */
+    z-index: -1;
+    position: fixed;
+    width: 236px;
+    height: 301px;
+    right: 0px;
+    bottom: 0px;
+}
+
+/* Show full group image */
+.junko:hover {
+    /* Image */
+    background-image: url("../img/group_down.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+
+    /* Position */
+    z-index: -1;
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    bottom: -30%;
+}
+
+
+/* Rainbow crap */
+.rainbow {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 40px;
+    font-family: monospace;
+    letter-spacing: 5px;
+}
+
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
