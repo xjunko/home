@@ -24,7 +24,7 @@ function generate_html_from_link_info(data) {
     // Title
     row_title_container = document.createElement("div");
     row_title = document.createElement("a");
-    row_title.classList.add("link-title", "link", "underline", "grid-link");
+    row_title.classList.add("link", "underline", "grid-link");
     row_title.href = data.url;
     row_title.innerText = data.title;
     row_title_container.appendChild(row_title);
@@ -34,7 +34,7 @@ function generate_html_from_link_info(data) {
     if (data.logo) {
         row_title.innerText = "";
         row_title_logo = document.createElement("img");
-        row_title_logo.classList.add("link-title", "link", "underline", "link-logo");
+        row_title_logo.classList.add("link", "underline", "link-logo");
         row_title_logo.src = data.logo;
         row_title_logo.alt = data.description;
         row_title_logo.href = data.url;

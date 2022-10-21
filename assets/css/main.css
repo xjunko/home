@@ -72,14 +72,6 @@ h1 {
     text-align: center !important;
 }
 
-.link-logo {
-    height: 32px;
-    width: auto;
-}
-
-.link-logo:hover {
-    outline: 2px solid var(--brightest-color);
-}
 
 .grid-links {
     display: flex;
@@ -87,11 +79,17 @@ h1 {
     margin: 0;
     align-items: center;
     justify-content: center;
+    height: 32px;
+    width: auto;
 }
 
 .grid-link {
     padding: 0 4px;
 
+}
+
+.grid-link:hover img {
+    outline: 2px solid var(--brightest-color);
 }
 
 .junko-main {
