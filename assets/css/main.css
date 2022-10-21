@@ -72,6 +72,28 @@ h1 {
     text-align: center !important;
 }
 
+.link-logo {
+    height: 32px;
+    width: auto;
+}
+
+.link-logo:hover {
+    outline: 2px solid var(--brightest-color);
+}
+
+.grid-links {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-link {
+    padding: 0 4px;
+
+}
+
 .junko-main {
     /* Image */
     background-image: url("../img/junko_main.png");
