@@ -1,5 +1,10 @@
 links = [
     {
+        "url": "https://junko.konno.tk/",
+        "description": "This site",
+        "logo": "./assets/img/logo/junko.png"
+    },
+    {
         "url": "https://archlinux.org/",
         "description": "i use arch btw",
         "logo": "./assets/img/logo/archlinux.gif"
