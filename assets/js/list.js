@@ -28,6 +28,12 @@ links = [
     url: 'https://utsuho.rocks/',
     description: 'The inspiration for this site.',
     logo: './assets/img/logo/utsuhorocks.png'
+  },
+
+  {
+    url: 'https://www.katawa-shoujo.com/about.php',
+    description: 'Absolute banger of a game.',
+    logo: './assets/img/logo/katawashoujo.jpg'
   }
 ]
 
