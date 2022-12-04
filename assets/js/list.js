@@ -5,6 +5,11 @@ var links = [
         logo: './assets/img/logo/junko.png'
     },
     {
+        url: 'https://utsuho.rocks/',
+        description: 'The inspiration for this site.',
+        logo: './assets/img/logo/utsuhorocks.png'
+    },
+    {
         url: 'https://archlinux.org/',
         description: 'i use arch btw',
         logo: './assets/img/logo/archlinux.gif'
@@ -20,11 +25,6 @@ var links = [
         logo: './assets/img/logo/konata.gif'
     },
     {
-        url: 'https://utsuho.rocks/',
-        description: 'The inspiration for this site.',
-        logo: './assets/img/logo/utsuhorocks.png'
-    },
-    {
         url: 'https://www.katawa-shoujo.com/about.php',
         description: 'Absolute banger of a game.',
         logo: './assets/img/logo/katawashoujo.jpg'
@@ -35,7 +35,12 @@ var friend_links = [
         url: "https://727.pages.dev/",
         description: "Dude's site is broken all the time lmao",
         logo: "https://cdn.discordapp.com/attachments/782136789103280129/1048221626233278524/oie_C2AQ4IDHYC7b.jpg"
-    }
+    },
+    {
+        url: "https://mariluu.moyai.xyz/",
+        description: "mariluu's site :)",
+        logo: "https://mariluu.moyai.xyz/content/maribanner.gif"
+    },
 ];
 function generate_html_from_link_info_ts(data) {
     var content_row = document.createElement("div");
