@@ -38,8 +38,15 @@ const links: Array<LogoData> = [
     }
 ];
 
-function generate_html_from_link_info_ts(data: LogoData)
-{
+const friend_links: Array<LogoData> = [
+    {
+        url: "https://727.pages.dev/",
+        description: "Dude's site is broken all the time lmao",
+        logo: "https://cdn.discordapp.com/attachments/782136789103280129/1048221626233278524/oie_C2AQ4IDHYC7b.jpg"
+    }
+]
+
+function generate_html_from_link_info_ts(data: LogoData) {
     var content_row: HTMLDivElement = document.createElement("div");
 
     // Title
@@ -68,10 +75,17 @@ function generate_html_from_link_info_ts(data: LogoData)
 }
 
 // Here goes nothing
-var grid = document.getElementById("grid_shit");
+var general = document.getElementById("grid-general");
+var friend = document.getElementById("grid-friends");
 
+// General
 for (let i = 0; i < links.length; i++) {
-    grid?.appendChild(generate_html_from_link_info_ts(links[i]));
+    general?.appendChild(generate_html_from_link_info_ts(links[i]));
+}
+
+// Friends
+for (let i = 0; i < friend_links.length; i++) {
+    friend?.appendChild(generate_html_from_link_info_ts(friend_links[i]));
 }
 
 // To anyone reading this in the web, this file is generated from a typescript file.

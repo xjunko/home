@@ -30,6 +30,13 @@ var links = [
         logo: './assets/img/logo/katawashoujo.jpg'
     }
 ];
+var friend_links = [
+    {
+        url: "https://727.pages.dev/",
+        description: "Dude's site is broken all the time lmao",
+        logo: "https://cdn.discordapp.com/attachments/782136789103280129/1048221626233278524/oie_C2AQ4IDHYC7b.jpg"
+    }
+];
 function generate_html_from_link_info_ts(data) {
     var content_row = document.createElement("div");
     // Title
@@ -53,8 +60,14 @@ function generate_html_from_link_info_ts(data) {
     return content_row;
 }
 // Here goes nothing
-var grid = document.getElementById("grid_shit");
+var general = document.getElementById("grid-general");
+var friend = document.getElementById("grid-friends");
+// General
 for (var i = 0; i < links.length; i++) {
-    grid === null || grid === void 0 ? void 0 : grid.appendChild(generate_html_from_link_info_ts(links[i]));
+    general === null || general === void 0 ? void 0 : general.appendChild(generate_html_from_link_info_ts(links[i]));
+}
+// Friends
+for (var i = 0; i < friend_links.length; i++) {
+    friend === null || friend === void 0 ? void 0 : friend.appendChild(generate_html_from_link_info_ts(friend_links[i]));
 }
 // To anyone reading this in the web, this file is generated from a typescript file.
