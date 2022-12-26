@@ -15,6 +15,12 @@ const links: Array<LogoData> = [
   },
 
   {
+    url: "https://猫.移动/",
+    description: "Super cool terminal styled site.",
+    logo: "./assets/img/logo/xn-neko-btn.gif"
+  },
+
+  {
     url: "https://archlinux.org/",
     description: "i use arch btw",
     logo: "./assets/img/logo/archlinux.gif",
