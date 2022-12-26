@@ -131,6 +131,22 @@ h1 {
   bottom: 0px;
 }
 
+.junko-no-hover {
+  /* Image */
+  background-image: url("../img/junko_right.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+
+  /* Position */
+  z-index: -1;
+  position: fixed;
+  width: 236px;
+  height: 301px;
+  right: 0px;
+  bottom: 0px;
+}
+
 /* Show full group image */
 .junko:hover {
   /* Image */
