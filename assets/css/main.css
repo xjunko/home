@@ -1,158 +1,155 @@
 /* Fonts */
 @font-face {
-    font-family: "Unifont";
-    src: url("../../assets/fonts/unifont-13.0.04.ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Unifont";
+  src: url("../../assets/fonts/unifont-13.0.04.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
-    --font: Unifont;
+  --font: Unifont;
 
-    --darkest-color: #070707;
-    --not-so-dark-color: #202123;
-    --middle-color: #A0A8AE;
-    --not-so-bright-color: #63687B;
-    --brightest-color: #FAFBF8;
+  --darkest-color: #070707;
+  --not-so-dark-color: #202123;
+  --middle-color: #a0a8ae;
+  --not-so-bright-color: #63687b;
+  --brightest-color: #fafbf8;
 }
-
 
 /* Styles */
 body {
-    font-family: var(--font);
-    background-color: var(--not-so-dark-color);
+  font-family: var(--font);
+  background-color: var(--not-so-dark-color);
 }
 
 /* Texts */
 a,
 p,
 h1 {
-    text-decoration: none;
-    color: var(--brightest-color);
+  text-decoration: none;
+  color: var(--brightest-color);
 }
 
 h1 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 16px;
-    font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .lowkey {
-    color: var(--middle-color);
-    opacity: 0.5;
-    font-size: 12pt;
+  color: var(--middle-color);
+  opacity: 0.5;
+  font-size: 12pt;
 }
 
 /* Elements */
 .nav {
-    text-align: center;
-    align-content: center;
+  text-align: center;
+  align-content: center;
 }
 
 .content {
-    align-content: center;
-    text-align: center;
-    font-size: 14pt;
-    margin-top: 15px;
+  align-content: center;
+  text-align: center;
+  font-size: 14pt;
+  margin-top: 15px;
 }
 
 .links {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
-.links tr>td:first-child {
-    padding: 0 1em 0 0;
+.links tr > td:first-child {
+  padding: 0 1em 0 0;
 }
 
 .link {
-    color: var(--middle-color);
-    text-decoration: underline;
-    text-align: center !important;
+  color: var(--middle-color);
+  text-decoration: underline;
+  text-align: center !important;
 }
 
 .box {
-    border: var(--not-so-bright-color) solid 2px;
-    background: var(--not-so-dark-color);
-    padding: 1em;
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 0px;
-    margin-top: 1em;
+  border: var(--not-so-bright-color) solid 2px;
+  background: var(--not-so-dark-color);
+  padding: 1em;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-top: 1em;
 }
 
-
 .grid-links {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-    height: 31px;
-    width: auto;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: 31px;
+  width: auto;
 }
 
 .grid-link {
-    padding: 0 4px;
-
+  padding: 0 4px;
 }
 
 .grid-link:hover img {
-    outline: 2px solid var(--brightest-color);
+  outline: 2px solid var(--brightest-color);
 }
 
 .junko-main {
-    /* Image */
-    background-image: url("../img/junko_main.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+  /* Image */
+  background-image: url("../img/junko_main.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    /* Position */
-    position: relative;
-    width: 137px;
-    height: 410px;
-    margin: 20px auto;
+  /* Position */
+  position: relative;
+  width: 137px;
+  height: 410px;
+  margin: 20px auto;
 }
 
 .junko {
-    /* Image */
-    background-image: url("../img/junko_right.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.5;
+  /* Image */
+  background-image: url("../img/junko_right.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
 
-    /* Position */
-    z-index: -1;
-    position: fixed;
-    width: 236px;
-    height: 301px;
-    right: 0px;
-    bottom: 0px;
+  /* Position */
+  z-index: -1;
+  position: fixed;
+  width: 236px;
+  height: 301px;
+  right: 0px;
+  bottom: 0px;
 }
 
 /* Show full group image */
 .junko:hover {
-    /* Image */
-    background-image: url("../img/group_down.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.1;
+  /* Image */
+  background-image: url("../img/group_down.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.1;
 
-    /* Position */
-    z-index: -1;
-    /* Set rules to fill background */
-    min-height: 100%;
-    min-width: 1024px;
+  /* Position */
+  z-index: -1;
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
 
-    /* Set up proportionate scaling */
-    width: 100%;
-    height: auto;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
 
-    /* Set up positioning */
-    position: fixed;
-    bottom: -30%;
+  /* Set up positioning */
+  position: fixed;
+  bottom: -30%;
 }
