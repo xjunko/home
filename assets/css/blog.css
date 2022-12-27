@@ -63,3 +63,9 @@ a:target {
 .redtext {
   color: #a47996 !important;
 }
+
+/* Site specific  */
+.emote {
+  width: 16px;
+  height: auto;
+}
