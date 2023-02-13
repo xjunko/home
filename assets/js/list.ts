@@ -9,12 +9,6 @@ const links: Array<LogoData> = [
   },
 
   {
-    url: "https://utsuho.rocks/",
-    description: "The inspiration for this site.",
-    logo: "./assets/img/logo/utsuhorocks.png",
-  },
-
-  {
     url: "https://猫.移动/",
     description: "Super cool terminal styled site.",
     logo: "./assets/img/logo/xn-neko-btn.gif"
@@ -53,9 +47,9 @@ const friend_links: Array<LogoData> = [
   },
 
   {
-    url: "https://mariluu.moyai.xyz/",
-    description: "mariluu's site :)",
-    logo: "https://mariluu.moyai.xyz/content/maribanner.gif",
+    url: "https://utsuho.rocks/",
+    description: "The inspiration for this site.",
+    logo: "./assets/img/logo/utsuhorocks.png",
   },
 ];
 
