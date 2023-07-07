@@ -1,4 +1,6 @@
 <h2 align="center"> FireRedz's homepage </h2>
 
-![image](https://user-images.githubusercontent.com/44401509/209589915-06f7b81a-e9df-4f0d-bd6e-ad2942ca23fd.png)
-![image](https://user-images.githubusercontent.com/44401509/209589921-f0bb774e-5304-4354-a707-3a156de6bcb0.png)
+![image](https://github.com/xjunko/home/assets/44401509/6db9897f-64b6-4b03-b765-f5db49b44f85)
+![image](https://github.com/xjunko/home/assets/44401509/cda3d175-7a2f-43f8-877b-4cfd1ff5ed8c)
+
+
