@@ -17,9 +17,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Create folder
+      run: |
+          mkdir -p public && cp *.html public/ && cp -r assets/ public/
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v1
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: false
-        dist_dir: ./
+        dist_dir: public/
