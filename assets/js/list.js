@@ -2,7 +2,7 @@ var links = [
     {
         url: "https://junko.konno.tk/",
         description: "This site",
-        logo: "./assets/img/logo/junko.png"
+        logo: "./assets/img/logo/junko.png",
     },
     {
         url: "https://猫.移动/",
@@ -12,34 +12,34 @@ var links = [
     {
         url: "https://archlinux.org/",
         description: "i use arch btw",
-        logo: "./assets/img/logo/archlinux.gif"
+        logo: "./assets/img/logo/archlinux.gif",
     },
     {
         url: "https://sdf.org/",
         description: "SDF.org",
-        logo: "./assets/img/logo/sdf.png"
+        logo: "./assets/img/logo/sdf.png",
     },
     {
         url: "http://lucky-ch.com/",
         description: "Lucky Star",
-        logo: "./assets/img/logo/konata.gif"
+        logo: "./assets/img/logo/konata.gif",
     },
     {
         url: "https://www.katawa-shoujo.com/about.php",
         description: "Absolute banger of a game.",
-        logo: "./assets/img/logo/katawashoujo.jpg"
+        logo: "./assets/img/logo/katawashoujo.jpg",
     },
 ];
 var friend_links = [
     {
         url: "https://727.pages.dev/",
         description: "Dude's site is broken all the time lmao",
-        logo: "https://cdn.discordapp.com/attachments/782136789103280129/1048221626233278524/oie_C2AQ4IDHYC7b.jpg"
+        logo: "https://cdn.discordapp.com/attachments/782136789103280129/1048221626233278524/oie_C2AQ4IDHYC7b.jpg",
     },
     {
         url: "https://utsuho.rocks/",
         description: "The inspiration for this site.",
-        logo: "./assets/img/logo/utsuhorocks.png"
+        logo: "./assets/img/logo/utsuhorocks.png",
     },
 ];
 function generate_html_from_link_info_ts(data) {
@@ -47,14 +47,14 @@ function generate_html_from_link_info_ts(data) {
     // Title
     var row_title_container = document.createElement("div");
     var row_title = document.createElement("a");
-    row_title.classList.add("link", "underline", "grid-link");
+    row_title.classList.add("underline", "grid-link");
     row_title.href = data.url;
     row_title_container.appendChild(row_title);
     // Logo (if any)
     if (data.logo) {
         row_title.innerText = "";
         var row_title_logo = document.createElement("img");
-        row_title_logo.classList.add("link", "underline", "link-logo");
+        row_title_logo.classList.add("underline", "link-logo");
         row_title_logo.src = data.logo;
         row_title_logo.alt = data.description;
         row_title_logo.title = "".concat(data.url, ": ").concat(data.description);

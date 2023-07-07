@@ -18,6 +18,11 @@
   --brightest-color: #fafbf8;
 }
 
+/* Color */
+.bright {
+  color: var(--brightest-color);
+}
+
 /* Styles */
 body {
   font-family: var(--font);
@@ -49,6 +54,12 @@ h1 {
   font-size: 12pt;
 }
 
+/* Lines */
+hr {
+  border-top: 1px solid var(--not-so-dark-color);
+  opacity: 0.3;
+}
+
 /* Elements */
 .nav {
   text-align: center;
@@ -74,6 +85,11 @@ h1 {
   color: var(--middle-color);
   text-decoration: underline;
   text-align: center !important;
+}
+
+.link:hover {
+  background-color: var(--brightest-color) !important;
+  color: #0c090a !important;
 }
 
 .box {

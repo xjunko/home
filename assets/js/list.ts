@@ -59,7 +59,7 @@ function generate_html_from_link_info_ts(data: LogoData) {
   // Title
   var row_title_container: HTMLDivElement = document.createElement("div");
   var row_title: HTMLAnchorElement = document.createElement("a");
-  row_title.classList.add("link", "underline", "grid-link");
+  row_title.classList.add("underline", "grid-link");
   row_title.href = data.url;
   row_title_container.appendChild(row_title);
 
@@ -67,7 +67,7 @@ function generate_html_from_link_info_ts(data: LogoData) {
   if (data.logo) {
     row_title.innerText = "";
     var row_title_logo: HTMLImageElement = document.createElement("img");
-    row_title_logo.classList.add("link", "underline", "link-logo");
+    row_title_logo.classList.add("underline", "link-logo");
     row_title_logo.src = data.logo;
     row_title_logo.alt = data.description;
     row_title_logo.title = `${data.url}: ${data.description}`;
