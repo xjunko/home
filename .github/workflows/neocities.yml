@@ -24,7 +24,7 @@ jobs:
         
     - name: Create folder
       run: |
-          mkdir -p public && cp *.htm public/ && cp -r static/ public/ && ls public/
+          mkdir -p public && cp *.html public/ && cp -r static/ public/ && ls public/
           
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v1
