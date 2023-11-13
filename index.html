@@ -12,7 +12,8 @@
     <link rel="stylesheet" type="text/css" href="/static/css/phone.css">
 
     <!-- Title -->
-    <title>Homepage | letter to the black world</title>
+    <title>home
+ | letter to the black world</title>
 </head>
 
 <body>
@@ -60,76 +61,84 @@
         </div>
     </div>
 
-    <!-- Content -->
     <div class="content-container">
         <div class="content">
-            <p>
-            <h3> about </h3>
-            </p>
-            <p>
-                my name is junko, you can find me online as xjunko or fireredz.
-                i have a strong interest in eletronics, japanese cultures and coding.
-            </p>
+            <!-- Content -->
+<p>
+<h3> about </h3>
+</p>
+<p>
+    my name is junko, you can find me online as xjunko or fireredz.
+    i have a strong interest in eletronics, japanese cultures and coding.
+</p>
 
-            <p>
-                this website serves as more or less dumping ground of useless information.
-                here, you may find how to contact me, crap i've written and things that you might find interesting.
-            </p>
+<p>
+    this website serves as more or less dumping ground of useless information.
+    here, you may find how to contact me, crap i've written and things that you might find interesting.
+</p>
 
-            <p>
-                currently, the domain is <a href="https://xjunko.neocities.org/">xjunko.neocities.org</a>, i'm broke so the domain <i>might</i> change from time to time.
-            </p>
+<p>
+    currently, the domain is <a href="https://xjunko.neocities.org/">xjunko.neocities.org</a>, i'm broke so the domain <i>might</i> change from time to time.
+</p>
 
-            <p>
-            <h3> contact me </h3>
+<p>
+<h3> contact me </h3>
 
-            i go by the name, <a id="discord-name"></a>, on discord, feel free to message me, i'm not that interesting but a chat won't hurt me :). <br />
-            Currently <a id='discord-status-about'>offline</a>.
-            </p>
+i go by the name, <a id="discord-name"></a>, on discord, feel free to message me, i'm not that interesting but a chat won't hurt me :). <br />
+Currently <a id='discord-status-about'>offline</a>.
+</p>
 
+            <hr />
+<div class="footer">
+    <i>
+        ©2020-2023 xjunko <<a href='/https://github.com/xjunko/home'>@github/xjunko/home</a>> <br />
+            Powered by <a href="https://github.com/xjunko/home/.kyouko">kyouko v0.0.2 — simple templating processor</a>
+    </i>
+</div>
         </div>
     </div>
 
     <!-- Discord stuff -->
-    <script type="text/javascript">
-        console.log("hiyo!")
+<script type="text/javascript">
+    console.log("hiyo!")
 
-        // fetch user data from api
-        api_endpoint = 'https://api.lanyard.rest/v1/users/224785877086240768';
-        req = new XMLHttpRequest();
-        req.open("GET", api_endpoint, true);
-        req.onload = function () {
-            console.log("get!");
-            if (this.status == 200) {
-                console.log("good!");
-                var data = JSON.parse(this.response).data;
-                var user = data.discord_user;
-                var status = data.discord_status;
+    // fetch user data from api
+    api_endpoint = 'https://api.lanyard.rest/v1/users/224785877086240768';
+    req = new XMLHttpRequest();
+    req.open("GET", api_endpoint, true);
+    req.onload = function () {
+        console.log("get!");
+        if (this.status == 200) {
+            console.log("good!");
+            var data = JSON.parse(this.response).data;
+            var user = data.discord_user;
+            var status = data.discord_status;
 
-                // pfp then name
-                var html_name = document.getElementById("discord-name");
-                html_name.innerHTML = `<img class='discord-avatar' src='https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=40'> <i>${user.username}</i>`
+            // pfp then name
+            var html_name = document.getElementById("discord-name");
+            html_name.innerHTML = `<img class='discord-avatar' src='https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=40'> <i>${user.username}</i>`
 
-                // online stat
-                var html_status = document.getElementById("discord-status");
-                var color = ""
+            // online stat
+            var html_status = document.getElementById("discord-status");
+            var color = ""
 
-                switch (status) {
-                    case 'online': html_status.text = "online"; color = "color: green;"; break;
-                    case 'idle': html_status.text = "idling"; color = "color: yellow;"; break;
-                    case 'dnd': html_status.text = "dnd"; color = "color: red;"; break;
-                    case 'offline': html_status.text = "offline"; color = "color: gray;"; break;
-                }
-
-                document.getElementById("discord-status-about").text = html_status.text;
-                document.getElementById("discord-status-about").style = color;
-                html_status.style = color;
-
-                console.log(html_status);
+            switch (status) {
+                case 'online': html_status.text = "online"; color = "color: green;"; break;
+                case 'idle': html_status.text = "idling"; color = "color: yellow;"; break;
+                case 'dnd': html_status.text = "dnd"; color = "color: red;"; break;
+                case 'offline': html_status.text = "offline"; color = "color: gray;"; break;
             }
+
+            document.getElementById("discord-status-about").text = html_status.text;
+            document.getElementById("discord-status-about").style = color;
+            html_status.style = color;
+
+            console.log(html_status);
         }
-        req.send();
-    </script>
+    }
+    req.send();
+</script>
+
 </body>
 
 </html>
