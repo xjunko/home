@@ -13,7 +13,9 @@
     --outline-color: #cbcbcb;
     --sidebar-color: #000000;
 
+    --text-light: #FFFFFF;
     --text-faint: #838383;
+    --text-dark: #000000;
 
 }
 
@@ -46,10 +48,10 @@ body {
 .content {
     max-width: 800px;
     padding: 0 30px 10px 30px;
-    border-top: 5px double #E2FAF9;
-    background-color: #647975;
+    border-top: 5px double var(--outline-color);
     background-color: #0000004d;
-    color: #FFFFFF;
+    color: var(--text-light);
+    text-shadow: 2px 1px var(--text-dark);
 }
 
 .content p {
