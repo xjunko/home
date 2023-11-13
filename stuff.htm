@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta(s) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheet(s) and Icons -->
+    <link rel="icon" type="image/x-icon" href="/static/imgs/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/phone.css">
+
+    <!-- Title -->
+    <title>cool links | letter to the black world</title>
+</head>
+
+<body>
+    <!-- Sidebar stuff -->
+    <div class="sidebar-container">
+        <div class="sidebar">
+            <!-- avatar -->
+            <div class="avatar">
+                <img src="static/imgs/junko.png" alt="avatar"> </img>
+            </div>
+
+            <!-- name -->
+            <h1>
+                <a class='no-link' href="/">junko</a>
+            </h1>
+
+            <!-- intro -->
+            <p class="domain">The Legendary Showa Idol</p>
+
+            <!-- lists of stuff -->
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="/redirect.htm?r=github">github</a>
+                    </li>
+
+                    <li>
+                        <a href="/redirect.htm?r=steam">steam</a>
+                    </li>
+
+                    <li>
+                        <a href="/blog.htm">blog</a>
+                    </li>
+
+                    <li>
+                        <a href="/stuff.htm">stuff</a>
+                    </li>
+
+                    <li class="quote">
+                        <a class="no-link">Densetsu no Shōwa aidoru.</a> <br />
+                        <a class="no-link">Currently</a> <a id='discord-status' class="no-link">offline</a>.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content-container">
+        <div class="content">
+            <p>
+            <h3> cool ebin links </h3>
+            </p>
+
+
+            <!-- this site info -->
+            <p><strong>this site</strong> —</p>
+
+            <ul>
+                <li>
+                    <img src="/static/imgs/buttons/junko.png">
+                    <a href="/">webring logo</a>
+                    <ul>
+                        <li>
+                            <i>feel free to include it into your website!</i>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
+
+            <!-- friends -->
+            <p><strong>friends</strong> —</p>
+            <ul>
+                <li>
+                    <img src="/static/imgs/buttons/neko-dc.jpg">
+                    <a href="https://727.pages.dev/">neko's page</a>
+
+                    <ul>
+                        <li>
+                            <i>dude's site is broken all the time lmao.</i>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- random webring/cool site links -->
+            <p><strong>cool sites</strong> —</p>
+
+            <div style="text-indent: 1em;">
+                <a class='net-buttons' href="https://utsuho.rocks/"><img src="/static/imgs/buttons/utsuhorocks.png"></img></a>
+                <a class='net-buttons' href="https://猫.移动/"><img src="/static/imgs/buttons/xn-neko-btn.gif"></img></a>
+                <a class='net-buttons' href="https://archlinux.org/"><img src="/static/imgs/buttons/archlinux.gif"></img></a>
+                <a class='net-buttons' href="http://lucky-ch.com"><img src="/static/imgs/buttons/konata.gif"></img></a>
+                <a class='net-buttons' href="https://www.katawa-shoujo.com/about.php"><img src="/static/imgs/buttons/katawashoujo.jpg"></img></a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Discord stuff -->
+    <script type="text/javascript">
+        console.log("hiyo!")
+
+        // fetch user data from api
+        api_endpoint = 'https://api.lanyard.rest/v1/users/224785877086240768';
+        req = new XMLHttpRequest();
+        req.open("GET", api_endpoint, true);
+        req.onload = function () {
+            console.log("get!");
+            if (this.status == 200) {
+                console.log("good!");
+                var data = JSON.parse(this.response).data;
+                var user = data.discord_user;
+                var status = data.discord_status;
+
+                // online stat
+                var html_status = document.getElementById("discord-status");
+                var color = ""
+
+                switch (status) {
+                    case 'online': html_status.text = "online"; color = "color: green;"; break;
+                    case 'idle': html_status.text = "idling"; color = "color: yellow;"; break;
+                    case 'dnd': html_status.text = "dnd"; color = "color: red;"; break;
+                    case 'offline': html_status.text = "offline"; color = "color: gray;"; break;
+                }
+
+                html_status.style = color;
+
+                console.log(html_status);
+            }
+        }
+        req.send();
+    </script>
+</body>
+
+</html>

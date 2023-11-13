@@ -1,0 +1,16 @@
+@media only screen and (max-width: 768px),
+(orientation: portrait) {
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .avatar>img {
+        width: 64px;
+        height: 64px;
+        float: left;
+    }
+}

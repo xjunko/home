@@ -1,0 +1,166 @@
+/* 
+    As for me, I always used to do things alone. 
+    That’s why the thought of being a team… doesn’t always sit well with me. 
+    With that said, if the rest of you feel really strongly about this, then maybe…I better do my part, too. Right? 
+
+    inspired by microsounds.github.io and wowana.me
+*/
+
+:root {
+    --dark-color: #0C0C0C;
+    --bright-color: #111111;
+
+    --outline-color: #cbcbcb;
+    --sidebar-color: #000000;
+
+    --text-faint: #838383;
+
+}
+
+html {
+    /* cool fonts to meh fonts */
+    font-family: "Liberation Serif", "Times New Roman", "Times", serif, "Dejima Mincho";
+
+
+    min-height: 100%;
+    background-color: var(--dark-color);
+    background: url("../imgs/sky.png") repeat, linear-gradient(180deg, var(--dark-color), var(--bright-color));
+    background-blend-mode: screen, screen, normal;
+    background-size: auto, 20%, auto;
+
+    color: var(--outline-color);
+}
+
+body {
+    display: flex;
+    margin: auto;
+    width: 1200px;
+    max-width: 100%;
+}
+
+/* main */
+.content-container {
+    padding: 1em;
+}
+
+.content {
+    max-width: 800px;
+    padding: 0 30px 10px 30px;
+    border-top: 5px double #E2FAF9;
+    background-color: #647975;
+    background-color: #0000004d;
+    color: #FFFFFF;
+}
+
+.content p {
+    hyphens: auto;
+    text-align: justify;
+    text-indent: 1em;
+}
+
+.content>img {
+    max-width: 100%;
+    border: 1px solid var(--outline-color);
+}
+
+.content img {
+    border: 1px solid var(--outline-color);
+}
+
+.content>h3 {
+    margin: 0;
+}
+
+/* sidebar */
+.sidebar-container {
+    padding: 1em;
+    font: .9em "Liberation Serif", "Times New Roman", "Times", serif, "Dejima Mincho";
+}
+
+.sidebar {
+    width: 290px;
+    background: var(--sidebar-color);
+    border: .1em solid var(--outline-color);
+    border-radius: .3em;
+}
+
+.sidebar>p,
+.sidebar>h1 {
+    text-align: center;
+    padding: 0 0;
+    margin: 0;
+}
+
+.avatar>img {
+    border-radius: .3em .3em 0 0;
+    width: 290px;
+    height: 290px;
+    background-color: var(--sidebar-color);
+}
+
+/* sidebar links */
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links ul li {
+    border-top: .1em solid var(--outline-color);
+    padding: .2em .4em;
+}
+
+/* utils */
+.sidebar a:not(.no-link) {
+    color: var(--outline-color);
+    text-decoration: underline;
+}
+
+.no-link,
+.sidebar a:hover {
+    color: var(--outline-color);
+    text-decoration: none;
+}
+
+.center,
+.quote {
+    text-align: center;
+}
+
+.faint {
+    color: var(--text-faint);
+}
+
+#discord-status,
+#discord-status-about {
+    font-weight: bold;
+}
+
+/* indents */
+.indent {
+    text-indent: 32px;
+}
+
+/* links */
+a {
+    color: var(--outline-color);
+    text-decoration: none;
+}
+
+a:hover,
+a:hover>* {
+    text-shadow: 0 0 3px var(--text-faint);
+}
+
+/* buttons */
+.net-buttons {
+    text-indent: 1em;
+}
+
+
+.net-buttons img {
+    border: 2px solid var(--dark-color);
+}
+
+.net-buttons:hover img {
+    border: 2px solid var(--outline-color);
+}
