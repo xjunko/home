@@ -166,3 +166,8 @@ a:hover>* {
 .net-buttons:hover img {
     border: 2px solid var(--outline-color);
 }
+
+/* footer */
+.footer {
+    font-size: 4mm;
+}
