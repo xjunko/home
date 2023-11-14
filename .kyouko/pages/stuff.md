@@ -1,13 +1,38 @@
 @TITLE
-blog
+cool links
 @TITLE
 
 @CONTENT
-<i>
-    <b>
-        <p> migrating... so nothing here for now :((( </p>
-    </b>
-</i>
+<br />
+
+### cool ebin links
+<br />
+
+
+<!-- this site info -->
+**this site** —
+
+- ![](/static/imgs/buttons/junko.png) [site's logo](/)
+    - _feel free to include it into your website!_
+
+
+<!-- friends -->
+**friends** —
+
+- ![](/static/imgs/buttons/neko-dc.jpg) [neko's page](https://727.pages.dev/)
+    - _dude's site is broken all the time lmao._
+
+<!-- inspirations -->
+**inspirations** —
+
+- [![](/static/imgs/buttons/microsounds.gif)](https://microsounds.github.io/)
+- [wowana.me](https://wowana.me)
+
+<!-- random webring/cool site links -->
+**cool sites** —
+
+[![](/static/imgs/buttons/utsuhorocks.png)](https://utsuho.rocks/) [![](/static/imgs/buttons/xn-neko-btn.gif)](https://猫.移动/) [![](/static/imgs/buttons/archlinux.gif)](https://archlinux.org/) [![](/static/imgs/buttons/konata.gif)](http://lucky-ch.com) [![](/static/imgs/buttons/katawashoujo.jpg)](https://www.katawa-shoujo.com/about.php)
+
 @CONTENT
 
 @SCRIPT

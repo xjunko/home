@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="/static/css/phone.css">
 
 <!-- Title -->
-<title>blog
+<title><p>blog</p>
  | letter to the black world</title>
 </head>
 
@@ -63,11 +63,9 @@
 
     <div class="content-container">
         <div class="content">
-            <i>
-    <b>
-        <p> migrating... so nothing here for now :((( </p>
-    </b>
-</i>
+            <br />
+<h2>Notice</h2>
+<p>migrating... so nothing here for now :(</p>
 
             <hr />
 <div class="footer">
@@ -81,16 +79,12 @@
 
     <!-- Discord stuff -->
 <script type="text/javascript">
-    console.log("hiyo!")
-
     // fetch user data from api
     api_endpoint = 'https://api.lanyard.rest/v1/users/224785877086240768';
     req = new XMLHttpRequest();
     req.open("GET", api_endpoint, true);
     req.onload = function () {
-        console.log("get!");
         if (this.status == 200) {
-            console.log("good!");
             var data = JSON.parse(this.response).data;
             var user = data.discord_user;
             var status = data.discord_status;

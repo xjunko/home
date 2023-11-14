@@ -1,6 +1,8 @@
 """ kyouko.py - simple script to convert the html files """
 from pathlib import Path
 
+from markdown_it import MarkdownIt
+
 # files
 TEMPLATE_FOLDER: Path = Path.cwd() / ".kyouko" / "templates"
 TEMPLATE: Path = TEMPLATE_FOLDER / "template.html"
@@ -11,10 +13,16 @@ PAGE_FOLDER: Path = Path.cwd() / ".kyouko" / "pages"
 OUTPUT_FOLDER: Path = Path.cwd()
 
 
+def process_markdown(t: str) -> str:
+    markdown = MarkdownIt("commonmark", {"breaks": True, "html": True})
+
+    return markdown.render(t)
+
+
 def main() -> int:
     RAW_TEMPLATE = TEMPLATE.read_text()
 
-    for page in PAGE_FOLDER.glob("*.html"):
+    for page in PAGE_FOLDER.glob("*.md"):
         PAGE_DATA = page.read_text()
 
         # piss easy parser
@@ -46,6 +54,9 @@ def main() -> int:
         current_page = RAW_TEMPLATE
 
         for mode, code in content.items():
+            if mode not in ["FOOTER", "HEAD"]:
+                code = process_markdown(code)
+
             current_page = current_page.replace(f"@{mode.upper()}_INSERT", code)
 
         output_file = OUTPUT_FOLDER / f"{page.stem}.html"

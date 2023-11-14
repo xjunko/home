@@ -3,43 +3,30 @@ home
 @TITLE
 
 @CONTENT
-<!-- Content -->
-<p>
-<h3> about </h3>
-</p>
-<p>
-    my name is junko, you can find me online as xjunko or fireredz.
-    i have a strong interest in eletronics, japanese cultures and coding.
-</p>
+<br />
 
-<p>
-    this website serves as more or less dumping ground of useless information.
-    here, you may find how to contact me, crap i've written and things that you might find interesting.
-</p>
+## about
 
-<p>
-    currently, the domain is <a href="https://xjunko.neocities.org/">xjunko.neocities.org</a>, i'm broke so the domain <i>might</i> change from time to time.
-</p>
+my name is junko, you can find me online as xjunko or fireredz. i have a strong interest in eletronics, japanese cultures and coding. <br /> <br />
 
-<p>
-<h3> contact me </h3>
+this website serves as more or less dumping ground of useless information. here, you may find how to contact me, crap i've written and things that you might find interesting. <br /> <br />
 
-i go by the name, <a id="discord-name"></a>, on discord, feel free to message me, i'm not that interesting but a chat won't hurt me :). <br />
+currently, the domain is <a href="https://xjunko.neocities.org/">xjunko.neocities.org</a>, i'm broke so the domain <i>might</i> change from time to time. <br /> <br />
+
+
+## contact me
+
+i go by the name, <a id="discord-name"></a>, on discord, feel free to message me, i'm not that interesting but a chat won't hurt me :).
 Currently <a id='discord-status-about'>offline</a>.
-</p>
 @CONTENT
 
 @SCRIPT
-<!-- Discord stuff -->
 <script type="text/javascript">
-    console.log("hiyo!")
-
     // fetch user data from api
     api_endpoint = 'https://api.lanyard.rest/v1/users/224785877086240768';
     req = new XMLHttpRequest();
     req.open("GET", api_endpoint, true);
     req.onload = function () {
-        console.log("get!");
         if (this.status == 200) {
             console.log("good!");
             var data = JSON.parse(this.response).data;
@@ -68,6 +55,7 @@ Currently <a id='discord-status-about'>offline</a>.
             console.log(html_status);
         }
     }
+
     req.send();
 </script>
 @SCRIPT

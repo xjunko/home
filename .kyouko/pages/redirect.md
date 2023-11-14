@@ -3,6 +3,7 @@ redirect
 @TITLE
 
 @CONTENT
+<br />
 <p style="width: 800px" id="redirect"> redirecting!!! </p>
 @CONTENT
 

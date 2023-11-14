@@ -58,6 +58,7 @@ body {
     hyphens: auto;
     text-align: justify;
     text-indent: 1em;
+    margin: 0;
 }
 
 .content>img {
@@ -69,8 +70,20 @@ body {
     border: 1px solid var(--outline-color);
 }
 
-.content>h3 {
+.content>h3,
+.content>h2 {
     margin: 0;
+}
+
+/* webring buttons */
+.content li>img,
+.content a>img {
+    border: 2px solid var(--dark-color);
+}
+
+.content li>img:hover,
+.content a>img:hover {
+    border: 2px solid var(--outline-color);
 }
 
 /* sidebar */
