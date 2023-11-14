@@ -5,6 +5,7 @@ from pathlib import Path
 TEMPLATE_FOLDER: Path = Path.cwd() / ".kyouko" / "templates"
 TEMPLATE: Path = TEMPLATE_FOLDER / "template.html"
 FOOTER: Path = TEMPLATE_FOLDER / "footer.html"
+HEADER: Path = TEMPLATE_FOLDER / "head.html"
 
 PAGE_FOLDER: Path = Path.cwd() / ".kyouko" / "pages"
 OUTPUT_FOLDER: Path = Path.cwd()
@@ -17,7 +18,10 @@ def main() -> int:
         PAGE_DATA = page.read_text()
 
         # piss easy parser
-        content: dict[str, str] = {"FOOTER": FOOTER.read_text()}
+        content: dict[str, str] = {
+            "FOOTER": FOOTER.read_text(),
+            "HEAD": HEADER.read_text(),
+        }
         current_mode: str = ""
 
         for line in PAGE_DATA.splitlines():
