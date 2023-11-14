@@ -54,7 +54,7 @@ def main() -> int:
         current_page = RAW_TEMPLATE
 
         for mode, code in content.items():
-            if mode not in ["FOOTER", "HEAD"]:
+            if mode not in ["FOOTER", "HEAD", "TITLE"]:
                 code = process_markdown(code)
 
             current_page = current_page.replace(f"@{mode.upper()}_INSERT", code)
