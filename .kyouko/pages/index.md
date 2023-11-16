@@ -18,6 +18,11 @@ currently, the domain is <a href="https://junko.konno.ovh/">junko.konno.ovh</a>,
 
 i go by the name, <a id="discord-name"></a>, on discord, feel free to message me, i'm not that interesting but a chat won't hurt me :).
 Currently <a id='discord-status-about'>offline</a>.
+
+<br/>
+
+besides discord you can contact me thru email, though, response time may vary: 
+yuuki [at] konno [dot] ovh
 @CONTENT
 
 @SCRIPT
