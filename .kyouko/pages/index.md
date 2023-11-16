@@ -11,7 +11,7 @@ my name is junko, you can find me online as xjunko or fireredz. i have a strong 
 
 this website serves as more or less dumping ground of useless information. here, you may find how to contact me, crap i've written and things that you might find interesting. <br /> <br />
 
-currently, the domain is <a href="https://xjunko.neocities.org/">xjunko.neocities.org</a>, i'm broke so the domain <i>might</i> change from time to time. <br /> <br />
+currently, the domain is <a href="https://junko.konno.ovh/">junko.konno.ovh</a>, i'm broke so the domain <i>might</i> change from time to time. <br /> <br />
 
 
 ## contact me
