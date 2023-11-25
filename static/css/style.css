@@ -6,6 +6,11 @@
     inspired by microsounds.github.io and wowana.me
 */
 
+@font-face {
+    font-family: Terminus;
+    src: url(../fonts/TerminusTTF.woff2);
+}
+
 :root {
     --dark-color: #0C0C0C;
     --bright-color: #111111;
@@ -17,11 +22,13 @@
     --text-faint: #838383;
     --text-dark: #000000;
 
+    --fonts: "Terminus", "Liberation Serif", "Times New Roman", "Times", serif, "Dejima Mincho";
 }
 
 html {
     /* cool fonts to meh fonts */
-    font-family: "Liberation Serif", "Times New Roman", "Times", serif, "Dejima Mincho";
+    font-family: var(--fonts);
+    font-size: 16px;
 
 
     min-height: 100%;
@@ -89,7 +96,7 @@ body {
 /* sidebar */
 .sidebar-container {
     padding: 1em;
-    font: .9em "Liberation Serif", "Times New Roman", "Times", serif, "Dejima Mincho";
+    font: .9em var(--fonts);
 }
 
 .sidebar {
