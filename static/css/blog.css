@@ -1,0 +1,138 @@
+:root {
+    --almost-dark: #1C1C1C;
+    --not-so-dark: #6A6A6A;
+
+    --youtube-color: #FF0000;
+    --spotify-color: #1DB954;
+    --green-text: #96c83b;
+}
+
+
+.blog-container {
+    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blog-post {
+    font-size: 12pt !important;
+    width: 800px;
+    max-width: 800px;
+    padding: 3px;
+    overflow: auto;
+    opacity: 0.9;
+    background-color: var(--dark-color);
+    color: var(--text-light);
+    border: solid 2px var(--almost-dark);
+    margin-top: 5px;
+}
+
+.blog-post:hover {
+    border: solid 2px var(--outline-color);
+    opacity: 1.0;
+}
+
+.blog-post * {
+    overflow: hidden;
+    max-width: 800px;
+}
+
+.blog-content>p {
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+}
+
+
+.blog-post img:not(.discord-emoji) {
+    max-width: 790px;
+    display: block;
+    margin: auto;
+}
+
+.blog-author {
+    color: #a47996;
+    font-weight: bold;
+}
+
+.blog-media {
+    width: 33%;
+    padding: 2px 4px 2px 2px;
+    float: left;
+}
+
+.blog-url,
+.blog-content>a,
+.blog-container>p {
+    text-decoration: underline;
+    color: var(--text-faint) !important;
+}
+
+.blog-url:hover,
+.blog-content>a:hover,
+.blog-container>p:hover {
+    background-color: var(--outline-color) !important;
+    color: var(--text-dark) !important;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+/* Youtube */
+.youtube {
+    border: dashed 2px var(--youtube-color);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 4px;
+    margin-right: 4px;
+    max-width: 790px;
+    width: 100%;
+
+}
+
+.youtube img {
+    opacity: 0.3;
+}
+
+.youtube:hover img {
+    opacity: 0.35;
+}
+
+.youtube-info {
+    position: absolute;
+    transform: translate(75%, -850%);
+    color: var(--brightest-color);
+    opacity: 1.0;
+    font-size: 24px;
+}
+
+/* Spotify */
+.spotify {
+    border: solid 2px var(--spotify-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.spotify-thumbnail {
+    float: left;
+    width: auto;
+    height: 100px;
+}
+
+.spotify-info {
+    width: 85%;
+    text-align: center;
+}
+
+/* bruh */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
