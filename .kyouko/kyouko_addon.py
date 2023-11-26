@@ -145,29 +145,38 @@ def process_blog(id: int, file: Path, markdown_callback: Callable = lambda: ...)
     POST_ID: int = id + 1
     POST_RAW: str = file.read_text()
     POST_CONTENT: str = ""
-    METADATA: dict[str, str] = {}
+    METADATA: dict[str, str] = {"style": ""}
 
     for line in POST_RAW.splitlines():
         if line.startswith("[]#"):
             key, value = line.removeprefix("[]#").split(":", 1)
-            METADATA |= {key.strip(): value.strip()}
+            METADATA |= {key.strip().casefold(): value.strip()}
         else:
             POST_CONTENT += preprocess_blog_line(line) + "\n"
+
+    # Custom CSS
+    if "outline" in METADATA:
+        METADATA[
+            "style"
+        ] += f";border: {METADATA.get('outline-style', 'solid')} 2px {METADATA['outline']}"
+
+        print(METADATA, POST_CONTENT)
 
     # Export
     POST_BOILERPLATE: dict[str, Any] = {
         "ID": POST_ID,
-        "AUTHOR": METADATA.get("Author", "junko"),
+        "AUTHOR": METADATA.get("author", "junko"),
         "DATE": datetime.fromtimestamp(int(file.stem)),
+        "CSS": METADATA.get("style", ""),
     }
 
-    HTML_OUTPUT: str = '<div class="blog-post" id="{ID}" {CSS} >'
+    HTML_OUTPUT: str = '<div class="blog-post" id="{ID}" style="{CSS}" >'
 
     HTML_OUTPUT += '<div class="blog-content">'
     HTML_OUTPUT += '<span class="blog-author">{AUTHOR}</span> {DATE} '
     HTML_OUTPUT += '<a class="blog-url no-underline" href="#{ID}">#{ID}</a> <br/>'
 
-    if thumbnail_url := METADATA.get("Thumbnail"):
+    if thumbnail_url := METADATA.get("thumbnail"):
         thumbnail_filename: str = get_hashed_filename_from_url(thumbnail_url)
         thumbnail_mime: str = get_mime_from_url(thumbnail_url)
 
