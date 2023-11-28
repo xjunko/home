@@ -127,7 +127,10 @@ def preprocess_blog_line(content: str) -> str:
     content = SPOTIFY_REGEX.sub(_replace_spotify_embed, content)
 
     def _replace_reference(match: re.Match) -> str:
-        raise RuntimeError("unimplemented")
+        if post_reference := match.group(0):
+            raw_text: str = post_reference.split(r"\>>", 1)[-1].strip()
+            # return f'<a style="color: var(--reference-text)">\>{raw_text}</a>'
+            return f'<a style="color: var(--reference-text); text-decoration: underline" href="#{raw_text}">>>{raw_text}</a>'
 
     content = POST_REFERENCE_REGEX.sub(_replace_reference, content)
 
