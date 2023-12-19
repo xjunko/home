@@ -110,7 +110,7 @@
 
 /* Spotify */
 .spotify {
-    border: solid 2px var(--spotify-color);
+    border: dashed 2px var(--spotify-color);
     display: flex;
     flex-direction: row;
     align-items: center;
