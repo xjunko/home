@@ -47,6 +47,10 @@ body {
     max-width: 100%;
 }
 
+hr {
+    border-color: var(--text-faint);
+}
+
 /* main */
 .content-container {
     padding: 1em;
