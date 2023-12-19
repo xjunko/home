@@ -19,14 +19,20 @@ cool links
 <!-- friends -->
 **friends** —
 
-- ![](/static/imgs/buttons/neko-dc.jpg) [neko's page](https://727.pages.dev/)
+- [[<u>l-m.dev</u>]](https://me.l-m.dev/)
+    - _cool guy, he knows a lot about compilers._
+- [[caffeine](https://caffeine.moe/)]
+    - _soon-to-be successful music producer (real)._
+- [![](/static/imgs/buttons/utsuhorocks.png)](https://utsuho.rocks/) [Utsuho Rocks](https://utsuho.rocks/)
+    - _cute site._
+- ![Neko's site logo](/static/imgs/buttons/neko-dc.jpg) [neko's page](https://727.pages.dev/)
     - _dude's site is broken all the time lmao._
 
 <!-- inspirations -->
 **inspirations** —
 
-- [![](/static/imgs/buttons/microsounds.gif)](https://microsounds.github.io/)
-- [wowana.me](https://wowana.me)
+- [![microsounds's logo](/static/imgs/buttons/microsounds.gif)](https://microsounds.github.io/)
+- [[wowana.me]](https://wowana.me)
 
 <!-- random webring/cool site links -->
 **cool sites** —
