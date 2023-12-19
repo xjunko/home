@@ -31,7 +31,7 @@ cool links
 <!-- random webring/cool site links -->
 **cool sites** —
 
-[![](/static/imgs/buttons/utsuhorocks.png)](https://utsuho.rocks/) [![](/static/imgs/buttons/xn-neko-btn.gif)](https://猫.移动/) [![](/static/imgs/buttons/archlinux.gif)](https://archlinux.org/) [![](/static/imgs/buttons/konata.gif)](http://lucky-ch.com) [![](/static/imgs/buttons/katawashoujo.jpg)](https://www.katawa-shoujo.com/about.php)
+[![](/static/imgs/buttons/utsuhorocks.png)](https://utsuho.rocks/) [![](/static/imgs/buttons/xn-neko-btn.gif)](https://猫.移动/) [![](/static/imgs/buttons/archlinux.gif)](https://archlinux.org/) [![](/static/imgs/buttons/konata.gif)](http://lucky-ch.com) [![](/static/imgs/buttons/katawashoujo.jpg)](https://www.katawa-shoujo.com/about.php) [![mariluu's site](https://mariluu.hehe.moe/content/maribanner.gif)](https://mariluu.hehe.moe)
 
 @CONTENT
 
