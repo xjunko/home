@@ -1,3 +1,5 @@
+/* blog.css - god awful piece of shit styling hacked together in an hour. */
+
 :root {
     --almost-dark: #1C1C1C;
     --not-so-dark: #6A6A6A;
@@ -6,6 +8,21 @@
     --spotify-color: #1DB954;
     --green-text: #96c83b;
     --reference-text: #FF0000;
+
+    --blog-width: 800px;
+}
+
+/* phone users moment */
+@media (max-width: 1280px) {
+    :root {
+        --blog-width: 55vw;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --blog-width: 95vw;
+    }
 }
 
 
@@ -13,13 +30,14 @@
     padding-top: 1em;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
 .blog-post {
     font-size: 12pt !important;
-    width: 800px;
-    max-width: 800px;
+    width: var(--blog-width);
+    max-width: var(--blog-width);
     padding: 3px;
     overflow: auto;
     opacity: 0.9;
@@ -36,7 +54,7 @@
 
 .blog-post * {
     overflow: hidden;
-    max-width: 800px;
+    max-width: var(--blog-width);
 }
 
 .blog-content>p {
@@ -46,7 +64,7 @@
 
 
 .blog-post img:not(.discord-emoji) {
-    max-width: 790px;
+    max-width: calc(var(--blog-width) - 10px);
     display: block;
     margin: auto;
 }
@@ -82,12 +100,13 @@
 
 /* Youtube */
 .youtube {
+    position: relative;
     border: dashed 2px var(--youtube-color);
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 4px;
     margin-right: 4px;
-    max-width: 790px;
+    max-width: calc(var(--blog-width) - 10px);
     width: 100%;
 
 }
@@ -102,11 +121,18 @@
 
 .youtube-info {
     position: absolute;
-    transform: translate(75%, -850%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--brightest-color);
     opacity: 1.0;
     font-size: 24px;
 }
+
 
 /* Spotify */
 .spotify {
