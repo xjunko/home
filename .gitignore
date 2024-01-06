@@ -5,6 +5,7 @@ blog/journal
 # Let's make this a secret :)
 .kyouko/blogs/*
 .kyouko/pages/*
+.env
 
 # Python crap
 # Byte-compiled / optimized / DLL files
