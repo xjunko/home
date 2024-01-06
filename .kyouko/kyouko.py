@@ -73,7 +73,7 @@ def process_page(raw_content: str) -> str:
 
 def main() -> int:
     # Blog (singular page)
-    posts_raw: list[tuple[str, int]] | reversed[tuple[str, int]] = []
+    posts_raw: list[tuple[str, int]] | sorted[tuple[str, int]] = []
 
     # Fetch entries from discord.
     for message in kyouko_addon.get_messages_from_discord():
@@ -111,6 +111,8 @@ def main() -> int:
     ):
         post_html: str = kyouko_addon.process_blog(id, post, process_markdown)  # type: ignore
         posts_raw.append((post_html, int(post.stem)))
+
+    posts_raw = sorted(posts_raw, key=lambda x: x[1], reverse=True)
 
     # Export blog
     blog_output = OUTPUT_FOLDER / "blog.html"
