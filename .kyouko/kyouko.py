@@ -14,7 +14,8 @@ PAGE_FOLDER: Path = Path.cwd() / ".kyouko" / "pages"
 BLOG_FOLDER: Path = Path.cwd() / ".kyouko" / "blogs"
 OUTPUT_FOLDER: Path = Path.cwd()
 
-RAW_TEMPLATE = TEMPLATE.read_text()
+RAW_TEMPLATE = TEMPLATE.read_text(encoding="utf-8")
+BLOG_FOLDER.mkdir(parents=True, exist_ok=True)
 
 
 def process_markdown(t: str) -> str:
@@ -72,20 +73,48 @@ def process_page(raw_content: str) -> str:
 
 def main() -> int:
     # Blog (singular page)
-    POSTS_RAW: list[str] = []
+    posts_raw: list[tuple[str, int]] | reversed[tuple[str, int]] = []
 
+    # Fetch entries from discord.
+    for message in kyouko_addon.get_messages_from_discord():
+        filename: int = int(message.created_at.timestamp())
+        content: str = message.content
+
+        # Pre-processing to fit the parser
+        for i, attachment in enumerate(message.attachments):
+            if i == 0:
+                content = (
+                    f"[]# Thumbnail: {attachment.url.split('?', 1)[0]} \n" + content
+                )
+            else:
+                content += f"{attachment.url} \n"
+
+        # Fix green texts
+        lines: list[str] = []
+        for line in content.splitlines():
+            if line.startswith(">"):
+                line = line.replace(">", "\\>", 1)
+
+            lines.append(line)
+
+        content = "\n".join(lines)
+
+        (BLOG_FOLDER / f"{filename}.md").write_text(content, "utf-8")
+
+    # Blog (local files)
     for id, post in enumerate(
         sorted(list(BLOG_FOLDER.glob("*.md")), key=lambda x: x.stem)
     ):
-        POSTS_RAW.append(kyouko_addon.process_blog(id, post, process_markdown))
+        post_html: str = kyouko_addon.process_blog(id, post, process_markdown)  # type: ignore
+        posts_raw.append((post_html, int(post.stem)))
 
-    POSTS_RAW = reversed(POSTS_RAW)
-
+    # Export blog
     blog_output = OUTPUT_FOLDER / "blog.html"
     blog_output.write_text(
-        process_page((PAGE_FOLDER / "blog.md").read_text()).replace(
-            "{{BLOG_INTERNAL}}", "\n".join(POSTS_RAW)
-        )
+        process_page((PAGE_FOLDER / "blog.md").read_text(encoding="utf-8")).replace(
+            "{{BLOG_INTERNAL}}", "\n".join(x[0] for x in posts_raw)
+        ),
+        "utf-8",
     )
 
     # Normal pages
@@ -95,7 +124,7 @@ def main() -> int:
 
         current_page: str = process_page(page.read_text())
         output_file = OUTPUT_FOLDER / f"{page.stem}.html"
-        output_file.write_text(current_page)
+        output_file.write_text(current_page, "utf-8")
 
     return 0
 
