@@ -10,13 +10,13 @@ from pathlib import Path
 from typing import Any, Callable
 
 import requests
-from url_normalize import url_normalize
+from url_normalize import url_normalize  # type: ignore
 from utils import spotify
 
 _original_get = requests.get
 
 
-def get_if_not_in_cache_else_cache(url: str) -> requests.Response:
+def get_if_not_in_cache_else_cache(url: str) -> dict[str, Any]:
     cache_file: Path = Path.cwd() / ".cache"
 
     if not cache_file.exists():
@@ -44,7 +44,7 @@ requests.get = get_if_not_in_cache_else_cache
 
 def get_youtube_embed(video_id: str) -> str | None:
     for quality in ["maxresdefault.jpg", "mqdefault.jpg", "0.jpg"]:
-        if (resp := requests.get(f"https://i3.ytimg.com/vi/{video_id}/{quality}"))[
+        if (resp := requests.get(f"https://i3.ytimg.com/vi/{video_id}/{quality}"))[  # type: ignore
             "status"
         ] != 404:
             return quality
@@ -54,7 +54,7 @@ def get_youtube_embed(video_id: str) -> str | None:
 
 def get_hashed_filename_from_url(url: str) -> str:
     return (
-        hashlib.md5(url_normalize(url).encode()).hexdigest()
+        hashlib.md5(url_normalize(url).encode()).hexdigest()  # type: ignore
         + "."
         + get_mime_from_url(url)
     )
@@ -65,34 +65,34 @@ def get_mime_from_url(url: str) -> str:
 
 
 def preprocess_blog_line(content: str) -> str:
-    MEDIA_REGEX: re.Pattern = re.compile(
+    MEDIA_REGEX: re.Pattern = re.compile(  # type: ignore
         r"https?://\S+\.(?:(png)|(jpe?g)|(gif)|(svg)|(webp)|(mp4)|(webm)|(mov))"
     )
 
-    YOUTUBE_REGEX: re.Pattern = re.compile(
+    YOUTUBE_REGEX: re.Pattern = re.compile(  # type: ignore
         r"https?://(?:www\.)?youtu(?:be\.com/watch\?v=|\.be/)(\S+)"
     )
-    SPOTIFY_REGEX: re.Pattern = re.compile(r"https?://open\.spotify\.com/track/(\w+)")
-    GREENTEXT_REGEX: re.Pattern = re.compile(r"\\>.*")
-    POST_REFERENCE_REGEX: re.Pattern = re.compile(r"\\>>.*")
+    SPOTIFY_REGEX: re.Pattern = re.compile(r"https?://open\.spotify\.com/track/(\w+)")  # type: ignore
+    GREENTEXT_REGEX: re.Pattern = re.compile(r"\\>.*")  # type: ignore
+    POST_REFERENCE_REGEX: re.Pattern = re.compile(r"\\>>.*")  # type: ignore
 
-    def _media_embed(match: re.Match) -> str:
-        if url := match.group(0):
-            if url.endswith(("mp4", "webm", "mov")):
+    def _media_embed(match: re.Match) -> str | None:  # type: ignore
+        if url := match.group(0):  # type: ignore
+            if url.endswith(("mp4", "webm", "mov")):  # type: ignore
                 return f'<video loop controls preload=metadata width="100%" height="auto" src="{url}"></video>'
 
-            return url
+            return url  # type: ignore
 
-    content = MEDIA_REGEX.sub(_media_embed, content)
+    content = MEDIA_REGEX.sub(_media_embed, content)  # type: ignore
 
-    def _youtube_embed(match: re.Match) -> str:
-        video_url = match.string
-        video_id = match.group(1)
+    def _youtube_embed(match: re.Match) -> str | None:  # type: ignore
+        video_url = match.string  # type: ignore
+        video_id = match.group(1)  # type: ignore
 
         if not video_id:
-            video_id = video_url.split("v=")[-1]
+            video_id = video_url.split("v=")[-1]  # type: ignore
 
-        if video_thumbnail := get_youtube_embed(video_id):
+        if video_thumbnail := get_youtube_embed(video_id):  # type: ignore
             return f"""
 <div class="youtube">
     <a href="{video_url}" target="_blank">
@@ -103,10 +103,10 @@ def preprocess_blog_line(content: str) -> str:
 </div>
 """
 
-    content = YOUTUBE_REGEX.sub(_youtube_embed, content)
+    content = YOUTUBE_REGEX.sub(_youtube_embed, content)  # type: ignore
 
-    def _replace_spotify_embed(match: re.Match) -> str:
-        if track := spotify.get(match.string):
+    def _replace_spotify_embed(match: re.Match) -> str:  # type: ignore
+        if track := spotify.get(match.string):  # type: ignore
             return f"""
 <div class="spotify">
     <div class="spotify-thumbnail">
@@ -124,27 +124,27 @@ def preprocess_blog_line(content: str) -> str:
 </div>
 """
 
-    content = SPOTIFY_REGEX.sub(_replace_spotify_embed, content)
+    content = SPOTIFY_REGEX.sub(_replace_spotify_embed, content)  # type: ignore
 
-    def _replace_reference(match: re.Match) -> str:
-        if post_reference := match.group(0):
-            raw_text: str = post_reference.split(r"\>>", 1)[-1].strip()
+    def _replace_reference(match: re.Match) -> str:  # type: ignore
+        if post_reference := match.group(0):  # type: ignore
+            raw_text: str = post_reference.split(r"\>>", 1)[-1].strip()  # type: ignore
             # return f'<a style="color: var(--reference-text)">\>{raw_text}</a>'
             return f'<a style="color: var(--reference-text); text-decoration: underline" href="#{raw_text}">>>{raw_text}</a>'
 
-    content = POST_REFERENCE_REGEX.sub(_replace_reference, content)
+    content = POST_REFERENCE_REGEX.sub(_replace_reference, content)  # type: ignore
 
-    def _replace_green_text(match: re.Match) -> str:
-        if match.string.strip().startswith("\\"):
-            raw_text: str = match.string.split(r"\>", 1)[-1]
-            return f'<a style="color: var(--green-text)">\>{raw_text}</a>'
+    def _replace_green_text(match: re.Match) -> str:  # type: ignore
+        if match.string.strip().startswith("\\"):  # type: ignore
+            raw_text: str = match.string.split(r"\>", 1)[-1]  # type: ignore
+            return f'<a style="color: var(--green-text)">\>{raw_text}</a>'  # type: ignore
 
-    content = GREENTEXT_REGEX.sub(_replace_green_text, content)
+    content = GREENTEXT_REGEX.sub(_replace_green_text, content)  # type: ignore
 
     return content
 
 
-def process_blog(id: int, file: Path, markdown_callback: Callable = lambda: ...) -> str:
+def process_blog(id: int, file: Path, markdown_callback: Callable = lambda: ...) -> str:  # type: ignore
     POST_ID: int = id + 1
     POST_RAW: str = file.read_text()
     POST_CONTENT: str = ""
@@ -153,15 +153,15 @@ def process_blog(id: int, file: Path, markdown_callback: Callable = lambda: ...)
     for line in POST_RAW.splitlines():
         if line.startswith("[]#"):
             key, value = line.removeprefix("[]#").split(":", 1)
-            METADATA |= {key.strip().casefold(): value.strip()}
+            METADATA |= {key.strip().casefold(): value.strip()}  # type: ignore
         else:
-            POST_CONTENT += preprocess_blog_line(line) + "\n"
+            POST_CONTENT += preprocess_blog_line(line) + "\n"  # type: ignore
 
     # Custom CSS
     if "outline" in METADATA:
         METADATA[
             "style"
-        ] += f";border: {METADATA.get('outline-style', 'solid')} 2px {METADATA['outline']}"
+        ] += f";border: {METADATA.get('outline-style', 'solid')} 2px {METADATA['outline']}"  # type: ignore
 
         print(METADATA, POST_CONTENT)
 
@@ -175,29 +175,29 @@ def process_blog(id: int, file: Path, markdown_callback: Callable = lambda: ...)
 
     HTML_OUTPUT: str = '<div class="blog-post" id="{ID}" style="{CSS}" >'
 
-    HTML_OUTPUT += '<div class="blog-content">'
-    HTML_OUTPUT += '<span class="blog-author">{AUTHOR}</span> {DATE} '
-    HTML_OUTPUT += '<a class="blog-url no-underline" href="#{ID}">#{ID}</a> <br/>'
+    HTML_OUTPUT += '<div class="blog-content">'  # type: ignore
+    HTML_OUTPUT += '<span class="blog-author">{AUTHOR}</span> {DATE} '  # type: ignore
+    HTML_OUTPUT += '<a class="blog-url no-underline" href="#{ID}">#{ID}</a> <br/>'  # type: ignore
 
     if thumbnail_url := METADATA.get("thumbnail"):
         thumbnail_filename: str = get_hashed_filename_from_url(thumbnail_url)
         thumbnail_mime: str = get_mime_from_url(thumbnail_url)
 
-        HTML_OUTPUT += f'file: <a class="blog-url" href="{thumbnail_url}" target="_blank" rel="noopener noreffer">{thumbnail_filename}</a> [file/{thumbnail_mime}] <br/>'
-        HTML_OUTPUT += (
+        HTML_OUTPUT += f'file: <a class="blog-url" href="{thumbnail_url}" target="_blank" rel="noopener noreffer">{thumbnail_filename}</a> [file/{thumbnail_mime}] <br/>'  # type: ignore
+        HTML_OUTPUT += (  # type: ignore
             f'<a href="{thumbnail_url}" target="_blank" rel="noopener noreferrer">'
             f'<img class="blog-media" src="{thumbnail_url}">'
             "</a>"
         )
 
-    HTML_OUTPUT += markdown_callback(POST_CONTENT) + "\n"
+    HTML_OUTPUT += markdown_callback(POST_CONTENT) + "\n"  # type: ignore
 
-    HTML_OUTPUT += "</div>"
+    HTML_OUTPUT += "</div>"  # type: ignore
 
-    HTML_OUTPUT += "</div>"
+    HTML_OUTPUT += "</div>"  # type: ignore
 
     # Resolve all boilerplate
     for key, value in POST_BOILERPLATE.items():
-        HTML_OUTPUT = HTML_OUTPUT.replace("{" + key + "}", str(value))
+        HTML_OUTPUT = HTML_OUTPUT.replace("{" + key + "}", str(value))  # type: ignore
 
-    return HTML_OUTPUT + "\n"
+    return HTML_OUTPUT + "\n"  # type: ignore
