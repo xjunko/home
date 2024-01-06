@@ -95,6 +95,10 @@ def main() -> int:
             if line.startswith(">"):
                 line = line.replace(">", "\\>", 1)
 
+            if line.startswith("[]# Offset:"):
+                filename -= int(eval(line.split(":", 1)[1]))  # Hacky
+                continue
+
             lines.append(line)
 
         content = "\n".join(lines)
