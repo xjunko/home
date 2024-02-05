@@ -21,7 +21,7 @@ Currently <a id='discord-status-about'>offline</a>.
 
 <br/>
 
-besides discord you can contact me thru email, though, response time may vary: 
+besides discord you can contact me thru email, though, response time may vary:
 yuuki [at] konno [dot] ovh
 @CONTENT
 

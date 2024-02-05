@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import base64
 import json
 import re
@@ -7,7 +9,7 @@ import requests
 
 # re
 SPOTIFY_QUERY: re.Pattern = re.compile(
-    r'<script\s+id="initial-state"\s+type="text/plain">([^<]+)</script>'
+    r'<script\s+id="initial-state"\s+type="text/plain">([^<]+)</script>',
 )
 
 

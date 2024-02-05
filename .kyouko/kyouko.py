@@ -1,4 +1,5 @@
 """ kyouko.py - simple script to convert the html files """
+from __future__ import annotations
 
 import shutil
 import tempfile
@@ -124,7 +125,7 @@ def main() -> int:
 
     # Parse all files in the temp folder.
     for id, post in enumerate(
-        sorted(list(temp_folder_path.glob("*.md")), key=lambda x: x.stem)
+        sorted(list(temp_folder_path.glob("*.md")), key=lambda x: x.stem),
     ):
         post_html: str = kyouko_addon.process_blog(id, post, process_markdown)  # type: ignore
         posts_raw.append((post_html, int(post.stem)))
@@ -142,7 +143,8 @@ def main() -> int:
     blog_output = OUTPUT_FOLDER / "blog.html"
     blog_output.write_text(
         process_page((PAGE_FOLDER / "blog.md").read_text(encoding="utf-8")).replace(
-            "{{BLOG_INTERNAL}}", "\n".join(x[0] for x in posts_raw)
+            "{{BLOG_INTERNAL}}",
+            "\n".join(x[0] for x in posts_raw),
         ),
         "utf-8",
     )

@@ -1,13 +1,13 @@
 """ addon.py - for kyouko, mostly blogs stuff. """
+from __future__ import annotations
 
-import base64
 import hashlib
-import json
 import os
 import re
+from collections.abc import Callable
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 import nextcord
 import requests
@@ -67,14 +67,14 @@ def get_mime_from_url(url: str) -> str:
 
 def preprocess_blog_line(content: str) -> str:
     MEDIA_REGEX: re.Pattern[str] = re.compile(
-        r"https?://\S+\.(?:(png)|(jpe?g)|(gif)|(svg)|(webp)|(mp4)|(webm)|(mov))"
+        r"https?://\S+\.(?:(png)|(jpe?g)|(gif)|(svg)|(webp)|(mp4)|(webm)|(mov))",
     )
 
     YOUTUBE_REGEX: re.Pattern[str] = re.compile(
-        r"https?://(?:www\.)?youtu(?:be\.com/watch\?v=|\.be/)(\S+)"
+        r"https?://(?:www\.)?youtu(?:be\.com/watch\?v=|\.be/)(\S+)",
     )
     SPOTIFY_REGEX: re.Pattern[str] = re.compile(
-        r"https?://open\.spotify\.com/track/(\w+)"
+        r"https?://open\.spotify\.com/track/(\w+)",
     )
     GREENTEXT_REGEX: re.Pattern[str] = re.compile(r"\\>.*")
     POST_REFERENCE_REGEX: re.Pattern[str] = re.compile(r"\\>>.*")
@@ -99,7 +99,7 @@ def preprocess_blog_line(content: str) -> str:
             return f"""
 <div class="youtube">
     <a href="{video_url}" target="_blank">
-        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/{video_id}/{video_thumbnail}" 
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/{video_id}/{video_thumbnail}"
             alt="Youtube Thumbnail">
         <a class="youtube-info" href="{video_url}" target="_blank"> Click to watch in YouTube. </a>
     </a>
@@ -140,7 +140,7 @@ def preprocess_blog_line(content: str) -> str:
     def _replace_green_text(match: re.Match[str]) -> str | None:
         if match.string.strip().startswith("\\"):
             raw_text: str = match.string.split(r"\>", 1)[-1]
-            return f'<a style="color: var(--green-text)">\>{raw_text}</a>'  # type: ignore
+            return rf'<a style="color: var(--green-text)">\>{raw_text}</a>'  # type: ignore
 
     content = GREENTEXT_REGEX.sub(_replace_green_text, content)  # type: ignore
 
@@ -148,7 +148,9 @@ def preprocess_blog_line(content: str) -> str:
 
 
 def process_blog(
-    id: int, file: Path, markdown_callback: Callable[[str], str] = lambda x: x
+    id: int,
+    file: Path,
+    markdown_callback: Callable[[str], str] = lambda x: x,
 ) -> str:
     POST_ID: int = id + 1
     POST_RAW: str = file.read_text()
@@ -177,8 +179,8 @@ def process_blog(
         "DATE": datetime.fromtimestamp(
             int(file.stem)
             - int(
-                eval(METADATA.get("offset", "0"))
-            )  # massive fucking security risk but im the only one using this.
+                eval(METADATA.get("offset", "0")),
+            ),  # massive fucking security risk but im the only one using this.
         ),
         "CSS": METADATA.get("style", ""),
     }

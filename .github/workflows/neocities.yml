@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - master
-      
+
 concurrency: # prevent concurrent deploys doing strange things
   group: deploy-to-neocities
   cancel-in-progress: true
@@ -16,16 +16,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
         node-version: lts/*
-        
+
     - name: Create folder
       run: |
           mkdir -p public && cp *.html public/ && cp -r static/ public/ && ls public/
-          
+
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v1
       with:
