@@ -1,6 +1,5 @@
 """ addon.py - for kyouko, mostly blogs stuff. """
 
-
 import base64
 import hashlib
 import json
@@ -15,34 +14,6 @@ import requests
 from dotenv import load_dotenv
 from url_normalize import url_normalize  # type: ignore
 from utils import spotify
-
-_original_get = requests.get
-
-
-def get_if_not_in_cache_else_cache(url: str) -> dict[str, Any]:
-    cache_file: Path = Path.cwd() / ".cache"
-
-    if not cache_file.exists():
-        cache_file.write_text(json.dumps({}))
-
-    # Format, {status, content}
-    CACHE_DATA = json.loads(cache_file.read_text())
-
-    if url not in CACHE_DATA:
-        resp = _original_get(url)
-        CACHE_DATA[url] = {
-            "status": resp.status_code,
-            "content": base64.b64encode(resp.content).decode("ascii"),
-        }
-        cache_file.write_text(json.dumps(CACHE_DATA))
-
-    return {
-        "status": CACHE_DATA[url]["status"],
-        "content": base64.b64decode(CACHE_DATA[url]["content"].encode("ascii")),
-    }
-
-
-requests.get = get_if_not_in_cache_else_cache
 
 
 def get_messages_from_discord() -> list[nextcord.Message]:
@@ -73,9 +44,10 @@ def get_messages_from_discord() -> list[nextcord.Message]:
 
 def get_youtube_embed(video_id: str) -> str:
     for quality in ["maxresdefault.jpg", "mqdefault.jpg", "0.jpg"]:
-        if (resp := requests.get(f"https://i3.ytimg.com/vi/{video_id}/{quality}"))[  # type: ignore
-            "status"
-        ] != 404:
+        if (
+            requests.get(f"https://i3.ytimg.com/vi/{video_id}/{quality}").status_code
+            != 404
+        ):
             return quality
 
     return "0.jpg"

@@ -23,8 +23,8 @@ class SpotifyTrack:
 
 
 def get(url: str) -> SpotifyTrack | None:
-    if (resp := requests.get(url))["status"] == 200:
-        data = SPOTIFY_QUERY.findall(resp["content"].decode())[0]
+    if (resp := requests.get(url)).status_code == 200:
+        data = SPOTIFY_QUERY.findall(resp.content.decode())[0]
 
         json_decoded = json.loads(base64.b64decode(data.encode()))
 
