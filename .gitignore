@@ -4,6 +4,7 @@ blog/journal
 
 # Let's make this a secret :)
 .kyouko/blogs/*
+.kyouko/discord/*
 .kyouko/pages/*
 .env
 
