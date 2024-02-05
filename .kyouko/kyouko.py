@@ -1,4 +1,7 @@
 """ kyouko.py - simple script to convert the html files """
+
+import shutil
+import tempfile
 from pathlib import Path
 
 import kyouko_addon
@@ -12,10 +15,14 @@ HEADER: Path = TEMPLATE_FOLDER / "head.html"
 
 PAGE_FOLDER: Path = Path.cwd() / ".kyouko" / "pages"
 BLOG_FOLDER: Path = Path.cwd() / ".kyouko" / "blogs"
+DISCORD_FOLDER: Path = Path.cwd() / ".kyouko" / "discord"
 OUTPUT_FOLDER: Path = Path.cwd()
 
 RAW_TEMPLATE = TEMPLATE.read_text(encoding="utf-8")
+
+# Ensure both folder exists.
 BLOG_FOLDER.mkdir(parents=True, exist_ok=True)
+DISCORD_FOLDER.mkdir(parents=True, exist_ok=True)
 
 
 def process_markdown(t: str) -> str:
@@ -75,7 +82,7 @@ def main() -> int:
     # Blog (singular page)
     posts_raw: list[tuple[str, int]] | sorted[tuple[str, int]] = []
 
-    # Fetch entries from discord.
+    # Fetch entries from discord and then save it into its own folder.
     for message in kyouko_addon.get_messages_from_discord():
         filename: int = int(message.created_at.timestamp())
         content: str = message.content
@@ -103,15 +110,32 @@ def main() -> int:
 
         content = "\n".join(lines)
 
-        (BLOG_FOLDER / f"{filename}.md").write_text(content, "utf-8")
+        (DISCORD_FOLDER / f"{filename}.md").write_text(content, "utf-8")
 
-    # Blog (local files)
+    # Mix all files from discord and local blogs.
+    temp_folder = tempfile.TemporaryDirectory()
+    temp_folder_path = Path(temp_folder.name)
+
+    for file in DISCORD_FOLDER.glob("*.md"):
+        shutil.copy(file, temp_folder_path / file.name)
+
+    for file in BLOG_FOLDER.glob("*.md"):
+        shutil.copy(file, temp_folder_path / file.name)
+
+    # Parse all files in the temp folder.
     for id, post in enumerate(
-        sorted(list(BLOG_FOLDER.glob("*.md")), key=lambda x: x.stem)
+        sorted(list(temp_folder_path.glob("*.md")), key=lambda x: x.stem)
     ):
         post_html: str = kyouko_addon.process_blog(id, post, process_markdown)  # type: ignore
         posts_raw.append((post_html, int(post.stem)))
 
+    # Done parsing, delete temp.
+    temp_folder.cleanup()
+
+    del temp_folder
+    del temp_folder_path
+
+    # Sort
     posts_raw = sorted(posts_raw, key=lambda x: x[1], reverse=True)
 
     # Export blog
