@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta(s) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheet(s) and Icons -->
+    <link rel="icon" type="image/x-icon" href="/static/imgs/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/phone.css">
+
+    <!-- Title -->
+    <title>@{page.metadata['title']} | letter to the black world</title>
+</head>
+
+<body>
+    @include "component/sidebar.html"
+
+    <div class="content-container">
+        <div class="content">
+            @{page.content}
+
+            @include "component/footer.html"
+        </div>
+
+        <!-- Special layout -->
+        @if page.metadata["tags"].contains("blog")
+        <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
+
+        <div class="blog-container">
+            @for post in magi.posts
+            @include "component/post.html"
+            @end
+        </div>
+
+        <link rel="stylesheet" type="text/css" href="/static/prism/prism.css">
+        <script src="/static/prism/prism.js"></script>
+
+        <div class="blog-container">
+            <div class="paging">
+                @for page_count in 0 .. page.max_number + 1
+                @if page_count == page.number
+                <a style="padding: 4px; font-size: 1.2rem; background-color: var(--outline-color) !important; color: var(--text-dark) !important;"
+                    href='/blog/${page_count+1}.html'>${page_count+1}</a>
+                @else
+                <a style="padding: 2px" href='/blog/${page_count+1}.html'>${page_count+1}</a>
+                @end
+
+                @end
+            </div>
+        </div>
+
+        @end
+
+        @{page.outer}
+    </div>
+
+    @include "component/discord.html"
+</body>
+
+</html>

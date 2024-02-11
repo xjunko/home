@@ -1,0 +1,14 @@
+<div class="spotify">
+    <div class="spotify-thumbnail">
+        <img loading=lazy height="100px" width="100px" src="${thumbnail}" alt="Cover Art">
+    </div>
+    <div class="spotify-info">
+        <a class="links" href="https://open.spotify.com/track/${track.id}">${track.name}</a>
+        <br>
+        <a class="links" href="https://open.spotify.com/artist/${artist.id}">${artist.profile.name}</a>
+        <br>
+        <audio controls preload=none>
+            <source src="${audio_preview.url}" type="audio/mpeg">
+        </audio>
+    </div>
+</div>

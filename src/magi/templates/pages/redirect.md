@@ -1,14 +1,10 @@
-@TITLE
-redirect
-@TITLE
+@title=redirect
+@tags=internal
 
-@CONTENT
 <br />
 <p style="width: 800px" id="redirect"> redirecting!!! </p>
-@CONTENT
 
-@SCRIPT
-<!-- Redirect -->
+<!-- Redirect Script -->
 <script type="text/javascript">
     const indexes = {
         "github": "https://github.com/xjunko",
@@ -36,4 +32,3 @@ redirect
         }
     }
 </script>
-@SCRIPT

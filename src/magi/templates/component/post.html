@@ -1,0 +1,16 @@
+<div class="blog-post" id="@{post.id}" style='${post.metadata["style"] or {""}}'>
+    <div class=" blog-content">
+        <span class="blog-author">@{post.metadata['author']}</span> @{post.date}
+        <a class="blog-url no-underline" href="#@{post.id}">#@{post.id}</a> <br />
+
+        @if "thumbnail" in post.metadata
+        file: <a class="blog-url" href="@{post.metadata['thumbnail']}" target="_blank"
+            rel="noopener noreffer">@{post.metadata["filename"]}</a> [file/@{post.metadata["mimetype"]}] <br />
+        <a href="@{post.metadata['thumbnail']}" target="_blank" rel="noopener noreffer">
+            <img loading=lazy class="blog-media" src="@{post.metadata['thumbnail']}">
+        </a>
+        @end
+
+        @{post.content}
+    </div>
+</div>

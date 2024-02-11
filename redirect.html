@@ -3,82 +3,68 @@
 
 <head>
     <!-- Meta(s) -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Stylesheet(s) and Icons -->
-<link rel="icon" type="image/x-icon" href="/static/imgs/favicon.ico" />
-<link rel="stylesheet" type="text/css" href="/static/css/style.css">
-<link rel="stylesheet" type="text/css" href="/static/css/phone.css">
+    <!-- Stylesheet(s) and Icons -->
+    <link rel="icon" type="image/x-icon" href="/static/imgs/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/phone.css">
 
-<!-- Title -->
-<title>redirect
- | letter to the black world</title>
+    <!-- Title -->
+    <title>redirect | letter to the black world</title>
 </head>
 
 <body>
-    <!-- Sidebar stuff -->
-    <div class="sidebar-container">
-        <div class="sidebar">
-            <!-- avatar -->
-            <div class="avatar">
-                <img src="static/imgs/junko.png" alt="avatar"> </img>
-            </div>
+<!-- Sidebar stuff -->
+<div class="sidebar-container">
+    <div class="sidebar">
+        <!-- avatar -->
+        <div class="avatar">
+            <img src="../static/imgs/junko.png" alt="avatar"> </img>
+        </div>
 
-            <!-- name -->
-            <h1>
-                <a class='no-link' href="/">junko</a>
-            </h1>
+        <!-- name -->
+        <h1>
+            <a class='no-link' href="/">junko</a>
+        </h1>
 
-            <!-- intro -->
-            <p class="domain">The Legendary Showa Idol</p>
+        <!-- intro -->
+        <p class="domain">The Legendary Showa Idol</p>
 
-            <!-- lists of stuff -->
-            <div class="links">
-                <ul>
-                    <li>
-                        <a href="/redirect.html?r=github">github</a>
-                    </li>
+        <!-- lists of stuff -->
+        <div class="links">
+            <ul>
+                <li>
+                    <a href="/redirect.html?r=github">github</a>
+                </li>
 
-                    <li>
-                        <a href="/redirect.html?r=steam">steam</a>
-                    </li>
+                <li>
+                    <a href="/redirect.html?r=steam">steam</a>
+                </li>
 
-                    <li>
-                        <a href="/blog.html">blog</a>
-                    </li>
+                <li>
+                    <a href="/blog/1.html">blog</a>
+                </li>
 
-                    <li>
-                        <a href="/stuff.html">stuff</a>
-                    </li>
+                <li>
+                    <a href="/stuff.html">stuff</a>
+                </li>
 
-                    <li class="quote">
-                        <a class="no-link">Densetsu no Shōwa aidoru.</a> <br />
-                        <a class="no-link">Currently</a> <a id='discord-status' class="no-link">offline</a>.
-                    </li>
-                </ul>
-            </div>
+                <li class="quote">
+                    <a class="no-link">Densetsu no Shōwa aidoru.</a> <br />
+                    <a class="no-link">Currently</a> <a id='discord-status' class="no-link">offline</a>.
+                </li>
+            </ul>
         </div>
     </div>
+</div>
 
     <div class="content-container">
         <div class="content">
             <br />
 <p style="width: 800px" id="redirect"> redirecting!!! </p>
-
-            <hr />
-<div class="footer">
-    <i>
-        ©2020-2023 xjunko <<a href="https://github.com/xjunko/home">@github/xjunko/home</a>> <br />
-            Powered by <a href="https://github.com/xjunko/home/tree/master/.kyouko">kyouko v0.0.4 — simple microblogging processor</a>
-    </i>
-</div>
-        </div>
-
-
-    </div>
-
-    <!-- Redirect -->
+<!-- Redirect Script -->
 <script type="text/javascript">
     const indexes = {
         "github": "https://github.com/xjunko",
@@ -107,6 +93,69 @@
     }
 </script>
 
+<hr />
+<div class="footer">
+    <i>
+        ©2020-2024 xjunko <<a href="https://github.com/xjunko/home">@github/xjunko/home</a>> <br />
+            Powered by <a href="https://github.com/xjunko/home/tree/master/.kyouko">kyouko v0.1.5 — simple microblogging
+                processor</a>
+    </i>
+</div>
+        </div>
+
+        <!-- Special layout -->
+
+
+        
+    </div>
+
+<script type="text/javascript">
+    // fetch user data from api
+    api_endpoint = 'https://api.lanyard.rest/v1/users/224785877086240768';
+    req = new XMLHttpRequest();
+    req.open("GET", api_endpoint, true);
+    req.onload = function () {
+        if (this.status == 200) {
+            console.log("good!");
+            var data = JSON.parse(this.response).data;
+            var user = data.discord_user;
+            var status = data.discord_status;
+
+            // pfp then name
+            try {
+                var html_name = document.getElementById("discord-name");
+                html_name.innerHTML = "<img class='discord-avatar' src='https://cdn.discordapp.com/avatars/" + user.id + "/" + user.avatar + ".png?size=40'> <i>" + user.username + "</i>";
+            } catch {
+                console.log('[Discord] Failed to replace avatar component, probably doesnt exists...');
+            }
+
+
+            // online stat
+            var html_status = document.getElementById("discord-status");
+            var color = ""
+
+            switch (status) {
+                case 'online': html_status.text = "online"; color = "color: green;"; break;
+                case 'idle': html_status.text = "idling"; color = "color: yellow;"; break;
+                case 'dnd': html_status.text = "dnd"; color = "color: red;"; break;
+                case 'offline': html_status.text = "offline"; color = "color: gray;"; break;
+            }
+
+            try {
+                document.getElementById("discord-status-about").text = html_status.text;
+                document.getElementById("discord-status-about").style = color;
+            } catch {
+                console.log('[Discord] Failed to replace name component, probably doesnt exists...');
+            }
+
+            html_status.style = color;
+
+            console.log(html_status);
+        }
+    }
+
+    req.send();
+</script>
 </body>
 
 </html>
