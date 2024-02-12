@@ -8,9 +8,37 @@ Junko's homepage
 [![Code style: black](https://img.shields.io/badge/code%20style-Default-blue.svg)](https://github.com/vlang/v)
 </h2>
 
-scuffed "templating engine" for my homepage.
+- Piece of shit website generator that has 50% chance of exploding by itself.
+- Specifically made for me, might not work for you.
 
 <br/>
+
+## Internal
+### Pages
+- Markdown files from `src/magi/templates/pages/` are automatically generated into html files.
+- For more control write a custom html with V's template.
+### Special Token
+- `@` is used for metadata info.
+
+### `@`
+```js
+[
+	// Common
+	'title',
+	'tags',
+	'outer',
+	'author',
+	'priority',
+	// Blog
+	'style',
+	'outline',
+	'outline-style',
+	'thumbnail',
+]
+```
+- is not case sensitive.
+- Example: `@TITLE=THE MOTHERFUCKIN TITLE`
+
 
 ## Preview
 ![image](https://github.com/xjunko/home/assets/44401509/a5dc648e-3a43-4678-a24c-96dc5915015d)
