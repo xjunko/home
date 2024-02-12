@@ -30,7 +30,26 @@
 **inspirations** —
 
 - [![microsounds's logo](/static/imgs/buttons/microsounds.gif)](https://microsounds.github.io/)
+    - miku, a lot of mikus, great vibes :D
 - [[wowana.me]](https://wowana.me)
+    - random niche info, cool hackerman stuff.
+
+**miscellaneous**  —
+- [GNU's Animu Reaction Collections](https://gnupluslinux.com/anime/)
+    - mongolian basket weaving forum materials.
+- [Anime Girls Holding Programming Books](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books)
+    - Exactly as it says.
+- [MG Anime Renders](https://a.mg-renders.net/)
+    - Collections of HQ SFW/NSFW anime renders, great for editing.
+- [Every Noise at Once](https://everynoise.com/)
+    - Great website to find your music niche.
+- [AIDN's webgl fuckery](https://aidn.jp/contents/)
+    - Fun website, check it out. 
+    - Made by the original Nyan Cat dude :3
+- [Windows 10 VBAudio + Peace + Equalizer APO Guide](https://docs.google.com/document/d/1tbGOH1_Wbv94hwo1mVG31Sv1mbhqZqvM4cqw8yV2j2o/edit?pli=1)
+    - Useful for me cuz I can barely hear my mic in windows.
+    - It just Werkz™ in Linux funnily enough.
+
 
 <!-- random webring/cool site links -->
 **cool sites** —
