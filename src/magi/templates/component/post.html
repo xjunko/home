@@ -2,7 +2,7 @@
     <div class=" blog-content">
         <span class="blog-author">@{post.metadata['author']}</span> @{post.date}
         <a class="blog-url no-underline" href="#@{post.id}">#@{post.id}</a>
-        <a class="blog-url no-underline" href="../blog-redirect.html?id=${post.id}">[SHARE]</a>
+        <a class="blog-url no-underline" href="../redirect.html?id=${post.id}">[SHARE]</a>
         <br />
 
         @if "thumbnail" in post.metadata

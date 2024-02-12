@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/phone.css">
 
     <!-- Title -->
-    <title>redirect | letter to the black world</title>
+    <title>doomerposting | letter to the black world</title>
 </head>
 
 <body>
@@ -63,35 +63,8 @@
     <div class="content-container">
         <div class="content">
             <br />
-<p style="width: 800px" id="redirect"> redirecting!!! </p>
-<!-- Redirect Script -->
-<script type="text/javascript">
-    const indexes = {
-        "github": "https://github.com/xjunko",
-        "steam": "https://steamcommunity.com/id/FireRedz/"
-    }
-
-    const query = window.location.search;
-    const params = new URLSearchParams(query);
-
-    const redirect_to = params.get("r");
-
-    function fuck_right_of_to(url) {
-        window.location.replace(url);
-    }
-
-    if (!redirect_to || redirect_to == null) {
-        document.getElementById("redirect").innerHTML = "oops you did a fucky wucky :3333, returning to index."
-        fuck_right_of_to("/")
-    } else {
-        if (redirect_to in indexes) {
-            fuck_right_of_to(indexes[redirect_to]);
-        } else {
-            document.getElementById("redirect").innerHTML = "invalid redirect."
-            fuck_right_of_to("/")
-        }
-    }
-</script>
+<h1> Loading... </h1>
+<a id="redirect-status"> Detecting arguments... </a>
 
 <hr />
 <div class="footer">
@@ -107,6 +80,100 @@
 
 
 
+        <!-- Blog redirector -->
+<div>
+</div>
+
+<script>
+    // Some voodoo shit going on here
+    // dont ask.
+    const posts_map = {
+
+        1: [
+
+            "1687430942",
+            "1687421383",
+            "1687419676",
+            "1687291421",
+            "1687244838",
+            "1687176398",
+            "1687099685",
+            "1678830296",
+            "1678675496",
+            "1677169075",
+            "1676847134",
+            "1671542296",
+            "1671362755",
+            "1666759601",
+            "1662532576",
+            "1661942210",
+            "1660453926",
+            "1660436683",
+        ],
+    }
+
+    // Common shortcuts
+    const indexes = {
+        "github": "https://github.com/xjunko",
+        "steam": "https://steamcommunity.com/id/FireRedz/"
+    }
+
+    // Starts here
+    const params = new URLSearchParams(window.location.search);
+    const status_text = document.getElementById("redirect-status");
+
+    status_text.style.fontWeight = "bold";
+    status_text.style.fontSize = "32px";
+
+    function fuck_right_of_to(url) {
+        window.location.replace(url);
+    }
+
+    function handle_common_redirect(redirect_to) {
+        if (!redirect_to || redirect_to == null) {
+            status_text.textContent = "oops you did a fucky wucky :3333, returning to index."
+            fuck_right_of_to("/")
+        } else {
+            if (redirect_to in indexes) {
+                fuck_right_of_to(indexes[redirect_to]);
+            } else {
+                status_text.textContent = "invalid redirect."
+                fuck_right_of_to("/")
+            }
+        }
+    }
+
+    function handle_blog_redirect(post_id) {
+        if (!post_id) {
+            status_text.textContent = "No parameter given, please give 'id'!!!";
+        } else {
+            status_text.textContent = "Hold on.";
+
+            let found_the_shit = false;
+
+            for (const [key, value] of Object.entries(posts_map)) {
+                if (value.includes(post_id)) {
+                    found_the_shit = true;
+                    status_text.textContent = "Found the stuff.";
+                    fuck_right_of_to("https://konno.ovh/blog/" + key + ".html#" + post_id);
+                }
+            }
+
+            if (!found_the_shit) {
+                status_text.textContent = `Did not found post: #` + post_id;
+            }
+
+        }
+    }
+
+    // Detect which param is passed, then go with that.
+    if (params.get("r")) {
+        handle_common_redirect(params.get("r"));
+    } else {
+        handle_blog_redirect(params.get("id"));
+    }
+
+</script>
 
         
     </div>

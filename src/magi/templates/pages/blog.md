@@ -1,5 +1,6 @@
 @title=doomerposting
 @tags=blog
+@priority=9999
 
 <br />
 
