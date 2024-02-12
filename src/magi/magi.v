@@ -5,6 +5,8 @@ import internal { Configuration }
 
 pub struct Magi {
 mut:
+	pages_cache map[int][]Post
+
 	config Configuration @[required]
 	casper Casper
 pub mut:
@@ -71,4 +73,23 @@ pub fn execute(config Configuration) {
 			panic(err)
 		}
 	}
+}
+
+// Called fropm templates/component/blog-redirect.html
+pub fn (mut magi Magi) get_pages() map[int][]Post {
+	if magi.pages_cache.len == 0 {
+		// Maybe cache this?
+		mut pages := map[int][]Post{}
+
+		posts := magi.posts.clone()
+		posts_per_page := 20
+
+		for i in 0 .. (posts.len / posts_per_page) + 1 {
+			pages[i + 1] = posts#[i * posts_per_page..(i * posts_per_page) + posts_per_page]
+		}
+
+		magi.pages_cache = unsafe { pages }
+	}
+
+	return magi.pages_cache
 }
