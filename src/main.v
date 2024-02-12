@@ -13,6 +13,9 @@ fn main() {
 	config.expects('instance.type', 'magi')
 	config.expects('instance.version', '0.0.1')
 
+	// Domain
+	config.expects('instance.domain', 'https://konno.ovh')
+
 	// Folder
 	config.expects('folder.root', 'static')
 	config.expects('folder.entry', 'entry')

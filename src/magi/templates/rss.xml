@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>junko's blog</title>
+        <link>@{magi.config.get("instance.domain") as string}</link>
+        <description>nonstop rambling</description>
+        <language>en-us</language>
+        <copyright>Copyright 2023-2024, konno.ovh</copyright>
+        <generator>Magi + V</generator>
+        <lastBuildDate>@{magi.posts#[-1 ..][0].date.utc_string()}</lastBuildDate>
+        <atom:link href="@{magi.config.get('instance.domain') as string}/feed.xml" rel="self"
+            type="application/rss+xml" />
+
+        @for post in magi.posts
+        <item>
+            <title>@{post.date}</title>
+            <link>@{magi.config.get("instance.domain") as string}/redirect.html?id=${post.id}</link>
+            <pubDate>@{post.date.utc_string()}</pubDate>
+            <category>@{post.metadata["tags"]}</category>
+            <description>
+                @if "thumbnail" in post.metadata
+                <img src="@{post.metadata['thumbnail']}"> </img>
+                @end
+                @{magi.escape_xml(post.content)}
+            </description>
+        </item>
+        @endfor
+    </channel>
+</rss>

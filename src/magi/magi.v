@@ -6,10 +6,10 @@ import internal { Configuration }
 pub struct Magi {
 mut:
 	pages_cache map[int][]Post
-
-	config Configuration @[required]
-	casper Casper
+	casper      Casper
 pub mut:
+	config Configuration @[required]
+
 	page  []Page
 	posts []Post // Similar to Page but boxed into a Post type.
 }
@@ -50,6 +50,11 @@ pub fn execute(config Configuration) {
 	magi.resolve_blog()
 	magi.resolve_pages()
 
+	// RSS
+	println('[Magi] Saving RSS Feed.')
+	os.write_file('feed.xml', $tmpl('templates/rss.xml')) or { panic(err) }
+
+	// Page
 	println('[Magi] Saving pages!')
 	for mut page in magi.page {
 		if os.base(page.path) == 'blog.md' {
@@ -94,4 +99,8 @@ pub fn (mut magi Magi) get_pages() map[int][]Post {
 	}
 
 	return magi.pages_cache
+}
+
+pub fn (mut magi Magi) escape_xml(content string) string {
+	return content.replace_each(['"', '&quot;', "'", '&apos;', '<', '&lt;', '>', '&gt;', '&', '&amp;'])
 }
