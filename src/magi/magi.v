@@ -19,6 +19,8 @@ pub fn (mut magi Magi) resolve_pages() {
 		println('[Magi] Creating page: ${os.base(file)}')
 		magi.page << Page.create(file)
 	}
+
+	magi.page.sort(a.metadata['priority'] > b.metadata['priority'])
 }
 
 pub fn (mut magi Magi) resolve_blog() {

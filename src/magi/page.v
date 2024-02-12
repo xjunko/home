@@ -10,6 +10,7 @@ pub const c_supported = [
 	'tags',
 	'outer',
 	'author',
+	'priority',
 	// Blog
 	'style',
 	'outline',
