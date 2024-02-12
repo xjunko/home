@@ -1,4 +1,5 @@
 @title=doomerposting
+@description=schizo ramblin.
 @tags=blog
 @priority=-1
 

@@ -1,4 +1,5 @@
 @title=home
+@description=the main page.
 @tags=internal
 
 <br />

@@ -5,8 +5,11 @@ import markdown
 
 pub const c_special = '@'
 pub const c_supported = [
-	// Common
+	// Web info (for embeds)
 	'title',
+	'description',
+	'thumbnail',
+	// Common
 	'tags',
 	'outer',
 	'author',
@@ -15,7 +18,6 @@ pub const c_supported = [
 	'style',
 	'outline',
 	'outline-style',
-	'thumbnail',
 ]
 
 pub struct Page {

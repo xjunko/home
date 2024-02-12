@@ -1,4 +1,5 @@
 @title=doomerposting
+@description=internal redirect page
 @tags=internal.post_finder
 @priority=9999
 
