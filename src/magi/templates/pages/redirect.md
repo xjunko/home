@@ -1,5 +1,6 @@
 @title=doomerposting
 @tags=internal.post_finder
+@priority=9999
 
 <br />
 
