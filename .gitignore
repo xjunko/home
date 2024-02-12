@@ -21,7 +21,6 @@ bin/
 
 # vweb and database
 *.db
-*.js
 
 # Entry
 static/entry/*
