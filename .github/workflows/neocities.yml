@@ -26,7 +26,7 @@ jobs:
       run: |
           mkdir -p public 
           cp *.html public/ 
-          cp blog/*.html public/ 
+          cp -r blog/ public/ 
           cp -r static/ public/ 
           ls public/
           
