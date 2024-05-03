@@ -9,6 +9,7 @@ pub mut:
 	media     processor.MediaProcessor
 	greentext processor.GreentextProcessor
 	reference processor.ReferenceProcessor
+	discord   processor.DiscordCDNProcessor
 }
 
 pub fn Casper.create() !Casper {
@@ -18,6 +19,7 @@ pub fn Casper.create() !Casper {
 		media: processor.MediaProcessor.create()!
 		greentext: processor.GreentextProcessor.create()!
 		reference: processor.ReferenceProcessor.create()!
+		discord: processor.DiscordCDNProcessor.create()!
 	}
 
 	return casper
@@ -25,8 +27,11 @@ pub fn Casper.create() !Casper {
 
 // Do
 pub fn (mut casper Casper) preprocess(mut post Post) string {
+	// Even more simpler
+	discord_cdn_fix := casper.discord.process(post.content)
+
 	// Simpler handler first.
-	gt_text := casper.greentext.process(post.content)
+	gt_text := casper.greentext.process(discord_cdn_fix)
 	reference_info := casper.reference.first_pass(gt_text)
 
 	// Bit more complex

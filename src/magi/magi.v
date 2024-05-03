@@ -30,7 +30,14 @@ pub fn (mut magi Magi) resolve_blog() {
 	files << os.glob('static/entry/discord/*.md') or { [] }
 
 	for file in files {
-		magi.posts << Post.create(file, mut magi.casper)
+		mut new_post := Post.create(file, mut magi.casper)
+
+		// Thumbnail hack: Discord CDN FIX
+		if "thumbnail" in new_post.metadata {
+			new_post.metadata["thumbnail"] = magi.casper.discord.process(new_post.metadata["thumbnail"])
+		}
+
+		magi.posts << new_post
 	}
 
 	magi.casper.postprocess(mut magi.posts)
@@ -82,7 +89,7 @@ pub fn execute(config Configuration) {
 	}
 }
 
-// Called fropm templates/component/blog-redirect.html
+// Called from templates/component/blog-redirect.html
 pub fn (mut magi Magi) get_pages() map[int][]Post {
 	if magi.pages_cache.len == 0 {
 		// Maybe cache this?
