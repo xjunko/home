@@ -1,6 +1,6 @@
 <div class="blog-post reference" id="@{post.id}" style='${post.metadata["style"] or {""}}'>
     <div class=" blog-content">
-        <a class="blog-url no-underline">Referencing #@{post.id}</a> <br />
+        <a class="blog-url no-underline" href="../redirect.html?id=${post.id}">Referencing #@{post.id}</a> <br />
         Posted by <span class="blog-author">@{post.metadata['author']}</span> at @{post.date}
         @{post.content}
     </div>
