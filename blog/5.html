@@ -9,20 +9,20 @@
     <!-- Embed Meta -->
     <!-- Primary Meta Tags -->
     <meta name="title" content="doomerposting | letter to the black world" />
-    <meta name="description" content="internal redirect page" />
+    <meta name="description" content="schizo ramblin." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://konno.ovh/" />
     <meta property="og:title" content="doomerposting | letter to the black world" />
-    <meta property="og:description" content="internal redirect page" />
+    <meta property="og:description" content="schizo ramblin." />
     <meta property="og:image" content="https://konno.ovh/static/imgs/preview.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://konno.ovh/" />
     <meta property="twitter:title" content="doomerposting | letter to the black world" />
-    <meta property="twitter:description" content="internal redirect page" />
+    <meta property="twitter:description" content="schizo ramblin." />
     <meta property="twitter:image" content="https://konno.ovh/static/imgs/preview.png" />
 
 
@@ -89,8 +89,10 @@
     <div class="content-container">
         <div class="content">
             <br />
-<h1> Loading... </h1>
-<a id="redirect-status"> Detecting arguments... </a>
+<h3>いらっしゃいませ</h3>
+<p>welcome to my crappy blog/board/whatever
+where i post random stuff from time to time, you might find interesting stuff here.. idk... <br/></p>
+<p><a href="https://konno.ovh/feed.xml">[RSS]</a> feed is available.</p>
 
 <hr />
 <div class="footer" style="position: relative;">
@@ -107,178 +109,55 @@
         </div>
 
 
+        <!-- Special case layout -->
+        <!-- Blog -->
+
+        <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
+
+        <div class="blog-container">
+
+<div class="blog-post" id="1660436683" style=''>
+    <div class=" blog-content">
+        <span class="blog-author">junko</span> 2022-08-14 00:24:43
+        <a class="blog-url no-underline" href="#1660436683">#1660436683</a>
+        <a class="blog-url no-underline" href="../redirect.html?id=1660436683">[SHARE]</a>
+        <br />
 
 
 
-        <!-- Blog redirector -->
-<div>
+        <p>learning 3d stuff, shits fucked.</p>
+<p><video muted autoplay loop controls preload=metadata src="https://cdn.discordapp.xyz/attachments/703552229680087042/1121346771390570586/46APHJw.mp4"></video></p>
+    </div>
 </div>
+        </div>
 
-<script>
-    // Some voodoo shit going on here
-    // dont ask.
-    const posts_map = {
+        <link rel="stylesheet" type="text/css" href="/static/prism/prism.css">
+        <script src="/static/prism/prism.js"></script>
 
-        1: [
+        <div class="blog-container">
+            <div class="paging">
 
-            "1714879447",
-            "1714710287",
-            "1714558883",
-            "1714482803",
-            "1714396403",
-            "1714223603",
-            "1714213283",
-            "1713014003",
-            "1712572343",
-            "1711778543",
-            "1711326263",
-            "1711315463",
-            "1711229063",
-            "1711182743",
-            "1711142663",
-            "1710969863",
-            "1710624263",
-            "1710365063",
-            "1709673863",
-            "1709155463",
-        ],
-        2: [
 
-            "1708809863",
-            "1708464263",
-            "1707945863",
-            "1707743122",
-            "1707628986",
-            "1707561134",
-            "1707282982",
-            "1707110182",
-            "1706455502",
-            "1705805536",
-            "1704676756",
-            "1704506394",
-            "1704341509",
-            "1704268389",
-            "1703710542",
-            "1703309854",
-            "1703011724",
-            "1702991910",
-            "1702120384",
-            "1701773200",
-        ],
-        3: [
+                <a style="padding: 2px" href='/blog/1.html'>1</a>
 
-            "1701187727",
-            "1701155686",
-            "1701155600",
-            "1700946181",
-            "1700945941",
-            "1700148417",
-            "1699621720",
-            "1699097680",
-            "1698296920",
-            "1698217720",
-            "1697363800",
-            "1694316905",
-            "1690919597",
-            "1690075723",
-            "1689610964",
-            "1689610565",
-            "1689440054",
-            "1689437677",
-            "1689431878",
-            "1688749925",
-        ],
-        4: [
 
-            "1687728438",
-            "1687719518",
-            "1687539414",
-            "1687430942",
-            "1687421383",
-            "1687419676",
-            "1687291421",
-            "1687244838",
-            "1687176398",
-            "1687099685",
-            "1678830296",
-            "1678675496",
-            "1677169075",
-            "1676847134",
-            "1671542296",
-            "1671362755",
-            "1666759601",
-            "1662532576",
-            "1661942210",
-            "1660453926",
-        ],
-        5: [
+                <a style="padding: 2px" href='/blog/2.html'>2</a>
 
-            "1660436683",
-        ],
-    }
 
-    // Common shortcuts
-    const indexes = {
-        "github": "https://github.com/xjunko",
-        "steam": "https://steamcommunity.com/id/FireRedz/"
-    }
+                <a style="padding: 2px" href='/blog/3.html'>3</a>
 
-    // Starts here
-    const params = new URLSearchParams(window.location.search);
-    const status_text = document.getElementById("redirect-status");
 
-    status_text.style.fontWeight = "bold";
-    status_text.style.fontSize = "32px";
+                <a style="padding: 2px" href='/blog/4.html'>4</a>
 
-    function fuck_right_of_to(url) {
-        window.location.replace(url);
-    }
 
-    function handle_common_redirect(redirect_to) {
-        if (!redirect_to || redirect_to == null) {
-            status_text.textContent = "oops you did a fucky wucky :3333, returning to index."
-            fuck_right_of_to("/")
-        } else {
-            if (redirect_to in indexes) {
-                fuck_right_of_to(indexes[redirect_to]);
-            } else {
-                status_text.textContent = "invalid redirect."
-                fuck_right_of_to("/")
-            }
-        }
-    }
+                <a style="padding: 4px; font-size: 1.2rem; background-color: var(--outline-color) !important; color: var(--text-dark) !important;"
+                    href='/blog/5.html'>5</a>
 
-    function handle_blog_redirect(post_id) {
-        if (!post_id) {
-            status_text.textContent = "No parameter given, please give 'id'!!!";
-        } else {
-            status_text.textContent = "Hold on.";
+            </div>
+        </div>
 
-            let found_the_shit = false;
 
-            for (const [key, value] of Object.entries(posts_map)) {
-                if (value.includes(post_id)) {
-                    found_the_shit = true;
-                    status_text.textContent = "Found the stuff.";
-                    fuck_right_of_to("https://konno.ovh/blog/" + key + ".html#" + post_id);
-                }
-            }
 
-            if (!found_the_shit) {
-                status_text.textContent = `Did not found post: #` + post_id;
-            }
-
-        }
-    }
-
-    // Detect which param is passed, then go with that.
-    if (params.get("r")) {
-        handle_common_redirect(params.get("r"));
-    } else {
-        handle_blog_redirect(params.get("id"));
-    }
-
-</script>
 
         
     </div>
