@@ -22,7 +22,7 @@ pub fn (mut config Configuration) expects(key string, value ConfigurationValue) 
 	}
 }
 
-pub fn (mut config Configuration) get(key string) ConfigurationValue {
+pub fn (config &Configuration) get(key string) ConfigurationValue {
 	return config.options[key] or { panic('Config: Key not found => ' + key) }
 }
 
