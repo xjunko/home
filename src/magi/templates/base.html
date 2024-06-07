@@ -45,7 +45,7 @@
             @include "component/footer.html"
         </div>
 
-        @if page.metadata["tags"].contains("blog")
+        @if page.metadata["tags"].contains("blog") && (config.get("website.blog.enable") as bool) == true
         <!-- Special case layout -->
         <!-- Blog -->
 

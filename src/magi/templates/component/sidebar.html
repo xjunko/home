@@ -25,9 +25,11 @@
                     <a href="/redirect.html?r=steam">steam</a>
                 </li>
 
+                @if (config.get("website.blog.enable") as bool) == true
                 <li>
                     <a href="/blog/1.html">blog</a>
                 </li>
+                @end
 
                 <li>
                     <a href="/stuff.html">stuff</a>

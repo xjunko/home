@@ -5,7 +5,7 @@
         <a class="blog-url no-underline" href="../redirect.html?id=${post.id}">[SHARE]</a>
         <br />
 
-        @if "thumbnail" in post.metadata
+        @if "thumbnail" in post.metadata && (config.get("website.blog.media") as bool) == true
         file: <a class="blog-url" href="@{post.metadata['thumbnail']}" target="_blank"
             rel="noopener noreffer">@{post.metadata["filename"]}</a> [file/@{post.metadata["mimetype"]}] <br />
         <a href="@{post.metadata['thumbnail']}" target="_blank" rel="noopener noreffer">

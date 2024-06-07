@@ -63,9 +63,7 @@
                     <a href="/redirect.html?r=steam">steam</a>
                 </li>
 
-                <li>
-                    <a href="/blog/1.html">blog</a>
-                </li>
+
 
                 <li>
                     <a href="/stuff.html">stuff</a>
@@ -100,7 +98,7 @@
                 processor</a>
 
             <a style="position: absolute; top: -5px; right: 0">
-                <img src="https://moe-counter.glitch.me/get/@xjunko?theme=asoul" height="50" style="border: none;">
+                <img src="https://moecount.lolihouse.top/get/@xjunko" height="50" style="border: none;">
             </a>
     </i>
 </div>
@@ -121,101 +119,7 @@
 
         1: [
 
-            "1715068228",
-            "1715057699",
-            "1714879447",
-            "1714710287",
-            "1714558883",
-            "1714482803",
-            "1714396403",
-            "1714223603",
-            "1714213283",
-            "1713014003",
-            "1712572343",
-            "1711778543",
-            "1711326263",
-            "1711315463",
-            "1711229063",
-            "1711182743",
-            "1711142663",
-            "1710969863",
-            "1710624263",
-            "1710365063",
-        ],
-        2: [
-
-            "1709673863",
-            "1709155463",
-            "1708809863",
-            "1708464263",
-            "1707945863",
-            "1707743122",
-            "1707628986",
-            "1707561134",
-            "1707282982",
-            "1707110182",
-            "1706455502",
-            "1705805536",
-            "1704676756",
-            "1704506394",
-            "1704341509",
-            "1704268389",
-            "1703710542",
-            "1703309854",
-            "1703011724",
-            "1702991910",
-        ],
-        3: [
-
-            "1702120384",
-            "1701773200",
-            "1701187727",
-            "1701155686",
-            "1701155600",
-            "1700946181",
-            "1700945941",
-            "1700148417",
-            "1699621720",
-            "1699097680",
-            "1698296920",
-            "1698217720",
-            "1697363800",
-            "1694316905",
-            "1690919597",
-            "1690075723",
-            "1689610964",
-            "1689610565",
-            "1689440054",
-            "1689437677",
-        ],
-        4: [
-
-            "1689431878",
-            "1688749925",
-            "1687728438",
-            "1687719518",
-            "1687539414",
-            "1687430942",
-            "1687421383",
-            "1687419676",
-            "1687291421",
-            "1687244838",
-            "1687176398",
-            "1687099685",
-            "1678830296",
-            "1678675496",
-            "1677169075",
-            "1676847134",
-            "1671542296",
-            "1671362755",
-            "1666759601",
-            "1662532576",
-        ],
-        5: [
-
-            "1661942210",
-            "1660453926",
-            "1660436683",
+            "0",
         ],
     }
 
@@ -300,10 +204,24 @@
             // pfp then name
             try {
                 var html_name = document.getElementById("discord-name");
-                html_name.innerHTML = "<img class='discord-avatar' src='https://cdn.discordapp.com/avatars/" + user.id + "/" + user.avatar + ".png?size=40'> <i>" + user.username + "</i>";
+                var avatarUrl = "https://cdn.discordapp.com/avatars/" + user.id + "/" + user.avatar + ".png?size=40";
+
+                // Get request to the URL and see if it exists, if it returns 404, delete the element
+                var avatar_check = new XMLHttpRequest();
+                avatar_check.open("GET", avatarUrl, true);
+                avatar_check.onload = function () {
+                    if (this.status == 404) {
+                        html_name.innerHTML = "<i>" + user.username + "</i>";
+                    } else {
+                        html_name.innerHTML = "<img class='discord-avatar' src='" + avatarUrl + "'> <i>" + user.username + "</i>";
+                    }
+                };
+                avatar_check.send();
+
             } catch {
                 console.log('[Discord] Failed to replace avatar component, probably doesnt exists...');
             }
+
 
 
             // online stat

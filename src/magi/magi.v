@@ -1,6 +1,7 @@
 module magi
 
 import os
+import time
 import internal { Configuration }
 
 pub struct Magi {
@@ -33,8 +34,8 @@ pub fn (mut magi Magi) resolve_blog() {
 		mut new_post := Post.create(file, mut magi.casper)
 
 		// Thumbnail hack: Discord CDN FIX
-		if "thumbnail" in new_post.metadata {
-			new_post.metadata["thumbnail"] = magi.casper.discord.process(new_post.metadata["thumbnail"])
+		if 'thumbnail' in new_post.metadata {
+			new_post.metadata['thumbnail'] = magi.casper.discord.process(new_post.metadata['thumbnail'])
 		}
 
 		magi.posts << new_post
@@ -54,7 +55,19 @@ pub fn execute(config Configuration) {
 
 	println('[Internal] Magi, created.')
 
-	magi.resolve_blog()
+	c_blog_enabled := (config.get('website.blog.enable') as bool) == true
+
+	if c_blog_enabled {
+		magi.resolve_blog()
+	} else {
+		magi.posts << Post{
+			path: 'NONE'
+			id: '0'
+			date: time.now()
+			original_content: ''
+		}
+	}
+
 	magi.resolve_pages()
 
 	// RSS
@@ -65,6 +78,10 @@ pub fn execute(config Configuration) {
 	println('[Magi] Saving pages!')
 	for mut page in magi.page {
 		if os.base(page.path) == 'blog.md' {
+			if !c_blog_enabled {
+				continue
+			}
+
 			posts := magi.posts.clone()
 			posts_per_page := 20
 

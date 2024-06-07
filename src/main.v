@@ -27,7 +27,12 @@ fn main() {
 	// Paging
 	config.expects('website.page.limit', f32(20)) // 20 per page.
 
+	// Misc flag
+	config.expects('website.blog.enable', true)
+	config.expects('website.blog.media', true)
+
 	//
+	config.load()
 	config.save()
 
 	//

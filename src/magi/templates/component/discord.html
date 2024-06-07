@@ -13,10 +13,24 @@
             // pfp then name
             try {
                 var html_name = document.getElementById("discord-name");
-                html_name.innerHTML = "<img class='discord-avatar' src='https://cdn.discordapp.com/avatars/" + user.id + "/" + user.avatar + ".png?size=40'> <i>" + user.username + "</i>";
+                var avatarUrl = "https://cdn.discordapp.com/avatars/" + user.id + "/" + user.avatar + ".png?size=40";
+
+                // Get request to the URL and see if it exists, if it returns 404, delete the element
+                var avatar_check = new XMLHttpRequest();
+                avatar_check.open("GET", avatarUrl, true);
+                avatar_check.onload = function () {
+                    if (this.status == 404) {
+                        html_name.innerHTML = "<i>" + user.username + "</i>";
+                    } else {
+                        html_name.innerHTML = "<img class='discord-avatar' src='" + avatarUrl + "'> <i>" + user.username + "</i>";
+                    }
+                };
+                avatar_check.send();
+
             } catch {
                 console.log('[Discord] Failed to replace avatar component, probably doesnt exists...');
             }
+
 
 
             // online stat
