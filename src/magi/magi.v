@@ -60,12 +60,23 @@ pub fn execute(config Configuration) {
 	if c_blog_enabled {
 		magi.resolve_blog()
 	} else {
+		// HACK: To avoid index=0, len=0 problem.
 		magi.posts << Post{
 			path: 'NONE'
 			id: '0'
 			date: time.now()
 			original_content: ''
 		}
+
+		// We don't need these files for now.
+		for blog_html_file in os.glob('blog/*.html') or { [] } {
+			os.rm(blog_html_file) or {
+				panic('Failed to delete unused blog file, this should never happen!!!!')
+			}
+		}
+
+		os.write_file('blog/index.html', '<meta http-equiv="refresh" content="0;url=https://konno.ovh">') or {}
+		os.write_file('blog/1.html', '<meta http-equiv="refresh" content="0;url=https://konno.ovh">') or {}
 	}
 
 	magi.resolve_pages()
