@@ -3,6 +3,7 @@
         <span class="blog-author">@{post.metadata['author']}</span> @{post.date}
         <a class="blog-url no-underline" href="#@{post.id}">#@{post.id}</a>
         <a class="blog-url no-underline" href="../redirect.html?id=${post.id}">[SHARE]</a>
+        <!-- <a class="blog-tags">@{post.metadata["tags"]}</a> -->
         <br />
 
         @if "thumbnail" in post.metadata && (config.get("website.blog.media") as bool) == true

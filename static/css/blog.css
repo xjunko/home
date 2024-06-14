@@ -105,6 +105,13 @@
     color: var(--text-dark) !important;
 }
 
+/* .blog-tags,
+.blog-tags>a,
+.blog-tags>p {
+    font-size: 8pt;
+    color: white;
+} */
+
 .no-underline {
     text-decoration: none;
 }
