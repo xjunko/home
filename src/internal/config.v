@@ -36,7 +36,16 @@ pub fn (mut config Configuration) load() {
 		mut decoded_config := json.decode(Configuration, content) or { panic(err) }
 
 		config.path = decoded_config.path
+
+		reference_option := config.options.clone()
 		config.options = decoded_config.options.move()
+
+		// Ensures new config value is set, if doesn't exists.
+		for key, value in reference_option {
+			if key !in config.options {
+				config.options[key] = value
+			}
+		}
 	}
 }
 
