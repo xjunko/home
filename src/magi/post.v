@@ -41,6 +41,12 @@ pub fn Post.create(path string, mut casper Casper) Post {
 		post.metadata['mimetype'] = get_mimetype(post.metadata['filename'])
 	}
 
+	// NOTE: discord-post is exported right from discord, as the name suggests..
+	//       and i think it'll look cooler if i changed how the post looks.
+	if post.metadata['tags'].contains('discord-post') {
+		post.metadata['style'] = 'border: .1em solid #5865F2;'
+	}
+
 	return post
 }
 
