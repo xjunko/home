@@ -31,6 +31,9 @@ fn main() {
 	config.expects('website.blog.enable', true)
 	config.expects('website.blog.media', true)
 
+	// Discord
+	config.expects('website.blog.discord', true)
+
 	//
 	config.load()
 	config.save()

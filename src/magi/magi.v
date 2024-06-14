@@ -28,7 +28,10 @@ pub fn (mut magi Magi) resolve_blog() {
 	mut files := []string{}
 
 	files << os.glob('static/entry/written/*.md') or { [] }
-	files << os.glob('static/entry/discord/*.md') or { [] }
+
+	if magi.config.get('website.blog.discord') as bool {
+		files << os.glob('static/entry/discord/*.md') or { [] }
+	}
 
 	for file in files {
 		mut new_post := Post.create(file, mut magi.casper)
