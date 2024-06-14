@@ -6,7 +6,7 @@
 
 ## about
 
-my name is junko, you can find me online as xjunko or fireredz. i have a strong interest in eletronics, japanese cultures and coding. 
+my name is junko, you can find me online as xjunko. i have a strong interest in eletronics, japanese cultures and coding. 
 <br /><br />
 
 this website serves as more or less dumping ground of useless information. here, you may find how to contact me, crap i've written and things that you might find interesting.
