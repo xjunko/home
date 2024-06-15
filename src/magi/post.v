@@ -3,6 +3,7 @@ module magi
 import os
 import time
 import markdown
+import processor
 
 @[heap]
 pub struct Post {
@@ -39,6 +40,11 @@ pub fn Post.create(path string, mut casper Casper) Post {
 	if 'thumbnail' in post.metadata {
 		post.metadata['filename'] = get_filename(post.metadata['thumbnail'])
 		post.metadata['mimetype'] = get_mimetype(post.metadata['filename'])
+
+		if processor.is_video_url(post.metadata['thumbnail']) {
+			println(post)
+			post.metadata['thumbnail-type'] = 'video'
+		}
 	}
 
 	// NOTE: discord-post is exported right from discord, as the name suggests..

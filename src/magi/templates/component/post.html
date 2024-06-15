@@ -10,7 +10,11 @@
         file: <a class="blog-url" href="@{post.metadata['thumbnail']}" target="_blank"
             rel="noopener noreffer">@{post.metadata["filename"]}</a> [file/@{post.metadata["mimetype"]}] <br />
         <a href="@{post.metadata['thumbnail']}" target="_blank" rel="noopener noreffer">
+            @if post.metadata["thumbnail-type"] == "video"
+            <video muted loop controls preload=metadata class="blog-media" src="@{post.metadata['thumbnail']}"></video>
+            @else
             <img loading=lazy class="blog-media" src="@{post.metadata['thumbnail']}">
+            @end
         </a>
         @end
 
