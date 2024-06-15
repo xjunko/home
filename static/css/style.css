@@ -104,6 +104,7 @@ hr {
 }
 
 .sidebar {
+    position: relative;
     width: 290px;
     background: var(--sidebar-color);
     border: .1em solid var(--outline-color);
@@ -128,6 +129,7 @@ hr {
 .links ul {
     list-style: none;
     padding: 0;
+    margin-top: 0;
 }
 
 .links ul li {
