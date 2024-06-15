@@ -340,8 +340,8 @@ so I can do goofy shit like this and get free wifi without paying. very cool.&lt
             <category>programming, music, vlang, midi, depressing</category>
             <description>
 
-                &lt;p&gt;&lt;video muted autoplay loop controls preload=metadata src=&quot;https://hatsune-miku.has.rocks/r/depressing.mp4&quot;&gt;&lt;/video&gt;&lt;/p&gt;
-&lt;p&gt;most depressing midi player&lt;/p&gt;
+                <img src="https://hatsune-miku.has.rocks/r/depressing.mp4"> </img>
+                &lt;p&gt;most depressing midi player&lt;/p&gt;
             </description>
         </item>
         <item>
@@ -633,10 +633,10 @@ i&apos;m finally free???&lt;/p&gt;
             <category>irl, exam, spm</category>
             <description>
 
+                <img src="https://hatsune-miku.has.rocks/r/miku-real-ending.mp4"> </img>
                 &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;extra subjects&lt;/a&gt;&lt;br/&gt;
 &lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;additional mathematics, accounting&lt;/a&gt;&lt;br/&gt;
 ...and thats the last subject, fuck additional mathematics man.&lt;/p&gt;
-&lt;p&gt;&lt;video muted autoplay loop controls preload=metadata src=&quot;https://hatsune-miku.has.rocks/r/miku-real-ending.mp4&quot;&gt;&lt;/video&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
@@ -646,12 +646,12 @@ i&apos;m finally free???&lt;/p&gt;
             <category>irl, exam, spm</category>
             <description>
 
+                <img src="https://hatsune-miku.has.rocks/r/miku-end.mp4"> </img>
                 &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;history finished&lt;/a&gt;&lt;br/&gt;
 &lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;malay finished&lt;/a&gt;&lt;br/&gt;
 &lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;english finished&lt;/a&gt;&lt;br/&gt;
 &lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;math finished&lt;/a&gt;&lt;br/&gt;
 core subjects part of the final year exam has ended, the next one starts in a few week. :D&lt;/p&gt;
-&lt;p&gt;&lt;video muted autoplay loop controls preload=metadata src=&quot;https://hatsune-miku.has.rocks/r/miku-end.mp4&quot;&gt;&lt;/video&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
@@ -661,8 +661,8 @@ core subjects part of the final year exam has ended, the next one starts in a fe
             <category>irl, exam, spm</category>
             <description>
 
+                <img src="https://hatsune-miku.has.rocks/r/teto-end.mp4"> </img>
                 &lt;p&gt;final year exam (spm) starts today, its over...&lt;/p&gt;
-&lt;p&gt;&lt;video muted autoplay loop controls preload=metadata src=&quot;https://hatsune-miku.has.rocks/r/teto-end.mp4&quot;&gt;&lt;/video&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
@@ -697,10 +697,10 @@ fun times.&lt;/p&gt;
             <category>programming, 2d, from-scratch, vlang, rhythm-game, osu!, music</category>
             <description>
 
+                <img src="https://hatsune-miku.has.rocks/r/kurarin_menu_video.mp4"> </img>
                 &lt;p&gt;i&apos;ve been working on a menu system for the engine. &lt;br&gt;
 hated every second of it, because i had to implement everything like it&apos;s 1984. &lt;br&gt;
 anyway look at these cool menus~&lt;/p&gt;
-&lt;p&gt;&lt;video muted autoplay loop controls preload=metadata src=&quot;https://hatsune-miku.has.rocks/r/kurarin_menu_video.mp4&quot;&gt;&lt;/video&gt;&lt;/p&gt;
 &lt;p&gt;&lt;video muted autoplay loop controls preload=metadata src=&quot;https://hatsune-miku.has.rocks/r/kurarin_menu_storyboard.mp4&quot;&gt;&lt;/video&gt;&lt;/p&gt;
             </description>
         </item>
@@ -711,8 +711,8 @@ anyway look at these cool menus~&lt;/p&gt;
             <category>programming, 3d, vlang, from-scratch, rhythm-game, pjsekai, stella, music</category>
             <description>
 
+                <img src="https://hatsune-miku.has.rocks/r/pjsekai_test_2.mp4"> </img>
                 &lt;p&gt;update on the pjsekai engine&lt;/p&gt;
-&lt;p&gt;&lt;video muted autoplay loop controls preload=metadata src=&quot;https://hatsune-miku.has.rocks/r/pjsekai_test_2.mp4&quot;&gt;&lt;/video&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
@@ -722,8 +722,8 @@ anyway look at these cool menus~&lt;/p&gt;
             <category>music, vocaloid, hatsune-miku</category>
             <description>
 
+                <img src="https://hatsune-miku.has.rocks/r/peak_vocaloid_tuning.mp4"> </img>
                 &lt;p&gt;amazing.&lt;/p&gt;
-&lt;p&gt;&lt;video muted autoplay loop controls preload=metadata src=&quot;https://hatsune-miku.has.rocks/r/peak_vocaloid_tuning.mp4&quot;&gt;&lt;/video&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
@@ -733,8 +733,8 @@ anyway look at these cool menus~&lt;/p&gt;
             <category>programming, 3d, vlang, from-scratch, rhythm-game, pjsekai, stella</category>
             <description>
 
+                <img src="https://hatsune-miku.has.rocks/r/pjsekai_test_1.mp4"> </img>
                 &lt;p&gt;trying to make my own pjsekai engine, shits awful mate. (Part of the &lt;a class=&quot;links&quot; href=&quot;https://github.com/xjunko/kurarin&quot;&gt;Kurarin&lt;/a&gt; project.)&lt;/p&gt;
-&lt;p&gt;&lt;video muted autoplay loop controls preload=metadata src=&quot;https://hatsune-miku.has.rocks/r/pjsekai_test_1.mp4&quot;&gt;&lt;/video&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
@@ -744,8 +744,8 @@ anyway look at these cool menus~&lt;/p&gt;
             <category>programming, 3d, vlang, from-scratch</category>
             <description>
 
+                <img src="https://hatsune-miku.has.rocks/r/cube_no_depth_buffer.mp4"> </img>
                 &lt;p&gt;learning 3d stuff, shits fucked.&lt;/p&gt;
-&lt;p&gt;&lt;video muted autoplay loop controls preload=metadata src=&quot;https://hatsune-miku.has.rocks/r/cube_no_depth_buffer.mp4&quot;&gt;&lt;/video&gt;&lt;/p&gt;
             </description>
         </item>
     </channel>
