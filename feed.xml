@@ -13,6 +13,28 @@
 
 
         <item>
+            <title>2024-06-16 17:39:27</title>
+            <link>https://konno.ovh/redirect.html?id=1718559567</link>
+            <pubDate>Sun, 16 Jun 2024 17:39:27 UTC</pubDate>
+            <category>programming, update</category>
+            <description>
+
+                <img src="https://hatsune-miku.has.rocks/r/update2.png"> </img>
+                &lt;p&gt;i redid some of the design for the site, other than that it&apos;s mostly internal work.&lt;/p&gt;
+&lt;hr&gt;
+what changed: &lt;br&gt;
+&lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;static overlay&lt;/a&gt;&lt;br/&gt;
+&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;add support for video thumbnail &lt;/a&gt;&lt;br/&gt;
+&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;rehost most of the content to tixte&apos;s cdn &lt;/a&gt;&lt;br/&gt;
+&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;redesign sidebar &lt;/a&gt;&lt;br/&gt;
+&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;add music bar at the bottom &lt;/a&gt;&lt;br/&gt;
+&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;minor revamp throughout the codebase &lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;a href=&apos;https://www.deviantart.com/blastssjpk/art/Kagamine-Rin-02-Pixel-Art-716748616&apos;&gt;
+    &lt;img src=&quot;https://hatsune-miku.has.rocks/r/kagamine_rin_02_pixel_art_by_blastssjpk_dbuqers.png&quot; height=&quot;100px&quot; style=&quot;float: left&quot;&gt;
+&lt;/a&gt;
+            </description>
+        </item>
+        <item>
             <title>2024-02-12 13:05:22</title>
             <link>https://konno.ovh/redirect.html?id=1707743122</link>
             <pubDate>Mon, 12 Feb 2024 13:05:22 UTC</pubDate>
