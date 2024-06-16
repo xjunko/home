@@ -42,7 +42,6 @@ pub fn Post.create(path string, mut casper Casper) Post {
 		post.metadata['mimetype'] = get_mimetype(post.metadata['filename'])
 
 		if processor.is_video_url(post.metadata['thumbnail']) {
-			println(post)
 			post.metadata['thumbnail-type'] = 'video'
 		}
 	}
