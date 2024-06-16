@@ -25,6 +25,7 @@
     --fonts: "Terminus", "Liberation Serif", "Times New Roman", "Times", serif, "Dejima Mincho";
 }
 
+
 html {
     /* cool fonts to meh fonts */
     font-family: var(--fonts);
@@ -38,6 +39,8 @@ html {
     background-size: auto, 20%, auto;
 
     color: var(--outline-color);
+    scrollbar-color: var(--outline-color) #fff;
+    scrollbar-width: thin;
 }
 
 body {
