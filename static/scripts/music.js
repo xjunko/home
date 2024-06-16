@@ -17,6 +17,11 @@ let _current_track = document.getElementById("music");
 
 let track_list = [
     {
+        name: "腐れ外道とチョコレゐト",
+        artist: "PinocchioP",
+        path: "https://hatsune-miku.has.rocks/r/chocolate.mp3"
+    },
+    {
         name: "ゾイトロープ",
         artist: "youまん",
         path: "https://hatsune-miku.has.rocks/r/zoetrope.mp3"
