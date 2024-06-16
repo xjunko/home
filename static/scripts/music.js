@@ -17,6 +17,11 @@ let _current_track = document.getElementById("music");
 
 let track_list = [
     {
+        name: "UFO(10th anniv.)",
+        artist: "青屋夏生",
+        path: "https://hatsune-miku.has.rocks/r/ufo.mp3"
+    },
+    {
         name: "腐れ外道とチョコレゐト",
         artist: "PinocchioP",
         path: "https://hatsune-miku.has.rocks/r/chocolate.mp3"
