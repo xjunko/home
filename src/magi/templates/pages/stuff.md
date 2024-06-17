@@ -99,8 +99,15 @@
 
 
 
-[![](/static/imgs/buttons/utsuhorocks.png)](https://utsuho.rocks/) [![](/static/imgs/buttons/xn-neko-btn.gif)](https://猫.移动/) [![](/static/imgs/buttons/archlinux.gif)](https://archlinux.org/) [![](/static/imgs/buttons/konata.gif)](http://lucky-ch.com) [![](/static/imgs/buttons/katawashoujo.jpg)](https://www.katawa-shoujo.com/about.php) [![mariluu's site](/static/imgs/buttons/mariluu.gif)](https://mariluu.hehe.moe) [![](https://dimden.dev/services/images/88x31.gif)](https://dimden.dev/)
-
+[![](/static/imgs/buttons/utsuhorocks.png)](https://utsuho.rocks/) 
+[![](/static/imgs/buttons/xn-neko-btn.gif)](https://猫.移动/) 
+[![](/static/imgs/buttons/archlinux.gif)](https://archlinux.org/) 
+[![http://lucky-ch.com](/static/imgs/buttons/konata.gif)](http://lucky-ch.com) 
+[![](/static/imgs/buttons/katawashoujo.jpg)](https://www.katawa-shoujo.com/about.php) 
+[![mariluu's site](/static/imgs/buttons/mariluu.gif)](https://mariluu.hehe.moe) 
+[![https://dimden.dev/](https://dimden.dev/services/images/88x31.gif)](https://dimden.dev/) 
+[![marisakirisame.net](https://marisakirisame.net/button.png)](https://marisakirisame.net)
+[![](/static/imgs/buttons/vendicated.png)](https://vendicated.dev/)
 
 
 </marquee>
