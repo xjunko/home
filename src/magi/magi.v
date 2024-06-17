@@ -24,12 +24,12 @@ pub fn (mut magi Magi) resolve_pages() {
 	magi.page.sort(a.metadata['priority'] > b.metadata['priority'])
 }
 
-pub fn (mut magi Magi) resolve_blog() {
+pub fn (mut magi Magi) resolve_channel() {
 	mut files := []string{}
 
 	files << os.glob('static/entry/written/*.md') or { [] }
 
-	if magi.config.get('website.blog.discord') as bool {
+	if magi.config.get('website.channel.discord') as bool {
 		files << os.glob('static/entry/discord/*.md') or { [] }
 	}
 
@@ -58,10 +58,10 @@ pub fn execute(config Configuration) {
 
 	println('[Internal] Magi, created.')
 
-	c_blog_enabled := (config.get('website.blog.enable') as bool) == true
+	c_chan_enabled := (config.get('website.channel.enable') as bool) == true
 
-	if c_blog_enabled {
-		magi.resolve_blog()
+	if c_chan_enabled {
+		magi.resolve_channel()
 	} else {
 		// HACK: To avoid index=0, len=0 problem.
 		magi.posts << Post{
@@ -72,14 +72,14 @@ pub fn execute(config Configuration) {
 		}
 
 		// We don't need these files for now.
-		for blog_html_file in os.glob('blog/*.html') or { [] } {
-			os.rm(blog_html_file) or {
-				panic('Failed to delete unused blog file, this should never happen!!!!')
+		for chan_html_file in os.glob('chan/*.html') or { [] } {
+			os.rm(chan_html_file) or {
+				panic('Failed to delete unused channel file, this should never happen!!!!')
 			}
 		}
 
-		os.write_file('blog/index.html', '<meta http-equiv="refresh" content="0;url=https://konno.ovh">') or {}
-		os.write_file('blog/1.html', '<meta http-equiv="refresh" content="0;url=https://konno.ovh">') or {}
+		os.write_file('chan/index.html', '<meta http-equiv="refresh" content="0;url=https://konno.ovh">') or {}
+		os.write_file('chan/1.html', '<meta http-equiv="refresh" content="0;url=https://konno.ovh">') or {}
 	}
 
 	magi.resolve_pages()
@@ -91,8 +91,8 @@ pub fn execute(config Configuration) {
 	// Page
 	println('[Magi] Saving pages!')
 	for mut page in magi.page {
-		if os.base(page.path) == 'blog.md' {
-			if !c_blog_enabled {
+		if os.base(page.path) == 'channel.md' {
+			if !c_chan_enabled {
 				continue
 			}
 
@@ -108,7 +108,7 @@ pub fn execute(config Configuration) {
 					continue
 				}
 
-				os.write_file('blog/${i + 1}.html', $tmpl('templates/base.html')) or { panic(err) }
+				os.write_file('chan/${i + 1}.html', $tmpl('templates/base.html')) or { panic(err) }
 			}
 
 			continue
@@ -120,7 +120,7 @@ pub fn execute(config Configuration) {
 	}
 }
 
-// Called from templates/component/blog-redirect.html
+// Called from templates/component/channel-redirect.html
 pub fn (mut magi Magi) get_pages() map[int][]Post {
 	if magi.pages_cache.len == 0 {
 		// Maybe cache this?

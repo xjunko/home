@@ -45,7 +45,7 @@
         }
     }
 
-    function handle_blog_redirect(post_id) {
+    function handle_channel_redirect(post_id) {
         if (!post_id) {
             status_text.textContent = "No parameter given, please give 'id'!!!";
         } else {
@@ -57,7 +57,7 @@
                 if (value.includes(post_id)) {
                     found_the_shit = true;
                     status_text.textContent = "Found the stuff.";
-                    fuck_right_of_to("https://konno.ovh/blog/" + key + ".html#" + post_id);
+                    fuck_right_of_to("https://konno.ovh/chan/" + key + ".html#" + post_id);
                 }
             }
 
@@ -72,7 +72,7 @@
     if (params.get("r")) {
         handle_common_redirect(params.get("r"));
     } else {
-        handle_blog_redirect(params.get("id"));
+        handle_channel_redirect(params.get("id"));
     }
 
 </script>

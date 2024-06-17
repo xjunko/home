@@ -66,7 +66,7 @@
 
 
                 <li>
-                    <a class="sidebar-deco-offset-less" href="/blog/1.html">channel</a>
+                    <a class="sidebar-deco-offset-less" href="/chan/1.html">channel</a>
                 </li>
 
                 <li>
@@ -111,7 +111,7 @@
 <div class="footer" style="position: relative;">
     <i>
         ©2020-2024 xjunko <<a href="https://github.com/xjunko/home">@github/xjunko/home</a>> <br />
-            Powered by <a href="https://github.com/xjunko/home/tree/master/src">Magi v0.2.1 — simple microblogging
+            Powered by <a href="https://github.com/xjunko/home/tree/master/src">Magi v0.2.3 — simple microblogging
                 processor</a>
 
             <a style="position: absolute; top: -5px; right: 0">
@@ -131,7 +131,7 @@
         <br>
 
 
-        <!-- Blog redirector -->
+        <!-- Channel redirector -->
 <div>
 </div>
 
@@ -230,7 +230,7 @@
         }
     }
 
-    function handle_blog_redirect(post_id) {
+    function handle_channel_redirect(post_id) {
         if (!post_id) {
             status_text.textContent = "No parameter given, please give 'id'!!!";
         } else {
@@ -242,7 +242,7 @@
                 if (value.includes(post_id)) {
                     found_the_shit = true;
                     status_text.textContent = "Found the stuff.";
-                    fuck_right_of_to("https://konno.ovh/blog/" + key + ".html#" + post_id);
+                    fuck_right_of_to("https://konno.ovh/chan/" + key + ".html#" + post_id);
                 }
             }
 
@@ -257,7 +257,7 @@
     if (params.get("r")) {
         handle_common_redirect(params.get("r"));
     } else {
-        handle_blog_redirect(params.get("id"));
+        handle_channel_redirect(params.get("id"));
     }
 
 </script>

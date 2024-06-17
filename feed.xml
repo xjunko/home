@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>junko's blog</title>
+        <title>junko's channel</title>
         <link>https://konno.ovh</link>
         <description>nonstop rambling</description>
         <language>en-us</language>
@@ -73,10 +73,10 @@ isnt it cool
 
                 <img src="https://hatsune-miku.has.rocks/r/cf.png"> </img>
                 &lt;p&gt;Last year:
-&lt;div class=&quot;blog-post reference&quot; id=&quot;1671362755_ref&quot; style=&apos;&apos;&gt;
-    &lt;div class=&quot; blog-content&quot;&gt;
-        &lt;a class=&quot;blog-url no-underline&quot; href=&quot;../redirect.html?id=1671362755&quot;&gt;Referencing #1671362755&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;blog-author&quot;&gt;junko&lt;/span&gt; at 2022-12-18 11:25:55
+&lt;div class=&quot;channel-post reference&quot; id=&quot;1671362755_ref&quot; style=&apos;&apos;&gt;
+    &lt;div class=&quot;channel-content&quot;&gt;
+        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1671362755&quot;&gt;Referencing #1671362755&lt;/a&gt; &lt;br /&gt;
+        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2022-12-18 11:25:55
         &lt;p&gt;my first time going to a anime convention, met my online friend.
 also i took a picture with hatsune miku racing.
 fun times.&lt;/p&gt;
@@ -169,10 +169,10 @@ which, says a lot cuz &lt;em&gt;i&apos;m a tough guy&lt;/em&gt;, edgylord-tier k
             <description>
 
                 &lt;p&gt;Continuation of
-&lt;div class=&quot;blog-post reference&quot; id=&quot;1700946181_ref&quot; style=&apos;&apos;&gt;
-    &lt;div class=&quot; blog-content&quot;&gt;
-        &lt;a class=&quot;blog-url no-underline&quot; href=&quot;../redirect.html?id=1700946181&quot;&gt;Referencing #1700946181&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;blog-author&quot;&gt;junko&lt;/span&gt; at 2023-11-25 21:03:01
+&lt;div class=&quot;channel-post reference&quot; id=&quot;1700946181_ref&quot; style=&apos;&apos;&gt;
+    &lt;div class=&quot;channel-content&quot;&gt;
+        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1700946181&quot;&gt;Referencing #1700946181&lt;/a&gt; &lt;br /&gt;
+        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2023-11-25 21:03:01
         &lt;p&gt;looking at V discord channel, seems like theres some kind of drama going on there. &lt;br/&gt;
 kinda sad that 2 of the big guys left. almost feels like the language itself is about to die, i hope not. &lt;br/&gt;
 the language is genuinely cool. while they overpromised lots of stuff, the language itself does work as a programming language and thats good enough for me. &lt;br/&gt;

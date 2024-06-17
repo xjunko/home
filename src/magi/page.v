@@ -14,7 +14,7 @@ pub const c_supported = [
 	'outer',
 	'author',
 	'priority',
-	// Blog
+	// Channel & Blog
 	'style',
 	'outline',
 	'outline-style',

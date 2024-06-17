@@ -1,4 +1,4 @@
-/* blog.css - god awful piece of shit styling hacked together in an hour. */
+/* channel.css - x-chan lookalike styling */
 
 :root {
     --almost-dark: #1C1C1C;
@@ -9,24 +9,24 @@
     --green-text: #96c83b;
     --reference-text: #FF0000;
 
-    --blog-width: 850px;
+    --channel-width: 850px;
 }
 
 /* phone users moment */
 @media (max-width: 1280px) {
     :root {
-        --blog-width: 55vw;
+        --channel-width: 55vw;
     }
 }
 
 @media (max-width: 768px) {
     :root {
-        --blog-width: 95vw;
+        --channel-width: 95vw;
     }
 }
 
 
-.blog-container {
+.channel-container {
     padding-top: 1em;
     display: flex;
     justify-content: center;
@@ -34,10 +34,10 @@
     flex-direction: column;
 }
 
-.blog-post {
+.channel-post {
     font-size: 12pt !important;
-    width: var(--blog-width);
-    max-width: var(--blog-width);
+    width: var(--channel-width);
+    max-width: var(--channel-width);
     padding: 3px;
     overflow: auto;
     opacity: 0.9;
@@ -47,67 +47,67 @@
     margin-top: 5px;
 }
 
-.blog-post.reference {
-    width: calc(var(--blog-width) * 50%);
-    max-width: calc(var(--blog-width) * 75%);
+.channel-post.reference {
+    width: calc(var(--channel-width) * 50%);
+    max-width: calc(var(--channel-width) * 75%);
     overflow: hidden;
 }
 
-.blog-post:hover {
+.channel-post:hover {
     border: solid 2px var(--outline-color);
     opacity: 1.0;
 }
 
-.blog-post * {
+.channel-post * {
     overflow: hidden;
-    max-width: var(--blog-width);
+    max-width: var(--channel-width);
 }
 
-.blog-content>p {
+.channel-content>p {
     padding: 0px 5px 0px 5px;
     margin: 0px;
 }
 
 
-.blog-post img:not(.discord-emoji) {
-    max-width: calc(var(--blog-width) - 10px);
+.channel-post img:not(.discord-emoji) {
+    max-width: calc(var(--channel-width) - 10px);
     display: block;
     margin: auto;
 }
 
-.blog-author {
+.channel-author {
     color: #a47996;
     font-weight: bold;
 }
 
-.blog-media {
+.channel-media {
     width: 33%;
     padding: 2px 4px 2px 2px;
     float: left;
     transition: width 0.25s, height 0.25s;
 }
 
-.blog-media:hover {
+.channel-media:hover {
     width: 100%;
 }
 
-.blog-url,
-.blog-content>a,
-.blog-container>p {
+.channel-url,
+.channel-content>a,
+.channel-container>p {
     text-decoration: underline;
     color: var(--text-faint) !important;
 }
 
-.blog-url:hover,
-.blog-content>a:hover,
-.blog-container>p:hover {
+.channel-url:hover,
+.channel-content>a:hover,
+.channel-container>p:hover {
     background-color: var(--outline-color) !important;
     color: var(--text-dark) !important;
 }
 
-/* .blog-tags,
-.blog-tags>a,
-.blog-tags>p {
+/* .channel-tags,
+.channel-tags>a,
+.channel-tags>p {
     font-size: 8pt;
     color: white;
 } */
@@ -124,7 +124,7 @@
     margin-bottom: 5px;
     margin-left: 4px;
     margin-right: 4px;
-    max-width: calc(var(--blog-width) - 10px);
+    max-width: calc(var(--channel-width) - 10px);
     width: 100%;
 
 }

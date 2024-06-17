@@ -1,6 +1,6 @@
 @title=doomerposting
 @description=schizo ramblin.
-@tags=blog
+@tags=channel
 @priority=-1
 
 <br />

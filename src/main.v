@@ -11,7 +11,7 @@ fn main() {
 	// General
 	config.expects('instance.name', 'xjunko')
 	config.expects('instance.type', 'magi')
-	config.expects('instance.version', '0.0.1')
+	config.expects('instance.version', '0.2.3')
 
 	// Domain
 	config.expects('instance.domain', 'https://konno.ovh')
@@ -28,11 +28,11 @@ fn main() {
 	config.expects('website.page.limit', f32(20)) // 20 per page.
 
 	// Misc flag
-	config.expects('website.blog.enable', true)
-	config.expects('website.blog.media', true)
+	config.expects('website.channel.enable', true)
+	config.expects('website.channel.media', true)
 
 	// Discord
-	config.expects('website.blog.discord', true)
+	config.expects('website.channel.discord', true)
 
 	//
 	config.load()
