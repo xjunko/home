@@ -13,7 +13,7 @@
 
 - ![](/static/imgs/buttons/junko.png) [site's logo](/)
     - _feel free to include it into your website!_
-    - <textarea style="width: 484px; max-width: 484px;height: 50px;border: 1px solid var(--outline-color);background-color: var(--dark-color);color: var(--text-light); resize: none;" readonly>
+    - <textarea style="width: 100%; max-width: 484px;height: 50px;border: 1px solid var(--outline-color);background-color: var(--dark-color);color: var(--text-light); resize: none;" readonly>
         <a href="https://konno.ovh" target="_blank">
             <img src="https://konno.ovh/static/imgs/buttons/junko.png"/>
         </a></textarea>
