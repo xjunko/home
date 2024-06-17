@@ -13,7 +13,7 @@
 
 - ![](/static/imgs/buttons/junko.png) [site's logo](/)
     - _feel free to include it into your website!_
-    - <textarea style="width: 100%; height: 50px;border: 1px solid var(--outline-color);background-color: var(--dark-color);color: var(--text-light);" readonly>
+    - <textarea style="width: 484px; max-width: 484px;height: 50px;border: 1px solid var(--outline-color);background-color: var(--dark-color);color: var(--text-light); resize: none;" readonly>
         <a href="https://konno.ovh" target="_blank">
             <img src="https://konno.ovh/static/imgs/buttons/junko.png"/>
         </a></textarea>
@@ -39,21 +39,57 @@
 - [[wowana.me]](https://wowana.me)
     - random niche info, cool hackerman stuff.
 
+<!-- guides -->
+**guides** —
+- [PDAFT for dummies](https://rentry.co/pdaftforpc)
+    - guide for getting hatsune miku arcade future tone running on your windows machine.
+- [PDAFT on Steam Deck](https://github.com/kobacat/Project-Diva-AFT-Steam-Deck/blob/main/guide-lutris.md)
+    - same thing as above but for linux machines.
+- [Windows 10 VBAudio + Peace + Equalizer APO Guide](https://docs.google.com/document/d/1tbGOH1_Wbv94hwo1mVG31Sv1mbhqZqvM4cqw8yV2j2o/edit?pli=1)
+    - useful for getting proper pipewire + easyeffects equivalent on windows.
+- [/g/'s Windows Paste](https://rentry.org/fwt)
+    - contains a lot of useful info for windows users.
+
+<!-- media -->
+**media** —
+- [animepahe](https://animepahe.ru/)
+    - no bullshit, ad-free, 1080p anime streaming website, source from subsplease, very fast.
+- [asmr.one](https://asmr.one)
+    - libraries of high quality asmr ripped directly from dlsite.
+- [Every Noise at Once](https://everynoise.com/)
+    - great website to find your music niche.
+- [FMHY - freemediaheckyeah](https://fmhy.net/)
+    - massive libraries of resources for pirating movies, anime, manga, etc.
+
+<!-- tools -->
+**tools** —
+- [waifu2x](http://waifu2x.udp.jp/)
+    - upscale pictures online, mostly used for anime pictures, as the name suggests.
+- [Needs More JPEG](http://needsmorejpeg.com/)
+    - the polar opposite of what the above did, makes your picture shit.
+- [Steam Profile Cropper](https://steam.design/)
+- [Omori Gif Generator](https://omori.basil.cafe/)
+    - make omori gifs, like those you see on tenor.
+
+<!-- arcade -->
+**arcade** —
+- [maimai DX NET](https://maimaidx-eng.com/)
+- [CHUNITHM NET](https://lng-tgk-aime-gw.am-all.net/common_auth/login?site_id=chuniex&redirect_url=https://chunithm-net-eng.com/mobile/&back_url=https://chunithm.sega.com/)
+- [maimai Profile Generator](https://maichart-en.nuko.cat/)
+    - generates a fancy picture for your achievement in the game.
+
+
+<!-- miscellaneous -->
 **miscellaneous**  —
 - [GNU's Animu Reaction Collections](https://gnupluslinux.com/anime/)
     - mongolian basket weaving forum materials.
 - [Anime Girls Holding Programming Books](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books)
-    - Exactly as it says.
+    - exactly as it says.
 - [MG Anime Renders](https://a.mg-renders.net/)
-    - Collections of HQ SFW/NSFW anime renders, great for editing.
-- [Every Noise at Once](https://everynoise.com/)
-    - Great website to find your music niche.
-- [AIDN's webgl fuckery](https://aidn.jp/contents/)
-    - Fun website, check it out. 
-    - Made by the original Nyan Cat dude :3
-- [Windows 10 VBAudio + Peace + Equalizer APO Guide](https://docs.google.com/document/d/1tbGOH1_Wbv94hwo1mVG31Sv1mbhqZqvM4cqw8yV2j2o/edit?pli=1)
-    - Useful for me cuz I can barely hear my mic in windows.
-    - It just Werkz™ in Linux funnily enough.
+    - collections of hq sfw/nsfw anime renders, great for editing.
+- [AIDN's WebGL Library](https://aidn.jp/contents/)
+    - fun website, check it out. 
+    - made by the original nyan cat dude :>
 
 
 <!-- random webring/cool site links -->
