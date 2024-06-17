@@ -1,5 +1,6 @@
 module internal
 
+import v.vmod
 import json
 import os
 
@@ -12,7 +13,8 @@ pub struct Configuration {
 mut:
 	path string
 pub mut:
-	options map[string]ConfigurationValue
+	options  map[string]ConfigurationValue
+	manifest vmod.Manifest
 }
 
 // Config operation
@@ -52,6 +54,20 @@ pub fn (mut config Configuration) load() {
 pub fn Configuration.create(path string) Configuration {
 	mut configuration := Configuration{
 		path: path
+	}
+
+	println('[Internal] Finding v.mod file, please wait!')
+
+	if os.exists('v.mod') {
+		print('[Internal] Found v.mod file,')
+
+		configuration.manifest = vmod.from_file('v.mod') or {
+			panic('Failed to read manifest: ${err}')
+		}
+
+		println(' running version ${configuration.manifest.version}!')
+	} else {
+		panic('v.mod file not found!')
 	}
 
 	return configuration

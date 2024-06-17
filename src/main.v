@@ -11,7 +11,7 @@ fn main() {
 	// General
 	config.expects('instance.name', 'xjunko')
 	config.expects('instance.type', 'magi')
-	config.expects('instance.version', '0.2.3')
+	config.expects('instance.version', config.manifest.version)
 
 	// Domain
 	config.expects('instance.domain', 'https://konno.ovh')
