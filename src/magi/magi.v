@@ -29,11 +29,20 @@ pub fn (mut magi Magi) resolve_channel() {
 
 	files << os.glob('static/entry/written/*.md') or { [] }
 
+	println('[Channel] Found ${files.len} written entries.')
+
 	if magi.config.get('website.channel.discord') as bool {
 		files << os.glob('static/entry/discord/*.md') or { [] }
+		println('[Channel] Found ${files.len} discord entries.')
 	}
 
-	for file in files {
+	for i, file in files {
+		// Show progress every 10 files
+		if i % 10 == 0 || i == files.len - 1 {
+			// Progress bar
+			println('[Channel] Processing ${i + 1}/${files.len} files.')
+		}
+
 		mut new_post := Post.create(file, mut magi.casper)
 
 		// Thumbnail hack: Discord CDN FIX
@@ -44,9 +53,10 @@ pub fn (mut magi Magi) resolve_channel() {
 		magi.posts << new_post
 	}
 
+	println('[Channel] Sorting posts and running post-process.')
 	magi.casper.postprocess(mut magi.posts)
-
 	magi.posts.sort(a.date > b.date)
+	println('[Channel] Done.')
 }
 
 //
@@ -56,12 +66,16 @@ pub fn execute(config Configuration) {
 		casper: Casper.create() or { panic(err) }
 	}
 
-	println('[Internal] Magi, created.')
+	println('[Magi] Starting Magi!')
 
 	c_chan_enabled := (config.get('website.channel.enable') as bool) == true
 
+	println('[Magi] Channel state: ${c_chan_enabled}')
+
 	if c_chan_enabled {
+		println('[Magi] Resolving channel.')
 		magi.resolve_channel()
+		println('[Magi] Channel resolved.')
 	} else {
 		// HACK: To avoid index=0, len=0 problem.
 		magi.posts << Post{
@@ -82,7 +96,9 @@ pub fn execute(config Configuration) {
 		os.write_file('chan/1.html', '<meta http-equiv="refresh" content="0;url=https://konno.ovh">') or {}
 	}
 
+	println('[Magi] Resolving pages.')
 	magi.resolve_pages()
+	println('[Magi] Pages resolved: ${magi.page.len}')
 
 	// RSS
 	println('[Magi] Saving RSS Feed.')
