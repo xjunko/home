@@ -1,6 +1,7 @@
 module internal
 
 import v.vmod
+import v.util.version
 import json
 import os
 
@@ -13,8 +14,10 @@ pub struct Configuration {
 mut:
 	path string
 pub mut:
-	options  map[string]ConfigurationValue
-	manifest vmod.Manifest
+	options map[string]ConfigurationValue
+
+	manifest         vmod.Manifest
+	compiler_version string = version.full_v_version(false)
 }
 
 // Config operation
