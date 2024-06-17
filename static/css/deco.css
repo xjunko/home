@@ -41,6 +41,16 @@
     margin-bottom: -3px;
 }
 
+
+/* marquee thingamajig on the sidebar*/
+.marquee-buttons {
+    width: 290px;
+    position: absolute;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* phone gooners */
 @media only screen and (max-width: 1280px),
 (orientation: portrait) {
     .sidebar-name {
@@ -51,12 +61,17 @@
         display: none;
     }
 
+    .marquee-buttons {
+        display: none;
+    }
+
     .sidebar-deco-offset,
     .sidebar-deco-offset-less {
         margin-left: 0px;
     }
 }
 
+/* less important, not layout */
 /* static animation, from dimden.dev */
 body:before {
     content: "";

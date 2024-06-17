@@ -24,3 +24,27 @@ Currently <a id='discord-status-about'>offline</a>.
 
 besides discord you can contact me thru email, though, response time may vary:
 yuuki [at] konno [dot] ovh
+<br /><br />
+
+## recent post
+
+<a style="color: #96c83b;">>nothing, unfortunately.</a>
+<br /><br />
+
+## this site
+
+<div style="display: flex; float: right;flex-direction: column;">
+    <a href="/">
+        <img style="float: right;" src="/static/imgs/buttons/junko.png">
+    </a> 
+    <i>
+    hotlinking is allowed!
+    </i>
+</div>
+
+<div>
+    <textarea style="width: 60%; height: 50px;border: 1px solid var(--outline-color);background-color: var(--dark-color);color: var(--text-light);" readonly>
+<a href="https://konno.ovh" target="_blank">
+    <img src="https://konno.ovh/static/imgs/buttons/junko.png"/>
+</a></textarea>
+</div>

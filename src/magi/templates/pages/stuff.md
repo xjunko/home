@@ -13,6 +13,10 @@
 
 - ![](/static/imgs/buttons/junko.png) [site's logo](/)
     - _feel free to include it into your website!_
+    - <textarea style="width: 100%; height: 50px;border: 1px solid var(--outline-color);background-color: var(--dark-color);color: var(--text-light);" readonly>
+        <a href="https://konno.ovh" target="_blank">
+            <img src="https://konno.ovh/static/imgs/buttons/junko.png"/>
+        </a></textarea>
 
 
 <!-- friends -->
@@ -53,6 +57,14 @@
 
 
 <!-- random webring/cool site links -->
-**cool sites** —
+**super kewl website on the internet** —
+
+<marquee scrollamount="5" direction="right">
+
+
 
 [![](/static/imgs/buttons/utsuhorocks.png)](https://utsuho.rocks/) [![](/static/imgs/buttons/xn-neko-btn.gif)](https://猫.移动/) [![](/static/imgs/buttons/archlinux.gif)](https://archlinux.org/) [![](/static/imgs/buttons/konata.gif)](http://lucky-ch.com) [![](/static/imgs/buttons/katawashoujo.jpg)](https://www.katawa-shoujo.com/about.php) [![mariluu's site](/static/imgs/buttons/mariluu.gif)](https://mariluu.hehe.moe) [![](https://dimden.dev/services/images/88x31.gif)](https://dimden.dev/)
+
+
+
+</marquee>
