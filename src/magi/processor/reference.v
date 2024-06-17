@@ -2,7 +2,6 @@ module processor
 
 import regex
 import pcre
-import time
 
 pub const ref_reference_re = r'^(>>.+?)(?:\n|$)'
 pub const ref_placeholder_re = r'\[\[*.*]]'
