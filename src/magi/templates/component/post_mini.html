@@ -1,0 +1,22 @@
+<div class="channel-post-mini" id="@{post.id}" style='${post.metadata["style"] or {""}}'>
+    <div class=" channel-content">
+        <span class="channel-author">@{post.metadata['author']}</span> @{post.date}
+        <a class="channel-url no-underline" href="../redirect.html?id=${post.id}">[OPEN]</a>
+        <br />
+
+        @if "thumbnail" in post.metadata && (config.get("website.channel.media") as bool) == true
+        file: <a class="channel-url" href="@{post.metadata['thumbnail']}" target="_blank"
+            rel="noopener noreffer">@{post.metadata["filename"]}</a> [file/@{post.metadata["mimetype"]}] <br />
+        <a href="@{post.metadata['thumbnail']}" target="_blank" rel="noopener noreffer">
+            @if post.metadata["thumbnail-type"] == "video"
+            <video muted loop controls preload=metadata class="channel-media-mini"
+                src="@{post.metadata['thumbnail']}"></video>
+            @else
+            <img loading=lazy class="channel-media-mini" src="@{post.metadata['thumbnail']}">
+            @end
+        </a>
+        @end
+
+        @{post.content}
+    </div>
+</div>

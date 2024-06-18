@@ -127,6 +127,25 @@ pub fn execute(config Configuration) {
 				os.write_file('chan/${i + 1}.html', $tmpl('templates/base.html')) or { panic(err) }
 			}
 
+			magi.posts = posts
+			continue
+		}
+
+		if os.base(page.path) == 'index.md' {
+			// TODO: This is a hack, we should have a better way to do this.
+			mut recent_post_template := '<a style="color: #96c83b;">>none, unfortunately.</a>'
+
+			if post := magi.posts[0] {
+				recent_post_template = $tmpl("templates/component/post_mini.html")
+				recent_post_template += '\n<link rel="stylesheet" type="text/css" href="/static/css/channel.css">'
+			}
+
+			page.content = page.content.replace('++RECENT_POST', recent_post_template)
+
+			os.write_file('${os.base(page.path).split_nth('.', 2)[0]}.html', $tmpl('templates/base.html')) or {
+				panic(err)
+			}
+
 			continue
 		}
 

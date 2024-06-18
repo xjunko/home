@@ -28,7 +28,7 @@ yuuki [at] konno [dot] ovh
 
 ## recent post
 
-<a style="color: #96c83b;">>nothing, unfortunately.</a>
+++RECENT_POST
 <br /><br />
 
 ## this site
