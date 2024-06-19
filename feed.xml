@@ -359,7 +359,7 @@ praying for my man l-m over there at &lt;a href=&quot;https://me.l-m.dev/&quot;&
             <category>exploit, university</category>
             <description>
 
-                &lt;p&gt;&amp;gt;Figured out how to exploit my uni&apos;s wifi for free.&lt;/p&gt;
+                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;Figured out how to exploit my uni&apos;s wifi for free.&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;#!/usr/bin/env bash
 
 # Kill wlan0 for abit.
