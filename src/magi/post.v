@@ -16,7 +16,10 @@ pub mut:
 	has_reference    bool
 }
 
-pub fn (post &Post) reference() string {
+pub fn (post &Post) reference(simple bool) string {
+	if simple {
+		return $tmpl('templates/embed/reference-simple.html')
+	}
 	return $tmpl('templates/embed/reference.html')
 }
 

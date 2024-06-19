@@ -4,10 +4,11 @@ import regex
 import pcre
 
 pub const ref_reference_re = r'^(>>.+?)(?:\n|$)'
-pub const ref_placeholder_re = r'\[\[*.*]]'
+pub const ref_placeholder_prefix = '[[REF_DATA'
+pub const ref_placeholder_re = r'\[\[REF_DATA*.*]]'
 
 pub interface IPost {
-	reference() string
+	reference(bool) string
 mut:
 	id string
 }
@@ -41,6 +42,7 @@ pub fn (mut reference ReferenceProcessor) first_pass(text string) []string {
 
 	mut results := []string{}
 
+	// NEWLINE pass
 	for line in text.split_into_lines() {
 		matching := current_re.match_str(line, 0, 0) or {
 			results << line
@@ -48,7 +50,7 @@ pub fn (mut reference ReferenceProcessor) first_pass(text string) []string {
 		}
 
 		if reference_text := matching.get(1) {
-			results << '[[REF_DATA:${reference_text.split('>>')[1].trim_space()}]]'
+			results << '${processor.ref_placeholder_prefix}:${reference_text.split('>>')[1].trim_space()}]]'
 		} else {
 			results << line
 		}
@@ -63,11 +65,22 @@ pub fn (mut reference ReferenceProcessor) first_pass(text string) []string {
 
 pub fn (mut reference ReferenceProcessor) final_pass(text string, mut posts []IPost) string {
 	return reference.pattern.replace_by_fn(text, fn [posts] (_ regex.RE, text string, b1 int, b2 int) string {
-		ref_id := text[b1..b2].split_nth(':', 2)[1].split(']')[0]
+		mut ref_id := text[b1..b2].split_nth(':', 2)[1].split(']')[0]
+		mut is_simple_ref := false
+
+		if ref_id.starts_with('>') || ref_id.starts_with('&gt;') {
+			is_simple_ref = true
+
+			if ref_id.starts_with('&gt;') {
+				ref_id = ref_id[4..]
+			} else {
+				ref_id = ref_id[1..]
+			}
+		}
 
 		for post in posts {
 			if ref_id == post.id {
-				return post.reference()
+				return post.reference(is_simple_ref)
 			}
 		}
 
