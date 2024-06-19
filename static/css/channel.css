@@ -9,13 +9,13 @@
     --green-text: #96c83b;
     --reference-text: #FF0000;
 
-    --channel-width: 850px;
+    --channel-width: 650px;
 }
 
 /* phone users moment */
 @media (max-width: 1280px) {
     :root {
-        --channel-width: 55vw;
+        --channel-width: 60vw;
     }
 }
 
@@ -100,7 +100,7 @@
 }
 
 .channel-media {
-    width: 33%;
+    width: 25%;
     padding: 2px 4px 2px 2px;
     float: left;
     transition: width 0.25s, height 0.25s;
@@ -113,7 +113,7 @@
 }
 
 .channel-media:hover {
-    width: 50%;
+    width: 45%;
 }
 
 .channel-url,
