@@ -136,7 +136,7 @@ pub fn execute(config Configuration) {
 			mut recent_post_template := '<a style="color: #96c83b;">>none, unfortunately.</a>'
 
 			if post := magi.posts[0] {
-				recent_post_template = $tmpl("templates/component/post_mini.html")
+				recent_post_template = $tmpl('templates/component/post-mini.html')
 				recent_post_template += '\n<link rel="stylesheet" type="text/css" href="/static/css/channel.css">'
 			}
 
