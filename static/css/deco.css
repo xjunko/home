@@ -90,10 +90,6 @@ body:before {
     background-image: url(/static/imgs/overlays/overlay.png);
     background-repeat: all;
     background-position: 0px 0px;
-    animation-name: animation_static_overlay;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(4);
     box-shadow: inset 0px 0px 10em rgb(0 0 0 / 40%);
 }
 
@@ -110,18 +106,4 @@ body:after {
     background-image: url(/static/imgs/overlays/overlay.png);
     background-repeat: all;
     background-position: 0px 0px;
-    animation-name: animation_static_overlay;
-    animation-duration: 0.8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(4);
-}
-
-@keyframes animation_static_overlay {
-    0% {
-        background-position: 0px 0px;
-    }
-
-    100% {
-        background-position: 0px 4px;
-    }
 }
