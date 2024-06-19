@@ -131,6 +131,39 @@
 
         <div class="channel-container">
 
+<div class="channel-post" id="1694316905" style=''>
+    <div class=" channel-content">
+        <span class="channel-author">junko</span> 2023-09-10 03:35:05
+        <a class="channel-url no-underline" href="#1694316905">#1694316905</a>
+        <a class="channel-url no-underline" href="../redirect.html?id=1694316905">[SHARE]</a>
+        <!-- <a class="channel-tags">exploit, university</a> -->
+        <br />
+
+
+
+        <p>&gt;Figured out how to exploit my uni's wifi for free.</p>
+<pre><code class="language-bash">#!/usr/bin/env bash
+
+# Kill wlan0 for abit.
+sudo networkctl down wlan0
+
+# Change mac address (temporarily)
+sudo macchanger -r wlan0
+
+# Revive the shit.
+sudo networkctl up wlan0
+
+# Get the new macaddr value
+new_mac=$(ifconfig wlan0 | grep --color=never  -oE '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}')  
+
+# Activate the shit the shit.
+echo &quot;Opening trial activator thingamajig.&quot;
+xdg-open &quot;https://wifi.aeronet.com.my/login?username=T-${new_mac^^}&quot;
+</code></pre>
+<p>Turns out, my uni's <em>PAID</em> wifi trial didn't really check for mac addresses properly,
+so I can do goofy shit like this and get free wifi without paying. very cool.</p>
+    </div>
+</div>
 <div class="channel-post" id="1690919597" style=''>
     <div class=" channel-content">
         <span class="channel-author">junko</span> 2023-08-01 19:53:17
@@ -539,28 +572,6 @@ whatever it is that granted me this result, thank you.</p>
 <a style="color: var(--green-text)">&gt;...?</a><br/>
 it's over.... it's really over.... 17 years of school... it's all over...
 i'm finally free???</p>
-    </div>
-</div>
-<div class="channel-post" id="1678675496" style=''>
-    <div class=" channel-content">
-        <span class="channel-author">junko</span> 2023-03-13 02:44:56
-        <a class="channel-url no-underline" href="#1678675496">#1678675496</a>
-        <a class="channel-url no-underline" href="../redirect.html?id=1678675496">[SHARE]</a>
-        <!-- <a class="channel-tags">irl, exam, spm</a> -->
-        <br />
-
-
-        file: <a class="channel-url" href="https://hatsune-miku.has.rocks/r/miku-real-ending.mp4" target="_blank"
-            rel="noopener noreffer">miku-real-ending.mp4</a> [file/mp4] <br />
-        <a href="https://hatsune-miku.has.rocks/r/miku-real-ending.mp4" target="_blank" rel="noopener noreffer">
-
-            <video muted loop controls preload=metadata class="channel-media"
-                src="https://hatsune-miku.has.rocks/r/miku-real-ending.mp4"></video>
-        </a>
-
-        <p><a style="color: var(--green-text)">&gt;extra subjects</a><br/>
-<a style="color: var(--green-text)">&gt;additional mathematics, accounting</a><br/>
-...and thats the last subject, fuck additional mathematics man.</p>
     </div>
 </div>
         </div>
