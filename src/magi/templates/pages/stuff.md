@@ -108,6 +108,7 @@
 [![https://dimden.dev/](https://dimden.dev/services/images/88x31.gif)](https://dimden.dev/) 
 [![marisakirisame.net](https://marisakirisame.net/button.png)](https://marisakirisame.net)
 [![](/static/imgs/buttons/vendicated.png)](https://vendicated.dev/)
+[![](/static/imgs/buttons/insect.gif)](https://insect.christmas/)
 
 
 </marquee>
