@@ -153,6 +153,9 @@ pub fn execute(config Configuration) {
 			panic(err)
 		}
 	}
+
+	// Done
+	magi.casper.database.close() or { panic(err) }
 }
 
 // Called from templates/component/channel-redirect.html
