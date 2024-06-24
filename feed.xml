@@ -13,6 +13,18 @@
 
 
         <item>
+            <title>2024-06-24 19:33:07</title>
+            <link>https://konno.ovh/redirect.html?id=1719257587</link>
+            <pubDate>Mon, 24 Jun 2024 19:33:07 UTC</pubDate>
+            <category>programming, update</category>
+            <description>
+
+                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;added caching mechanism to the spotify/youtube proxy thing&lt;/a&gt;&lt;br/&gt;
+&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;whole site now compiles in less than a second now!!! &lt;/a&gt;&lt;br/&gt;
+now available at commit &lt;a href=&quot;https://github.com/xjunko/home/commit/6dde3ac38655a58e211c7de4eafb28003aca2ac6&quot;&gt;[#6dde3ac]&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
             <title>2024-06-19 04:32:54</title>
             <link>https://konno.ovh/redirect.html?id=1718771574</link>
             <pubDate>Wed, 19 Jun 2024 04:32:54 UTC</pubDate>
