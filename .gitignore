@@ -24,6 +24,9 @@ bin/
 # vweb and database
 *.db
 
+# python
+.venv
+
 # Entry
 static/entry/*
 ext/*
