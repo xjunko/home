@@ -28,13 +28,11 @@ pub fn (youtube YoutubeProcessor) get_video_thumbnail_from_id(video_id string) s
 	return 'https://i3.ytimg.com/vi/${video_id}/0.jpg' // Most shit quality
 }
 
-pub fn (youtube YoutubeProcessor) get_video_thumbnail(video_id string, mut db sqlite.DB) string {
-	default_thumbnail := 'https://i3.ytimg.com/vi/${video_id}/0.jpg' // Most shit quality
-
+pub fn (youtube YoutubeProcessor) get_video_thumbnail(video_id string, mut db sqlite.DB) !string {
 	// Fetch DB
 	db_thumbnails := sql db {
 		select from YoutubeThumbnail where video_id == video_id limit 1
-	} or { return default_thumbnail }
+	}!
 
 	if thumbnail := db_thumbnails[0] {
 		return thumbnail.thumbnail_url
@@ -46,14 +44,16 @@ pub fn (youtube YoutubeProcessor) get_video_thumbnail(video_id string, mut db sq
 		thumbnail_url: youtube.get_video_thumbnail_from_id(video_id)
 	}
 
-	sql db {
-		insert online_thumbnail into YoutubeThumbnail
-	} or {
-		println('[Database] Failed to save thumbnail info: ${err}')
-		return default_thumbnail
+	// Get request, see if the thumbnail url is valid, just in case.
+	if (http.get(online_thumbnail.thumbnail_url) or { panic(err) }).status_code != 200 {
+		return error('Invalid thumbnail URL!')
 	}
 
-	return default_thumbnail
+	sql db {
+		insert online_thumbnail into YoutubeThumbnail
+	}!
+
+	return error('Failed to get thumbnail from both Online and Database!')
 }
 
 pub fn (mut youtube YoutubeProcessor) process(text string, mut db sqlite.DB) string {
@@ -61,14 +61,11 @@ pub fn (mut youtube YoutubeProcessor) process(text string, mut db sqlite.DB) str
 		video_url := text[b1..b2]
 		video_id := re.get_group_by_id(text, 0)
 
-		video_thumbnail := youtube.get_video_thumbnail(video_id, mut db)
-
-		// Last check, just in case it went through.
-		if (http.get(video_thumbnail) or { panic(err) }).status_code != 200 {
-			return video_url
+		if video_thumbnail := youtube.get_video_thumbnail(video_id, mut db) {
+			return $tmpl('../templates/embed/youtube.html')
 		}
 
-		return $tmpl('../templates/embed/youtube.html')
+		return video_url
 	})
 }
 
