@@ -66,7 +66,7 @@ img {
     <table class='smallvocacontainer' style='text-align: center;'>
     <tr>
         <td>
-            <div class='webring-info'>VOCALOID WEBRING</div>
+            <div class='webring-info blink'>VOCALOID WEBRING</div>
             <div class='webring-links'>
                 [<a href='https://webring.adilene.net/' target='_parent'>Index</a> — <a href='https://webring.adilene.net/members.php' target='_parent'>Members</a>]
             </div>

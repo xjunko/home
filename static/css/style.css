@@ -89,6 +89,29 @@ hr {
     margin: 0;
 }
 
+/* texts */
+
+/* blinking text */
+.blink {
+    animation: blink 0.8s step-end infinite;
+}
+
+.blink-smooth {
+    animation: blink 0.5s linear infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* email */
+.widget-email a {
+    font-size: 2rem;
+}
+
+
 /* webring buttons */
 .content li>img,
 .content a>img {
@@ -195,6 +218,8 @@ a:hover>* {
 .net-buttons:hover img {
     border: 2px solid var(--outline-color);
 }
+
+
 
 /* footer */
 .footer {
