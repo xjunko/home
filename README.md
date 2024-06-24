@@ -28,15 +28,15 @@ junko's homepage
 ### flow
 ```
 Main -> Magi.resolve_pages -> Magi.resolve_channel 
-	   									|
-      								    v
-								   Post.create
-                                        |
-                                        v
-		Casper.postprocess	<-	Casper.preprocess
-				|
-				v
-		      Finish
+                                      |
+                                      v
+                                Post.create
+                                      |
+                                      v
+    Casper.postprocess   <-   Casper.preprocess
+              |
+              v
+            Finish
 
 ```
 ### special token
