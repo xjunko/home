@@ -6,6 +6,8 @@ imsoniac
 *.so
 *.dylib
 *.dll
+*.db
+*.sqlite
 
 # Ignore binary output folders
 bin/
