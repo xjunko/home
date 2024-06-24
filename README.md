@@ -41,7 +41,10 @@ Junko's homepage
 
 
 ## Preview
-![](https://my-anime-waifu.needs.rest/r/homepage.png)
-![](https://my-anime-waifu.needs.rest/r/blog.png)
-![](https://my-anime-waifu.needs.rest/r/stuff.png)
+![image](https://github.com/xjunko/home/assets/44401509/400759eb-fdfa-476e-a327-75e112551907)
+![image](https://github.com/xjunko/home/assets/44401509/4d209884-e286-4c5d-852a-8cfa729e4745)
+![image](https://github.com/xjunko/home/assets/44401509/8109f457-588d-4ff8-8fee-2fea64883eaa)
+![image](https://github.com/xjunko/home/assets/44401509/c679877e-6fde-447f-a16e-29e8828a36fa)
+
+
 
