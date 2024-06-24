@@ -2,6 +2,7 @@
 @description=internal redirect page
 @tags=internal.post_finder
 @priority=9999
+@route=/redirect.html
 
 <br />
 

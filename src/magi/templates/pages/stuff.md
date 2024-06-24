@@ -1,6 +1,7 @@
 @title=cool links
 @description=collections of cool links.
 @tags=internal
+@route=/stuff.html
 
 <br />
 

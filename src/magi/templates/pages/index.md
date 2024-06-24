@@ -1,6 +1,7 @@
 @title=home
 @description=the main page.
 @tags=internal
+@route=/index.html
 
 <br />
 

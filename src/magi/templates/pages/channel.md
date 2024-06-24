@@ -2,6 +2,7 @@
 @description=schizo ramblin.
 @tags=channel
 @priority=-1
+@route=/chan/1.html
 
 <br />
 
