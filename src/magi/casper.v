@@ -10,7 +10,7 @@ pub mut:
 	spotify   processor.SpotifyProcessor
 	youtube   processor.YoutubeProcessor
 	media     processor.MediaProcessor
-	greentext processor.GreentextProcessor
+	greentext processor.ChanStyleTextProcessor
 	reference processor.ReferenceProcessor
 	discord   processor.DiscordCDNProcessor
 }
@@ -21,7 +21,7 @@ pub fn Casper.create() !Casper {
 		spotify: processor.SpotifyProcessor.create()!
 		youtube: processor.YoutubeProcessor.create()!
 		media: processor.MediaProcessor.create()!
-		greentext: processor.GreentextProcessor.create()!
+		greentext: processor.ChanStyleTextProcessor.create()!
 		reference: processor.ReferenceProcessor.create()!
 		discord: processor.DiscordCDNProcessor.create()!
 	}
