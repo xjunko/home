@@ -7,7 +7,7 @@
 
 ## about
 
-my name is junko, you can find me online as xjunko. i have a strong interest in eletronics, japanese cultures and coding. 
+my name is junko, you can find me online as xjunko. i have a strong interest in eletronics, arcade rhythm game, programming and vocaloids!
 <br /><br />
 
 this website serves as more or less dumping ground of useless information. here, you may find how to contact me, crap i've written and things that you might find interesting.
@@ -18,13 +18,17 @@ currently, the domain is [konno.ovh](https://konno.ovh), i'm broke so the domain
 
 ## contact me
 
-i go by the name, <a id="discord-name"></a>, on discord, feel free to message me, i'm not that interesting but a chat won't hurt me :).
+i go by the name, <a id="discord-name" class="blink-smooth">xjunko</a>, on discord, feel free to message me, also, i've been trying to get off the internet recently, so response time may be late. sorry ;-;
 <br />
-Currently <a id='discord-status-about'>offline</a>.
+Currently <a id='discord-status-about' class="blink-smooth">offline</a>.
 <br /><br />
 
-besides discord you can contact me thru email, though, response time may vary:
-yuuki [at] konno [dot] ovh
+if, for whatever reason, you need to get a hold of me quickly, contact thru email instead:
+<div class="center widget-email blink">
+    <a>
+        yuuki [at] konno [dot] ovh
+    </a>
+</div>
 <br /><br />
 
 ## recent post

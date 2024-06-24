@@ -96,7 +96,7 @@
 <!-- random webring/cool site links -->
 **super kewl website on the internet** —
 
-<marquee scrollamount="5" direction="right">
+<marquee scrollamount="10" direction="right">
 
 
 
