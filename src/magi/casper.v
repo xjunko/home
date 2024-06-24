@@ -10,7 +10,7 @@ pub mut:
 	spotify   processor.SpotifyProcessor
 	youtube   processor.YoutubeProcessor
 	media     processor.MediaProcessor
-	greentext processor.ChanStyleTextProcessor
+	channel   processor.ChanStyleTextProcessor
 	reference processor.ReferenceProcessor
 	discord   processor.DiscordCDNProcessor
 }
@@ -21,7 +21,7 @@ pub fn Casper.create() !Casper {
 		spotify: processor.SpotifyProcessor.create()!
 		youtube: processor.YoutubeProcessor.create()!
 		media: processor.MediaProcessor.create()!
-		greentext: processor.ChanStyleTextProcessor.create()!
+		channel: processor.ChanStyleTextProcessor.create()!
 		reference: processor.ReferenceProcessor.create()!
 		discord: processor.DiscordCDNProcessor.create()!
 	}
@@ -44,8 +44,8 @@ pub fn (mut casper Casper) preprocess(mut post Post) string {
 	discord_cdn_fix := casper.discord.process(post.content)
 
 	// Simpler handler first.
-	gt_text := casper.greentext.process(discord_cdn_fix)
-	reference_info := casper.reference.first_pass(gt_text)
+	ct_text := casper.channel.process(discord_cdn_fix)
+	reference_info := casper.reference.first_pass(ct_text)
 
 	// Bit more complex
 	m_text := casper.media.process(reference_info[0])
