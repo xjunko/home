@@ -22,6 +22,13 @@
                 &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;added caching mechanism to the spotify/youtube proxy thing&lt;/a&gt;&lt;br/&gt;
 &lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;whole site now compiles in less than a second now!!! &lt;/a&gt;&lt;br/&gt;
 now available at commit &lt;a href=&quot;https://github.com/xjunko/home/commit/6dde3ac38655a58e211c7de4eafb28003aca2ac6&quot;&gt;[#6dde3ac]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;also check out this song&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;div class=&quot;youtube&quot;&gt;
+    &lt;a href=&quot;https://youtu.be/n1nKVZPd_x4&quot; target=&quot;_blank&quot;&gt;
+        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/n1nKVZPd_x4/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
+        &lt;a class=&quot;youtube-info&quot; href=&quot;https://youtu.be/n1nKVZPd_x4&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
             </description>
         </item>
         <item>
