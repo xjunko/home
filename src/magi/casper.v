@@ -1,8 +1,11 @@
 module magi
 
+import db.sqlite
 import processor
 
 pub struct Casper {
+mut:
+	database sqlite.DB
 pub mut:
 	spotify   processor.SpotifyProcessor
 	youtube   processor.YoutubeProcessor
@@ -14,6 +17,7 @@ pub mut:
 
 pub fn Casper.create() !Casper {
 	mut casper := Casper{
+		database: sqlite.connect('db.sqlite')!
 		spotify: processor.SpotifyProcessor.create()!
 		youtube: processor.YoutubeProcessor.create()!
 		media: processor.MediaProcessor.create()!
@@ -21,6 +25,15 @@ pub fn Casper.create() !Casper {
 		reference: processor.ReferenceProcessor.create()!
 		discord: processor.DiscordCDNProcessor.create()!
 	}
+
+	// Create table if doesnt exists
+	sql casper.database {
+		create table processor.Track
+	}!
+
+	sql casper.database {
+		create table processor.YoutubeThumbnail
+	}!
 
 	return casper
 }
@@ -36,8 +49,8 @@ pub fn (mut casper Casper) preprocess(mut post Post) string {
 
 	// Bit more complex
 	m_text := casper.media.process(reference_info[0])
-	yt_text := casper.youtube.process(m_text)
-	sptfy_text := casper.spotify.process(yt_text)
+	yt_text := casper.youtube.process(m_text, mut casper.database)
+	sptfy_text := casper.spotify.process(yt_text, mut casper.database)
 
 	post.has_reference = reference_info[1] == 'true'
 
