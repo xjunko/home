@@ -7,12 +7,6 @@ pub const ref_reference_re = r'^(>>.+?)(?:\n|$)'
 pub const ref_placeholder_prefix = '[[REF_DATA'
 pub const ref_placeholder_re = r'\[\[REF_DATA*.*]]'
 
-pub interface IPost {
-	reference(bool) string
-mut:
-	id string
-}
-
 // Two pass
 // First pass, replace with just dumb placeholder.
 // Second pass, insert the actual reference.
