@@ -7,6 +7,7 @@ pub struct Casper {
 mut:
 	database sqlite.DB
 pub mut:
+	template  processor.SimpleTemplateProcessor
 	spotify   processor.SpotifyProcessor
 	youtube   processor.YoutubeProcessor
 	media     processor.MediaProcessor
@@ -18,6 +19,7 @@ pub mut:
 pub fn Casper.create() !Casper {
 	mut casper := Casper{
 		database: sqlite.connect('db.sqlite')!
+		template: processor.SimpleTemplateProcessor.create()!
 		spotify: processor.SpotifyProcessor.create()!
 		youtube: processor.YoutubeProcessor.create()!
 		media: processor.MediaProcessor.create()!
@@ -39,9 +41,12 @@ pub fn Casper.create() !Casper {
 }
 
 // Do
-pub fn (mut casper Casper) preprocess(mut post Post) string {
+pub fn (mut casper Casper) preprocess(mut post processor.IPost) string {
+	// Template first
+	template_pass := casper.template.process(post.content)
+
 	// Even more simpler
-	discord_cdn_fix := casper.discord.process(post.content)
+	discord_cdn_fix := casper.discord.process(template_pass)
 
 	// Simpler handler first.
 	ct_text := casper.channel.process(discord_cdn_fix)

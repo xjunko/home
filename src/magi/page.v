@@ -2,6 +2,7 @@ module magi
 
 import os
 import markdown
+import processor
 
 pub const c_special = '@'
 pub const c_supported = [
@@ -62,9 +63,10 @@ pub fn Page.create(path string) Page {
 		path: path
 	}
 
-	page.load()
+	mut template_processor := processor.SimpleTemplateProcessor.create() or { panic(err) }
 
-	page.content = markdown.to_html(page.content)
+	page.load()
+	page.content = markdown.to_html(template_processor.process(page.content))
 
 	return page
 }
