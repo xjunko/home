@@ -92,6 +92,12 @@
     - fun website, check it out. 
     - made by the original nyan cat dude :>
 
+<!-- widgets -->
+**widgets**  —
+<div style="display: flex;">
+    @include "component/decorations/nerdtest.html"
+    @include "component/decorations/moon.html"
+</div>
 
 <!-- random webring/cool site links -->
 **super kewl website on the internet** —
@@ -110,6 +116,6 @@
 [![marisakirisame.net](https://marisakirisame.net/button.png)](https://marisakirisame.net)
 [![](/static/imgs/buttons/vendicated.png)](https://vendicated.dev/)
 [![](/static/imgs/buttons/insect.gif)](https://insect.christmas/)
-
+[![](https://chaotic.ninja/assets/img/banners/88x31/chaoticninja.gif)](https://chaotic.ninja/)
 
 </marquee>
