@@ -60,18 +60,9 @@ pub fn Configuration.create(path string) Configuration {
 	}
 
 	println('[Internal] Finding v.mod file, please wait!')
-
-	if os.exists('v.mod') {
-		print('[Internal] Found v.mod file,')
-
-		configuration.manifest = vmod.from_file('v.mod') or {
-			panic('Failed to read manifest: ${err}')
-		}
-
-		println(' running version ${configuration.manifest.version}!')
-	} else {
-		panic('v.mod file not found!')
-	}
+	print('[Internal] Found v.mod file,')
+	configuration.manifest = vmod.decode(@VMOD_FILE) or { panic('Failed to read manifest: ${err}') }
+	println(' running version ${configuration.manifest.version}!')
 
 	return configuration
 }
