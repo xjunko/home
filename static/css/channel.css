@@ -20,11 +20,19 @@
     :root {
         --channel-width: 60vw;
     }
+
+    .channel-tags {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
     :root {
         --channel-width: 95vw;
+    }
+
+    .channel-tags {
+        display: none;
     }
 }
 
