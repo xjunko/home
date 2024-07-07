@@ -125,6 +125,7 @@
     width: 45%;
 }
 
+
 .channel-url,
 .channel-content>a,
 .channel-container>p {
@@ -139,12 +140,24 @@
     color: var(--text-dark) !important;
 }
 
-/* .channel-tags,
+.channel-tags {
+    float: right;
+}
+
+.channel-tags a,
+.channel-tags p {
+    color: white;
+    text-decoration: none;
+}
+
+.channel-tags,
 .channel-tags>a,
 .channel-tags>p {
-    font-size: 8pt;
+    font-size: 9pt;
     color: white;
-} */
+    text-decoration: none;
+}
+
 
 .no-underline {
     text-decoration: none;

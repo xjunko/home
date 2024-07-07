@@ -3,7 +3,8 @@
         <span class="channel-author">@{post.metadata['author']}</span> @{post.date}
         <a class="channel-url no-underline" href="#@{post.id}">#@{post.id}</a>
         <a class="channel-url no-underline" href="../redirect.html?id=${post.id}">[SHARE]</a>
-        <!-- <a class="channel-tags">@{post.metadata["tags"]}</a> -->
+        <a class="channel-tags"
+            style="text-decoration: none; color: var(--text-light) !important">[@{post.metadata["tags"]}]</a>
         <br />
 
         @if "thumbnail" in post.metadata && (config.get("website.channel.media") as bool) == true
