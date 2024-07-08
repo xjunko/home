@@ -50,7 +50,9 @@ pub fn (mut magi Magi) resolve_channel() {
 			new_post.metadata['thumbnail'] = magi.casper.discord.process(new_post.metadata['thumbnail'])
 		}
 
-		magi.posts << new_post
+		if 'exclude' !in new_post.metadata {
+			magi.posts << new_post
+		}
 	}
 
 	println('[Channel] Sorting posts and running post-process.')

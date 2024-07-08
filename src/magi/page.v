@@ -20,6 +20,8 @@ pub const c_supported = [
 	'style',
 	'outline',
 	'outline-style',
+	// Trigger
+	'exclude',
 ]
 
 pub struct Page {
@@ -39,7 +41,8 @@ pub fn (mut page Page) load() {
 			for supported in magi.c_supported {
 				if line.to_lower().starts_with('${magi.c_special}${supported}') {
 					items := line.split_nth('=', 2)
-					page.metadata[items[0].replace(magi.c_special, '')] = items[1]
+
+					page.metadata[items[0].replace(magi.c_special, '')] = items[1] or { 'None' }
 
 					if supported == 'outline' {
 						page.metadata['style'] += ';border: ' + (page.metadata['outline-style'] or {
