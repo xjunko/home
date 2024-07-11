@@ -40,54 +40,35 @@
 <body>
     @include "component/sidebar.html"
 
+    <!-- Generic -->
+    @if !page.metadata['step'].contains('notes')
     <div class="content-container">
         <div class="content">
+            <!-- Common Content -->
             @{page.content}
 
+            <!-- Notes entry -->
+            @include "component/page/notes.html"
+
+            <!-- Content Footer -->
             @include "component/footer.html"
         </div>
 
-        @if page.metadata["tags"].contains("channel") && (config.get("website.channel.enable") as bool) == true
-        <!-- Special case layout -->
-        <!-- Channel -->
+        <!-- This components needs to be outside -->
+        @include "component/page/channel.html"
+        @include "component/utils/space.html"
+        @include "component/page/redirect.html"
 
-        <link rel="stylesheet" type="text/css" href="/static/css/channel.css">
-
-        <div class="channel-container">
-            @for post in magi.posts
-            @include "component/post.html"
-            @end
-        </div>
-
-        <link rel="stylesheet" type="text/css" href="/static/prism/prism.css">
-        <script src="/static/prism/prism.js"></script>
-
-        <div class="channel-container">
-            <div class="paging">
-                @for page_count in 0 .. page.max_number + 1
-                @if page_count == page.number
-                <a style="padding: 4px; font-size: 1.2rem; background-color: var(--outline-color) !important; color: var(--text-dark) !important;"
-                    href='/chan/${page_count+1}.html'>${page_count+1}</a>
-                @else
-                <a style="padding: 2px" href='/chan/${page_count+1}.html'>${page_count+1}</a>
-                @end
-
-                @end
-            </div>
-        </div>
-        @end
-
-        @for _ in 0 .. 5
-        <br>
-        @end
-
-        @if page.metadata["tags"].contains("internal.post_finder")
-        <!-- Channel redirector -->
-        @include "component/redirect.html"
-        @end
-
+        <!-- Extra -->
         @{page.outer}
     </div>
+    @end
+
+    <!-- Note -->
+    @if page.metadata['step'] == 'notes'
+    <link rel="stylesheet" type="text/css" href="/static/css/notes.css">
+    @include "component/page/notes.html"
+    @end
 
     @include "component/discord.html"
     @include "component/bottombar.html"

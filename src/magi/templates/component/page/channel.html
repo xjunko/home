@@ -1,0 +1,29 @@
+@if page.metadata["tags"].contains("channel") && (config.get("website.channel.enable") as bool) == true
+<!-- Special case layout -->
+<!-- Channel -->
+
+<link rel="stylesheet" type="text/css" href="/static/css/channel.css">
+
+<div class="channel-container">
+    @for post in magi.posts
+    @include "component/post.html"
+    @end
+</div>
+
+<link rel="stylesheet" type="text/css" href="/static/prism/prism.css">
+<script src="/static/prism/prism.js"></script>
+
+<div class="channel-container">
+    <div class="paging">
+        @for page_count in 0 .. page.max_number + 1
+        @if page_count == page.number
+        <a style="padding: 4px; font-size: 1.2rem; background-color: var(--outline-color) !important; color: var(--text-dark) !important;"
+            href='/chan/${page_count+1}.html'>${page_count+1}</a>
+        @else
+        <a style="padding: 2px" href='/chan/${page_count+1}.html'>${page_count+1}</a>
+        @end
+
+        @end
+    </div>
+</div>
+@end

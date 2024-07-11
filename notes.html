@@ -8,21 +8,21 @@
 
     <!-- Embed Meta -->
     <!-- Primary Meta Tags -->
-    <meta name="title" content="doomerposting | letter to the black world" />
-    <meta name="description" content="internal redirect page" />
+    <meta name="title" content="notes | letter to the black world" />
+    <meta name="description" content="a very long passage of texts of stuff." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://konno.ovh/" />
-    <meta property="og:title" content="doomerposting | letter to the black world" />
-    <meta property="og:description" content="internal redirect page" />
+    <meta property="og:title" content="notes | letter to the black world" />
+    <meta property="og:description" content="a very long passage of texts of stuff." />
     <meta property="og:image" content="https://konno.ovh/static/imgs/preview.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://konno.ovh/" />
-    <meta property="twitter:title" content="doomerposting | letter to the black world" />
-    <meta property="twitter:description" content="internal redirect page" />
+    <meta property="twitter:title" content="notes | letter to the black world" />
+    <meta property="twitter:description" content="a very long passage of texts of stuff." />
     <meta property="twitter:image" content="https://konno.ovh/static/imgs/preview.png" />
 
 
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/player.css">
 
     <!-- Title -->
-    <title>doomerposting | letter to the black world</title>
+    <title>notes | letter to the black world</title>
 </head>
 
 <body>
@@ -142,11 +142,23 @@
         <div class="content">
             <!-- Common Content -->
             <br />
-<h1> Loading... </h1>
-<a id="redirect-status"> Detecting arguments... </a>
+<h2>notes</h2>
+<br>
+super long form of texts that is very random, feel free to read it :D.
 
             <!-- Notes entry -->
 
+<ul>
+
+    <li>
+        <a style="font-size: 1.7rem;text-decoration: none;border-bottom: 3px solid #F7208B;"
+            href="/notes/buying-a-keitai.html">
+            Buying a Keitai a.k.a Japanese Flip Phone
+        </a>
+        —
+        <em>July 2024</em>
+    </li>
+</ul>
 
 
 
@@ -175,183 +187,6 @@
 <br>
 <br>
 
-<!-- Channel redirector -->
-<div>
-</div>
-
-<script>
-    // Some voodoo shit going on here
-    // dont ask.
-    const posts_map = {
-
-        1: [
-
-            "1720412521",
-            "1720261966",
-            "1719950373",
-            "1719747879",
-            "1719257587",
-            "1718771574",
-            "1718676241",
-            "1718559567",
-            "1716451033",
-            "1715888027",
-            "1715324980",
-            "1715057699",
-            "1714879447",
-            "1714710287",
-            "1714558883",
-            "1714396403",
-            "1714213283",
-            "1713014003",
-            "1712572343",
-            "1711326263",
-        ],
-        2: [
-
-            "1711315463",
-            "1711229063",
-            "1711142663",
-            "1710969863",
-            "1710624263",
-            "1710365063",
-            "1709673863",
-            "1709155463",
-            "1708809863",
-            "1708464263",
-            "1707945863",
-            "1707743122",
-            "1707628986",
-            "1707561134",
-            "1707282982",
-            "1707110182",
-            "1706455502",
-            "1705805536",
-            "1704676756",
-            "1704506394",
-        ],
-        3: [
-
-            "1704341509",
-            "1704268389",
-            "1703710542",
-            "1703309854",
-            "1703011724",
-            "1702991910",
-            "1702120384",
-            "1701773200",
-            "1701187727",
-            "1701155686",
-            "1701155600",
-            "1700946181",
-            "1700945941",
-            "1700148417",
-            "1699621720",
-            "1699097680",
-            "1698296920",
-            "1698217720",
-            "1697363800",
-            "1694316905",
-        ],
-        4: [
-
-            "1690919597",
-            "1690075723",
-            "1689610964",
-            "1689610565",
-            "1689440054",
-            "1689437677",
-            "1689431878",
-            "1688749925",
-            "1687728438",
-            "1687719518",
-            "1687539414",
-            "1687430942",
-            "1687421383",
-            "1687419676",
-            "1687291421",
-            "1687244838",
-            "1687176398",
-            "1687099685",
-            "1678830296",
-            "1678675496",
-        ],
-        5: [
-
-            "1677169075",
-            "1676847134",
-            "1671542296",
-            "1671362755",
-            "1666759601",
-            "1662532576",
-            "1661942210",
-            "1660453926",
-            "1660436683",
-        ],
-    }
-
-    // Common shortcuts
-    const indexes = {
-        "github": "https://github.com/xjunko",
-        "steam": "https://steamcommunity.com/id/FireRedz/"
-    }
-
-    // Starts here
-    const params = new URLSearchParams(window.location.search);
-    const status_text = document.getElementById("redirect-status");
-
-    status_text.style.fontWeight = "bold";
-    status_text.style.fontSize = "32px";
-
-    function fuck_right_of_to(url) {
-        window.location.replace(url);
-    }
-
-    function handle_common_redirect(redirect_to) {
-        if (!redirect_to || redirect_to == null) {
-            status_text.textContent = "oops you did a fucky wucky :3333, returning to index."
-            fuck_right_of_to("/")
-        } else {
-            if (redirect_to in indexes) {
-                fuck_right_of_to(indexes[redirect_to]);
-            } else {
-                status_text.textContent = "invalid redirect."
-                fuck_right_of_to("/")
-            }
-        }
-    }
-
-    function handle_channel_redirect(post_id) {
-        if (!post_id) {
-            status_text.textContent = "No parameter given, please give 'id'!!!";
-        } else {
-            status_text.textContent = "Hold on.";
-
-            let found_the_shit = false;
-
-            for (const [key, value] of Object.entries(posts_map)) {
-                if (value.includes(post_id)) {
-                    found_the_shit = true;
-                    status_text.textContent = "Found the stuff.";
-                    fuck_right_of_to("https://konno.ovh/chan/" + key + ".html#" + post_id);
-                }
-            }
-
-            if (!found_the_shit) {
-                status_text.textContent = `Did not found post: #` + post_id;
-            }
-
-        }
-    }
-
-    // Detect which param is passed, then go with that.
-    if (params.get("r")) {
-        handle_common_redirect(params.get("r"));
-    } else {
-        handle_channel_redirect(params.get("id"));
-    }
-
-</script>
 
         <!-- Extra -->
         

@@ -31,6 +31,11 @@ if, for whatever reason, you need to get a hold of me quickly, contact thru emai
 </div>
 <br /><br />
 
+## last note
+
+++RECENT_NOTE
+<br /><br />
+
 ## recent post
 
 ++RECENT_POST

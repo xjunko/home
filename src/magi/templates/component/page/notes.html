@@ -1,0 +1,44 @@
+@if page.metadata["tags"].contains("notes") && !page.metadata['step'].contains('notes')
+<ul>
+    @for note in magi.notes
+    <li>
+        <a style="font-size: 1.7rem;text-decoration: none;border-bottom: 3px solid #F7208B;"
+            href="/notes/@{note.metadata['slog']}.html">
+            @{note.metadata['title']}
+        </a>
+        —
+        <em>@{note.date.custom_format("MMMM YYYY")}</em>
+    </li>
+    @end
+</ul>
+@end
+
+@if page.metadata['step'].contains('notes')
+<div class="content-container">
+    <div class="note-content">
+        @for note in magi.notes
+        @if note.metadata['slog'] == page.metadata['step-data']
+        <h1 class="note-header">
+            @{note.metadata['title']}
+        </h1>
+
+
+        <div class="note-info">
+            <hr>
+            <p>Posted on @{note.date.custom_format("ddd, MMM Do, YYYY")} | @{note.words} words | ~${f64(note.words) /
+                212.0:.02f}
+                minutes read
+            </p>
+            <hr>
+        </div>
+
+
+        @{note.content}
+        @end
+        @end
+
+        @include "component/footer.html"
+    </div>
+    @include "component/utils/space.html"
+</div>
+@end

@@ -219,6 +219,21 @@ a:hover>* {
     border: 2px solid var(--outline-color);
 }
 
+/* image flag */
+img[src*='#left'] {
+    float: left;
+}
+
+img[src*='#right'] {
+    float: right;
+}
+
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}
+
+
 
 
 /* footer */

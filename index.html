@@ -56,21 +56,26 @@
         <!-- lists of stuff -->
         <div class="links">
             <ul>
-                <li>
-                    <a class="sidebar-deco-offset" href="/redirect.html?r=github">github</a>
+                <li class="sidebar-deco-offset">
+                    <a href="/redirect.html?r=github">github</a>
                 </li>
 
-                <li>
-                    <a class="sidebar-deco-offset" href="/redirect.html?r=steam">steam</a>
+                <li class="sidebar-deco-offset">
+                    <a href="/redirect.html?r=steam">steam</a>
+                </li>
+
+                <li class="sidebar-deco-offset">
+                    <a href="/notes.html">notes</a>
                 </li>
 
 
-                <li>
-                    <a class="sidebar-deco-offset-less" href="/chan/1.html">channel</a>
+
+                <li class="sidebar-deco-offset">
+                    <a href="/chan/1.html">channel</a>
                 </li>
 
-                <li>
-                    <a class="sidebar-deco-offset-less" href="/stuff.html">links</a>
+                <li class="sidebar-deco-offset">
+                    <a class=" " href="/stuff.html">links</a>
                 </li>
 
                 <li class="quote">
@@ -131,8 +136,11 @@
 </div>
 </div>
 
+    <!-- Generic -->
+
     <div class="content-container">
         <div class="content">
+            <!-- Common Content -->
             <br />
 <h2>about</h2>
 <p>my name is junko, you can find me online as xjunko. i have a strong interest in eletronics, arcade rhythm game, programming and vocaloids!
@@ -153,9 +161,80 @@ Currently <a id='discord-status-about' class="blink-smooth">offline</a>.
     </a>
 </div>
 <br /><br />
+<h2>last note</h2>
+<p><div class="note-info">
+    <a href="/notes/buying-a-keitai.html">
+        <h1 class="note-header">
+            Buying a Keitai a.k.a Japanese Flip Phone
+        </h1>
+    </a>
+    <hr>
+    <p style="color: var(--text-faint)">Posted on Thu, Jul 11th, 2024 | 568 words
+        |
+        ~2.68
+        minutes read
+    </p>
+    <hr>
+</div>
+
+<style>
+    :root {
+        --underline-color: #F7208B;
+    }
+
+    .note-info {
+        border: solid 2px var(--almost-dark);
+        padding: 10px 5px 5px 10px;
+    }
+
+    .note-info h1:hover {
+        background-color: var(--underline-color);
+        color: black;
+    }
+
+
+    .note-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .note-info h1::before {
+        color: var(--underline-color);
+        content: '>> ';
+    }
+
+    .note-info h1:hover::before {
+        color: black;
+        content: '>> ';
+    }
+
+    .note-info hr {
+        color: var(--underline-color);
+    }
+
+    .note-info hr {
+        position: relative;
+        height: 5px;
+        overflow: hidden;
+        border: 0;
+        margin: 5px 0;
+
+    }
+
+    .note-info hr::after {
+        content: "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 5px;
+        width: 100%;
+        word-wrap: break-word;
+    }
+</style>
+
+<br /><br /></p>
 <h2>recent post</h2>
 <p><div class="channel-post-mini" id="1720412521" style='border: .1em solid #5865F2;'>
-    <div class=" channel-content">
+    <div class="ignore channel-content">
         <span class="channel-author">junko</span> 2024-07-08 04:22:01
         <a class="channel-url no-underline" href="../redirect.html?id=1720412521">[OPEN]</a>
         <br />
@@ -168,7 +247,11 @@ Currently <a id='discord-status-about' class="blink-smooth">offline</a>.
             <img loading=lazy class="channel-media-mini" src="https://hatsune-miku.has.rocks/r/3.95gpa.png">
         </a>
 
-        <p><div class="channel-post reference" id="1706455502_ref" style='border: .1em solid #5865F2;'>
+        <p><a style="color: var(--green-text)">&gt;results came in</a><br/>
+<a style="color: var(--red-text)">&lt;GPA: 3.95 (previously, 3.3)</a><br/>
+lmao look at that fucking jump, i fucking choke 4 flat gpa 😭
+whatever, i hope i can keep this up until final sem</p>
+<p><div class="channel-post reference" id="1706455502_ref">
     <div class="channel-content">
         <a class="channel-url no-underline" href="../redirect.html?id=1706455502">Referencing #1706455502</a> <br />
         Posted by <span class="channel-author">junko</span> at 2024-01-28 15:25:02
@@ -177,10 +260,6 @@ damn thats actually decent. still gonna change my course <img class="discord-emo
     </div>
 </div>
 </p>
-<p><a style="color: var(--green-text)">&gt;results came in</a><br/>
-<a style="color: var(--red-text)">&lt;GPA: 3.95 (previously, 3.3)</a><br/>
-lmao look at that fucking jump, i fucking choke 4 flat gpa 😭 <br></p>
-<p>whatever, i hope i can keep this up until final sem</p>
     </div>
 </div>
 
@@ -202,6 +281,12 @@ lmao look at that fucking jump, i fucking choke 4 flat gpa 😭 <br></p>
 </a></textarea>
 </div>
 
+            <!-- Notes entry -->
+
+
+
+
+            <!-- Content Footer -->
 <hr />
 <div class="footer" style="position: relative;">
     <i>
@@ -217,19 +302,22 @@ lmao look at that fucking jump, i fucking choke 4 flat gpa 😭 <br></p>
 </div>
         </div>
 
+        <!-- This components needs to be outside -->
 
 
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
+        <!-- Extra -->
         
     </div>
+
+    <!-- Note -->
+
 
 <script type="text/javascript">
     // fetch user data from api

@@ -24,12 +24,24 @@
     z-index: 420;
 }
 
-.sidebar-deco-offset {
-    margin-left: 42px;
+.sidebar-deco-offset:nth-child(1) a {
+    margin-left: 30px;
 }
 
-.sidebar-deco-offset-less {
+.sidebar-deco-offset:nth-child(2) a {
+    margin-left: 45px;
+}
+
+.sidebar-deco-offset:nth-child(3) a {
+    margin-left: 35px;
+}
+
+.sidebar-deco-offset:nth-child(4) a {
     margin-left: 30px;
+}
+
+.sidebar-deco-offset:nth-child(5) a {
+    margin-left: 25px;
 }
 
 #discord-status {
@@ -61,8 +73,27 @@
         display: none;
     }
 
-    .sidebar-deco-offset,
-    .sidebar-deco-offset-less {
+    .sidebar-deco-offset a {
+        margin-left: 0px;
+    }
+
+    .sidebar-deco-offset:nth-child(1) a {
+        margin-left: 0px;
+    }
+
+    .sidebar-deco-offset:nth-child(2) a {
+        margin-left: 0px;
+    }
+
+    .sidebar-deco-offset:nth-child(3) a {
+        margin-left: 0px;
+    }
+
+    .sidebar-deco-offset:nth-child(4) a {
+        margin-left: 0px;
+    }
+
+    .sidebar-deco-offset:nth-child(5) a {
         margin-left: 0px;
     }
 }
