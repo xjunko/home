@@ -94,7 +94,7 @@
 
 <!-- widgets -->
 **widgets**  —
-<div style="display: flex;">
+<div style="display: flex;align-items: center;justify-content: center;">
     @include "component/decorations/nerdtest.html"
     @include "component/decorations/moon.html"
 </div>
@@ -102,9 +102,7 @@
 <!-- random webring/cool site links -->
 **super kewl website on the internet** —
 
-<marquee scrollamount="10" direction="right">
-
-
+<div class="ignore" style="text-align: center">
 
 [![](/static/imgs/buttons/utsuhorocks.png)](https://utsuho.rocks/) 
 [![](/static/imgs/buttons/xn-neko-btn.gif)](https://猫.移动/) 
@@ -117,5 +115,11 @@
 [![](/static/imgs/buttons/vendicated.png)](https://vendicated.dev/)
 [![](/static/imgs/buttons/insect.gif)](https://insect.christmas/)
 [![](https://chaotic.ninja/assets/img/banners/88x31/chaoticninja.gif)](https://chaotic.ninja/)
+[![](/static/imgs/buttons/d14.gif)](https://libdb.so/)
+[![](/static/imgs/buttons/lain.png)](https://fauux.neocities.org/lovelain)
+[![](/static/imgs/buttons/const.png)](https://constellatory.net/)
+[![](/static/imgs/buttons/nightfall.city.png)](https://nightfall.city/)
+[![](/static/imgs/buttons/zvava.org.png)](https://zvava.org/)
+[![](/static/imgs/buttons/velzie.rip.png)](https://velzie.rip/)
 
-</marquee>
+</div>
