@@ -68,7 +68,7 @@ hr {
     text-shadow: 2px 1px var(--text-dark);
 }
 
-.content p {
+.content p:not(.ignore p) {
     hyphens: auto;
     text-align: justify;
     text-indent: 1em;
