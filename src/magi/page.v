@@ -16,6 +16,9 @@ pub const c_supported = [
 	'author',
 	'priority',
 	'route',
+	'date',
+	// Note
+	'slog',
 	// Channel & Blog
 	'style',
 	'outline',
@@ -33,6 +36,8 @@ pub mut:
 	max_number int = -5
 	content    string
 	outer      string
+
+	words int
 }
 
 pub fn (mut page Page) load() {
@@ -57,6 +62,12 @@ pub fn (mut page Page) load() {
 			} else {
 				page.content += line + '\n'
 			}
+		}
+	}
+
+	if 'slog' in page.metadata {
+		for line in page.content.split_into_lines() {
+			page.words += line.trim_space().split(' ').len
 		}
 	}
 }

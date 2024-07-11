@@ -13,6 +13,7 @@ pub mut:
 
 	page  []Page
 	posts []Post // Similar to Page but boxed into a Post type.
+	notes []Post // No need to make a new type for this.
 }
 
 pub fn (mut magi Magi) resolve_pages() {
@@ -61,6 +62,33 @@ pub fn (mut magi Magi) resolve_channel() {
 	println('[Channel] Done.')
 }
 
+pub fn (mut magi Magi) resolve_notes() {
+	mut files := []string{}
+
+	files << os.glob('static/entry/notes/*.md') or { [] }
+
+	println('[Note] Found ${files.len} written notes.')
+
+	for i, file in files {
+		// Show progress every 10 files
+		if i % 10 == 0 || i == files.len - 1 {
+			// Progress bar
+			println('[Note] Processing ${i + 1}/${files.len} files.')
+		}
+
+		mut new_post := Post.create(file, mut magi.casper)
+
+		if 'exclude' !in new_post.metadata {
+			magi.notes << new_post
+		}
+	}
+
+	println('[Note] Sorting Notes and running post-process.')
+	magi.casper.postprocess(mut magi.notes)
+	magi.notes.sort(a.date > b.date)
+	println('[Note] Done.')
+}
+
 //
 pub fn execute(config Configuration) {
 	mut magi := Magi{
@@ -102,6 +130,10 @@ pub fn execute(config Configuration) {
 	magi.resolve_pages()
 	println('[Magi] Pages resolved: ${magi.page.len}')
 
+	println('[Magi] Resolving notes.')
+	magi.resolve_notes()
+	println('[Magi] Notes resolved: ${magi.notes.len}')
+
 	// RSS
 	println('[Magi] Saving RSS Feed.')
 	os.write_file('feed.xml', $tmpl('templates/rss.xml')) or { panic(err) }
@@ -109,6 +141,7 @@ pub fn execute(config Configuration) {
 	// Page
 	println('[Magi] Saving pages!')
 	for mut page in magi.page {
+		// Channel
 		if os.base(page.path) == 'channel.md' {
 			if !c_chan_enabled {
 				continue
@@ -133,16 +166,43 @@ pub fn execute(config Configuration) {
 			continue
 		}
 
+		// Note
+		if os.base(page.path) == 'notes.md' {
+			// Entry page
+			os.write_file('${os.base(page.path).split_nth('.', 2)[0]}.html', $tmpl('templates/base.html')) or {
+				panic(err)
+			}
+
+			page.metadata['step'] = 'notes'
+
+			// Generate notes
+			for current_note in magi.notes {
+				page.metadata['step-data'] = current_note.metadata['slog']
+
+				os.write_file('notes/${current_note.metadata['slog']}.html', $tmpl('templates/base.html')) or {
+					panic(err)
+				}
+			}
+
+			continue
+		}
+
 		if os.base(page.path) == 'index.md' {
 			// TODO: This is a hack, we should have a better way to do this.
 			mut recent_post_template := '<a style="color: #96c83b;">>none, unfortunately.</a>'
+			mut recent_note_template := '<a style="color: #96c83b;">>none, unfortunately.</a>'
 
 			if post := magi.posts[0] {
-				recent_post_template = $tmpl('templates/component/post-mini.html')
+				recent_post_template = $tmpl('templates/component/mini/post.html')
 				recent_post_template += '\n<link rel="stylesheet" type="text/css" href="/static/css/channel.css">'
 			}
 
+			if note := magi.notes[0] {
+				recent_note_template = $tmpl('templates/component/mini/note.html')
+			}
+
 			page.content = page.content.replace('++RECENT_POST', recent_post_template)
+			page.content = page.content.replace('++RECENT_NOTE', recent_note_template)
 
 			os.write_file('${os.base(page.path).split_nth('.', 2)[0]}.html', $tmpl('templates/base.html')) or {
 				panic(err)

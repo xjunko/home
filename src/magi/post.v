@@ -55,6 +55,11 @@ pub fn Post.create(path string, mut casper Casper) Post {
 		post.metadata['style'] = 'border: .1em solid #5865F2;'
 	}
 
+	// Try to fix date, thru metadata, if it exists.
+	if post.date.year == 1970 && 'date' in post.metadata {
+		post.date = time.unix(post.metadata['date'].int())
+	}
+
 	return post
 }
 
