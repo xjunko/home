@@ -103,25 +103,5 @@
 **super kewl website on the internet** —
 
 <div class="ignore" style="text-align: center">
-
-[![](/static/imgs/buttons/utsuhorocks.png)](https://utsuho.rocks/) 
-[![](/static/imgs/buttons/xn-neko-btn.gif)](https://猫.移动/) 
-[![](/static/imgs/buttons/archlinux.gif)](https://archlinux.org/) 
-[![http://lucky-ch.com](/static/imgs/buttons/konata.gif)](http://lucky-ch.com) 
-[![](/static/imgs/buttons/katawashoujo.jpg)](https://www.katawa-shoujo.com/about.php) 
-[![mariluu's site](/static/imgs/buttons/mariluu.gif)](https://mariluu.hehe.moe) 
-[![https://dimden.dev/](https://dimden.dev/services/images/88x31.gif)](https://dimden.dev/) 
-[![marisakirisame.net](https://marisakirisame.net/button.png)](https://marisakirisame.net)
-[![](/static/imgs/buttons/vendicated.png)](https://vendicated.dev/)
-[![](/static/imgs/buttons/insect.gif)](https://insect.christmas/)
-[![](https://chaotic.ninja/assets/img/banners/88x31/chaoticninja.gif)](https://chaotic.ninja/)
-[![](/static/imgs/buttons/d14.gif)](https://libdb.so/)
-[![](/static/imgs/buttons/lain.png)](https://fauux.neocities.org/lovelain)
-[![](/static/imgs/buttons/const.png)](https://constellatory.net/)
-[![](/static/imgs/buttons/nightfall.city.png)](https://nightfall.city/)
-[![](/static/imgs/buttons/zvava.org.png)](https://zvava.org/)
-[![](/static/imgs/buttons/velzie.rip.png)](https://velzie.rip/)
-[![](https://melankorin.net/assets/img/buttons/button-1.gif)](https://melankorin.net/)
-
-
+    @include "component/decorations/cool_buttons.html"
 </div>
