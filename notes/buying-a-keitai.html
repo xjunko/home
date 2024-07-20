@@ -178,7 +178,7 @@
 
         <div class="note-info">
             <hr>
-            <p>Posted on Thu, Jul 11th, 2024 | 568 words | ~2.68
+            <p>Posted on Thu, Jul 11th, 2024 | 1583 words | ~7.47
                 minutes read
             </p>
             <hr>
@@ -207,12 +207,94 @@
 <a href="https://www.ebay.com.my/itm/204382636998">
     <img src="https://i.ebayimg.com/images/g/2xYAAOSwJkZl4~4x/s-l1200.jpg#right" style="width: 20%;">
 </a>
-<p>After hours of just looking around YouTube and the Japanese side of the internet, I decided to go with Sharp Aquos 601SH or Sharp Keitai 2. Unfortunately, there has been a whole lot of complaints from westerner people (those being on the USA and Europe) about the phone not supporting the bands required for their carrier but, fortunately, I live in Asia. Japanese Keitai tends to just work in Asia countries. So yeah, pretty cool.</p>
+<p>After hours of just looking around the internet, I decided to go with Sharp Aquos 601SH or Sharp Keitai 2. Unfortunately, there has been a whole lot of complaints from westerner people (those being on the USA and Europe) about the phone not supporting the bands required for their carrier but, fortunately, I live in Asia. Japanese Keitai tends to just work in Asia countries. So yeah, pretty cool.</p>
 <h2>Buying</h2>
 <p>Buying a Keitai is not exactly easy because you have to jump thru a lot of hoops to get it to you, but, again, fortunately, my Amazon equivalent for this country, Shopee, has it for sale, So I don't need to use proxies or pay any of those expensive import/export tax, thank GOD.</p>
-<!-- ## Using -->
-<h2>..more</h2>
-<p>To be continued!!</p>
+<h2>Using</h2>
+<p>After waiting for a week for the phone to arrive (I swear, theyre not usually this long, at least in my region), it's here.</p>
+<a>
+    <img src="https://hatsune-miku.has.rocks/r/GS7UQDsaAAAFDaP.jpg#right" style="width: 50%">
+</a>
+<p>Now, the first thing you should do after getting a keitai is to give it a strap.</p>
+<p>Ok nice, now let's get to the real thing, installing applications.
+<br><br><br></p>
+<h2>Installing Applications</h2>
+<p>So, how the hell are supposed to install apps into this, because the browser that my phone came with can't download files.
+Easy, we use <a href="https://developer.android.com/tools/adb">ADB</a>.
+I'm using linux so all I had to do it to just run <code>sudo pacman -S android-tools</code> in the terminal and ... that's it :D.</p>
+<p>For windows folks, I guess you had to find a binary somewhere and then put it in your enviroment path (or just rawdog it inside the extracted folder like a maniac).</p>
+<p>Anyways going back to the phone, enable the developer options and the USB debugging options inside it, so that ADB can detect our device!</p>
+<p>After that, just run <code>adb install &lt;path/to/app.apk&gt;</code> with your apks.</p>
+<p>Here is the not-so-detailed list of what I installed:</p>
+<ul>
+<li><a href="https://f-droid.org/en/packages/com.aurora.store/">Aurora Store</a> (Important!!! cuz we dont have google services installed)</li>
+<li><a href="https://f-droid.org/">F-droid</a></li>
+<li><a href="https://f-droid.org/en/packages/com.moez.QKSMS/">QKSMS</a></li>
+<li>Whatsapp</li>
+<li>Google 2FA (Anon Login)</li>
+<li><a href="https://github.com/sspanak/tt9">Traditional T9</a></li>
+<li>Firefox</li>
+<li>ZArchiver</li>
+<li><a href="https://f-droid.org/en/packages/org.schabi.newpipe/">NewPipe</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.musicplayer.blackplayerfree&amp;hl=en">Blackplayer</a></li>
+<li>Spotify Lite</li>
+<li>Twitter</li>
+<li><a href="https://github.com/Adamantcheese/Kuroba">Kuroba</a></li>
+</ul>
+<p>and... that should be all I needed. Funnily enough, the native email app that it came with just works with my email
+so no need for third party app there :D.</p>
+<h2>What works</h2>
+<p>So after all of this kerfuffle, what works and what not.</p>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMS</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Phone Calls</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>4G Connectivity</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Good Battery Lifetime</td>
+<td>✔️, VERY</td>
+</tr>
+<tr>
+<td>External Storage</td>
+<td>✔️, spec said 32GB only but it seems to work fine with 64gb SD Card</td>
+</tr>
+<tr>
+<td>Google Services</td>
+<td>❗ (Can work with MicroG)</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>❗</td>
+</tr>
+<tr>
+<td>Wired Headset</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h2>Misc</h2>
+<a>
+    <img src="https://hatsune-miku.has.rocks/r/GS7UQCdbIAA8iK9.jpg#center" style="width: 50%">
+</a>
 
 <hr />
 <div class="footer" style="position: relative;">

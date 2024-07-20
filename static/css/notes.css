@@ -2,6 +2,15 @@
     --underline-color: #F7208B;
 }
 
+code {
+    font-family: var(--fonts);
+    font-size: 16px;
+    background-color: var(--bright-color);
+    color: #ce9178;
+    border: 1px solid var(--text-faint);
+    text-shadow: 0 0;
+}
+
 
 .note-header a {
     background-color: var(--underline-color);
@@ -86,4 +95,16 @@ h5::before {
 h6::before {
     color: var(--underline-color);
     content: '###### ';
+}
+
+/* table */
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 6px 13px;
+    border: 1px solid var(--text-light);
+    font-size: large;
 }
