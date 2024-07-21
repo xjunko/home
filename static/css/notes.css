@@ -2,16 +2,6 @@
     --underline-color: #F7208B;
 }
 
-code {
-    font-family: var(--fonts);
-    font-size: 16px;
-    background-color: var(--bright-color);
-    color: #ce9178;
-    border: 1px solid var(--text-faint);
-    text-shadow: 0 0;
-}
-
-
 .note-header a {
     background-color: var(--underline-color);
     color: black;
@@ -97,13 +87,24 @@ h6::before {
     content: '###### ';
 }
 
+/* code */
+.note-content code {
+    font-family: var(--fonts);
+    font-size: 16px;
+    background-color: var(--bright-color);
+    color: #ce9178;
+    border: 1px solid var(--text-faint);
+    text-shadow: 0 0;
+}
+
+
 /* table */
-table {
+.note-content table {
     border-spacing: 0;
     border-collapse: collapse;
 }
 
-table td {
+.note-content table td {
     padding: 6px 13px;
     border: 1px solid var(--text-light);
     font-size: large;
