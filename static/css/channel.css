@@ -88,14 +88,17 @@
     opacity: 1.0;
 }
 
-.channel-post * {
-    overflow: hidden;
-    max-width: var(--channel-width);
-}
-
 .channel-content>p {
     padding: 0px 5px 0px 5px;
     margin: 0px;
+}
+
+.channel-content li {
+    list-style-position: inside;
+}
+
+.channel-content li::marker {
+    content: counter(list-item) " › ";
 }
 
 
