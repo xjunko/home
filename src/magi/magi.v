@@ -109,9 +109,9 @@ pub fn execute(config Configuration) {
 	} else {
 		// HACK: To avoid index=0, len=0 problem.
 		magi.posts << Post{
-			path: 'NONE'
-			id: '0'
-			date: time.now()
+			path:             'NONE'
+			id:               '0'
+			date:             time.now()
 			original_content: ''
 		}
 
@@ -122,8 +122,8 @@ pub fn execute(config Configuration) {
 			}
 		}
 
-		os.write_file('chan/index.html', '<meta http-equiv="refresh" content="0;url=https://konno.ovh">') or {}
-		os.write_file('chan/1.html', '<meta http-equiv="refresh" content="0;url=https://konno.ovh">') or {}
+		os.write_file('chan/index.html', '<meta http-equiv="refresh" content="0;url=https://kafu.ovh">') or {}
+		os.write_file('chan/1.html', '<meta http-equiv="refresh" content="0;url=https://kafu.ovh">') or {}
 	}
 
 	println('[Magi] Resolving pages.')

@@ -2,7 +2,7 @@
 // Use of this source code is governed by an AGPL license
 // that can be found in the LICENSE file.
 //
-// Modified by [xJunko | konno.ovh] on 2024
+// Modified by [xJunko | kafu.ovh] on 2024
 // Changes made: integrate database cache directly into the processor
 
 module processor
@@ -100,37 +100,35 @@ pub fn (spotify SpotifyProcessor) largest_cover_art(sources []RootCoverArt) ?str
 }
 
 pub fn (mut spotify SpotifyProcessor) get_track_from_url(url string) !Track {
-	response := http.get(url) or {
-		return error(processor.sptfy_i_fucked_up + 'Failed to reach url.')
-	}
+	response := http.get(url) or { return error(sptfy_i_fucked_up + 'Failed to reach url.') }
 
 	script_index, _ := spotify.script_pattern.find_from(response.body, 0)
 
 	if script_index < 0 {
-		return error(processor.sptfy_i_fucked_up + 'Embedded script not found.')
+		return error(sptfy_i_fucked_up + 'Embedded script not found.')
 	}
 
 	base64_data := spotify.script_pattern.get_group_by_id(response.body, 0)
 	music_data := base64.decode_str(base64_data)
 
 	decoded_data := json.decode(Root, music_data) or {
-		return error(processor.sptfy_i_fucked_up + 'Embedded data contains no valid data.')
+		return error(sptfy_i_fucked_up + 'Embedded data contains no valid data.')
 	}
 
 	for _, track in decoded_data.entities.items {
 		if audio_preview := track.previews.audio_previews.items[0] {
 			if artist := track.first_artist.items[0] {
 				thumbnail := spotify.largest_cover_art(track.album_of_track.cover_art.sources) or {
-					return error(processor.sptfy_i_fucked_up + 'Failed to get thumbnail.')
+					return error(sptfy_i_fucked_up + 'Failed to get thumbnail.')
 				}
 
 				fetched_track := Track{
-					source_url: url
-					id: track.id
-					name: track.name
-					artist: artist.profile.name
-					artist_id: artist.id
-					cover_art_url: thumbnail
+					source_url:        url
+					id:                track.id
+					name:              track.name
+					artist:            artist.profile.name
+					artist_id:         artist.id
+					cover_art_url:     thumbnail
 					audio_preview_url: audio_preview.url
 				}
 
@@ -164,7 +162,7 @@ pub fn (mut spotify SpotifyProcessor) get_track(url string, mut db sqlite.DB) !T
 		return fetched_track
 	}
 
-	return error(processor.sptfy_i_fucked_up + 'Failed to get data from both DB and Online.')
+	return error(sptfy_i_fucked_up + 'Failed to get data from both DB and Online.')
 }
 
 pub fn (mut spotify SpotifyProcessor) handle_url(url string, mut db sqlite.DB) string {
@@ -183,7 +181,7 @@ pub fn (mut spotify SpotifyProcessor) process(text string, mut db sqlite.DB) str
 
 pub fn SpotifyProcessor.create() !SpotifyProcessor {
 	return SpotifyProcessor{
-		pattern: regex.regex_opt(processor.sptfy_url_re)!
-		script_pattern: regex.regex_opt(processor.sptfy_script_re)!
+		pattern:        regex.regex_opt(sptfy_url_re)!
+		script_pattern: regex.regex_opt(sptfy_script_re)!
 	}
 }

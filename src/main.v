@@ -14,7 +14,7 @@ fn main() {
 	config.expects('instance.version', config.manifest.version)
 
 	// Domain
-	config.expects('instance.domain', 'https://konno.ovh')
+	config.expects('instance.domain', 'https://kafu.ovh')
 
 	// Folder
 	config.expects('folder.root', 'static')
