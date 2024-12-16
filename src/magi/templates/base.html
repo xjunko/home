@@ -13,17 +13,17 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kafu.ovh/" />
+    <meta property="og:url" content="@{magi.config.get('instance.domain') as string}" />
     <meta property="og:title" content="@{page.metadata['title']} | letter to the black world" />
     <meta property="og:description" content="@{page.metadata['description']}" />
-    <meta property="og:image" content="https://kafu.ovh/static/imgs/preview.png" />
+    <meta property="og:image" content="@{magi.config.get('instance.domain') as string}/static/imgs/preview.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://kafu.ovh/" />
+    <meta property="twitter:url" content="@{magi.config.get('instance.domain') as string}/" />
     <meta property="twitter:title" content="@{page.metadata['title']} | letter to the black world" />
     <meta property="twitter:description" content="@{page.metadata['description']}" />
-    <meta property="twitter:image" content="https://kafu.ovh/static/imgs/preview.png" />
+    <meta property="twitter:image" content="@{magi.config.get('instance.domain') as string}/static/imgs/preview.png" />
 
 
     <!-- Stylesheet(s) and Icons -->

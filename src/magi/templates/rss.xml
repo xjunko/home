@@ -5,7 +5,7 @@
         <link>@{magi.config.get("instance.domain") as string}</link>
         <description>nonstop rambling</description>
         <language>en-us</language>
-        <copyright>Copyright 2023-2024, kafu.ovh</copyright>
+        <copyright>Copyright 2023-2024, @{(magi.config.get('instance.domain') as string).replace("https://", "").replace("/", "")}</copyright>
         <generator>Magi + V</generator>
         <lastBuildDate>@{magi.posts#[-1 ..][0].date.utc_string()}</lastBuildDate>
         <atom:link href="@{magi.config.get('instance.domain') as string}/feed.xml" rel="self"
