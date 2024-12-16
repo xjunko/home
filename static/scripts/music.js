@@ -22,6 +22,11 @@ let track_list = [
         path: "https://hatsune-miku.has.rocks/r/ufo.mp3"
     },
     {
+        name: 'プシ',
+        artist: "r-906",
+        path: "https://hatsune-miku.has.rocks/r/pushi.mp3"
+    },
+    {
         name: "腐れ外道とチョコレゐト",
         artist: "PinocchioP",
         path: "https://hatsune-miku.has.rocks/r/chocolate.mp3"
@@ -45,6 +50,11 @@ let track_list = [
         name: "メモリア",
         artist: "Aira",
         path: "https://hatsune-miku.has.rocks/r/memoria.mp3"
+    },
+    {
+        name: 'RBF SYNDROME',
+        artist: "omuomu",
+        path: "https://hatsune-miku.has.rocks/r/rbfsyndrome.mp3"
     },
     {
         name: "夏 O 幻",
