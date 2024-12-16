@@ -18,7 +18,7 @@ currently, the domain is [kafu.ovh](https://kafu.ovh), i'm broke so the domain <
 
 ## contact me
 
-i go by the name, <a id="discord-name" class="blink-smooth">xjunko</a>, on discord, feel free to message me, also, i've been trying to get off the internet recently, so response time may be late. sorry ;-;
+i go by the name, <a id="discord-name" class="blink-smooth">rmhakurei</a>, on discord, feel free to message me.
 <br />
 Currently <a id='discord-status-about' class="blink-smooth">offline</a>.
 <br /><br />
