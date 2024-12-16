@@ -9,4 +9,4 @@
 ### いらっしゃいませ
 a place where i let my thoughts out, _may_ be NSFW.
 
-[[RSS]](https://konno.ovh/feed.xml) feed is available.
+[[RSS]](https://kafu.ovh/feed.xml) feed is available.
