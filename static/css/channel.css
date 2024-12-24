@@ -62,6 +62,7 @@
     font-size: 12pt !important;
     width: 100%;
     max-width: 100%;
+    max-height: 400px;
     padding: 3px;
     overflow: auto;
     opacity: 0.9;
@@ -71,11 +72,12 @@
     margin-top: 5px;
 }
 
-.channel-post-mini p {
+/* FIXME: this breaks custom formatting, come back to this again later */
+/* .channel-post-mini p {
     hyphens: auto;
     text-align: justify;
     text-indent: 0em;
-}
+} */
 
 .channel-post.reference {
     width: calc(var(--channel-width) * 50%);
