@@ -49,6 +49,23 @@
   text-transform: uppercase;
 }
 
+.sidebar-music {
+  width: 290px;
+  height: 60px;
+  position: relative;
+  background: var(--sidebar-color);
+  border: 0.1em solid var(--outline-color);
+  border-radius: 0.3em;
+}
+
+.sidebar-music object {
+  float: left;
+  position: absolute;
+  left: 0px;
+  overflow: hidden;
+  border-radius: 0.3em;
+}
+
 .avatar {
   margin-bottom: -3px;
 }
@@ -98,6 +115,10 @@
 
 @media only screen and (max-width: 768px), (orientation: portrait) {
   .marquee-buttons {
+    display: none;
+  }
+
+  .sidebar-music {
     display: none;
   }
 }
