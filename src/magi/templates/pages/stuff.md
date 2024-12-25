@@ -8,6 +8,10 @@
 ### cool ebin links
 <br />
 
+<!-- short description -->
+here lies a list of website of which i found interesting and cool.
+<br> <br>
+
 
 <!-- this site info -->
 **this site** —
@@ -23,8 +27,10 @@
 <!-- friends -->
 **friends** —
 
+- [[(꒪ω꒪υ)]](https://fawnsnangels.neocities.org/)
+    - a good friend of mine, cute website.
 - [[<u>l-m.dev</u>]](https://me.l-m.dev/)
-    - _cool guy, he knows a lot about compilers._
+    - _super cool compiler wizard guy, programming magickery, check it out!._
 - [[caffeine](https://caffeine.moe/)]
     - _soon-to-be successful music producer (real)._
 - [![](/static/imgs/buttons/utsuhorocks.png)](https://utsuho.rocks/) [Utsuho Rocks](https://utsuho.rocks/)
