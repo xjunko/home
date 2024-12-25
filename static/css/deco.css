@@ -118,6 +118,11 @@ body:before {
   background-repeat: all;
   background-position: 0px 0px;
   box-shadow: inset 0px 0px 10em rgb(0 0 0 / 40%);
+  animation-name: Static;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(4);
+  box-shadow: inset 0px 0px 10em rgb(0 0 0 / 40%);
 }
 
 body:after {
@@ -133,4 +138,58 @@ body:after {
   background-image: url(/static/imgs/overlays/overlay.png);
   background-repeat: all;
   background-position: 0px 0px;
+  animation-name: Static;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(4);
+}
+
+@keyframes Static {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px 4px;
+  }
+}
+
+/* Festive-specific theme */
+#snow {
+  background: none;
+  background-image: url(../imgs/overlays/s1.png), url(../imgs/overlays/s2.png),
+    url(../imgs/overlays/s3.png);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  -webkit-animation: snow 100s linear infinite;
+  animation: snow 100s linear infinite;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  50% {
+    background-position: 5000px 5000px, 1000px 2000px, -1000px 1500px;
+  }
+  100% {
+    background-position: 5000px 10000px, 2000px 4000px, -1000px 3000px;
+  }
+}
+
+@-webkit-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  50% {
+    background-position: 5000px 5000px, 1000px 2000px, -1000px 1500px;
+  }
+  100% {
+    background-position: 5000px 10000px, 2000px 4000px, -1000px 3000px;
+  }
 }
