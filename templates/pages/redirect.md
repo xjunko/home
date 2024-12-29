@@ -1,0 +1,90 @@
+@title=doomerposting
+@description=internal redirect page
+@tags=internal.post_finder
+@priority=9999
+@route=/redirect.html
+
+<br />
+
+<h1> Loading... </h1>
+<a id="redirect-status"> Detecting arguments... </a>
+
+<div>
+</div>
+
+<script>
+    // Some voodoo shit going on here
+    // dont ask.
+    // const posts_map = {
+    //     @for page_number, page_posts in magi.get_pages()
+    //     ${ page_number }: [
+    //     @for c_post in page_posts
+    //         "${ c_post.id }",
+    //         @end
+    //     ],
+    // @end
+    // }
+    const posts_map = {}
+
+    // Common shortcuts
+    const indexes = {
+        "github": "https://github.com/xjunko",
+        "steam": "https://steamcommunity.com/id/FireRedz/"
+    }
+
+    // Starts here
+    const params = new URLSearchParams(window.location.search);
+    const status_text = document.getElementById("redirect-status");
+
+    status_text.style.fontWeight = "bold";
+    status_text.style.fontSize = "32px";
+
+    function fuck_right_of_to(url) {
+        window.location.replace(url);
+    }
+
+    function handle_common_redirect(redirect_to) {
+        if (!redirect_to || redirect_to == null) {
+            status_text.textContent = "oops you did a fucky wucky :3333, returning to index."
+            fuck_right_of_to("/")
+        } else {
+            if (redirect_to in indexes) {
+                fuck_right_of_to(indexes[redirect_to]);
+            } else {
+                status_text.textContent = "invalid redirect."
+                fuck_right_of_to("/")
+            }
+        }
+    }
+
+    function handle_channel_redirect(post_id) {
+        if (!post_id) {
+            status_text.textContent = "No parameter given, please give 'id'!!!";
+        } else {
+            status_text.textContent = "Hold on.";
+
+            let found_the_shit = false;
+
+            for (const [key, value] of Object.entries(posts_map)) {
+                if (value.includes(post_id)) {
+                    found_the_shit = true;
+                    status_text.textContent = "Found the stuff.";
+                    fuck_right_of_to("{{ .Config.Get "Instance.Domain" }}/chan/" + key + ".html#" + post_id);
+                }
+            }
+
+            if (!found_the_shit) {
+                status_text.textContent = `Did not found post: #` + post_id;
+            }
+
+        }
+    }
+
+    // Detect which param is passed, then go with that.
+    if (params.get("r")) {
+        handle_common_redirect(params.get("r"));
+    } else {
+        handle_channel_redirect(params.get("id"));
+    }
+
+</script>
