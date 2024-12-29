@@ -10,7 +10,6 @@ import (
 	"text/template"
 	"time"
 
-	"eva/internal/config"
 	"eva/internal/page/processor"
 
 	"gitlab.com/golang-commonmark/markdown"
@@ -60,6 +59,7 @@ type EvaPage struct {
 	Metadata map[string]string
 
 	Template *template.Template
+	Exporter IExporter
 
 	RawContent     string
 	BeenReferenced bool
@@ -131,7 +131,12 @@ func (p *EvaPage) ToMarkdown() string {
 	return toMarkdown(p.Content)
 }
 
-func (p *EvaPage) GetContent(curConfig *config.Config, postOnChannels []EvaPage, postedNotes []EvaPage) string {
+func (p *EvaPage) GetContent() string {
+	// Check if Exporter is not nil
+	if p.Exporter == nil {
+		return p.ToMarkdown()
+	}
+
 	templateName := "internal.page_" + p.ID
 	withAllTemplate, err := p.Template.New(templateName).Parse(p.Content)
 
@@ -141,19 +146,8 @@ func (p *EvaPage) GetContent(curConfig *config.Config, postOnChannels []EvaPage,
 	}
 
 	var buf bytes.Buffer
-	context := struct {
-		CurrentPage *EvaPage
-		Config      *config.Config
-		Channels    []EvaPage
-		Notes       []EvaPage
-	}{
-		CurrentPage: p,
-		Config:      curConfig,
-		Channels:    postOnChannels,
-		Notes:       postedNotes,
-	}
 
-	if err := withAllTemplate.ExecuteTemplate(&buf, templateName, context); err != nil {
+	if err := withAllTemplate.ExecuteTemplate(&buf, templateName, p.Exporter); err != nil {
 		fmt.Printf("[Page] Failed to execute the page content: %v", err)
 		return p.ToMarkdown()
 	}
@@ -193,7 +187,7 @@ func (p *EvaPage) GetWords() int {
 	return len(strings.Fields(p.Content))
 }
 
-func NewPage(templ *template.Template, path string) *EvaPage {
+func NewPage(exporter IExporter, path string) *EvaPage {
 	filenameNoExt := strings.TrimSuffix(filepath.Base(path), filepath.Ext(path))
 	unixTimefromFilename, err := strconv.ParseInt(filenameNoExt, 10, 64)
 
@@ -206,6 +200,7 @@ func NewPage(templ *template.Template, path string) *EvaPage {
 		ID:       filenameNoExt,
 		PostedAt: time.Unix(unixTimefromFilename, 0),
 		Metadata: make(map[string]string),
-		Template: templ,
+		Exporter: exporter,
+		Template: exporter.GetTemplate(),
 	}
 }

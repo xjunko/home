@@ -2,7 +2,7 @@ package main
 
 import (
 	"eva/internal/config"
-	"eva/internal/manager"
+	"eva/internal/export"
 )
 
 func main() {
@@ -27,7 +27,7 @@ func main() {
 		panic(err)
 	}
 
-	if err := manager.Execute(config); err != nil {
+	if err := export.Execute(config); err != nil {
 		panic(err)
 	}
 }

@@ -1,5 +1,5 @@
-{{ $Config := .Config }}
-{{ $CurrentPage := .CurrentPage }}
+{{ $Config := .GetConfig }}
+{{ $CurrentPage := .GetCurrentPage }}
 
 {{ template "base/head" . }}
 
@@ -14,7 +14,7 @@
 <div class="content-container">
     <div class="content">
         <!-- Common Content -->
-        {{ $CurrentPage.GetContent $Config .Channels .Notes }}
+        {{ $CurrentPage.GetContent }}
 
         <!-- Version Footer -->
         {{ template "base/version" . }}
