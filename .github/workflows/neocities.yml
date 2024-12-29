@@ -24,13 +24,13 @@ jobs:
 
     - name: Create folder
       run: |
-          mkdir -p public 
-          cp *.html public/ 
+          mkdir -p public
+          cp *.html public/
           cp -r notes/ public/
-          cp -r chan/ public/ 
-          cp -r static/ public/ 
+          cp -r chan/ public/
+          cp -r static/ public/
           ls public/
-          
+
 
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v1

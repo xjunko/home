@@ -27,7 +27,7 @@ junko's homepage
 
 ### flow
 ```
-Main -> Magi.resolve_pages -> Magi.resolve_channel 
+Main -> Magi.resolve_pages -> Magi.resolve_channel
                                       |
                                       v
                                 Post.create
@@ -81,4 +81,3 @@ Main -> Magi.resolve_pages -> Magi.resolve_channel
 
 ## credits
 - spotify resolver is taken from [[l'm blog]](https://github.com/l1mey112/me.l-m.dev/blob/main/src/spotify/main.v)
-

@@ -1,0 +1,25 @@
+{{ $LatestPost := index .Channels 0 }}
+
+<link rel="stylesheet" type="text/css" href="/static/css/channel.css">
+
+<div class="channel-post-mini" id="{{ $LatestPost.ID }}" style='{{ index $LatestPost.Metadata "style" }}'>
+<div class="ignore channel-content">
+<span class="channel-author">{{ index $LatestPost.Metadata "author" }}</span> {{ $LatestPost.PostedAt }}
+<a class="channel-url no-underline" href="{{ .Config.Get "Instance.Domain" }}/redirect.html?id={{ $LatestPost.ID }}">[OPEN]</a>
+<br />
+{{ if (index $LatestPost.Metadata "thumbnail") }}
+file: <a class="channel-url" href="{{ index $LatestPost.Metadata "thumbnail" }}" target="_blank"
+rel="noopener noreffer">{{ index $LatestPost.Metadata "filename" }}</a> [file/{{ index $LatestPost.Metadata "mimetype" }}] <br />
+<a href="{{ index $LatestPost.Metadata "thumbnail" }}" target="_blank" rel="noopener noreffer">
+{{ if eq (index $LatestPost.Metadata "thumbnail-type") "video" }}
+<video muted loop controls preload=metadata class="channel-media-mini"
+src="{{ index $LatestPost.Metadata "thumbnail" }}"></video>
+{{ else }}
+<img loading=lazy class="channel-media-mini" src="{{ index $LatestPost.Metadata "thumbnail" }}">
+{{ end }}
+</a>
+{{ end }}
+
+{{ $LatestPost.GetContent .Config .Channels }}
+</div>
+</div>

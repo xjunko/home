@@ -1,0 +1,31 @@
+{{ $Config := .Config }}
+{{ $CurrentPage := .CurrentPage }}
+
+
+{{ template "header.tmpl" .}}
+
+<body>
+    <!-- Event -->
+    {{ template "christmas.tmpl" . }}
+
+    <!-- Sidebar -->
+    {{ template "sidebar.tmpl" . }}
+
+    <!-- Generic -->
+    {{if eq .Mode "Normal"}}
+    <div class="content-container">
+        <div class="content">
+            <!-- Common Content -->
+            {{ $CurrentPage.GetContent $Config .Channels }}
+
+            <!-- Content Footer -->
+            {{ template "footer.tmpl" . }}
+        </div>
+    </div>
+    {{end}}
+
+    {{ template "discord.tmpl" .}}
+    {{ template "bottombar.tmpl" . }}
+</body>
+
+</html>

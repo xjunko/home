@@ -1,0 +1,61 @@
+<script type="text/javascript">
+    // fetch user data from api
+    api_endpoint = 'https://api.lanyard.rest/v1/users/736223131240497183';
+    req = new XMLHttpRequest();
+    req.open("GET", api_endpoint, true);
+    req.onload = function () {
+        if (this.status == 200) {
+            console.log("good!");
+            var data = JSON.parse(this.response).data;
+            var user = data.discord_user;
+            var status = data.discord_status;
+
+            // pfp then name
+            try {
+                var html_name = document.getElementById("discord-name");
+                var avatarUrl = "https://cdn.discordapp.com/avatars/" + user.id + "/" + user.avatar + ".png?size=40";
+
+                // Get request to the URL and see if it exists, if it returns 404, delete the element
+                var avatar_check = new XMLHttpRequest();
+                avatar_check.open("GET", avatarUrl, true);
+                avatar_check.onload = function () {
+                    if (this.status == 404) {
+                        html_name.innerHTML = "<i>" + user.username + "</i>";
+                    } else {
+                        html_name.innerHTML = "<img class='discord-avatar' src='" + avatarUrl + "'> <i>" + user.username + "</i>";
+                    }
+                };
+                avatar_check.send();
+
+            } catch {
+                console.log('[Discord] Failed to replace avatar component, probably doesnt exists...');
+            }
+
+
+
+            // online stat
+            var html_status = document.getElementById("discord-status");
+            var color = ""
+
+            switch (status) {
+                case 'online': html_status.text = "online"; color = "color: green;"; break;
+                case 'idle': html_status.text = "idling"; color = "color: yellow;"; break;
+                case 'dnd': html_status.text = "dnd"; color = "color: red;"; break;
+                case 'offline': html_status.text = "offline"; color = "color: gray;"; break;
+            }
+
+            try {
+                document.getElementById("discord-status-about").text = html_status.text;
+                document.getElementById("discord-status-about").style = color;
+            } catch {
+                console.log('[Discord] Failed to replace name component, probably doesnt exists...');
+            }
+
+            html_status.style = color;
+
+            console.log(html_status);
+        }
+    }
+
+    req.send();
+</script>
