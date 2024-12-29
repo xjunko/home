@@ -4,11 +4,11 @@ import (
 	"eva/internal/config"
 	"eva/internal/page"
 	"eva/internal/page/processor"
+	"eva/internal/page/templates"
 	"fmt"
 	"os"
 	"path/filepath"
 	"sort"
-	"text/template"
 )
 
 type Magi struct {
@@ -46,6 +46,28 @@ func (m *Magi) ResolvePage() {
 	}
 }
 
+func (m *Magi) ResolveNote() {
+	files, err := filepath.Glob("web/entries/notes/*.md")
+
+	if err != nil {
+		fmt.Println("[Magi] Failed to resolve Note!")
+		return
+	}
+
+	for _, file := range files {
+		curNote := page.NewPage(file)
+
+		if err := curNote.Load(m.Processor); err != nil {
+			fmt.Printf("[Magi] %v \n", err)
+			continue
+		}
+
+		if !curNote.ShouldExclude() {
+			m.Notes = append(m.Notes, *curNote)
+		}
+	}
+}
+
 func (m *Magi) ResolveChannel() {
 	files, err := filepath.Glob("web/entries/channels/*.md")
 
@@ -77,19 +99,7 @@ func (m *Magi) ProcessChannel() {
 }
 
 func (m *Magi) ExportRSS() {
-	funcs := template.FuncMap{
-		"sub": func(a, b int) int {
-			return a - b
-		},
-	}
-
-	templateEngine := template.New("feed.tmpl").Funcs(funcs)
-	rssTemplate, err := templateEngine.ParseFiles("web/templates/rss/feed.tmpl")
-
-	if err != nil {
-		fmt.Printf("[Magi] %v \n", err)
-		return
-	}
+	templateEngine := templates.ParseTemplates("feed.tmpl")
 
 	rssFile, err := os.OpenFile("dist/feed.xml", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 
@@ -98,39 +108,14 @@ func (m *Magi) ExportRSS() {
 		return
 	}
 
-	if err := rssTemplate.Execute(rssFile, m); err != nil {
+	if err := templateEngine.Execute(rssFile, m); err != nil {
 		fmt.Printf("[Magi] %v \n", err)
 		return
 	}
 }
 
 func (m *Magi) ExportPage() {
-	templates := []string{}
-
-	err := filepath.Walk("web/templates/html", func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-
-		if !info.IsDir() && filepath.Ext(path) == ".tmpl" {
-			templates = append(templates, path)
-		}
-		return nil
-	})
-
-	if err != nil {
-		fmt.Println("[Magi] No templates found!")
-		return
-	}
-
-	templateEngine := template.New("base.tmpl")
-
-	pageTemplate, err := templateEngine.ParseFiles(templates...)
-
-	if err != nil {
-		fmt.Printf("[Magi] %v \n", err)
-		return
-	}
+	templateEngine := templates.ParseTemplates("base.tmpl")
 
 	for _, currentPage := range m.Pages {
 		m.CurrentPage = &currentPage
@@ -143,7 +128,7 @@ func (m *Magi) ExportPage() {
 			return
 		}
 
-		if err := pageTemplate.Execute(pageFile, m); err != nil {
+		if err := templateEngine.Execute(pageFile, m); err != nil {
 			fmt.Printf("[Magi] %v \n", err)
 			return
 		}
@@ -164,19 +149,19 @@ func Execute(config *config.Config) error {
 	is_channel_enabled, _ := config.GetAsBool("Instance.Channel.Enabled")
 
 	fmt.Println("[Magi] Starting!")
-	fmt.Printf("[Magi] Channel: %v \n", is_channel_enabled)
 
 	if is_channel_enabled {
-		fmt.Println("[Magi] Resolving Channel!")
 		manager.ResolveChannel()
-		fmt.Println("[Magi] Channel resolved!")
+		fmt.Printf("[Magi] Channels: %v posts \n", len(manager.Channels))
 	} else {
 		manager.Channels = append(manager.Channels, page.EvaPage{})
 	}
 
-	fmt.Println("[Magi] Resolving Page!")
 	manager.ResolvePage()
-	fmt.Println("[Magi] Page resolved!")
+	fmt.Printf("[Magi] Page: %v pages \n", len(manager.Pages))
+
+	manager.ResolveNote()
+	fmt.Printf("[Magi] Notes: %v notes \n", len(manager.Notes))
 
 	manager.ProcessChannel()
 

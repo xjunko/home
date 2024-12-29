@@ -7,39 +7,20 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
-	"text/template"
 	"time"
-
-	"github.com/yuin/goldmark"
-	"github.com/yuin/goldmark/extension"
-	"github.com/yuin/goldmark/parser"
-	"github.com/yuin/goldmark/renderer/html"
 
 	"eva/internal/config"
 	"eva/internal/page/processor"
+	"eva/internal/page/templates"
+
+	"gitlab.com/golang-commonmark/markdown"
 )
 
 // Eva specific code
-var MARKDOWN = goldmark.New(
-	goldmark.WithExtensions(extension.GFM),
-	goldmark.WithParserOptions(
-		parser.WithAutoHeadingID(),
-	),
-	goldmark.WithRendererOptions(
-		html.WithXHTML(),
-		html.WithUnsafe(),
-	),
-)
+var MARKDOWN = markdown.New(markdown.XHTMLOutput(false), markdown.HTML(true))
 
 func toMarkdown(content string) string {
-	var buf bytes.Buffer
-
-	if err := MARKDOWN.Convert([]byte(content), &buf); err != nil {
-		fmt.Printf("[Page] Failed to convert markdown: %v", err)
-		return content
-	}
-
-	return buf.String()
+	return MARKDOWN.RenderToString([]byte(content))
 }
 
 var PREFIX = "@"
@@ -50,7 +31,7 @@ var PREFIXES = []string{
 	"thumbnail",
 	// Page Data
 	"author",
-	"data",
+	"date",
 	"tags",
 	"route",
 	// /note/*
@@ -129,7 +110,7 @@ func (p *EvaPage) Load(curProcessor processor.IProcessor) error {
 	}
 
 	// Date fallbacks
-	if p.PostedAt.Year() == 1970 {
+	if p.PostedAt.Year() <= 2000 {
 		if unix_time, exists := p.Metadata["date"]; exists {
 			i, err := strconv.ParseInt(unix_time, 10, 64)
 
@@ -148,44 +129,12 @@ func (p *EvaPage) ToMarkdown() string {
 	return toMarkdown(p.Content)
 }
 
-func (p *EvaPage) GetContent(curConfig *config.Config, postOnChannels []EvaPage) string {
-	templates := []string{}
-
-	err := filepath.Walk("web/templates/html", func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-
-		if !info.IsDir() && filepath.Ext(path) == ".tmpl" {
-			templates = append(templates, path)
-		}
-		return nil
-	})
+func (p *EvaPage) GetContent(curConfig *config.Config, postOnChannels []EvaPage, postedNotes []EvaPage) string {
+	templateEngine := templates.ParseTemplates(p.ID + ".md")
+	withAllTemplate, err := templateEngine.Parse(p.Content)
 
 	if err != nil {
-		fmt.Println("[Magi] No templates found!")
-		return p.ToMarkdown()
-	}
-
-	funcs := template.FuncMap{
-		"sub": func(a, b int) int {
-			return a - b
-		},
-	}
-
-	templateEngine := template.New(p.ID + ".md").Funcs(funcs)
-
-	// Add all templates
-	pageTemplate, err := templateEngine.ParseFiles(templates...)
-
-	if err != nil {
-		fmt.Printf("[Page] Failed to include templates: %v", err)
-		return p.ToMarkdown()
-	}
-
-	withAllTemplate, err := pageTemplate.Parse(p.Content)
-
-	if err != nil {
+		fmt.Println(toMarkdown(p.Content))
 		fmt.Printf("[Page] Failed to parse the page content: %v", err)
 		return p.ToMarkdown()
 	}
@@ -195,10 +144,12 @@ func (p *EvaPage) GetContent(curConfig *config.Config, postOnChannels []EvaPage)
 		CurrentPage *EvaPage
 		Config      *config.Config
 		Channels    []EvaPage
+		Notes       []EvaPage
 	}{
 		CurrentPage: p,
 		Config:      curConfig,
 		Channels:    postOnChannels,
+		Notes:       postedNotes,
 	}
 
 	if err := withAllTemplate.Execute(&buf, context); err != nil {
@@ -217,12 +168,28 @@ func (p *EvaPage) GetType() EvaPageType {
 	return CHANNEL
 }
 
+func (p *EvaPage) GetFormattedPostDate() string {
+	return p.PostedAt.Format("Mon, Jan 2nd, 2006")
+}
+
+func (p *EvaPage) GetSimpleFormattedPostDate() string {
+	return p.PostedAt.Format("2006-01-02")
+}
+
+func (p *EvaPage) GetEstimatedReadingTime() string {
+	return fmt.Sprintf("%.2f minutes", float32(p.GetWords())/212.0)
+}
+
 func (p *EvaPage) ShouldExclude() bool {
 	if _, exists := p.Metadata["exclude"]; exists {
 		return true
 	}
 
 	return false
+}
+
+func (p *EvaPage) GetWords() int {
+	return len(strings.Fields(p.Content))
 }
 
 func NewPage(path string) *EvaPage {
@@ -242,11 +209,9 @@ func NewPage(path string) *EvaPage {
 }
 
 func getFilename(url string) string {
-	// Split URL by '/' and take the last part
 	parts := strings.Split(url, "/")
 	filename := parts[len(parts)-1]
 
-	// Split by '?' to remove any query parameters
 	if idx := strings.Index(filename, "?"); idx != -1 {
 		filename = filename[:idx]
 	}

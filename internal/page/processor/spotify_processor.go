@@ -1,13 +1,17 @@
 package processor
 
 import (
+	"bytes"
 	"encoding/base64"
 	"encoding/json"
 	"errors"
+	"eva/internal/page/templates"
 	"fmt"
 	"io"
 	"net/http"
 	"regexp"
+
+	"gorm.io/gorm"
 )
 
 type RootCoverArt struct {
@@ -53,9 +57,11 @@ type Root struct {
 }
 
 type Track struct {
-	SourceURL       string `json:"source_url"`
-	ID              string `json:"id"`
+	gorm.Model
+
+	ID              string `gorm:"primaryKey" json:"id"`
 	Name            string `json:"name"`
+	SourceURL       string `json:"source_url"`
 	Artist          string `json:"artist"`
 	ArtistID        string `json:"artist_id"`
 	CoverArtURL     string `json:"cover_art_url"`
@@ -69,6 +75,10 @@ const (
 )
 
 type SpotifyProcessor struct {
+	BaseProcessor
+
+	database *gorm.DB
+
 	Pattern       *regexp.Regexp
 	ScriptPattern *regexp.Regexp
 }
@@ -88,6 +98,26 @@ func (spotify *SpotifyProcessor) LargestCoverArt(sources []RootCoverArt) (string
 	}
 
 	return largestArt.URL, nil
+}
+
+func (spotify *SpotifyProcessor) GetTrack(url string) (Track, error) {
+	var track Track
+
+	result := spotify.database.Where("source_url = ?", url).First(&track)
+
+	if result.Error != nil {
+		fetchedTrack, err := spotify.GetTrackFromURL(url)
+
+		if err != nil {
+			return Track{}, err
+		}
+
+		spotify.database.Create(&fetchedTrack)
+
+		fmt.Printf("[Spotify]: Fetched track: %s\n", fetchedTrack.Name)
+	}
+
+	return track, nil
 }
 
 func (spotify *SpotifyProcessor) GetTrackFromURL(url string) (Track, error) {
@@ -119,7 +149,6 @@ func (spotify *SpotifyProcessor) GetTrackFromURL(url string) (Track, error) {
 		return Track{}, fmt.Errorf(sptfyErrorMsg+"Failed to decode JSON data: %v", err)
 	}
 
-	// Extract track details
 	for _, track := range decodedData.Entities.Items {
 		if len(track.Previews.AudioPreviews.Items) > 0 {
 			audioPreview := track.Previews.AudioPreviews.Items[0]
@@ -150,37 +179,43 @@ func (spotify *SpotifyProcessor) GetTrackFromURL(url string) (Track, error) {
 }
 
 func (spotify *SpotifyProcessor) HandleURL(url string) (string, error) {
-	track, err := spotify.GetTrackFromURL(url)
+	templateEngine := templates.ParseTemplates("widget_spotify.tmpl")
+
+	track, err := spotify.GetTrack(url)
+
 	if err != nil {
 		return "", err
 	}
 
-	return fmt.Sprintf("Track: %s\nArtist: %s\nCover Art: %s\nPreview: %s", track.Name, track.Artist, track.CoverArtURL, track.AudioPreviewURL), nil
-}
+	var buf bytes.Buffer
 
-func (spotify *SpotifyProcessor) PreProcess(text string) string {
-	return text
+	if err := templateEngine.Execute(&buf, track); err != nil {
+		return "", err
+	}
+
+	return buf.String(), nil
 }
 
 func (spotify *SpotifyProcessor) Process(text string) string {
 	return spotify.Pattern.ReplaceAllStringFunc(text, func(url string) string {
 		embedInfo, err := spotify.HandleURL(url)
+
 		if err != nil {
 			return fmt.Sprintf("Error: %v", err)
 		}
+
 		return embedInfo
 	})
 }
 
-func (spotify *SpotifyProcessor) PostProcess(text string) string {
-	return text
-}
+func NewSpotifyProcessor(database *gorm.DB) (*SpotifyProcessor, error) {
+	database.AutoMigrate(&Track{})
 
-func NewSpotifyProcessor() (*SpotifyProcessor, error) {
 	urlPattern := regexp.MustCompile(sptfyURLRe)
 	scriptPattern := regexp.MustCompile(sptfyScriptRe)
 
 	return &SpotifyProcessor{
+		database:      database,
 		Pattern:       urlPattern,
 		ScriptPattern: scriptPattern,
 	}, nil

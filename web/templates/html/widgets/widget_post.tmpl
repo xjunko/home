@@ -4,7 +4,7 @@
 
 <div class="channel-post-mini" id="{{ $LatestPost.ID }}" style='{{ index $LatestPost.Metadata "style" }}'>
 <div class="ignore channel-content">
-<span class="channel-author">{{ index $LatestPost.Metadata "author" }}</span> {{ $LatestPost.PostedAt }}
+<span class="channel-author">{{ index $LatestPost.Metadata "author" }}</span> {{ $LatestPost.GetSimpleFormattedPostDate }}
 <a class="channel-url no-underline" href="{{ .Config.Get "Instance.Domain" }}/redirect.html?id={{ $LatestPost.ID }}">[OPEN]</a>
 <br />
 {{ if (index $LatestPost.Metadata "thumbnail") }}
@@ -20,6 +20,6 @@ src="{{ index $LatestPost.Metadata "thumbnail" }}"></video>
 </a>
 {{ end }}
 
-{{ $LatestPost.GetContent .Config .Channels }}
+{{ $LatestPost.GetContent .Config .Channels .Notes }}
 </div>
 </div>

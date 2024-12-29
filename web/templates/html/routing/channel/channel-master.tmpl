@@ -1,0 +1,9 @@
+<link rel="stylesheet" type="text/css" href="/static/css/channel.css">
+<link rel="stylesheet" type="text/css" href="/static/prism/prism.css">
+<script src="/static/prism/prism.js"></script>
+
+<div class="channel-container">
+    {{ range $index, $currentPost := .Channels }}
+        {{ template "channel-post.tmpl" $currentPost }}
+    {{ end }}
+</div>

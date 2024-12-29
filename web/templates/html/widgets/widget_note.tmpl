@@ -1,0 +1,69 @@
+{{ $LatestNote := index .Notes 0 }}
+
+<div class="note-info">
+    <a href="/notes/{{ index $LatestNote.Metadata "slog" }}.html">
+        <h1 class="note-header">
+            {{ index $LatestNote.Metadata "title" }}
+        </h1>
+    </a>
+    <hr>
+    <p style="color: var(--text-faint)">Posted on {{ $LatestNote.GetFormattedPostDate }} | {{ $LatestNote.GetWords }} words
+        |
+        ~{{ $LatestNote.GetEstimatedReadingTime }} read
+    </p>
+    <hr>
+</div>
+
+<style>
+    :root {
+        --underline-color: #F7208B;
+    }
+
+    .note-info {
+        border: solid 2px var(--almost-dark);
+        padding: 10px 5px 5px 10px;
+    }
+
+    .note-info h1:hover {
+        background-color: var(--underline-color);
+        color: black;
+    }
+
+
+    .note-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .note-info h1::before {
+        color: var(--underline-color);
+        content: '>> ';
+    }
+
+    .note-info h1:hover::before {
+        color: black;
+        content: '>> ';
+    }
+
+    .note-info hr {
+        color: var(--underline-color);
+    }
+
+    .note-info hr {
+        position: relative;
+        height: 5px;
+        overflow: hidden;
+        border: 0;
+        margin: 5px 0;
+
+    }
+
+    .note-info hr::after {
+        content: "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 5px;
+        width: 100%;
+        word-wrap: break-word;
+    }
+</style>

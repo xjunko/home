@@ -25,3 +25,4 @@ go.work.sum
 *.json
 dist/*
 web/entries/*
+*.db

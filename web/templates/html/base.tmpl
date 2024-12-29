@@ -16,11 +16,15 @@
     <div class="content-container">
         <div class="content">
             <!-- Common Content -->
-            {{ $CurrentPage.GetContent $Config .Channels }}
+            {{ $CurrentPage.GetContent $Config .Channels .Notes }}
 
             <!-- Content Footer -->
             {{ template "footer.tmpl" . }}
         </div>
+
+        {{ if eq (index $CurrentPage.Metadata "tags") "channel" }}
+            {{ template "channel-master.tmpl" . }}
+        {{end}}
     </div>
     {{end}}
 

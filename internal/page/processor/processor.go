@@ -1,5 +1,11 @@
 package processor
 
+import (
+	"gorm.io/driver/sqlite"
+	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
+)
+
 type IProcessor interface {
 	PreProcess(string) string
 	Process(string) string
@@ -9,7 +15,24 @@ type IProcessor interface {
 type Processor struct {
 	BaseProcessor
 
+	Database   *gorm.DB
 	processors []IProcessor
+}
+
+func (p *Processor) InitializeProcessor() error {
+	if mediaProc, err := NewMediaProcessor(); err == nil {
+		p.processors = append(p.processors, mediaProc)
+	}
+
+	if ytProc, err := NewYoutubeProcessor(p.Database); err == nil {
+		p.processors = append(p.processors, ytProc)
+	}
+
+	if spotifyProc, err := NewSpotifyProcessor(p.Database); err == nil {
+		p.processors = append(p.processors, spotifyProc)
+	}
+
+	return nil
 }
 
 func (p *Processor) PreProcess(content string) string {
@@ -37,20 +60,21 @@ func (p *Processor) PostProcess(content string) string {
 }
 
 func NewProcessor() *Processor {
+	databaseInstance, err := gorm.Open(sqlite.Open("eva.db"), &gorm.Config{
+		Logger: logger.Default.LogMode(logger.Silent),
+	})
+
+	if err != nil {
+		panic(err)
+	}
+
 	proc := &Processor{
 		processors: make([]IProcessor, 0),
+		Database:   databaseInstance,
 	}
 
-	if mediaProc, err := NewMediaProcessor(); err == nil {
-		proc.processors = append(proc.processors, mediaProc)
-	}
-
-	if ytProc, err := NewYoutubeProcessor(); err == nil {
-		proc.processors = append(proc.processors, ytProc)
-	}
-
-	if spotifyProc, err := NewSpotifyProcessor(); err == nil {
-		proc.processors = append(proc.processors, spotifyProc)
+	if err := proc.InitializeProcessor(); err != nil {
+		panic(err)
 	}
 
 	return proc
