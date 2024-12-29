@@ -23,8 +23,9 @@ func BindTemplates(templ *template.Template) error {
 			return err
 		}
 
-		if !info.IsDir() && filepath.Ext(path) == ".tmpl" {
+		if !info.IsDir() && (filepath.Ext(path) == ".tmpl" || filepath.Ext(path) == ".html") {
 			templateName := strings.TrimSuffix(filepath.Base(path), ".tmpl")
+			templateName = strings.TrimSuffix(templateName, ".html")
 			baseFolder := strings.TrimPrefix(filepath.Dir(path), "templates")
 
 			if len(baseFolder) > 0 {

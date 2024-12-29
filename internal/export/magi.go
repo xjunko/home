@@ -54,9 +54,9 @@ func (m *Magi) GetLatestNote() *page.EvaPage {
 }
 
 func (m *Magi) GetLatestPost() *page.EvaPage {
-	if len(m.Pages) == 0 {
+	if len(m.Channels) == 0 {
 		return nil
 	}
 
-	return &m.Pages[len(m.Pages)-1]
+	return &m.Channels[len(m.Channels)-1]
 }

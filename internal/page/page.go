@@ -132,11 +132,6 @@ func (p *EvaPage) ToMarkdown() string {
 }
 
 func (p *EvaPage) GetContent() string {
-	// Check if Exporter is not nil
-	if p.Exporter == nil {
-		return p.ToMarkdown()
-	}
-
 	templateName := "internal.page_" + p.ID
 	withAllTemplate, err := p.Template.New(templateName).Parse(p.Content)
 

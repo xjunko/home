@@ -4,13 +4,11 @@
 
 junko's homepage
 
-[![V](https://img.shields.io/badge/V-212adfa-blue.svg)](https://github.com/vlang/v)
-[![Code style: v](https://img.shields.io/badge/code%20state-shit-purple.svg)](https://github.com/vlang/v)
+[![Go](https://img.shields.io/badge/Go-00ADD8?logo=Go&logoColor=white)](https://go.dev/)
 </h2>
 
-- heavy use of V's templating engine, beware of hacky workaround.
-- specifically made for me, might not work for you.
-- the website is shipped together with the source code, that's by design.
+- heavy use of go's templating.
+- written with modularity in mind, albeit very customized to my own use.
 
 <br/>
 
@@ -18,48 +16,37 @@ junko's homepage
 
 ### features
 - able to resolve `youtube` and `spotify` media internally w/o tracking user data.
-- templates everywhere, everything is mostly dynamic.
-- super fucking fast because it's compiled.
-- no need for a live webserver, a simple file server should do the job.
+- templates everywhere, everything is templates.
 ### pages
-- markdown files from `src/magi/templates/pages/` are automatically generated into html files.
-- for more control write a custom html with V's template.
+- pages goes to `templates/pages/*.md` in markdown format
+- entries goes to `entries/**/*.md`
+	- supports `notes`,`channels`
 
-### flow
-```
-Main -> Magi.resolve_pages -> Magi.resolve_channel
-                                      |
-                                      v
-                                Post.create
-                                      |
-                                      v
-    Casper.postprocess   <-   Casper.preprocess
-              |
-              v
-            Finish
-
-```
+### usage
 ### special token
 - `@` is used for metadata info.
 
-### `@`
-```js
-[
-	// web info (for embeds)
-	'title',
-	'description',
-	'thumbnail',
-	// common
-	'tags',
-	'outer',
-	'author',
-	'priority',
-	'route',
-	// channel & blog
-	'style',
-	'outline',
-	'outline-style',
-]
+```go
+var PREFIX = "@"
+var PREFIXES = []string{
+	// Page Basic Info
+	"title",
+	"description",
+	"thumbnail",
+	// Page Data
+	"author",
+	"date",
+	"tags",
+	"route",
+	// /note/*
+	"slog",
+	// /channel/*
+	"style",
+	"outline",
+	"outline-style",
+	// Misc
+	"exclude",
+}
 ```
 - is not case sensitive.
 - example: `@TITLE=THE MOTHERFUCKIN TITLE`
