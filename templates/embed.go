@@ -9,8 +9,27 @@ import (
 
 func BindFunctions(templ *template.Template) {
 	funcs := template.FuncMap{
+		"add": func(a, b int) int {
+			return a + b
+		},
 		"sub": func(a, b int) int {
 			return a - b
+		},
+		"loop": func(from, to int) <-chan int {
+			ch := make(chan int)
+			go func() {
+				for i := from; i <= to; i++ {
+					ch <- i
+				}
+				close(ch)
+			}()
+			return ch
+		},
+		"divide": func(a, b int) int {
+			return a / b
+		},
+		"multiply": func(a, b int) int {
+			return a * b
 		},
 	}
 

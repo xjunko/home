@@ -27,6 +27,7 @@
 
     {{ if eq (index $CurrentPage.Metadata "tags") "channel" }}
         {{ template "route/channel/container" . }}
+        {{ template "route/channel/paging" . }}
     {{end}}
 
     <br> <br> <br> 

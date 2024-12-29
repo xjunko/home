@@ -47,6 +47,7 @@ func Execute(config *config.Config) error {
 	manager.ExportRSS()
 	manager.ExportPage()
 	manager.ExportNote()
+	manager.ExportChannel()
 
 	return nil
 }

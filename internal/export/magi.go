@@ -19,6 +19,8 @@ type Magi struct {
 
 	CurrentPage *page.EvaPage
 	Mode        string
+
+	CurrentChannel int
 }
 
 func (m *Magi) GetCurrentPage() *page.EvaPage {
@@ -50,7 +52,7 @@ func (m *Magi) GetLatestNote() *page.EvaPage {
 		return nil
 	}
 
-	return &m.Notes[len(m.Notes)-1]
+	return &m.Notes[0]
 }
 
 func (m *Magi) GetLatestPost() *page.EvaPage {
@@ -58,5 +60,5 @@ func (m *Magi) GetLatestPost() *page.EvaPage {
 		return nil
 	}
 
-	return &m.Channels[len(m.Channels)-1]
+	return &m.Channels[0]
 }

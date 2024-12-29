@@ -73,6 +73,6 @@ func (m *Magi) ResolveChannel() {
 	}
 
 	sort.Slice(m.Channels, func(i, j int) bool {
-		return m.Channels[i].PostedAt.Before(m.Channels[j].PostedAt)
+		return m.Channels[i].PostedAt.After(m.Channels[j].PostedAt)
 	})
 }

@@ -72,3 +72,32 @@ func (m *Magi) ExportNote() {
 		}
 	}
 }
+
+func (m *Magi) ExportChannel() {
+	perPage := 20
+	totalPages := (len(m.Channels) / perPage) + 1
+
+	for _, currentPage := range m.Pages {
+		if currentPage.Metadata["tags"] == "channel" {
+			m.CurrentPage = &currentPage
+		}
+	}
+
+	m.Mode = "Channel"
+
+	for i := 0; i < totalPages; i++ {
+		m.CurrentChannel = i
+
+		channelFile, err := os.OpenFile("dist/chan/"+fmt.Sprintf("%d", i+1)+".html", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
+
+		if err != nil {
+			fmt.Printf("[Magi] Failed to open destination channel file: %v \n", err)
+			return
+		}
+
+		if err := m.Template.ExecuteTemplate(channelFile, "page", m); err != nil {
+			fmt.Printf("[Magi] Failed to generate the channel page: %v \n", err)
+			return
+		}
+	}
+}
