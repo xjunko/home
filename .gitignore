@@ -22,5 +22,6 @@ go.work.sum
 .env
 
 # eva internals
+*.json
 dist/*
 web/entries/*
