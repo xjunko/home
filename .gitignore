@@ -26,3 +26,5 @@ go.work.sum
 dist/*
 web/entries/*
 *.db
+*.md
+entries/*
