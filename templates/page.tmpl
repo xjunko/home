@@ -10,11 +10,16 @@
 {{ template "base/sidebar" . }}
 
 <!-- Generic -->
-{{if eq .Mode "Normal"}}
+{{ if ne .Mode "Note" }}
 <div class="content-container">
     <div class="content">
         <!-- Common Content -->
         {{ $CurrentPage.GetContent }}
+
+        <!-- Note List -->
+        {{if eq .Mode "NoteList"}}
+            {{ template "route/note/note-list" . }}
+        {{end}}
 
         <!-- Version Footer -->
         {{ template "base/version" . }}
@@ -27,7 +32,13 @@
     <br> <br> <br> 
     <br> <br> <br> 
 </div>
+{{ end }}
+
+ {{if eq .Mode "Note"}}
+    {{ template "route/note/post" . }}
 {{end}}
+
+
 
 {{ template "decoration/discord-status" .}}
 {{ template "decoration/music-player" . }}
