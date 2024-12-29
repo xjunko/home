@@ -3,6 +3,7 @@ package export
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func (m *Magi) ExportRSS() {
@@ -24,6 +25,10 @@ func (m *Magi) ExportPage() {
 		m.CurrentPage = &currentPage
 		m.Mode = "Normal"
 
+		if strings.HasPrefix(currentPage.Metadata["tags"], "notes") {
+			m.Mode = "NoteList"
+		}
+
 		pageFile, err := os.OpenFile("dist"+currentPage.Metadata["route"], os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 
 		if err != nil {
@@ -42,4 +47,28 @@ func (m *Magi) ExportPage() {
 		}
 	}
 
+}
+
+func (m *Magi) ExportNote() {
+	for _, currentNote := range m.Notes {
+		m.CurrentPage = &currentNote
+		m.Mode = "Note"
+
+		noteFile, err := os.OpenFile("dist/note/"+currentNote.Metadata["slog"]+".html", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
+
+		if err != nil {
+			fmt.Printf("[Magi] Failed to open destination note file: %v \n", err)
+			return
+		}
+
+		if _, err := m.Template.New("note_" + currentNote.Metadata["slug"]).Parse(currentNote.Content); err != nil {
+			fmt.Printf("[Magi] Failed to parse note template: %v \n", err)
+			return
+		}
+
+		if err := m.Template.ExecuteTemplate(noteFile, "page", m); err != nil {
+			fmt.Printf("[Magi] Failed to generate the note template: %v \n", err)
+			return
+		}
+	}
 }
