@@ -40,7 +40,7 @@ func (p *MediaProcessor) Process(text string) string {
 		}
 
 		if strings.Contains(link, "/emojis/") {
-			return fmt.Sprintf("\n<img class=\"discord-emoji\" loading=lazy alt=\"\" src=\"%s\">\n", link)
+			return fmt.Sprintf("\n<img class=\"discord-emoji\" loading=lazy alt=\"\" src=\"%s?size=32&quality=lossless\">\n", link)
 		}
 
 		return fmt.Sprintf("\n<img loading=lazy alt=\"\" src=\"%s\">\n", link)
