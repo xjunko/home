@@ -7,11 +7,11 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
+	"text/template"
 	"time"
 
 	"eva/internal/config"
 	"eva/internal/page/processor"
-	"eva/internal/page/templates"
 
 	"gitlab.com/golang-commonmark/markdown"
 )
@@ -58,6 +58,8 @@ type EvaPage struct {
 	PostedAt time.Time
 	Content  string
 	Metadata map[string]string
+
+	Template *template.Template
 
 	RawContent     string
 	BeenReferenced bool
@@ -130,11 +132,10 @@ func (p *EvaPage) ToMarkdown() string {
 }
 
 func (p *EvaPage) GetContent(curConfig *config.Config, postOnChannels []EvaPage, postedNotes []EvaPage) string {
-	templateEngine := templates.ParseTemplates(p.ID + ".md")
-	withAllTemplate, err := templateEngine.Parse(p.Content)
+	templateName := "internal.page_" + p.ID
+	withAllTemplate, err := p.Template.New(templateName).Parse(p.Content)
 
 	if err != nil {
-		fmt.Println(toMarkdown(p.Content))
 		fmt.Printf("[Page] Failed to parse the page content: %v", err)
 		return p.ToMarkdown()
 	}
@@ -152,7 +153,7 @@ func (p *EvaPage) GetContent(curConfig *config.Config, postOnChannels []EvaPage,
 		Notes:       postedNotes,
 	}
 
-	if err := withAllTemplate.Execute(&buf, context); err != nil {
+	if err := withAllTemplate.ExecuteTemplate(&buf, templateName, context); err != nil {
 		fmt.Printf("[Page] Failed to execute the page content: %v", err)
 		return p.ToMarkdown()
 	}
@@ -192,7 +193,7 @@ func (p *EvaPage) GetWords() int {
 	return len(strings.Fields(p.Content))
 }
 
-func NewPage(path string) *EvaPage {
+func NewPage(templ *template.Template, path string) *EvaPage {
 	filenameNoExt := strings.TrimSuffix(filepath.Base(path), filepath.Ext(path))
 	unixTimefromFilename, err := strconv.ParseInt(filenameNoExt, 10, 64)
 
@@ -205,24 +206,6 @@ func NewPage(path string) *EvaPage {
 		ID:       filenameNoExt,
 		PostedAt: time.Unix(unixTimefromFilename, 0),
 		Metadata: make(map[string]string),
+		Template: templ,
 	}
-}
-
-func getFilename(url string) string {
-	parts := strings.Split(url, "/")
-	filename := parts[len(parts)-1]
-
-	if idx := strings.Index(filename, "?"); idx != -1 {
-		filename = filename[:idx]
-	}
-
-	return filename
-}
-
-func getMimeType(filename string) string {
-	parts := strings.Split(filename, ".")
-	if len(parts) > 1 {
-		return parts[len(parts)-1]
-	}
-	return ""
 }

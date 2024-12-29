@@ -2,10 +2,10 @@ package processor
 
 import (
 	"bytes"
-	"eva/internal/page/templates"
 	"fmt"
 	"net/http"
 	"regexp"
+	"text/template"
 
 	"gorm.io/gorm"
 )
@@ -30,7 +30,11 @@ func (youtube *YoutubeProcessor) Process(text string) string {
 		videoID := youtube.extractVideoID(match)
 		videoInfo := youtube.getVideoInfo(videoID)
 
-		templateEngine := templates.ParseTemplates("widget_youtube.tmpl")
+		templateEngine, err := template.New("youtube.tmpl").ParseFiles("templates/widget/socials/youtube.tmpl")
+
+		if err != nil {
+			return fmt.Sprintf("Error: %v", err)
+		}
 
 		var buf bytes.Buffer
 		if err := templateEngine.Execute(&buf, videoInfo); err != nil {

@@ -4,6 +4,6 @@
 
 <div class="channel-container">
     {{ range $index, $currentPost := .Channels }}
-        {{ template "channel-post.tmpl" $currentPost }}
+        {{ template "route/channel/post" $currentPost }}
     {{ end }}
 </div>

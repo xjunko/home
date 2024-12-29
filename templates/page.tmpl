@@ -1,0 +1,32 @@
+{{ $Config := .Config }}
+{{ $CurrentPage := .CurrentPage }}
+
+{{ template "base/head" . }}
+
+<!-- Event -->
+{{ template "decoration/events/christmas" . }}
+
+<!-- Sidebar -->
+{{ template "base/sidebar" . }}
+
+<!-- Generic -->
+{{if eq .Mode "Normal"}}
+<div class="content-container">
+    <div class="content">
+        <!-- Common Content -->
+        {{ $CurrentPage.GetContent $Config .Channels .Notes }}
+
+        <!-- Version Footer -->
+        {{ template "base/version" . }}
+    </div>
+
+    {{ if eq (index $CurrentPage.Metadata "tags") "channel" }}
+        {{ template "route/channel/container" . }}
+    {{end}}
+</div>
+{{end}}
+
+{{ template "decoration/discord-status" .}}
+{{ template "decoration/music-player" . }}
+
+{{ template "base/footer" . }}

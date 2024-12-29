@@ -5,8 +5,8 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"errors"
-	"eva/internal/page/templates"
 	"fmt"
+	"html/template"
 	"io"
 	"net/http"
 	"regexp"
@@ -179,7 +179,11 @@ func (spotify *SpotifyProcessor) GetTrackFromURL(url string) (Track, error) {
 }
 
 func (spotify *SpotifyProcessor) HandleURL(url string) (string, error) {
-	templateEngine := templates.ParseTemplates("widget_spotify.tmpl")
+	templateEngine, err := template.New("spotify.tmpl").ParseFiles("templates/widget/socials/spotify.tmpl")
+
+	if err != nil {
+		return "", err
+	}
 
 	track, err := spotify.GetTrack(url)
 
