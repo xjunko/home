@@ -20,6 +20,10 @@ type Processor struct {
 }
 
 func (p *Processor) InitializeProcessor() error {
+	if chanProc, err := NewChanStyleProcessor(); err == nil {
+		p.processors = append(p.processors, chanProc)
+	}
+
 	if mediaProc, err := NewMediaProcessor(); err == nil {
 		p.processors = append(p.processors, mediaProc)
 	}
