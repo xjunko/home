@@ -1,0 +1,31 @@
+{{ $CurrentPage := index .Channels (sub (len .Channels) 1) }}
+{{ $Config := .Config }}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>{{ .Config.Get "Instance.Name" }}'s channel</title>
+        <link>{{ .Config.Get "Instance.Domain" }}</link>
+        <description>{{ .Config.Get "Instance.Description" }}</description>
+        <language>en-us</language>
+        <copyright>Copyright 2023-2024, {{ .Config.Get "Instance.Domain" }}</copyright>
+        <generator>Eva/go</generator>
+        <lastBuildDate>{{ $CurrentPage.PostedAt }}</lastBuildDate>
+        <atom:link href="{{ .Config.Get "Instance.Domain" }}/feed.xml" rel="self" type="application/rss+xml" />
+
+        {{ range $i, $CurrentPost := .Channels }}
+        <item>
+            <title>{{ $CurrentPost.PostedAt }}</title>
+            <link>{{ $Config.Get "Instance.Domain" }}/redirect?id={{ $CurrentPost.ID }}</link>
+            <pubDate>{{ $CurrentPost.PostedAt }}</pubDate>
+            <category>{{index $CurrentPost.Metadata "tags" }}</category>
+            <description>
+                {{ if index $CurrentPost.Metadata "thumbnail" }}
+                <img src="{{ index $CurrentPost.Metadata "thumbnail" }}"> </img>
+                {{ end }}
+                {{ $CurrentPost.Content }}
+            </description>
+        </item>
+        {{ end }}
+    </channel>
+</rss>

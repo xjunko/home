@@ -1,34 +1,29 @@
 # Binaries for programs and plugins
-main
-imsoniac
 *.exe
 *.exe~
+*.dll
 *.so
 *.dylib
-*.dll
-*.db
-*.sqlite
 
-# Ignore binary output folders
-bin/
+# Test binary, built with `go test -c`
+*.test
 
-# Ignore common editor/system specific metadata
-.DS_Store
-.idea/
-.vscode/
-*.iml
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
 
-# ENV
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# env file
 .env
 
-# vweb and database
+# eva internals
+*.json
+dist/*
+web/entries/*
 *.db
-
-# python
-.venv
-
-# Entry
-static/entry/*
-ext/*
-config.json
-Junko
+entries/*
