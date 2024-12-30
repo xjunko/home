@@ -1,10 +1,9 @@
 name: Deploy to Neocities (Mirror)
 
-# only run on changes to master or when triggered manually
 on:
   push:
     branches:
-      - master
+      - build
 
 concurrency: # prevent concurrent deploys doing strange things
   group: deploy-to-neocities
