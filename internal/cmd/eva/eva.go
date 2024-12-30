@@ -10,8 +10,8 @@ func main() {
 
 	config.Expect("Instance.Name", "junko")
 	config.Expect("Instance.Type", "Eva")
-	config.Expect("Instance.Description", "schizo ramblin")
-	config.Expect("Instance.Version", "0.0.1-go")
+	config.Expect("Instance.Description", "simple microblogging processor")
+	config.Expect("Instance.Version", "0.5.0")
 
 	config.Expect("Instance.Domain", "https://kafu.ovh")
 
