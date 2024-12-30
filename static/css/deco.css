@@ -89,19 +89,6 @@
   background: var(--sidebar-color);
   border: 0.1em solid var(--outline-color);
   border-radius: 0.3em;
-  animation: sidebar-intro 2s cubic-bezier(0.16, 1, 0.3, 1);
-  transform: translateY(0%);
-  z-index: -5;
-}
-
-@keyframes sidebar-intro {
-  0% {
-    transform: translateY(-200%);
-  }
-
-  100% {
-    transform: translateY(0%);
-  }
 }
 
 .sidebar-music object {
@@ -122,19 +109,6 @@
   position: absolute;
   padding-top: 5px;
   padding-bottom: 5px;
-  animation: sidebar-intro 2s cubic-bezier(0.16, 1, 0.3, 1);
-  transform: translateY(0%);
-  z-index: -5;
-}
-
-@keyframes sidebar-intro {
-  0% {
-    transform: translateY(-200%);
-  }
-
-  100% {
-    transform: translateY(0%);
-  }
 }
 
 /* phone gooners */
