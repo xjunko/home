@@ -14,7 +14,7 @@ document.getElementById("smallvocaring").innerHTML = `
     background: #34f2ff;
     color:white;
 }
-
+ 
 .smallvocacontainer::-moz-selection {
     background: #34f2ff;
     color:white;
@@ -49,7 +49,7 @@ document.getElementById("smallvocaring").innerHTML = `
 }
 
 #smallvocaring .webring-links a:hover{
-
+    
     letter-spacing: normal;
 }
 
