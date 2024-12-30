@@ -1,0 +1,194 @@
+
+
+
+
+    
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta(s) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Embed Meta -->
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Random useful *nix stuff "| letter to the black world" />
+    <meta name="description" content="Stuff that I found useful." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="junko" />
+    <meta property="og:title" content="Random useful *nix stuff | letter to the black world" />
+    <meta property="og:description" content="Stuff that I found useful." />
+    <meta property="og:image" content="https://kafu.ovh/static/imgs/preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://kafu.ovh" />
+    <meta property="twitter:title" content="Random useful *nix stuff | letter to the black world" />
+    <meta property="twitter:description" content="Stuff that I found useful." />
+    <meta property="twitter:image" content="https://kafu.ovh/static/imgs/preview.png" />
+
+
+    <!-- Stylesheet(s) and Icons -->
+    <link rel="icon" type="image/x-icon" href="/static/imgs/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/phone.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/deco.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/player.css">
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+
+    <!-- Title -->
+    <title>Random useful *nix stuff | letter to the black world</title>
+</head>
+
+<body>
+
+
+    <!-- Event -->
+    <div id="snow"></div>
+
+
+    <!-- Sidebar -->
+    
+
+
+<!-- Generic -->
+
+
+
+    
+
+<link rel="stylesheet" type="text/css" href="/static/css/notes.css">
+
+<div class="content-container">
+    <div class="note-content">
+        <h1 class="note-header">
+            Random useful *nix stuff
+        </h1>
+
+
+        <div class="note-info">
+            <hr>
+            <p>Posted on Sun, Jul 7nd, 2024 | 0 words | ~0.00 minutes minutes read</p>
+            <hr>
+        </div>
+
+
+        
+    </div>
+</div>
+
+
+
+
+
+    <script type="text/javascript">
+    // fetch user data from api
+    api_endpoint = 'https://api.lanyard.rest/v1/users/736223131240497183';
+    req = new XMLHttpRequest();
+    req.open("GET", api_endpoint, true);
+    req.onload = function () {
+        if (this.status == 200) {
+            console.log("good!");
+            var data = JSON.parse(this.response).data;
+            var user = data.discord_user;
+            var status = data.discord_status;
+
+            // pfp then name
+            try {
+                var html_name = document.getElementById("discord-name");
+                var avatarUrl = "https://cdn.discordapp.com/avatars/" + user.id + "/" + user.avatar + ".png?size=40";
+
+                // Get request to the URL and see if it exists, if it returns 404, delete the element
+                var avatar_check = new XMLHttpRequest();
+                avatar_check.open("GET", avatarUrl, true);
+                avatar_check.onload = function () {
+                    if (this.status == 404) {
+                        html_name.innerHTML = "<i>" + user.username + "</i>";
+                    } else {
+                        html_name.innerHTML = "<img class='discord-avatar' src='" + avatarUrl + "'> <i>" + user.username + "</i>";
+                    }
+                };
+                avatar_check.send();
+
+            } catch {
+                console.log('[Discord] Failed to replace avatar component, probably doesnt exists...');
+            }
+
+
+
+            // online stat
+            var html_status = document.getElementById("discord-status");
+            var color = ""
+
+            switch (status) {
+                case 'online': html_status.text = "online"; color = "color: green;"; break;
+                case 'idle': html_status.text = "idling"; color = "color: yellow;"; break;
+                case 'dnd': html_status.text = "dnd"; color = "color: red;"; break;
+                case 'offline': html_status.text = "offline"; color = "color: gray;"; break;
+            }
+
+            try {
+                document.getElementById("discord-status-about").text = html_status.text;
+                document.getElementById("discord-status-about").style = color;
+            } catch {
+                console.log('[Discord] Failed to replace name component, probably doesnt exists...');
+            }
+
+            html_status.style = color;
+
+            console.log(html_status);
+        }
+    }
+
+    req.send();
+</script>
+
+    <div class="music-player">
+    <div class="music-control">
+        <a id="music-backward" onclick="prevTrack()">
+            <i class="player-icons">&#xe802;</i>
+        </a>
+
+        <a id="music-play" onclick="playpauseTrack()">
+            <i class="player-icons">&#xe800;</i>
+        </a>
+
+        <a id="music-forward" onclick="nextTrack()">
+            <i class="player-icons">&#xe801;</i>
+        </a>
+    </div>
+
+    <a id="split">|</a>
+
+    <div class="music-info" style="flex: 5;">
+        <a id="music-queue">1/1</a>
+        <a id="split">|</a>
+        <a id="music-duration">0:00 / 0:00</a>
+        <a id="split">|</a>
+        <a id="music-title" style="flex: 5;">MUSIC-TITLE</a>
+    </div>
+
+    <a id="split">|</a>
+
+    <div class="music-volume" style="flex: 0.5; padding-left: 5px;padding-right: 32px;">
+        <input type="range" id="music-volume" min="0" max="100" value="25" onchange="setVolume()" oninput="setVolume()">
+    </div>
+
+    <audio id="music" src="" crossorigin="anonymous"></audio>
+</div>
+
+<script src="../static/scripts/music.js"></script>
+
+
+    
+</body>
+</html>
+
+

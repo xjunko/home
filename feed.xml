@@ -1,1105 +1,876 @@
+
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>junko's channel</title>
         <link>https://kafu.ovh</link>
-        <description>nonstop rambling</description>
+        <description>schizo ramblin</description>
         <language>en-us</language>
-        <copyright>Copyright 2023-2024, kafu.ovh</copyright>
-        <generator>Magi + V</generator>
-        <lastBuildDate>Sun, 14 Aug 2022 00:24:43 UTC</lastBuildDate>
-        <atom:link href="https://kafu.ovh/feed.xml" rel="self"
-            type="application/rss+xml" />
+        <copyright>Copyright 2023-2024, https://kafu.ovh</copyright>
+        <generator>Eva/go</generator>
+        <lastBuildDate>2022-08-14 08:24:43 +0800 +08</lastBuildDate>
+        <atom:link href="https://kafu.ovh/feed.xml" rel="self" type="application/rss+xml" />
 
+        
         <item>
-            <title>2024-12-25 14:34:12</title>
-            <link>https://kafu.ovh/redirect.html?id=1735137252</link>
-            <pubDate>Wed, 25 Dec 2024 14:34:12 UTC</pubDate>
+            <title>2024-12-25 22:34:12 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1735137252</link>
+            <pubDate>2024-12-25 22:34:12 +0800 +08</pubDate>
             <category></category>
             <description>
-                &lt;p&gt;it&apos;s that time of the year again.&lt;/p&gt;
-&lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://www.youtube.com/watch?v=dQ_d_VKrFgM&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/dQ_d_VKrFgM/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://www.youtube.com/watch?v=dQ_d_VKrFgM&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;div style=&quot;text-align: center&quot; class=&quot;blink&quot;&gt;
-&lt;h2&gt; merry christmas!!! &lt;/h2&gt;
-&lt;/div&gt;
+                
+                it's that time of the year again.
+
+
+<div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/dQ_d_VKrFgM/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+
+
+<div style="text-align: center" class="blink">
+<h2> merry christmas!!! </h2>
+</div>
+
             </description>
         </item>
+        
         <item>
-            <title>2024-12-23 05:12:51</title>
-            <link>https://kafu.ovh/redirect.html?id=1734930771</link>
-            <pubDate>Mon, 23 Dec 2024 05:12:51 UTC</pubDate>
+            <title>2024-12-23 13:12:51 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1734930771</link>
+            <pubDate>2024-12-23 13:12:51 +0800 +08</pubDate>
             <category>comicfiesta,anime-con,life,cf2024</category>
             <description>
-                &lt;p&gt;i went to the anime con this year, it was awesome, and my legs fucking hurts.&lt;/p&gt;
-&lt;p&gt;i wasn&apos;t planning on going but my friend gave me away his pass for the second day a week before the event, so i just went there completely blind.
-&lt;br&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div style=&quot;text-align: center&quot;&gt;
-&lt;img src=&quot;https://hatsune-miku.has.rocks/r/sign.webp#center&quot; height=&quot;400px&quot;&gt;
-&lt;p&gt;a signed picture from &lt;a href=&quot;https://www.youtube.com/@Daidus&quot;&gt;daidus&lt;/a&gt; and &lt;a href=&quot;https://www.youtube.com/@Emirichu&quot;&gt;emirichu&lt;/a&gt; &lt;br&gt;
-&lt;a style=&quot;color: gray;font-size: 12px&quot;&gt; (i queued for this for like an hour ^^;) &lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;div style=&quot;text-align: center&quot;&gt;
-&lt;video width=&quot;225px&quot; height=&quot;400px&quot; controls loop preload&gt;
-    &lt;source src=&quot;https://hatsune-miku.has.rocks/r/TETO.mp4&quot; type=&quot;video/mp4&quot;&gt;
-&lt;/video&gt;
-&lt;p&gt;cute teto car&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;div style=&quot;text-align: center&quot;&gt;
-&lt;img src=&quot;https://hatsune-miku.has.rocks/r/CF_EVENIN_TREE.jpg&quot; height=&quot;600px&quot;&gt;
-&lt;p&gt;evening of the event, everyone&apos;s already tired and stuff. look at this big ass tree.&lt;/p&gt;
-&lt;/div&gt;
+                
+                i went to the anime con this year, it was awesome, and my legs fucking hurts.
+
+i wasn't planning on going but my friend gave me away his pass for the second day a week before the event, so i just went there completely blind.
+<br>
+<hr>
+
+<div style="text-align: center">
+<img src="https://hatsune-miku.has.rocks/r/sign.webp#center" height="400px">
+
+a signed picture from [daidus](https://www.youtube.com/@Daidus) and [emirichu](https://www.youtube.com/@Emirichu) <br>
+<a style="color: gray;font-size: 12px"> (i queued for this for like an hour ^^;) </a>
+</div>
+
+<hr>
+
+<div style="text-align: center">
+<video width="225px" height="400px" controls loop preload>
+<source src="https://hatsune-miku.has.rocks/r/TETO.mp4" type="video/mp4">
+</video>
+
+cute teto car
+</div>
+
+<hr>
+
+<div style="text-align: center">
+<img src="https://hatsune-miku.has.rocks/r/CF_EVENIN_TREE.jpg" height="600px">
+
+evening of the event, everyone's already tired and stuff. look at this big ass tree.
+</div>
+
             </description>
         </item>
+        
         <item>
-            <title>2024-12-16 03:16:42</title>
-            <link>https://kafu.ovh/redirect.html?id=1734319002</link>
-            <pubDate>Mon, 16 Dec 2024 03:16:42 UTC</pubDate>
+            <title>2024-12-16 11:16:42 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1734319002</link>
+            <pubDate>2024-12-16 11:16:42 +0800 +08</pubDate>
             <category>update</category>
             <description>
+                
                 <img src="https://c.tenor.com/SBXNl1cJf6IAAAAd/tenor.gif"> </img>
-                &lt;p&gt;oh hey, i&apos;m back.&lt;/p&gt;
-&lt;p&gt;exams are finished now, i&apos;m free again, for now.&lt;/p&gt;
+                
+                oh hey, i'm back.
+
+exams are finished now, i'm free again, for now.
+
             </description>
         </item>
+        
         <item>
-            <title>2024-11-03 19:39:50</title>
-            <link>https://kafu.ovh/redirect.html?id=1730662790</link>
-            <pubDate>Sun, 3 Nov 2024 19:39:50 UTC</pubDate>
+            <title>2024-11-04 03:39:50 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1730662790</link>
+            <pubDate>2024-11-04 03:39:50 +0800 +08</pubDate>
             <category>domain,update,bruhmoment</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/kita.webp"> </img>
-                &lt;p&gt;so, it turns out, i somehow lost access to my registrar account.&lt;/p&gt;
-&lt;p&gt;&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;i didn&apos;t have it registered in my 2fa app&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;i also somehow lost the backup codes&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;can&apos;t renew the domain&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;the ship sank, it is what is is. i will now be using &lt;a href=&quot;https://kafu.ovh&quot;&gt;kafu.ovh&lt;/a&gt; instead!&lt;/p&gt;
-&lt;p&gt;i saved the dumbass backup code to my every cloud account i had. hopefully no more 2fa fuck ups!!!&lt;/p&gt;
+                
+                so, it turns out, i somehow lost access to my registrar account.
+
+
+<a style='color: var(--red-text)'>\<i didn't have it registered in my 2fa app</a><br/>
+<a style='color: var(--red-text)'>\<i also somehow lost the backup codes</a><br/>
+<a style='color: var(--green-text)'>\>can't renew the domain</a><br/>
+
+
+the ship sank, it is what is is. i will now be using [kafu.ovh](https://kafu.ovh) instead!
+
+
+i saved the dumbass backup code to my every cloud account i had. hopefully no more 2fa fuck ups!!!
+
             </description>
         </item>
+        
         <item>
-            <title>2024-10-28 06:16:42</title>
-            <link>https://kafu.ovh/redirect.html?id=1730096202</link>
-            <pubDate>Mon, 28 Oct 2024 06:16:42 UTC</pubDate>
+            <title>2024-10-28 14:16:42 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1730096202</link>
+            <pubDate>2024-10-28 14:16:42 +0800 +08</pubDate>
             <category>music, teto</category>
             <description>
-                &lt;p&gt;i just found a banger, check this out.&lt;/p&gt;
-&lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://youtu.be/_AjJZEcMdww&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/_AjJZEcMdww/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://youtu.be/_AjJZEcMdww&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
+                
+                i just found a banger, check this out.
+
+
+<div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/_AjJZEcMdww/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-09-16 09:32:55</title>
-            <link>https://kafu.ovh/redirect.html?id=1726479175</link>
-            <pubDate>Mon, 16 Sep 2024 09:32:55 UTC</pubDate>
+            <title>2024-09-16 17:32:55 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1726479175</link>
+            <pubDate>2024-09-16 17:32:55 +0800 +08</pubDate>
             <category>music, cool find, artist</category>
             <description>
-                &lt;p&gt;everyone need to listen to &lt;a href=&quot;https://www.youtube.com/@ippotsk&quot;&gt;ippo.tsk&lt;/a&gt; at least once in their life.&lt;/p&gt;
-&lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://youtu.be/GyjpqeKqzaQ&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/GyjpqeKqzaQ/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://youtu.be/GyjpqeKqzaQ&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;also, check out their other stuff &lt;a href=&quot;https://www.ippotsk.com/&quot;&gt;[here]&lt;/a&gt; it&apos;s really good.&lt;/p&gt;
-&lt;div&gt;
-&lt;img src=&quot;https://www.ippotsk.com/img/portfolio/art/2017-12-06.png#center&quot;&gt;
-&lt;div style=&quot;text-align: right&quot;&gt;&lt;a href=&quot;https://www.ippotsk.com/art/&quot;&gt;*one of their arts&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;
+                
+                everyone need to listen to [ippo.tsk](https://www.youtube.com/@ippotsk) at least once in their life.
+
+
+<div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/GyjpqeKqzaQ/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+
+
+also, check out their other stuff [[here]](https://www.ippotsk.com/) it's really good.
+
+<div>
+<img src="https://www.ippotsk.com/img/portfolio/art/2017-12-06.png#center">
+<div style="text-align: right"><a href="https://www.ippotsk.com/art/">*one of their arts</a></div>
+</div>
+
             </description>
         </item>
+        
         <item>
-            <title>2024-09-12 13:49:12</title>
-            <link>https://kafu.ovh/redirect.html?id=1726148952</link>
-            <pubDate>Thu, 12 Sep 2024 13:49:12 UTC</pubDate>
+            <title>2024-09-12 21:49:12 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1726148952</link>
+            <pubDate>2024-09-12 21:49:12 +0800 +08</pubDate>
             <category>personal,trip</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/monoga.mp4"> </img>
-                &lt;p&gt;today, i just rode about 200 kilometres worth of distance.&lt;/p&gt;
-&lt;p&gt;it was nice driving around. bit scary though, doing all of that alone...&lt;/p&gt;
+                
+                today, i just rode about 200 kilometres worth of distance.
+
+it was nice driving around. bit scary though, doing all of that alone...
+
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-09-11 06:00:04</title>
-            <link>https://kafu.ovh/redirect.html?id=1726034404</link>
-            <pubDate>Wed, 11 Sep 2024 06:00:04 UTC</pubDate>
+            <title>2024-09-11 14:00:04 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1726034404</link>
+            <pubDate>2024-09-11 14:00:04 +0800 +08</pubDate>
             <category>console,ps5,rant</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/onegame.jpg"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;ps5 pro announced&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;retails at 700$+&lt;/a&gt;&lt;br/&gt;
-what even is the point lmao, fucking thing got no games. all of that fancy ass upgrades for what?&lt;/p&gt;
+                
+                <a style='color: var(--green-text)'>\>ps5 pro announced</a><br/>
+<a style='color: var(--green-text)'>\>retails at 700$+</a><br/>
+what even is the point lmao, fucking thing got no games. all of that fancy ass upgrades for what?
+
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-09-10 05:47:17</title>
-            <link>https://kafu.ovh/redirect.html?id=1725947237</link>
-            <pubDate>Tue, 10 Sep 2024 05:47:17 UTC</pubDate>
+            <title>2024-09-10 13:47:17 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1725947237</link>
+            <pubDate>2024-09-10 13:47:17 +0800 +08</pubDate>
             <category>video</category>
             <description>
-                &lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://www.youtube.com/watch?v=R9dtWCsXSqc&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/R9dtWCsXSqc/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://www.youtube.com/watch?v=R9dtWCsXSqc&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
+                
+                <div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/R9dtWCsXSqc/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-08-15 09:47:17</title>
-            <link>https://kafu.ovh/redirect.html?id=1723715237</link>
-            <pubDate>Thu, 15 Aug 2024 09:47:17 UTC</pubDate>
+            <title>2024-08-15 17:47:17 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1723715237</link>
+            <pubDate>2024-08-15 17:47:17 +0800 +08</pubDate>
             <category>life</category>
             <description>
-                &lt;p&gt;i&apos;ve been settling at my rented house for a while now. slowly getting used to living (?) myself.
-its cool.&lt;/p&gt;
+                
+                i've been settling at my rented house for a while now. slowly getting used to living (?) myself.
+its cool.
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-08-01 23:47:17</title>
-            <link>https://kafu.ovh/redirect.html?id=1722556037</link>
-            <pubDate>Thu, 1 Aug 2024 23:47:17 UTC</pubDate>
+            <title>2024-08-02 07:47:17 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1722556037</link>
+            <pubDate>2024-08-02 07:47:17 +0800 +08</pubDate>
             <category>videogame,console,ps-vita</category>
             <description>
-                &lt;p&gt;i got myself a ps vita. outdated console i know, that&apos;s the point.
+                
+                i got myself a ps vita. outdated console i know, that's the point.
 got project diva and lots of vn on it, fun thing.
-i&apos;ve been using my phone way less nowadays, actl killing my online presence lmao.&lt;/p&gt;
+i've been using my phone way less nowadays, actl killing my online presence lmao.
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-07-26 13:14:14</title>
-            <link>https://kafu.ovh/redirect.html?id=1721999654</link>
-            <pubDate>Fri, 26 Jul 2024 13:14:14 UTC</pubDate>
+            <title>2024-07-26 21:14:14 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1721999654</link>
+            <pubDate>2024-07-26 21:14:14 +0800 +08</pubDate>
             <category>life, random, uni, list</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/lainlain.png"> </img>
-                &lt;p&gt;things to do when my uni starts.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;pay the debt i have with the two people i owe it to&lt;/li&gt;
-&lt;li&gt;lessen my arcade game time&lt;/li&gt;
-&lt;li&gt;explore the city more and dont rotmaxxing all day&lt;/li&gt;
-&lt;li&gt;dont interact with a menhera ever again&lt;/li&gt;
-&lt;li&gt;quit all the useless clubs&lt;/li&gt;
-&lt;li&gt;enjoy life with me and myself only&lt;/li&gt;
-&lt;/ul&gt;
+                
+                
+things to do when my uni starts.
+- pay the debt i have with the two people i owe it to
+- lessen my arcade game time
+- explore the city more and dont rotmaxxing all day
+- dont interact with a menhera ever again
+- quit all the useless clubs
+- enjoy life with me and myself only
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-07-24 06:30:33</title>
-            <link>https://kafu.ovh/redirect.html?id=1721802633</link>
-            <pubDate>Wed, 24 Jul 2024 06:30:33 UTC</pubDate>
+            <title>2024-07-24 14:30:33 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1721802633</link>
+            <pubDate>2024-07-24 14:30:33 +0800 +08</pubDate>
             <category>life, update, banks, rant</category>
             <description>
-                &lt;p&gt;had to update my bank details recently, because their service is so dogshit that i had to go there irl and
-fill shit out, manually, on a piece of paper... what a shit bank.&lt;/p&gt;
+                
+                
+had to update my bank details recently, because their service is so dogshit that i had to go there irl and
+fill shit out, manually, on a piece of paper... what a shit bank.
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-07-16 23:02:06</title>
-            <link>https://kafu.ovh/redirect.html?id=1721170926</link>
-            <pubDate>Tue, 16 Jul 2024 23:02:06 UTC</pubDate>
+            <title>2024-07-17 07:02:06 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1721170926</link>
+            <pubDate>2024-07-17 07:02:06 +0800 +08</pubDate>
             <category>life, thoughts</category>
             <description>
-                &lt;p&gt;i&apos;ve been looking at my local train&apos;s map recently...&lt;/p&gt;
-&lt;p&gt;kinda cool how i can just take one and just end up at the other side of the country...&lt;/p&gt;
-&lt;p&gt;maybe i should do that, who knows, it might fix whatever the fuck is wrong with me. just going balls out
-to fucking nowhere by myself, alone, experiencing the world.&lt;/p&gt;
+                
+                
+i've been looking at my local train's map recently...
+
+kinda cool how i can just take one and just end up at the other side of the country...
+
+maybe i should do that, who knows, it might fix whatever the fuck is wrong with me. just going balls out
+to fucking nowhere by myself, alone, experiencing the world.
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-07-13 13:32:45</title>
-            <link>https://kafu.ovh/redirect.html?id=1720877565</link>
-            <pubDate>Sat, 13 Jul 2024 13:32:45 UTC</pubDate>
+            <title>2024-07-13 21:32:45 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1720877565</link>
+            <pubDate>2024-07-13 21:32:45 +0800 +08</pubDate>
             <category>life, update, working</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/tomocute.png"> </img>
-                &lt;p&gt;this working thing is great and all but i feel like im slaving myself here lmao&lt;/p&gt;
+                
+                
+this working thing is great and all but i feel like im slaving myself here lmao
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-07-11 07:51:46</title>
-            <link>https://kafu.ovh/redirect.html?id=1720684306</link>
-            <pubDate>Thu, 11 Jul 2024 07:51:46 UTC</pubDate>
+            <title>2024-07-11 15:51:46 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1720684306</link>
+            <pubDate>2024-07-11 15:51:46 +0800 +08</pubDate>
             <category>life, update, flip-phone, classic</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/GS7UQDsaAAAFDaP.jpg"> </img>
-                &lt;p&gt;got myself a flip phone... because why not :pp&lt;/p&gt;
-&lt;p&gt;i made a post about it &lt;a href=&quot;https://kafu.ovh/notes/buying-a-keitai&quot;&gt;[HERE]&lt;/a&gt;, check it out!&lt;/p&gt;
+                
+                
+got myself a flip phone... because why not :pp
+
+i made a post about it [[HERE]](https://kafu.ovh/notes/buying-a-keitai), check it out!
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-07-08 04:22:01</title>
-            <link>https://kafu.ovh/redirect.html?id=1720412521</link>
-            <pubDate>Mon, 8 Jul 2024 04:22:01 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/3.95gpa.png"> </img>
-                &lt;p&gt;&lt;div class=&quot;channel-post reference&quot; id=&quot;1706455502_ref&quot;&gt;
-    &lt;div class=&quot;channel-content&quot;&gt;
-        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1706455502&quot;&gt;Referencing #1706455502&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2024-01-28 15:25:02
-        &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;3.28 GPA for something I couldn&apos;t care less about&lt;/a&gt;&lt;br/&gt;
-damn thats actually decent. still gonna change my course &lt;img class=&quot;discord-emoji&quot; src=&quot;https://cdn.discordapp.com/emojis/1095049440835928234.webp?size=32&quot;&gt;&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;results came in&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;GPA: 3.95 (previously, 3.3)&lt;/a&gt;&lt;br/&gt;
-lmao look at that fucking jump, i fucking choke 4 flat gpa 😭 &lt;br&gt;&lt;/p&gt;
-&lt;p&gt;whatever, i hope i can keep this up until final sem&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-07-06 10:32:46</title>
-            <link>https://kafu.ovh/redirect.html?id=1720261966</link>
-            <pubDate>Sat, 6 Jul 2024 10:32:46 UTC</pubDate>
+            <title>2024-07-06 18:32:46 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1720261966</link>
+            <pubDate>2024-07-06 18:32:46 +0800 +08</pubDate>
             <category>anime, figurine, shop, life</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/4cIkK5Up.jpg"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;be today&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;today is payday&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;got my salary&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;i spent it on nesos and figurines&lt;/a&gt;&lt;br/&gt;
-so this is why adults have work, this is amazing... &lt;br/&gt;
-money is... le-based.... sugoi even.&lt;/p&gt;
+                
+                
+<a style='color: var(--green-text)'>\>be today</a><br/>
+<a style='color: var(--green-text)'>\>today is payday</a><br/>
+<a style='color: var(--green-text)'>\>got my salary</a><br/>
+<a style='color: var(--red-text)'>\<i spent it on nesos and figurines</a><br/>
+so this is why adults have work, this is amazing... <br/>
+money is... le-based.... sugoi even.
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-07-02 19:59:33</title>
-            <link>https://kafu.ovh/redirect.html?id=1719950373</link>
-            <pubDate>Tue, 2 Jul 2024 19:59:33 UTC</pubDate>
+            <title>2024-07-03 03:59:33 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1719950373</link>
+            <pubDate>2024-07-03 03:59:33 +0800 +08</pubDate>
             <category>life, work</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/delete_m3.gif"> </img>
-                &lt;p&gt;honestly, i have all these knowledge but i never make people pay for it.&lt;/p&gt;
-&lt;p&gt;it feels really weird to charge people for something as simple as formatting windows and installing the usual office programs (around 20$).&lt;/p&gt;
-&lt;p&gt;do i just know too much (or too little, rather) or&lt;/p&gt;
-&lt;p&gt;is this just how the real world works like, you get pay for what you know (and exploit those who dont),&lt;/p&gt;
-&lt;p&gt;is my view on this is dark or what, i dont get it. maybe im just so accustomed to not receiving any kind of thanks or anything in return for helping people, who knows...&lt;/p&gt;
-&lt;p&gt;my boss been telling me that i need to charge people for everything i do, dont be nice to them, you get what you pay for kinda deal... alright  ┐(´ー｀)┌&lt;/p&gt;
+                
+                
+honestly, i have all these knowledge but i never make people pay for it.
+
+it feels really weird to charge people for something as simple as formatting windows and installing the usual office programs (around 20$).
+
+do i just know too much (or too little, rather) or
+
+is this just how the real world works like, you get pay for what you know (and exploit those who dont),
+
+is my view on this is dark or what, i dont get it. maybe im just so accustomed to not receiving any kind of thanks or anything in return for helping people, who knows...
+
+my boss been telling me that i need to charge people for everything i do, dont be nice to them, you get what you pay for kinda deal... alright  ┐(´ー｀)┌
+
             </description>
         </item>
+        
         <item>
-            <title>2024-06-30 11:44:39</title>
-            <link>https://kafu.ovh/redirect.html?id=1719747879</link>
-            <pubDate>Sun, 30 Jun 2024 11:44:39 UTC</pubDate>
+            <title>2024-06-30 19:44:39 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1719747879</link>
+            <pubDate>2024-06-30 19:44:39 +0800 +08</pubDate>
             <category>music, youtube, life</category>
             <description>
-                &lt;p&gt;i just got a job few days ago, it&apos;s nothing much but hey, it&apos;s a job :DDD &lt;br&gt;
-i worked as some fucking IT guy so there really isnt much to do lmao, feels like im cheating but computer just doesnt break as often nowadays... &lt;br&gt;
-also found a cool cover, check it out!!!&lt;/p&gt;
-&lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://youtu.be/D7rC1oGxtrI&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/D7rC1oGxtrI/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://youtu.be/D7rC1oGxtrI&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
+                
+                i just got a job few days ago, it's nothing much but hey, it's a job :DDD <br>
+i worked as some fucking IT guy so there really isnt much to do lmao, feels like im cheating but computer just doesnt break as often nowadays... <br>
+also found a cool cover, check it out!!!
+
+
+
+
+<div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/D7rC1oGxtrI/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-06-24 19:33:07</title>
-            <link>https://kafu.ovh/redirect.html?id=1719257587</link>
-            <pubDate>Mon, 24 Jun 2024 19:33:07 UTC</pubDate>
+            <title>2024-06-25 03:33:07 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1719257587</link>
+            <pubDate>2024-06-25 03:33:07 +0800 +08</pubDate>
             <category>programming, update</category>
             <description>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;added caching mechanism to the spotify/youtube proxy thing&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;whole site now compiles in less than a second now!!! &lt;/a&gt;&lt;br/&gt;
-now available at commit &lt;a href=&quot;https://github.com/xjunko/home/commit/6dde3ac38655a58e211c7de4eafb28003aca2ac6&quot;&gt;[#6dde3ac]&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;also check out this song&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://youtu.be/n1nKVZPd_x4&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/n1nKVZPd_x4/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://youtu.be/n1nKVZPd_x4&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
+                
+                <a style='color: var(--green-text)'>\>added caching mechanism to the spotify/youtube proxy thing</a><br/>
+<a style='color: var(--red-text)'>\<whole site now compiles in less than a second now!!!</a><br/>
+now available at commit <a href="https://github.com/xjunko/home/commit/6dde3ac38655a58e211c7de4eafb28003aca2ac6">[#6dde3ac]</a>
+
+<a style='color: var(--red-text)'>\<also check out this song</a><br/>
+
+
+
+<div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/n1nKVZPd_x4/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-06-19 04:32:54</title>
-            <link>https://kafu.ovh/redirect.html?id=1718771574</link>
-            <pubDate>Wed, 19 Jun 2024 04:32:54 UTC</pubDate>
+            <title>2024-06-19 12:32:54 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1718771574</link>
+            <pubDate>2024-06-19 12:32:54 +0800 +08</pubDate>
             <category>programming, update</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/9970083.jpg"> </img>
-                &lt;p&gt;can&apos;t believe that theres actually a cheater in the top #3 of osu!.
-i found &lt;a href=&quot;https://www.reddit.com/r/osureport/comments/1dgson1/osustandard_chud_son_relax/&quot;&gt;[this thread]&lt;/a&gt; early on when it got posted but thought nothing of it (mostly cuz i dont care and i found it funny.)
-also, &lt;br&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;he got restricted&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+                
+                can't believe that theres actually a cheater in the top #3 of osu!.
+i found [[this thread]](https://www.reddit.com/r/osureport/comments/1dgson1/osustandard_chud_son_relax/) early on when it got posted but thought nothing of it (mostly cuz i dont care and i found it funny.)
+also, <br>
+<a style='color: var(--green-text)'>\>he got restricted</a><br/>
+
             </description>
         </item>
+        
         <item>
-            <title>2024-06-18 02:04:01</title>
-            <link>https://kafu.ovh/redirect.html?id=1718676241</link>
-            <pubDate>Tue, 18 Jun 2024 02:04:01 UTC</pubDate>
+            <title>2024-06-18 10:04:01 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1718676241</link>
+            <pubDate>2024-06-18 10:04:01 +0800 +08</pubDate>
             <category>programming, update</category>
             <description>
+                
                 <img src="https://c.tenor.com/Ji_EAW5ZvdMAAAAd/tenor.gif"> </img>
-                &lt;p&gt;hey look, i made the site look a little bit cooler.  &lt;br&gt;
-hope you liked it :DDD &lt;br&gt;
-also the index now has recent post preview!!&lt;/p&gt;
+                
+                hey look, i made the site look a little bit cooler.  <br>
+hope you liked it :DDD <br>
+also the index now has recent post preview!!
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-06-16 17:39:27</title>
-            <link>https://kafu.ovh/redirect.html?id=1718559567</link>
-            <pubDate>Sun, 16 Jun 2024 17:39:27 UTC</pubDate>
+            <title>2024-06-17 01:39:27 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1718559567</link>
+            <pubDate>2024-06-17 01:39:27 +0800 +08</pubDate>
             <category>programming, update</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/update2.png"> </img>
-                &lt;p&gt;i redid some of the design for the site, other than that it&apos;s mostly internal work.&lt;/p&gt;
-&lt;hr&gt;
-what changed: &lt;br&gt;
-&lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;static overlay&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;add support for video thumbnail &lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;rehost most of the content to tixte&apos;s cdn &lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;redesign sidebar &lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;add music bar at the bottom &lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;minor revamp throughout the codebase &lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;a href=&apos;https://www.deviantart.com/blastssjpk/art/Kagamine-Rin-02-Pixel-Art-716748616&apos;&gt;
-    &lt;img src=&quot;https://hatsune-miku.has.rocks/r/kagamine_rin_02_pixel_art_by_blastssjpk_dbuqers.png&quot; height=&quot;100px&quot; style=&quot;float: left&quot;&gt;
-&lt;/a&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-05-23 07:57:13</title>
-            <link>https://kafu.ovh/redirect.html?id=1716451033</link>
-            <pubDate>Thu, 23 May 2024 07:57:13 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                &lt;p&gt;I&apos;m alive.
-Here&apos;s some cool remake I just found&lt;/p&gt;
-&lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://youtu.be/YEcBea7dmfk&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/YEcBea7dmfk/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://youtu.be/YEcBea7dmfk&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-05-16 19:33:47</title>
-            <link>https://kafu.ovh/redirect.html?id=1715888027</link>
-            <pubDate>Thu, 16 May 2024 19:33:47 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                &lt;p&gt;Got into a vehicle accident, I almost died lmao. A few deep bruises here and there but nothing serious. I am immortal.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-05-10 07:09:40</title>
-            <link>https://kafu.ovh/redirect.html?id=1715324980</link>
-            <pubDate>Fri, 10 May 2024 07:09:40 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/wtf.png"> </img>
-                &lt;p&gt;what the fuck is this, fuck you past me&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-05-07 04:54:59</title>
-            <link>https://kafu.ovh/redirect.html?id=1715057699</link>
-            <pubDate>Tue, 7 May 2024 04:54:59 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/lesson_learned.jpg"> </img>
-                &lt;p&gt;In the end, I am alone after all.
-How ironic.
-&amp;quot;I lead people to their own happiness but I have yet to attain my own&amp;quot; type shit.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-05-05 03:24:07</title>
-            <link>https://kafu.ovh/redirect.html?id=1714879447</link>
-            <pubDate>Sun, 5 May 2024 03:24:07 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/miku.gif"> </img>
-                &lt;p&gt;today and yesterday was a crazy day. we chilled together for the weekend, spent time playing arcades, walked to fucking nowhere for hours, stopping by at 7e for quick break. then ended the night with movie session. it was fun, it truly is. thanks ryn, it was nice while it lasted, im sorry.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-05-03 04:24:47</title>
-            <link>https://kafu.ovh/redirect.html?id=1714710287</link>
-            <pubDate>Fri, 3 May 2024 04:24:47 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://c.tenor.com/fRdYOIYjpLcAAAAC/tenor.gif"> </img>
-                &lt;p&gt;finally, i fixed the fucking thing, finally got time for myself to do whatever.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-05-01 10:21:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1714558883</link>
-            <pubDate>Wed, 1 May 2024 10:21:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/garauak.jpg"> </img>
-                &lt;p&gt;i&apos;m improving big time&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-04-29 13:13:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1714396403</link>
-            <pubDate>Mon, 29 Apr 2024 13:13:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/kurarin_2_miss.jpg"> </img>
-                &lt;p&gt;TWO FUCKING MISSES WTF HOW&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-04-27 10:21:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1714213283</link>
-            <pubDate>Sat, 27 Apr 2024 10:21:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                &lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://www.youtube.com/watch?v=19y8YTbvri8&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/19y8YTbvri8/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://www.youtube.com/watch?v=19y8YTbvri8&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;peak just dropped&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-04-13 13:13:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1713014003</link>
-            <pubDate>Sat, 13 Apr 2024 13:13:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/raputa.jpg"> </img>
-                &lt;p&gt;woaaaah raputa&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-04-08 10:32:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1712572343</link>
-            <pubDate>Mon, 8 Apr 2024 10:32:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/hand_skin.jpg"> </img>
-                &lt;p&gt;[Reference to #1711182743]&lt;/p&gt;
-&lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;be me&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;do cuts on my arm because :3333&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;gets skin infection&lt;/a&gt;&lt;br/&gt;
-truly a bruh moment&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-03-25 00:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1711326263</link>
-            <pubDate>Mon, 25 Mar 2024 00:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/image.jpg"> </img>
-                &lt;p&gt;LETS FUCKING GOOOO&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-03-24 21:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1711315463</link>
-            <pubDate>Sun, 24 Mar 2024 21:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/maimai10k.jpg"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;found out about the mall near my uni has an arcade&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;they got maimai&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;THEY GOT MAIMAI&amp;gt;!&amp;gt;??!&lt;/a&gt;&lt;br/&gt;
-i&apos;ve been wasting money on this game for a while now, check out my epic rating&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-03-23 21:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1711229063</link>
-            <pubDate>Sat, 23 Mar 2024 21:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                &lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://www.youtube.com/watch?v=LaEgpNBt-bQ&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/LaEgpNBt-bQ/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://www.youtube.com/watch?v=LaEgpNBt-bQ&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;WOAH WTF THIS IS PEAK&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-03-22 21:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1711142663</link>
-            <pubDate>Fri, 22 Mar 2024 21:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/mnm.gif"> </img>
-                &lt;p&gt;&lt;div class=&quot;channel-post reference&quot; id=&quot;1710969863_ref&quot;&gt;
-    &lt;div class=&quot;channel-content&quot;&gt;
-        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1710969863&quot;&gt;Referencing #1710969863&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2024-03-20 21:24:23
-        &lt;p&gt;also, not so long time ago, i met someone really cool, somehow we shared a lot of interest, so fucking epic man. but it seems that, she has a LOT of problem, like a whole lot. i cant write them here but just know that shes going through a lot, and i feel really fucking bad for not being able to do anything about it. i mean really, what can i do, im just an IT person, a tech dude, a fucking neet. i wish i was better.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+                
+                i redid some of the design for the site, other than that it's mostly internal work.
 
-also she used to do vtuber stuff, really cool. honestly, she is such a cool person, why did she even bother staying around with a loser like me lmao.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-03-20 21:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1710969863</link>
-            <pubDate>Wed, 20 Mar 2024 21:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/r.png"> </img>
-                &lt;p&gt;also, not so long time ago, i met someone really cool, somehow we shared a lot of interest, so fucking epic man. but it seems that, she has a LOT of problem, like a whole lot. i cant write them here but just know that shes going through a lot, and i feel really fucking bad for not being able to do anything about it. i mean really, what can i do, im just an IT person, a tech dude, a fucking neet. i wish i was better.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-03-16 21:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1710624263</link>
-            <pubDate>Sat, 16 Mar 2024 21:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/moons.png"> </img>
-                &lt;p&gt;honestly, my mental has been going shit recently, it&apos;s .... -not bad, it&apos;s just that i lost myself sometimes... if that makes sense. i dont really like it :(.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-03-13 21:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1710365063</link>
-            <pubDate>Wed, 13 Mar 2024 21:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                &lt;p&gt;good&lt;/p&gt;
-&lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://www.youtube.com/watch?v=_nqZc0KOc1U&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/_nqZc0KOc1U/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://www.youtube.com/watch?v=_nqZc0KOc1U&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-03-05 21:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1709673863</link>
-            <pubDate>Tue, 5 Mar 2024 21:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                &lt;p&gt;got busy with life, something broke on the website and i dont have the time to fix it.
-ill... just put a massive fuck off &amp;quot;shits broken&amp;quot; sign at the top for now...
-the generator is broken but all the entries are written in a discord channel, so it&apos;ll be back... eventually.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-02-28 21:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1709155463</link>
-            <pubDate>Wed, 28 Feb 2024 21:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                &lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://www.youtube.com/watch?v=xBsuBOrsFJs&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/xBsuBOrsFJs/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://www.youtube.com/watch?v=xBsuBOrsFJs&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;i like this cover sm&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-02-24 21:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1708809863</link>
-            <pubDate>Sat, 24 Feb 2024 21:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/wtf_what.png"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;changed my course&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;now im learning nothing because it&apos;s all just basic stuff now&lt;/a&gt;&lt;br/&gt;
-oh man, this is such a drop in difficulty, everything is so easy now wtf.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-02-20 21:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1708464263</link>
-            <pubDate>Tue, 20 Feb 2024 21:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/image_nisek.png"> </img>
-                &lt;p&gt;&lt;div class=&quot;channel-post reference&quot; id=&quot;1707945863_ref&quot;&gt;
-    &lt;div class=&quot;channel-content&quot;&gt;
-        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1707945863&quot;&gt;Referencing #1707945863&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2024-02-14 21:24:23
-        &lt;p&gt;&lt;div class=&quot;channel-post reference&quot; id=&quot;1707282982_ref&quot;&gt;
-    &lt;div class=&quot;channel-content&quot;&gt;
-        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1707282982&quot;&gt;Referencing #1707282982&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2024-02-07 05:16:22
-        &lt;p&gt;&lt;div class=&quot;channel-post reference&quot; id=&quot;1707110182_ref&quot;&gt;
-    &lt;div class=&quot;channel-content&quot;&gt;
-        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1707110182&quot;&gt;Referencing #1707110182&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2024-02-05 05:16:22
-        &lt;p&gt;started doing my request letter for program change, lots of paperwork. not fun.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<hr>
+what changed: <br>
 
-finished doing the paperwork few days ago, i hope it went through.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
 
-it&apos;s all done, im in IT department now. wonder how it&apos;s gonna play out...&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<a style='color: var(--green-text)'>\>static overlay</a><br/>
+<a style='color: var(--green-text)'>\>add support for video thumbnail</a><br/>
+<a style='color: var(--green-text)'>\>rehost most of the content to tixte's cdn</a><br/>
+<a style='color: var(--green-text)'>\>redesign sidebar</a><br/>
+<a style='color: var(--green-text)'>\>add music bar at the bottom</a><br/>
+<a style='color: var(--green-text)'>\>minor revamp throughout the codebase</a><br/>
 
-the people there were nice... i guess :DDD&lt;/p&gt;
+<a href='https://www.deviantart.com/blastssjpk/art/Kagamine-Rin-02-Pixel-Art-716748616'>
+<img src="https://hatsune-miku.has.rocks/r/kagamine_rin_02_pixel_art_by_blastssjpk_dbuqers.png" height="100px" style="float: left">
+</a>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2024-02-14 21:24:23</title>
-            <link>https://kafu.ovh/redirect.html?id=1707945863</link>
-            <pubDate>Wed, 14 Feb 2024 21:24:23 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                &lt;p&gt;&lt;div class=&quot;channel-post reference&quot; id=&quot;1707282982_ref&quot;&gt;
-    &lt;div class=&quot;channel-content&quot;&gt;
-        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1707282982&quot;&gt;Referencing #1707282982&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2024-02-07 05:16:22
-        &lt;p&gt;&lt;div class=&quot;channel-post reference&quot; id=&quot;1707110182_ref&quot;&gt;
-    &lt;div class=&quot;channel-content&quot;&gt;
-        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1707110182&quot;&gt;Referencing #1707110182&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2024-02-05 05:16:22
-        &lt;p&gt;started doing my request letter for program change, lots of paperwork. not fun.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-finished doing the paperwork few days ago, i hope it went through.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-it&apos;s all done, im in IT department now. wonder how it&apos;s gonna play out...&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-02-12 13:05:22</title>
-            <link>https://kafu.ovh/redirect.html?id=1707743122</link>
-            <pubDate>Mon, 12 Feb 2024 13:05:22 UTC</pubDate>
+            <title>2024-02-12 21:05:22 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1707743122</link>
+            <pubDate>2024-02-12 21:05:22 +0800 +08</pubDate>
             <category>programming, embeds, discord, spotify</category>
             <description>
-                &lt;p&gt;checkout these embeds I made for github.
-&lt;img align=&quot;center&quot; src=&quot;https://lets-all-love-miku.vercel.app/spotify&quot; width=&quot;395&quot; /&gt;
-&lt;img align=&quot;center&quot; src=&quot;https://lets-all-love-miku.vercel.app/discord&quot; width=&quot;395&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;isnt it cool &lt;img class=&quot;discord-emoji&quot; src=&quot;https://cdn.discordapp.com/emojis/1173800544389828608.webp?size=32&quot;&gt;&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-02-11 05:23:06</title>
-            <link>https://kafu.ovh/redirect.html?id=1707628986</link>
-            <pubDate>Sun, 11 Feb 2024 05:23:06 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/RS1mUGS.png"> </img>
-                &lt;p&gt;checkout my crappy linux rice lmao&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-02-10 10:32:14</title>
-            <link>https://kafu.ovh/redirect.html?id=1707561134</link>
-            <pubDate>Sat, 10 Feb 2024 10:32:14 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/VoPc3xp.png"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;current generator is slow as shit slop written in python&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;what if the same thing, but in compiled language 🤔 &lt;/a&gt;&lt;br/&gt;
-alright thats it im doing another rewrite for this website, you love to see it.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-02-07 05:16:22</title>
-            <link>https://kafu.ovh/redirect.html?id=1707282982</link>
-            <pubDate>Wed, 7 Feb 2024 05:16:22 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                &lt;p&gt;&lt;div class=&quot;channel-post reference&quot; id=&quot;1707110182_ref&quot;&gt;
-    &lt;div class=&quot;channel-content&quot;&gt;
-        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1707110182&quot;&gt;Referencing #1707110182&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2024-02-05 05:16:22
-        &lt;p&gt;started doing my request letter for program change, lots of paperwork. not fun.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+                
+                
+checkout these embeds I made for github.
+<img align="center" src="https://lets-all-love-miku.vercel.app/spotify" width="395" />
+<img align="center" src="https://lets-all-love-miku.vercel.app/discord" width="395" />
 
-finished doing the paperwork few days ago, i hope it went through.&lt;/p&gt;
+
+isnt it cool 
+<img class="discord-emoji" loading=lazy alt="" src="https://cdn.discordapp.com/emojis/1173800544389828608.webp?size=32&quality=lossless">
+
             </description>
         </item>
+        
         <item>
-            <title>2024-02-05 05:16:22</title>
-            <link>https://kafu.ovh/redirect.html?id=1707110182</link>
-            <pubDate>Mon, 5 Feb 2024 05:16:22 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/steamsad.gif"> </img>
-                &lt;p&gt;started doing my request letter for program change, lots of paperwork. not fun.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-01-28 15:25:02</title>
-            <link>https://kafu.ovh/redirect.html?id=1706455502</link>
-            <pubDate>Sun, 28 Jan 2024 15:25:02 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/result.png"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;3.28 GPA for something I couldn&apos;t care less about&lt;/a&gt;&lt;br/&gt;
-damn thats actually decent. still gonna change my course &lt;img class=&quot;discord-emoji&quot; src=&quot;https://cdn.discordapp.com/emojis/1095049440835928234.webp?size=32&quot;&gt;&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-01-21 02:52:16</title>
-            <link>https://kafu.ovh/redirect.html?id=1705805536</link>
-            <pubDate>Sun, 21 Jan 2024 02:52:16 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/1705792970635141.jpg"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;few more days until the exam&apos;s results comes out&lt;/a&gt;&lt;br/&gt;
-im calling it now, its gonna be shit&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-01-08 01:19:16</title>
-            <link>https://kafu.ovh/redirect.html?id=1704676756</link>
-            <pubDate>Mon, 8 Jan 2024 01:19:16 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;a direct message from a friend&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;&amp;quot;my pc like click link but there go nothing&amp;quot;&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;&amp;quot;like usual&amp;quot;&lt;/a&gt;&lt;br/&gt;
-what the fuck do you mean like usual and what the fuck does it mean, he&apos;s expecting me to know whats wrong with so little information, and then when asked he kept giving the most vague answer.
-Fuck me man, people wonder why I lost my patience so fast now and it&apos;s because of shit like this&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-01-06 01:59:54</title>
-            <link>https://kafu.ovh/redirect.html?id=1704506394</link>
-            <pubDate>Sat, 6 Jan 2024 01:59:54 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/IMG_20240106_174437.png"> </img>
-                &lt;p&gt;bought two cheap monitor (60hz and 100hz), life&apos;s great.&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-01-04 04:11:49</title>
-            <link>https://kafu.ovh/redirect.html?id=1704341509</link>
-            <pubDate>Thu, 4 Jan 2024 04:11:49 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;took &amp;quot;electronic engineering specialized in computing&amp;quot;&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;only to just learn physical electrical work &lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;no coding, no computer involved, all physical work, this is not what i signed up for&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;it doesnt help that the peoples are a fucking assholes&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;im forced to learn stuff that i dont care about&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;exams in a few weeks&lt;/a&gt;&lt;br/&gt;
-yeah OK im changing my course lmao, im gonna fail this exam for sure&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2024-01-03 07:53:09</title>
-            <link>https://kafu.ovh/redirect.html?id=1704268389</link>
-            <pubDate>Wed, 3 Jan 2024 07:53:09 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://media.tenor.com/images/8d472db61b87745900c9cc37e75aba55/tenor.gif"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;had a breakdown&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;broke my monitor in the process &lt;/a&gt;&lt;br/&gt;
-fuck me dude, now i gotta wait for my new monitor to arrive&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2023-12-27 20:55:42</title>
-            <link>https://kafu.ovh/redirect.html?id=1703710542</link>
-            <pubDate>Wed, 27 Dec 2023 20:55:42 UTC</pubDate>
+            <title>2023-12-28 04:55:42 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1703710542</link>
+            <pubDate>2023-12-28 04:55:42 +0800 +08</pubDate>
             <category>music, youtube, cevio</category>
             <description>
-                &lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://www.youtube.com/watch?v=28arHariBew&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/28arHariBew/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://www.youtube.com/watch?v=28arHariBew&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;i didn&apos;t know joucho has her own cevio model... that&apos;s cool&lt;/p&gt;
+                
+                <div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/28arHariBew/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+
+i didn't know joucho has her own cevio model... that's cool
+
             </description>
         </item>
+        
         <item>
-            <title>2023-12-23 05:37:34</title>
-            <link>https://kafu.ovh/redirect.html?id=1703309854</link>
-            <pubDate>Sat, 23 Dec 2023 05:37:34 UTC</pubDate>
+            <title>2023-12-23 13:37:34 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1703309854</link>
+            <pubDate>2023-12-23 13:37:34 +0800 +08</pubDate>
             <category>irl, anime, event, random</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/cf.png"> </img>
-                &lt;p&gt;Last year:
-&lt;div class=&quot;channel-post reference&quot; id=&quot;1671362755_ref&quot;&gt;
-    &lt;div class=&quot;channel-content&quot;&gt;
-        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1671362755&quot;&gt;Referencing #1671362755&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2022-12-18 11:25:55
-        &lt;p&gt;my first time going to a anime convention, met my online friend.
-also i took a picture with hatsune miku racing.
-fun times.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+                
+                
+Last year:
+<a style='color: var(--red-text)' href='/redirect.html?id=1671362755'>>>1671362755</a>
+<br>
 
-&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;This year&apos;s anime convention... &lt;br&gt;
-im not missing out &lt;br&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;im not missing out&lt;/a&gt;&lt;br/&gt;
-im not missing out &lt;br&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;im not missing out&lt;/a&gt;&lt;br/&gt;
-fucking exams man, wish i could go but i guess not for this year.... &lt;br&gt;&lt;/p&gt;
+This year's anime convention... <br>
+im not missing out <br>
+<a style='color: var(--green-text)'>\>im not missing out</a><br/>
+im not missing out <br>
+<a style='color: var(--green-text)'>\>im not missing out</a><br/>
+fucking exams man, wish i could go but i guess not for this year.... <br>
+
             </description>
         </item>
+        
         <item>
-            <title>2023-12-19 18:48:44</title>
-            <link>https://kafu.ovh/redirect.html?id=1703011724</link>
-            <pubDate>Tue, 19 Dec 2023 18:48:44 UTC</pubDate>
+            <title>2023-12-20 02:48:44 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1703011724</link>
+            <pubDate>2023-12-20 02:48:44 +0800 +08</pubDate>
             <category>life, random, regret</category>
             <description>
+                
                 <img src="https://media1.tenor.com/m/IdhaFzyMYA0AAAAd/sorasaki-hina-blue-archive.gif"> </img>
-                &lt;p&gt;been thinking about my course recently, i feel like i just made a major mistake.
-maybe taking electronic engineering wasnt a great idea after all. don&apos;t get me wrong, i like it, it&apos;s just that... stuff happened and people did me dirty and that really killed my passion for this field, i&apos;m thinking of changing my course to software engineering and do it the easy way since that&apos;s what i&apos;m most familiar with....&lt;/p&gt;
-&lt;br&gt;
-&lt;p&gt;and, i&apos;m not joking when i said people did me dirty, they really did, to the point where i had a emotional breakdown.
-which, says a lot cuz &lt;em&gt;i&apos;m a tough guy&lt;/em&gt;, edgylord-tier kinda, no emotion basically, so that&apos;s saying a lot.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;for now, i just don&apos;t want to think about it....&lt;/p&gt;
+                
+                
+been thinking about my course recently, i feel like i just made a major mistake.
+maybe taking electronic engineering wasnt a great idea after all. don't get me wrong, i like it, it's just that... stuff happened and people did me dirty and that really killed my passion for this field, i'm thinking of changing my course to software engineering and do it the easy way since that's what i'm most familiar with....
+
+<br>
+
+and, i'm not joking when i said people did me dirty, they really did, to the point where i had a emotional breakdown.
+which, says a lot cuz _i'm a tough guy_, edgylord-tier kinda, no emotion basically, so that's saying a lot.
+
+<hr>
+
+for now, i just don't want to think about it....
+
             </description>
         </item>
+        
         <item>
-            <title>2023-12-19 13:18:30</title>
-            <link>https://kafu.ovh/redirect.html?id=1702991910</link>
-            <pubDate>Tue, 19 Dec 2023 13:18:30 UTC</pubDate>
-            <category>discord-post</category>
-            <description>
-                <img src="https://hatsune-miku.has.rocks/r/given-up.png"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;05:16AM&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;fully awake, not even a hint of tired.&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;caffeine overdose&lt;/a&gt;&lt;br/&gt;
-exam got me fucked up lmao&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>2023-12-09 11:13:04</title>
-            <link>https://kafu.ovh/redirect.html?id=1702120384</link>
-            <pubDate>Sat, 9 Dec 2023 11:13:04 UTC</pubDate>
+            <title>2023-12-09 19:13:04 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1702120384</link>
+            <pubDate>2023-12-09 19:13:04 +0800 +08</pubDate>
             <category>music, spotify, aira</category>
             <description>
-                &lt;p&gt;spotify finally did their job and fixed &lt;a href=&quot;https://open.spotify.com/artist/0Myz4YQ9fIhJMHNUsqcLj9&quot;&gt;[Aira&apos;s]&lt;/a&gt; spotify page.&lt;/p&gt;
-&lt;p&gt;found some other bangers made by them cuz of that.&lt;/p&gt;
-&lt;hr&gt;
-&lt;div class=&quot;spotify&quot;&gt;
-    &lt;div class=&quot;spotify-thumbnail&quot;&gt;
-        &lt;img loading=lazy height=&quot;100px&quot; width=&quot;100px&quot; src=&quot;https://i.scdn.co/image/ab67616d0000b2738f3045da5366a3d9fb8d7672&quot; alt=&quot;Cover Art&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;spotify-info&quot;&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/track/7ayAFZamn8SxTRFZsfu1Iw&quot;&gt;revanche&lt;/a&gt;
-        &lt;br&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/artist/0Myz4YQ9fIhJMHNUsqcLj9&quot;&gt;Aira&lt;/a&gt;
-        &lt;br&gt;
-        &lt;audio controls preload=none&gt;
-            &lt;source src=&quot;https://p.scdn.co/mp3-preview/168b194be2bbfb52534d14256e67594b6bc651cd&quot; type=&quot;audio/mpeg&quot;&gt;
-        &lt;/audio&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;spotify&quot;&gt;
-    &lt;div class=&quot;spotify-thumbnail&quot;&gt;
-        &lt;img loading=lazy height=&quot;100px&quot; width=&quot;100px&quot; src=&quot;https://i.scdn.co/image/ab67616d0000b2734ca8864ce1cefec5019f06f7&quot; alt=&quot;Cover Art&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;spotify-info&quot;&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/track/0gp9BrAqDeBVhqQrsdsGAR&quot;&gt;Illustration&lt;/a&gt;
-        &lt;br&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/artist/0Myz4YQ9fIhJMHNUsqcLj9&quot;&gt;Aira&lt;/a&gt;
-        &lt;br&gt;
-        &lt;audio controls preload=none&gt;
-            &lt;source src=&quot;https://p.scdn.co/mp3-preview/e4d2f46e24e877eea5567cf313008f3f5e5b7e25&quot; type=&quot;audio/mpeg&quot;&gt;
-        &lt;/audio&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+                
+                spotify finally did their job and fixed [[Aira's]](https://open.spotify.com/artist/0Myz4YQ9fIhJMHNUsqcLj9) spotify page.
+
+found some other bangers made by them cuz of that.
+
+<hr>
+
+<div class="spotify">
+    <div class="spotify-thumbnail">
+        <img loading=lazy height="100px" width="100px" src="https://i.scdn.co/image/ab67616d0000b2738f3045da5366a3d9fb8d7672" alt="Cover Art">
+    </div>
+    <div class="spotify-info">
+        <a class="links" href="https://open.spotify.com/track/7ayAFZamn8SxTRFZsfu1Iw">revanche</a>
+        <br>
+        <a class="links" href="https://open.spotify.com/artist/0Myz4YQ9fIhJMHNUsqcLj9">Aira</a>
+        <br>
+        <audio controls preload=none>
+            <source src="https://p.scdn.co/mp3-preview/168b194be2bbfb52534d14256e67594b6bc651cd" type="audio/mpeg">
+        </audio>
+    </div>
+</div>
+
+<div class="spotify">
+    <div class="spotify-thumbnail">
+        <img loading=lazy height="100px" width="100px" src="https://i.scdn.co/image/ab67616d0000b2734ca8864ce1cefec5019f06f7" alt="Cover Art">
+    </div>
+    <div class="spotify-info">
+        <a class="links" href="https://open.spotify.com/track/0gp9BrAqDeBVhqQrsdsGAR">Illustration</a>
+        <br>
+        <a class="links" href="https://open.spotify.com/artist/0Myz4YQ9fIhJMHNUsqcLj9">Aira</a>
+        <br>
+        <audio controls preload=none>
+            <source src="https://p.scdn.co/mp3-preview/e4d2f46e24e877eea5567cf313008f3f5e5b7e25" type="audio/mpeg">
+        </audio>
+    </div>
+</div>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2023-12-05 10:46:40</title>
-            <link>https://kafu.ovh/redirect.html?id=1701773200</link>
-            <pubDate>Tue, 5 Dec 2023 10:46:40 UTC</pubDate>
+            <title>2023-12-05 18:46:40 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1701773200</link>
+            <pubDate>2023-12-05 18:46:40 +0800 +08</pubDate>
             <category>programming, c++, osu!, storyboard</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/final.mp4"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;friend kept asking me stuff about c++&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--red-text)&quot;&gt;&amp;lt;i dont know much about cpp, i only know a little bit of c&lt;/a&gt;&lt;br/&gt;
-so yeah, i made a simple osu! storyboard player to get myself familiar with c/++.&lt;/p&gt;
-&lt;p&gt;source code is available &lt;a href=&quot;https://github.com/xjunko/TypeT&quot;&gt;[HERE]&lt;/a&gt;, feel free to berate me.&lt;/p&gt;
+                
+                
+<a style='color: var(--green-text)'>\>friend kept asking me stuff about c++</a><br/>
+<a style='color: var(--red-text)'>\<i dont know much about cpp, i only know a little bit of c</a><br/>
+so yeah, i made a simple osu! storyboard player to get myself familiar with c/++.
+
+source code is available [[HERE]](https://github.com/xjunko/TypeT), feel free to berate me.
+
             </description>
         </item>
+        
         <item>
-            <title>2023-11-28 16:08:47</title>
-            <link>https://kafu.ovh/redirect.html?id=1701187727</link>
-            <pubDate>Tue, 28 Nov 2023 16:08:47 UTC</pubDate>
+            <title>2023-11-29 00:08:47 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1701187727</link>
+            <pubDate>2023-11-29 00:08:47 +0800 +08</pubDate>
             <category>programming, vlang, drama</category>
             <description>
-                &lt;p&gt;Continuation of
-&lt;div class=&quot;channel-post reference&quot; id=&quot;1700946181_ref&quot;&gt;
-    &lt;div class=&quot;channel-content&quot;&gt;
-        &lt;a class=&quot;channel-url no-underline&quot; href=&quot;../redirect.html?id=1700946181&quot;&gt;Referencing #1700946181&lt;/a&gt; &lt;br /&gt;
-        Posted by &lt;span class=&quot;channel-author&quot;&gt;junko&lt;/span&gt; at 2023-11-25 21:03:01
-        &lt;p&gt;looking at V discord channel, seems like theres some kind of drama going on there. &lt;br/&gt;
-kinda sad that 2 of the big guys left. almost feels like the language itself is about to die, i hope not. &lt;br/&gt;
-the language is genuinely cool. while they overpromised lots of stuff, the language itself does work as a programming language and thats good enough for me. &lt;br/&gt;
-seems like its not for other people, oh well.  &lt;br/&gt;
-praying for my man l-m over there at &lt;a href=&quot;https://me.l-m.dev/&quot;&gt;me.l-m.dev&lt;/a&gt;, he did a lot of work on the language&apos;s web assembly stuff recently :&amp;lt;&amp;lt;&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;&lt;a href=&quot;https://asvln.com/rants/pathetic.html&quot;&gt;[Vlang or: How I learned even open-source communities...]&lt;/a&gt; &lt;/a&gt;&lt;br/&gt;
-nvm, this is so silly wtf lol.&lt;/p&gt;
+                
+                
+Continuation of
+<a style='color: var(--red-text)' href='/redirect.html?id=1700946181'>>>1700946181</a>
+
+<a style='color: var(--green-text)'>\>[[Vlang or: How I learned even open-source communities...]](https://asvln.com/rants/pathetic.html)</a><br/>
+nvm, this is so silly wtf lol.
+
             </description>
         </item>
+        
         <item>
-            <title>2023-11-28 07:14:46</title>
-            <link>https://kafu.ovh/redirect.html?id=1701155686</link>
-            <pubDate>Tue, 28 Nov 2023 07:14:46 UTC</pubDate>
+            <title>2023-11-28 15:14:46 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1701155686</link>
+            <pubDate>2023-11-28 15:14:46 +0800 +08</pubDate>
             <category>irl, university, lecturer, random</category>
             <description>
-                &lt;p&gt;my fucking god, i hate this one lecturer of mine.
-motherfucker literally tells us shit at the last possible minute.&lt;/p&gt;
-&lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;hurr durr go make this [thing], its due in 2 weeks&lt;/a&gt;&lt;br/&gt;
-alright &lt;br&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;1 day later&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;ok so i want the [thing] by tomorrow, this is very important for your grade.&lt;/a&gt;&lt;br/&gt;
-???, then he has the fucking audacity to fucking compare us to the other classes which has literally 2 fucking weeks to work the thing with and be all like, &lt;br&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;MAN, this shit aint bussin yo wtf i expected more&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;im disappointed&lt;/a&gt;&lt;br/&gt;
-grrrrrrrrrrrrrrrr &lt;br/&gt;
-he pulled this crap on multiple things, like coursework, quizzes, exams and so on. its bullshit honestly.&lt;/p&gt;
+                
+                my fucking god, i hate this one lecturer of mine.
+motherfucker literally tells us shit at the last possible minute.
+
+<a style='color: var(--green-text)'>\>hurr durr go make this [thing], its due in 2 weeks</a><br/>
+alright <br>
+<a style='color: var(--green-text)'>\>1 day later</a><br/>
+<a style='color: var(--green-text)'>\>ok so i want the [thing] by tomorrow, this is very important for your grade.</a><br/>
+???, then he has the fucking audacity to fucking compare us to the other classes which has literally 2 fucking weeks to work the thing with and be all like, <br>
+<a style='color: var(--green-text)'>\>MAN, this shit aint bussin yo wtf i expected more</a><br/>
+<a style='color: var(--green-text)'>\>im disappointed</a><br/>
+grrrrrrrrrrrrrrrr <br/>
+he pulled this crap on multiple things, like coursework, quizzes, exams and so on. its bullshit honestly.
+
             </description>
         </item>
+        
         <item>
-            <title>2023-11-28 07:13:20</title>
-            <link>https://kafu.ovh/redirect.html?id=1701155600</link>
-            <pubDate>Tue, 28 Nov 2023 07:13:20 UTC</pubDate>
+            <title>2023-11-28 15:13:20 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1701155600</link>
+            <pubDate>2023-11-28 15:13:20 +0800 +08</pubDate>
             <category>music, youtube</category>
             <description>
-                &lt;p&gt;forgot about this masterpiece&lt;/p&gt;
-&lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://www.youtube.com/watch?v=aEtwA-iwoCQ&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/aEtwA-iwoCQ/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://www.youtube.com/watch?v=aEtwA-iwoCQ&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
+                
+                forgot about this masterpiece
+
+<div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/aEtwA-iwoCQ/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2023-11-25 21:03:01</title>
-            <link>https://kafu.ovh/redirect.html?id=1700946181</link>
-            <pubDate>Sat, 25 Nov 2023 21:03:01 UTC</pubDate>
+            <title>2023-11-26 05:03:01 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1700946181</link>
+            <pubDate>2023-11-26 05:03:01 +0800 +08</pubDate>
             <category>programming, vlang, drama, l-m</category>
             <description>
-                &lt;p&gt;looking at V discord channel, seems like theres some kind of drama going on there. &lt;br/&gt;
-kinda sad that 2 of the big guys left. almost feels like the language itself is about to die, i hope not. &lt;br/&gt;
-the language is genuinely cool. while they overpromised lots of stuff, the language itself does work as a programming language and thats good enough for me. &lt;br/&gt;
-seems like its not for other people, oh well.  &lt;br/&gt;
-praying for my man l-m over there at &lt;a href=&quot;https://me.l-m.dev/&quot;&gt;me.l-m.dev&lt;/a&gt;, he did a lot of work on the language&apos;s web assembly stuff recently :&amp;lt;&amp;lt;&lt;/p&gt;
+                
+                looking at V discord channel, seems like theres some kind of drama going on there. <br/>
+kinda sad that 2 of the big guys left. almost feels like the language itself is about to die, i hope not. <br/>
+the language is genuinely cool. while they overpromised lots of stuff, the language itself does work as a programming language and thats good enough for me. <br/>
+seems like its not for other people, oh well.  <br/>
+praying for my man l-m over there at [me.l-m.dev][l-m], he did a lot of work on the language's web assembly stuff recently :<<
+
+
+[l-m]: https://me.l-m.dev/
+
             </description>
         </item>
+        
         <item>
-            <title>2023-11-25 20:59:01</title>
-            <link>https://kafu.ovh/redirect.html?id=1700945941</link>
-            <pubDate>Sat, 25 Nov 2023 20:59:01 UTC</pubDate>
+            <title>2023-11-26 04:59:01 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1700945941</link>
+            <pubDate>2023-11-26 04:59:01 +0800 +08</pubDate>
             <category>music, youtube</category>
             <description>
-                &lt;p&gt;absolute banger&lt;/p&gt;
-&lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://www.youtube.com/watch?v=kyhuTcnEqVk&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/kyhuTcnEqVk/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://www.youtube.com/watch?v=kyhuTcnEqVk&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
+                
+                absolute banger
+
+<div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/kyhuTcnEqVk/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2023-11-16 15:26:57</title>
-            <link>https://kafu.ovh/redirect.html?id=1700148417</link>
-            <pubDate>Thu, 16 Nov 2023 15:26:57 UTC</pubDate>
+            <title>2023-11-16 23:26:57 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1700148417</link>
+            <pubDate>2023-11-16 23:26:57 +0800 +08</pubDate>
             <category>gif, random</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/wtf-is-this.gif"> </img>
-                &lt;p&gt;this gif is so fucked up what the fuck&lt;/p&gt;
+                
+                
+this gif is so fucked up what the fuck
+
             </description>
         </item>
+        
         <item>
-            <title>2023-11-10 13:08:40</title>
-            <link>https://kafu.ovh/redirect.html?id=1699621720</link>
-            <pubDate>Fri, 10 Nov 2023 13:08:40 UTC</pubDate>
+            <title>2023-11-10 21:08:40 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1699621720</link>
+            <pubDate>2023-11-10 21:08:40 +0800 +08</pubDate>
             <category>irl, chunithm, rhythm-game</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/chunithm.jpg"> </img>
-                &lt;p&gt;arcade nearby my place installed &lt;a href=&quot;https://chunithm.sega.com/&quot;&gt;chunithm&lt;/a&gt;, fun shit.&lt;/p&gt;
-&lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://www.youtube.com/watch?v=IF51E9Trp70&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/IF51E9Trp70/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://www.youtube.com/watch?v=IF51E9Trp70&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
+                
+                
+arcade nearby my place installed [chunithm](https://chunithm.sega.com/), fun shit.
+
+<div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/IF51E9Trp70/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2023-11-04 11:34:40</title>
-            <link>https://kafu.ovh/redirect.html?id=1699097680</link>
-            <pubDate>Sat, 4 Nov 2023 11:34:40 UTC</pubDate>
+            <title>2023-11-04 19:34:40 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1699097680</link>
+            <pubDate>2023-11-04 19:34:40 +0800 +08</pubDate>
             <category>irl, figurines, hatsune-miku, axccel, friend</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/miku-figurines.jpg"> </img>
-                &lt;p&gt;yeaaahhh 🗣️🗣️🗣️🗣️🗣️🗣️🗣️&lt;/p&gt;
+                
+                
+yeaaahhh 🗣️🗣️🗣️🗣️🗣️🗣️🗣️
+
             </description>
         </item>
+        
         <item>
-            <title>2023-10-26 05:08:40</title>
-            <link>https://kafu.ovh/redirect.html?id=1698296920</link>
-            <pubDate>Thu, 26 Oct 2023 05:08:40 UTC</pubDate>
+            <title>2023-10-26 13:08:40 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1698296920</link>
+            <pubDate>2023-10-26 13:08:40 +0800 +08</pubDate>
             <category>irl, fnaf, movie</category>
             <description>
+                
                 <img src="https://media.tenor.com/VEZOKlWlFCQAAAAd/fnaf-gangnam-style.gif"> </img>
-                &lt;p&gt;watched the fnaf movie, its OK. &lt;img class=&quot;discord-emoji&quot; src=&quot;https://cdn.discordapp.com/emojis/1108087638562447471.webp?size=32&amp;quality=lossless&quot;&gt;&lt;/p&gt;
+                
+                
+watched the fnaf movie, its OK. 
+<img class="discord-emoji" loading=lazy alt="" src="https://cdn.discordapp.com/emojis/1108087638562447471.webp?size=32&quality=lossless">
+
             </description>
         </item>
+        
         <item>
-            <title>2023-10-25 07:08:40</title>
-            <link>https://kafu.ovh/redirect.html?id=1698217720</link>
-            <pubDate>Wed, 25 Oct 2023 07:08:40 UTC</pubDate>
+            <title>2023-10-25 15:08:40 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1698217720</link>
+            <pubDate>2023-10-25 15:08:40 +0800 +08</pubDate>
             <category>irl, maimai, lividi, rhythm-game</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/maimai-lividi.jpg"> </img>
-                &lt;p&gt;love me some maimai &lt;img class=&quot;discord-emoji&quot; src=&quot;https://cdn.discordapp.com/emojis/875788256111890433.gif?size=32&amp;quality=lossless&quot;&gt;&lt;/p&gt;
+                
+                
+love me some maimai 
+<img class="discord-emoji" loading=lazy alt="" src="https://cdn.discordapp.com/emojis/875788256111890433.gif?size=32&quality=lossless">
+
             </description>
         </item>
+        
         <item>
-            <title>2023-10-15 09:56:40</title>
-            <link>https://kafu.ovh/redirect.html?id=1697363800</link>
-            <pubDate>Sun, 15 Oct 2023 09:56:40 UTC</pubDate>
+            <title>2023-10-15 17:56:40 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1697363800</link>
+            <pubDate>2023-10-15 17:56:40 +0800 +08</pubDate>
             <category>irl, figurine, ram, rezero, lewd</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/ram.webp"> </img>
-                &lt;p&gt;e-e.eerotic... 😳😳😳&lt;/p&gt;
+                
+                
+e-e.eerotic... 😳😳😳
+
             </description>
         </item>
+        
         <item>
-            <title>2023-09-10 03:35:05</title>
-            <link>https://kafu.ovh/redirect.html?id=1694316905</link>
-            <pubDate>Sun, 10 Sep 2023 03:35:05 UTC</pubDate>
+            <title>2023-09-10 11:35:05 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1694316905</link>
+            <pubDate>2023-09-10 11:35:05 +0800 +08</pubDate>
             <category>exploit, university</category>
             <description>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;Figured out how to exploit my uni&apos;s wifi for free.&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;#!/usr/bin/env bash
+                
+                <a style='color: var(--green-text)'>\>Figured out how to exploit my uni's wifi for free.</a><br/>
+```bash
+#!/usr/bin/env bash
 
 # Kill wlan0 for abit.
 sudo networkctl down wlan0
@@ -1111,400 +882,542 @@ sudo macchanger -r wlan0
 sudo networkctl up wlan0
 
 # Get the new macaddr value
-new_mac=$(ifconfig wlan0 | grep --color=never  -oE &apos;([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}&apos;)  
+new_mac=$(ifconfig wlan0 | grep --color=never  -oE '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}')
 
 # Activate the shit the shit.
-echo &amp;quot;Opening trial activator thingamajig.&amp;quot;
-xdg-open &amp;quot;https://wifi.aeronet.com.my/login?username=T-${new_mac^^}&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Turns out, my uni&apos;s &lt;em&gt;PAID&lt;/em&gt; wifi trial didn&apos;t really check for mac addresses properly,
-so I can do goofy shit like this and get free wifi without paying. very cool.&lt;/p&gt;
+echo "Opening trial activator thingamajig."
+xdg-open "https://wifi.aeronet.com.my/login?username=T-${new_mac^^}"
+```
+Turns out, my uni's *PAID* wifi trial didn't really check for mac addresses properly,
+so I can do goofy shit like this and get free wifi without paying. very cool.
+
             </description>
         </item>
+        
         <item>
-            <title>2023-08-01 19:53:17</title>
-            <link>https://kafu.ovh/redirect.html?id=1690919597</link>
-            <pubDate>Tue, 1 Aug 2023 19:53:17 UTC</pubDate>
+            <title>2023-08-02 03:53:17 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1690919597</link>
+            <pubDate>2023-08-02 03:53:17 +0800 +08</pubDate>
             <category>programming, music, vlang, midi, depressing</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/depressing.mp4"> </img>
-                &lt;p&gt;most depressing midi player&lt;/p&gt;
+                
+                most depressing midi player
+
             </description>
         </item>
+        
         <item>
-            <title>2023-07-23 01:28:43</title>
-            <link>https://kafu.ovh/redirect.html?id=1690075723</link>
-            <pubDate>Sun, 23 Jul 2023 01:28:43 UTC</pubDate>
+            <title>2023-07-23 09:28:43 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1690075723</link>
+            <pubDate>2023-07-23 09:28:43 +0800 +08</pubDate>
             <category>game, blue-archive, ui-kozeki</category>
             <description>
+                
                 <img src="https://media.tenor.com/VVTMP9ua3KIAAAAC/ui-blue-archive.gif"> </img>
-                &lt;p&gt;gave blue archive a try as a joke and i ended up actually playing the game, the lore is actually good what the fuck. &lt;br/&gt;
-ui my beloved.&lt;/p&gt;
+                
+                gave blue archive a try as a joke and i ended up actually playing the game, the lore is actually good what the fuck. <br/>
+ui my beloved.
+
             </description>
         </item>
+        
         <item>
-            <title>2023-07-17 16:22:44</title>
-            <link>https://kafu.ovh/redirect.html?id=1689610964</link>
-            <pubDate>Mon, 17 Jul 2023 16:22:44 UTC</pubDate>
+            <title>2023-07-18 00:22:44 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1689610964</link>
+            <pubDate>2023-07-18 00:22:44 +0800 +08</pubDate>
             <category>update</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/sneaky-fuck.png"> </img>
-                &lt;p&gt;how the fuck did i not see that &lt;br/&gt;&lt;/p&gt;
+                
+                how the fuck did i not see that <br/>
+
             </description>
         </item>
+        
         <item>
-            <title>2023-07-17 16:16:05</title>
-            <link>https://kafu.ovh/redirect.html?id=1689610565</link>
-            <pubDate>Mon, 17 Jul 2023 16:16:05 UTC</pubDate>
+            <title>2023-07-18 00:16:05 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1689610565</link>
+            <pubDate>2023-07-18 00:16:05 +0800 +08</pubDate>
             <category>update</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/blog-sh.png"> </img>
-                &lt;p&gt;one less &lt;code&gt;.sh&lt;/code&gt; file for creating post, amazing.&lt;/p&gt;
+                
+                one less `.sh` file for creating post, amazing.
+
             </description>
         </item>
+        
         <item>
-            <title>2023-07-15 16:54:14</title>
-            <link>https://kafu.ovh/redirect.html?id=1689440054</link>
-            <pubDate>Sat, 15 Jul 2023 16:54:14 UTC</pubDate>
+            <title>2023-07-16 00:54:14 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1689440054</link>
+            <pubDate>2023-07-16 00:54:14 +0800 +08</pubDate>
             <category>update, junko</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/Junko_drill.webp"> </img>
-                &lt;p&gt;new sorting style (l-m inspired), not sure if i like this one, we&apos;ll see. gonna give it a week or two.&lt;/p&gt;
+                
+                new sorting style (l-m inspired), not sure if i like this one, we'll see. gonna give it a week or two.
+
             </description>
         </item>
+        
         <item>
-            <title>2023-07-15 16:14:37</title>
-            <link>https://kafu.ovh/redirect.html?id=1689437677</link>
-            <pubDate>Sat, 15 Jul 2023 16:14:37 UTC</pubDate>
+            <title>2023-07-16 00:14:37 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1689437677</link>
+            <pubDate>2023-07-16 00:14:37 +0800 +08</pubDate>
             <category>spotify, tracking, ads, bloatware, update</category>
             <description>
-                &lt;p&gt;&lt;img src=&quot;https://hatsune-miku.has.rocks/r/spotify-track.png&quot; alt=&quot;&quot;&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;play.google.com &lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;that tracking &lt;/a&gt;&lt;br/&gt;
-Replaced Youtube&apos;s embed with a simpler no-js no-bullshit one, fuck off google. &lt;br&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;green text is a thing now&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+                
+                ![](https://hatsune-miku.has.rocks/r/spotify-track.png)
+<a style='color: var(--green-text)'>\>play.google.com</a><br/>
+<a style='color: var(--green-text)'>\>that tracking</a><br/>
+Replaced Youtube's embed with a simpler no-js no-bullshit one, fuck off google. <br>
+<a style='color: var(--green-text)'>\>green text is a thing now</a><br/>
+
             </description>
         </item>
+        
         <item>
-            <title>2023-07-15 14:37:58</title>
-            <link>https://kafu.ovh/redirect.html?id=1689431878</link>
-            <pubDate>Sat, 15 Jul 2023 14:37:58 UTC</pubDate>
+            <title>2023-07-15 22:37:58 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1689431878</link>
+            <pubDate>2023-07-15 22:37:58 +0800 +08</pubDate>
             <category>music, spotify, youtube</category>
             <description>
-                &lt;p&gt;holy fucking shit this is so good&lt;/p&gt;
-&lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://youtu.be/8hUuwtCrb-U&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/8hUuwtCrb-U/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://youtu.be/8hUuwtCrb-U&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;spotify&quot;&gt;
-    &lt;div class=&quot;spotify-thumbnail&quot;&gt;
-        &lt;img loading=lazy height=&quot;100px&quot; width=&quot;100px&quot; src=&quot;https://i.scdn.co/image/ab67616d0000b2731beab218e885f81890cf77f3&quot; alt=&quot;Cover Art&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;spotify-info&quot;&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/track/4L1oKyu3DPgBwB8aLpM6Fd&quot;&gt;フィナーレをあなたに。&lt;/a&gt;
-        &lt;br&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/artist/0Myz4YQ9fIhJMHNUsqcLj9&quot;&gt;Aira&lt;/a&gt;
-        &lt;br&gt;
-        &lt;audio controls preload=none&gt;
-            &lt;source src=&quot;https://p.scdn.co/mp3-preview/27ea9e6accefd28b9b0dc4b7aaee2cb8021c011e&quot; type=&quot;audio/mpeg&quot;&gt;
-        &lt;/audio&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+                
+                holy fucking shit this is so good
+
+<div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/8hUuwtCrb-U/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+
+<div class="spotify">
+    <div class="spotify-thumbnail">
+        <img loading=lazy height="100px" width="100px" src="https://i.scdn.co/image/ab67616d0000b2731beab218e885f81890cf77f3" alt="Cover Art">
+    </div>
+    <div class="spotify-info">
+        <a class="links" href="https://open.spotify.com/track/4L1oKyu3DPgBwB8aLpM6Fd">フィナーレをあなたに。</a>
+        <br>
+        <a class="links" href="https://open.spotify.com/artist/0Myz4YQ9fIhJMHNUsqcLj9">Aira</a>
+        <br>
+        <audio controls preload=none>
+            <source src="https://p.scdn.co/mp3-preview/27ea9e6accefd28b9b0dc4b7aaee2cb8021c011e" type="audio/mpeg">
+        </audio>
+    </div>
+</div>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2023-07-07 17:12:05</title>
-            <link>https://kafu.ovh/redirect.html?id=1688749925</link>
-            <pubDate>Fri, 7 Jul 2023 17:12:05 UTC</pubDate>
+            <title>2023-07-08 01:12:05 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1688749925</link>
+            <pubDate>2023-07-08 01:12:05 +0800 +08</pubDate>
             <category>losing-my-fucking-mind, asmr, life</category>
             <description>
+                
                 <img src="https://media.tenor.com/dN976uhxB0kAAAAC/aimoto-rinku-listening-to-music.gif"> </img>
-                &lt;p&gt;god bless asmr for existing, really need it in these hard times.&lt;/p&gt;
+                
+                god bless asmr for existing, really need it in these hard times.
+
             </description>
         </item>
+        
         <item>
-            <title>2023-06-25 21:27:18</title>
-            <link>https://kafu.ovh/redirect.html?id=1687728438</link>
-            <pubDate>Sun, 25 Jun 2023 21:27:18 UTC</pubDate>
+            <title>2023-06-26 05:27:18 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1687728438</link>
+            <pubDate>2023-06-26 05:27:18 +0800 +08</pubDate>
             <category>pakb, bdsm, inside-joke, discord, ai</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/RinaAI_History.png"> </img>
-                &lt;p&gt;here&apos;s some inside joke that no one else will get, to be continued.&lt;/p&gt;
+                
+                
+here's some inside joke that no one else will get, to be continued.
+
             </description>
         </item>
+        
         <item>
-            <title>2023-06-25 18:58:38</title>
-            <link>https://kafu.ovh/redirect.html?id=1687719518</link>
-            <pubDate>Sun, 25 Jun 2023 18:58:38 UTC</pubDate>
+            <title>2023-06-26 02:58:38 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1687719518</link>
+            <pubDate>2023-06-26 02:58:38 +0800 +08</pubDate>
             <category>meta, l-m, reference, spotify, screenshot</category>
             <description>
-                &lt;div&gt;
-    this is so meta lmao
-    &lt;a href=&quot;https://me.l-m.dev/?meta=1687746708&quot;&gt;
-        &lt;img class=&quot;image-center&quot; src=&quot;https://hatsune-miku.has.rocks/r/l-m.png&quot;&gt;
-    &lt;/a&gt; &lt;br/&gt;
-    &lt;a style=&quot;color: var(--green-text)&quot; href=&quot;https://me.l-m.dev&quot;&gt;&gt;&gt;&lt;a style=&quot;color: var(--green-text);text-decoration: underline;&quot; href=&quot;https://me.l-m.dev&quot;&gt;https://me.l-m.dev&lt;/a&gt; &lt;/a&gt; &lt;br/&gt;
-    check out their site too, amazing stuff there. &lt;br/&gt;
-&lt;/div&gt;
+                
+                
+<div>
+this is so meta lmao
+<a href="https://me.l-m.dev/?meta=1687746708">
+<img class="image-center" src="https://hatsune-miku.has.rocks/r/l-m.png">
+</a> <br/>
+<a style="color: var(--green-text)" href="https://me.l-m.dev">>><a style="color: var(--green-text);text-decoration: underline;" href="https://me.l-m.dev">https://me.l-m.dev</a> </a> <br/>
+check out their site too, amazing stuff there. <br/>
+</div>
+
             </description>
         </item>
+        
         <item>
-            <title>2023-06-23 16:56:54</title>
-            <link>https://kafu.ovh/redirect.html?id=1687539414</link>
-            <pubDate>Fri, 23 Jun 2023 16:56:54 UTC</pubDate>
+            <title>2023-06-24 00:56:54 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1687539414</link>
+            <pubDate>2023-06-24 00:56:54 +0800 +08</pubDate>
             <category>music, spotify</category>
             <description>
-                &lt;div class=&quot;spotify&quot;&gt;
-    &lt;div class=&quot;spotify-thumbnail&quot;&gt;
-        &lt;img loading=lazy height=&quot;100px&quot; width=&quot;100px&quot; src=&quot;https://i.scdn.co/image/ab67616d0000b2736308c29dbfef35be1a84a91f&quot; alt=&quot;Cover Art&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;spotify-info&quot;&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/track/5DCjOoHUncK7jauiGVLIrf&quot;&gt;色水&lt;/a&gt;
-        &lt;br&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/artist/7v7AOgHT3xwF4Z86hcCbsh&quot;&gt;Oisicle Melonpan&lt;/a&gt;
-        &lt;br&gt;
-        &lt;audio controls preload=none&gt;
-            &lt;source src=&quot;https://p.scdn.co/mp3-preview/c766f71202756ea1fd6c028dc0dcbe5082c71f7f&quot; type=&quot;audio/mpeg&quot;&gt;
-        &lt;/audio&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+                
+                <div class="spotify">
+    <div class="spotify-thumbnail">
+        <img loading=lazy height="100px" width="100px" src="https://i.scdn.co/image/ab67616d0000b2736308c29dbfef35be1a84a91f" alt="Cover Art">
+    </div>
+    <div class="spotify-info">
+        <a class="links" href="https://open.spotify.com/track/5DCjOoHUncK7jauiGVLIrf">色水</a>
+        <br>
+        <a class="links" href="https://open.spotify.com/artist/7v7AOgHT3xwF4Z86hcCbsh">Oisicle Melonpan</a>
+        <br>
+        <audio controls preload=none>
+            <source src="https://p.scdn.co/mp3-preview/c766f71202756ea1fd6c028dc0dcbe5082c71f7f" type="audio/mpeg">
+        </audio>
+    </div>
+</div>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2023-06-22 10:49:02</title>
-            <link>https://kafu.ovh/redirect.html?id=1687430942</link>
-            <pubDate>Thu, 22 Jun 2023 10:49:02 UTC</pubDate>
+            <title>2023-06-22 18:49:02 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1687430942</link>
+            <pubDate>2023-06-22 18:49:02 +0800 +08</pubDate>
             <category>music, spotify</category>
             <description>
+                
                 <img src="https://media.tenor.com/JHF5WC7kEScAAAAd/zombieland-saga-sakura-minamoto.gif"> </img>
-                &lt;p&gt;absolute banger&lt;/p&gt;
-&lt;div class=&quot;spotify&quot;&gt;
-    &lt;div class=&quot;spotify-thumbnail&quot;&gt;
-        &lt;img loading=lazy height=&quot;100px&quot; width=&quot;100px&quot; src=&quot;https://i.scdn.co/image/ab67616d0000b2732ac9bc3cc346c76dde8c3e60&quot; alt=&quot;Cover Art&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;spotify-info&quot;&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/track/7H4zZGCLNDp457svnrJdZB&quot;&gt;Faithlessness&lt;/a&gt;
-        &lt;br&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/artist/2rkgBTtk0Ec32yjIYsFP87&quot;&gt;Maison book girl&lt;/a&gt;
-        &lt;br&gt;
-        &lt;audio controls preload=none&gt;
-            &lt;source src=&quot;https://p.scdn.co/mp3-preview/14cfbac477dda291aae0e291fdec9c52b3f65b96&quot; type=&quot;audio/mpeg&quot;&gt;
-        &lt;/audio&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+                
+                
+absolute banger
+<div class="spotify">
+    <div class="spotify-thumbnail">
+        <img loading=lazy height="100px" width="100px" src="https://i.scdn.co/image/ab67616d0000b2732ac9bc3cc346c76dde8c3e60" alt="Cover Art">
+    </div>
+    <div class="spotify-info">
+        <a class="links" href="https://open.spotify.com/track/7H4zZGCLNDp457svnrJdZB">Faithlessness</a>
+        <br>
+        <a class="links" href="https://open.spotify.com/artist/2rkgBTtk0Ec32yjIYsFP87">Maison book girl</a>
+        <br>
+        <audio controls preload=none>
+            <source src="https://p.scdn.co/mp3-preview/14cfbac477dda291aae0e291fdec9c52b3f65b96" type="audio/mpeg">
+        </audio>
+    </div>
+</div>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2023-06-22 08:09:43</title>
-            <link>https://kafu.ovh/redirect.html?id=1687421383</link>
-            <pubDate>Thu, 22 Jun 2023 08:09:43 UTC</pubDate>
+            <title>2023-06-22 16:09:43 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1687421383</link>
+            <pubDate>2023-06-22 16:09:43 +0800 +08</pubDate>
             <category>photoshop, linux, junko</category>
             <description>
-                &lt;p&gt;got photoshop to work on linux, check this out!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://hatsune-miku.has.rocks/r/photoshop_junko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                
+                got photoshop to work on linux, check this out!
+
+![](https://hatsune-miku.has.rocks/r/photoshop_junko.png)
+
             </description>
         </item>
+        
         <item>
-            <title>2023-06-22 07:41:16</title>
-            <link>https://kafu.ovh/redirect.html?id=1687419676</link>
-            <pubDate>Thu, 22 Jun 2023 07:41:16 UTC</pubDate>
+            <title>2023-06-22 15:41:16 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1687419676</link>
+            <pubDate>2023-06-22 15:41:16 +0800 +08</pubDate>
             <category>music, spotify, l-m, proxies</category>
             <description>
-                &lt;p&gt;changed the way i do media proxies and added spotify embeds (inspired from &lt;a class=&quot;links&quot; href=&quot;https://github.com/l1mey112/me.l-m.dev&quot;&gt;here&lt;/a&gt;), shits cool now.&lt;/p&gt;
-&lt;div class=&quot;spotify&quot;&gt;
-    &lt;div class=&quot;spotify-thumbnail&quot;&gt;
-        &lt;img loading=lazy height=&quot;100px&quot; width=&quot;100px&quot; src=&quot;https://i.scdn.co/image/ab67616d0000b273b75f5b530f095f9155003e70&quot; alt=&quot;Cover Art&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;spotify-info&quot;&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/track/6LgbWb24tqwQYOz2LznkMD&quot;&gt;パステルレイン&lt;/a&gt;
-        &lt;br&gt;
-        &lt;a class=&quot;links&quot; href=&quot;https://open.spotify.com/artist/5WmX340gDNLIAyUcg4MzWN&quot;&gt;Sangatsu no Phantasia&lt;/a&gt;
-        &lt;br&gt;
-        &lt;audio controls preload=none&gt;
-            &lt;source src=&quot;https://p.scdn.co/mp3-preview/299693c83c46685c9e0e0ed393567f52d49a2a54&quot; type=&quot;audio/mpeg&quot;&gt;
-        &lt;/audio&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+                
+                changed the way i do media proxies and added spotify embeds (inspired from <a class="links" href="https://github.com/l1mey112/me.l-m.dev">here</a>), shits cool now.
+
+<div class="spotify">
+    <div class="spotify-thumbnail">
+        <img loading=lazy height="100px" width="100px" src="https://i.scdn.co/image/ab67616d0000b273b75f5b530f095f9155003e70" alt="Cover Art">
+    </div>
+    <div class="spotify-info">
+        <a class="links" href="https://open.spotify.com/track/6LgbWb24tqwQYOz2LznkMD">パステルレイン</a>
+        <br>
+        <a class="links" href="https://open.spotify.com/artist/5WmX340gDNLIAyUcg4MzWN">Sangatsu no Phantasia</a>
+        <br>
+        <audio controls preload=none>
+            <source src="https://p.scdn.co/mp3-preview/299693c83c46685c9e0e0ed393567f52d49a2a54" type="audio/mpeg">
+        </audio>
+    </div>
+</div>
+
+
             </description>
         </item>
+        
         <item>
-            <title>2023-06-20 20:03:41</title>
-            <link>https://kafu.ovh/redirect.html?id=1687291421</link>
-            <pubDate>Tue, 20 Jun 2023 20:03:41 UTC</pubDate>
+            <title>2023-06-21 04:03:41 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1687291421</link>
+            <pubDate>2023-06-21 04:03:41 +0800 +08</pubDate>
             <category>linux, update</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/arch-fucked.png"> </img>
-                &lt;p&gt;....and i fucking broke my install. shit. &lt;br/&gt;
-new install it is then.&lt;/p&gt;
+                
+                
+....and i fucking broke my install. shit. <br/>
+new install it is then.
+
             </description>
         </item>
+        
         <item>
-            <title>2023-06-20 07:07:18</title>
-            <link>https://kafu.ovh/redirect.html?id=1687244838</link>
-            <pubDate>Tue, 20 Jun 2023 07:07:18 UTC</pubDate>
+            <title>2023-06-20 15:07:18 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1687244838</link>
+            <pubDate>2023-06-20 15:07:18 +0800 +08</pubDate>
             <category>linux, update</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/arch_update.png"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;oh_no.bmp&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+                
+                
+<a style='color: var(--green-text)'>\>oh_no.bmp</a><br/>
+
             </description>
         </item>
+        
         <item>
-            <title>2023-06-19 12:06:38</title>
-            <link>https://kafu.ovh/redirect.html?id=1687176398</link>
-            <pubDate>Mon, 19 Jun 2023 12:06:38 UTC</pubDate>
+            <title>2023-06-19 20:06:38 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1687176398</link>
+            <pubDate>2023-06-19 20:06:38 +0800 +08</pubDate>
             <category>music, youtube</category>
             <description>
-                &lt;div class=&quot;youtube&quot;&gt;
-    &lt;a href=&quot;https://www.youtube.com/watch?v=N029UUlH1Dc&quot; target=&quot;_blank&quot;&gt;
-        &lt;img class=&quot;youtube-thumbnail&quot; loading=&quot;lazy&quot; src=&quot;https://i3.ytimg.com/vi/N029UUlH1Dc/maxresdefault.jpg&quot; alt=&quot;Youtube Thumbnail&quot;&gt;
-        &lt;a class=&quot;youtube-info&quot; href=&quot;https://www.youtube.com/watch?v=N029UUlH1Dc&quot; target=&quot;_blank&quot;&gt; Click to watch in YouTube. &lt;/a&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;absolute banger, god i love suisei voice...&lt;/p&gt;
+                
+                <div class="youtube">
+    <a href="" target="_blank">
+        <img class="youtube-thumbnail" loading="lazy" src="https://i3.ytimg.com/vi/N029UUlH1Dc/maxresdefault.jpg" alt="Youtube Thumbnail">
+        <a class="youtube-info" href="" target="_blank"> Click to watch in YouTube. </a>
+    </a>
+</div>
+
+absolute banger, god i love suisei voice...
+
             </description>
         </item>
+        
         <item>
-            <title>2023-06-18 14:48:05</title>
-            <link>https://kafu.ovh/redirect.html?id=1687099685</link>
-            <pubDate>Sun, 18 Jun 2023 14:48:05 UTC</pubDate>
+            <title>2023-06-18 22:48:05 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1687099685</link>
+            <pubDate>2023-06-18 22:48:05 +0800 +08</pubDate>
             <category>irl, exam, result, spm</category>
             <description>
+                
                 <img src="https://media.tenor.com/WO9vOMGeFq4AAAAC/ikuyo-kita-ikuyo.gif"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;results come out&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;4A, 2B&lt;/a&gt;&lt;br/&gt;
-lmao, i passed my fucking final year exam, decently too. &lt;br&gt;
-i totally was not expecting it to be this good tbh. &lt;br&gt;
-whatever it is that granted me this result, thank you.&lt;/p&gt;
+                
+                <a style='color: var(--green-text)'>\>results come out</a><br/>
+<a style='color: var(--green-text)'>\>4A, 2B</a><br/>
+lmao, i passed my fucking final year exam, decently too. <br>
+i totally was not expecting it to be this good tbh. <br>
+whatever it is that granted me this result, thank you.
+
             </description>
         </item>
+        
         <item>
-            <title>2023-03-14 21:44:56</title>
-            <link>https://kafu.ovh/redirect.html?id=1678830296</link>
-            <pubDate>Tue, 14 Mar 2023 21:44:56 UTC</pubDate>
+            <title>2023-03-15 05:44:56 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1678830296</link>
+            <pubDate>2023-03-15 05:44:56 +0800 +08</pubDate>
             <category>irl, school</category>
             <description>
+                
                 <img src="https://media.tenor.com/CZx4iJG6RwEAAAAC/shinji-shinji-ikari.gif"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;high school exam ended&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;wait is that&apos;s all?&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;that&apos;s it&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;...?&lt;/a&gt;&lt;br/&gt;
-it&apos;s over.... it&apos;s really over.... 17 years of school... it&apos;s all over...
-i&apos;m finally free???&lt;/p&gt;
+                
+                <a style='color: var(--green-text)'>\>high school exam ended</a><br/>
+<a style='color: var(--green-text)'>\>wait is that's all?</a><br/>
+<a style='color: var(--green-text)'>\>that's it</a><br/>
+<a style='color: var(--green-text)'>\>...?</a><br/>
+it's over.... it's really over.... 17 years of school... it's all over...
+i'm finally free???
+
             </description>
         </item>
+        
         <item>
-            <title>2023-03-13 02:44:56</title>
-            <link>https://kafu.ovh/redirect.html?id=1678675496</link>
-            <pubDate>Mon, 13 Mar 2023 02:44:56 UTC</pubDate>
+            <title>2023-03-13 10:44:56 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1678675496</link>
+            <pubDate>2023-03-13 10:44:56 +0800 +08</pubDate>
             <category>irl, exam, spm</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/miku-real-ending.mp4"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;extra subjects&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;additional mathematics, accounting&lt;/a&gt;&lt;br/&gt;
-...and thats the last subject, fuck additional mathematics man.&lt;/p&gt;
+                
+                <a style='color: var(--green-text)'>\>extra subjects</a><br/>
+<a style='color: var(--green-text)'>\>additional mathematics, accounting</a><br/>
+...and thats the last subject, fuck additional mathematics man.
+
+
             </description>
         </item>
+        
         <item>
-            <title>2023-02-23 16:17:55</title>
-            <link>https://kafu.ovh/redirect.html?id=1677169075</link>
-            <pubDate>Thu, 23 Feb 2023 16:17:55 UTC</pubDate>
+            <title>2023-02-24 00:17:55 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1677169075</link>
+            <pubDate>2023-02-24 00:17:55 +0800 +08</pubDate>
             <category>irl, exam, spm</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/miku-end.mp4"> </img>
-                &lt;p&gt;&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;history finished&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;malay finished&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;english finished&lt;/a&gt;&lt;br/&gt;
-&lt;a style=&quot;color: var(--green-text)&quot;&gt;&amp;gt;math finished&lt;/a&gt;&lt;br/&gt;
-core subjects part of the final year exam has ended, the next one starts in a few week. :D&lt;/p&gt;
+                
+                <a style='color: var(--green-text)'>\>history finished</a><br/>
+<a style='color: var(--green-text)'>\>malay finished</a><br/>
+<a style='color: var(--green-text)'>\>english finished</a><br/>
+<a style='color: var(--green-text)'>\>math finished</a><br/>
+core subjects part of the final year exam has ended, the next one starts in a few week. :D
+
+
             </description>
         </item>
+        
         <item>
-            <title>2023-02-19 22:52:14</title>
-            <link>https://kafu.ovh/redirect.html?id=1676847134</link>
-            <pubDate>Sun, 19 Feb 2023 22:52:14 UTC</pubDate>
+            <title>2023-02-20 06:52:14 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1676847134</link>
+            <pubDate>2023-02-20 06:52:14 +0800 +08</pubDate>
             <category>irl, exam, spm</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/teto-end.mp4"> </img>
-                &lt;p&gt;final year exam (spm) starts today, its over...&lt;/p&gt;
+                
+                final year exam (spm) starts today, its over...
+
+
+
             </description>
         </item>
+        
         <item>
-            <title>2022-12-20 13:18:16</title>
-            <link>https://kafu.ovh/redirect.html?id=1671542296</link>
-            <pubDate>Tue, 20 Dec 2022 13:18:16 UTC</pubDate>
+            <title>2022-12-20 21:18:16 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1671542296</link>
+            <pubDate>2022-12-20 21:18:16 +0800 +08</pubDate>
             <category>irl, shion, friend, blender, kagamine-rin, gift</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/shion_gave_me_rin.jpg"> </img>
-                &lt;p&gt;in the middle of porting kagamine rin mmd model to l4d2, &lt;br&gt;
-shion gave me this cute rin nendoroid, thanks!!&lt;/p&gt;
+                
+                in the middle of porting kagamine rin mmd model to l4d2, <br>
+shion gave me this cute rin nendoroid, thanks!!
+
             </description>
         </item>
+        
         <item>
-            <title>2022-12-18 11:25:55</title>
-            <link>https://kafu.ovh/redirect.html?id=1671362755</link>
-            <pubDate>Sun, 18 Dec 2022 11:25:55 UTC</pubDate>
+            <title>2022-12-18 19:25:55 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1671362755</link>
+            <pubDate>2022-12-18 19:25:55 +0800 +08</pubDate>
             <category>irl, event, anime-con</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/kl_christmas_tree.jpg"> </img>
-                &lt;p&gt;my first time going to a anime convention, met my online friend.
+                
+                my first time going to a anime convention, met my online friend.
 also i took a picture with hatsune miku racing.
-fun times.&lt;/p&gt;
+fun times.
+
             </description>
         </item>
+        
         <item>
-            <title>2022-10-26 04:46:41</title>
-            <link>https://kafu.ovh/redirect.html?id=1666759601</link>
-            <pubDate>Wed, 26 Oct 2022 04:46:41 UTC</pubDate>
+            <title>2022-10-26 12:46:41 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1666759601</link>
+            <pubDate>2022-10-26 12:46:41 +0800 +08</pubDate>
             <category>programming, 2d, from-scratch, vlang, rhythm-game, osu!, music</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/kurarin_menu_video.mp4"> </img>
-                &lt;p&gt;i&apos;ve been working on a menu system for the engine. &lt;br&gt;
-hated every second of it, because i had to implement everything like it&apos;s 1984. &lt;br&gt;
-anyway look at these cool menus~&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://hatsune-miku.has.rocks/r/kurarin_menu_storyboard.mp4&quot;&gt;https://hatsune-miku.has.rocks/r/kurarin_menu_storyboard.mp4&lt;/a&gt;&lt;/p&gt;
+                
+                
+i've been working on a menu system for the engine. <br>
+hated every second of it, because i had to implement everything like it's 1984. <br>
+anyway look at these cool menus~
+
+
+
+<video muted autoplay loop controls preload=metadata src="https://hatsune-miku.has.rocks/r/kurarin_menu_storyboard.mp4"></video>
+
             </description>
         </item>
+        
         <item>
-            <title>2022-09-07 06:36:16</title>
-            <link>https://kafu.ovh/redirect.html?id=1662532576</link>
-            <pubDate>Wed, 7 Sep 2022 06:36:16 UTC</pubDate>
+            <title>2022-09-07 14:36:16 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1662532576</link>
+            <pubDate>2022-09-07 14:36:16 +0800 +08</pubDate>
             <category>programming, 3d, vlang, from-scratch, rhythm-game, pjsekai, stella, music</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/pjsekai_test_2.mp4"> </img>
-                &lt;p&gt;update on the pjsekai engine&lt;/p&gt;
+                
+                update on the pjsekai engine
+
+
+
             </description>
         </item>
+        
         <item>
-            <title>2022-08-31 10:36:50</title>
-            <link>https://kafu.ovh/redirect.html?id=1661942210</link>
-            <pubDate>Wed, 31 Aug 2022 10:36:50 UTC</pubDate>
+            <title>2022-08-31 18:36:50 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1661942210</link>
+            <pubDate>2022-08-31 18:36:50 +0800 +08</pubDate>
             <category>music, vocaloid, hatsune-miku</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/peak_vocaloid_tuning.mp4"> </img>
-                &lt;p&gt;amazing.&lt;/p&gt;
+                
+                amazing.
+
+
+
             </description>
         </item>
+        
         <item>
-            <title>2022-08-14 05:12:06</title>
-            <link>https://kafu.ovh/redirect.html?id=1660453926</link>
-            <pubDate>Sun, 14 Aug 2022 05:12:06 UTC</pubDate>
+            <title>2022-08-14 13:12:06 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1660453926</link>
+            <pubDate>2022-08-14 13:12:06 +0800 +08</pubDate>
             <category>programming, 3d, vlang, from-scratch, rhythm-game, pjsekai, stella</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/pjsekai_test_1.mp4"> </img>
-                &lt;p&gt;trying to make my own pjsekai engine, shits awful mate. (Part of the &lt;a class=&quot;links&quot; href=&quot;https://github.com/xjunko/kurarin&quot;&gt;Kurarin&lt;/a&gt; project.)&lt;/p&gt;
+                
+                trying to make my own pjsekai engine, shits awful mate. (Part of the <a class="links" href="https://github.com/xjunko/kurarin">Kurarin</a> project.)
+
+
+
             </description>
         </item>
+        
         <item>
-            <title>2022-08-14 00:24:43</title>
-            <link>https://kafu.ovh/redirect.html?id=1660436683</link>
-            <pubDate>Sun, 14 Aug 2022 00:24:43 UTC</pubDate>
+            <title>2022-08-14 08:24:43 +0800 +08</title>
+            <link>https://kafu.ovh/redirect?id=1660436683</link>
+            <pubDate>2022-08-14 08:24:43 +0800 +08</pubDate>
             <category>programming, 3d, vlang, from-scratch</category>
             <description>
+                
                 <img src="https://hatsune-miku.has.rocks/r/cube_no_depth_buffer.mp4"> </img>
-                &lt;p&gt;learning 3d stuff, shits fucked.&lt;/p&gt;
+                
+                learning 3d stuff, shits fucked.
+
+
+
             </description>
         </item>
+        
     </channel>
 </rss>

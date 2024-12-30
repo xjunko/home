@@ -28,6 +28,23 @@
 }
 
 
+.channel-post {
+  animation: channel-post-intro 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+@keyframes channel-post-intro {
+  0% {
+    transform: translateY(-10%)
+  }
+
+  100% {
+    transform: translateY(0%)
+  }
+}
+
+
+
 .rin-stand img {
   float: left;
   position: relative;
@@ -125,16 +142,6 @@
   animation: sidebar-intro 2s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateY(0%);
   z-index: -5;
-}
-
-@keyframes sidebar-intro {
-  0% {
-    transform: translateY(-200%);
-  }
-
-  100% {
-    transform: translateY(0%);
-  }
 }
 
 /* phone gooners */
