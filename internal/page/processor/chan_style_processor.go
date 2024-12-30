@@ -27,10 +27,10 @@ func (p *ChanStyleProcessor) Process(text string) string {
 		// *chan styling
 		line = strings.TrimSpace(line)
 
-		switch line {
-		case ">":
+		switch {
+		case startsWith(line, ">"):
 			results = append(results, "<a style='color: var(--green-text)'>\\"+line+"</a><br/>")
-		case "<<":
+		case startsWith(line, "<<"):
 			results = append(results, "<a style='color: var(--red-text)'>\\"+line[1:]+"</a><br/>")
 		default:
 			results = append(results, line)
