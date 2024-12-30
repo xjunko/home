@@ -99,7 +99,6 @@
 
                             // Replace URL
                             let url = new URL(window.location.href);
-                            url.search = "";
                             url.hash = post_id;
 
                             window.history.replaceState({}, "", url.toString());
