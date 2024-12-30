@@ -101,13 +101,13 @@ here lies a list of website of which i found interesting and cool.
 <!-- widgets -->
 **widgets**  —
 <div style="display: flex;align-items: center;justify-content: center;">
-    {{ template "decoration/stats/nerd-stats" }}
-    {{ template "decoration/stats/moon-phase" }}
+{{ template "decoration/stats/nerd-stats" }}
+{{ template "decoration/stats/moon-phase" }}
 </div>
 
 <!-- random webring/cool site links -->
 **super kewl website on the internet** —
 
 <div class="ignore" style="text-align: center">
-    {{ template "decoration/buttons/people" }}
+{{ template "decoration/buttons/people" }}
 </div>
