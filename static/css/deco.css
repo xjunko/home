@@ -11,22 +11,8 @@
   bottom: 340px;
   text-decoration: none;
   color: white;
-  pointer-events: none;
-  animation: rin-name-intro 2s cubic-bezier(0.16, 1, 0.3, 1);
-  transform: translateY(0%);
-  z-index: -5;
+  /* z-index: 69420; */
 }
-
-@keyframes rin-name-intro {
-  0% {
-    transform: translateY(200%)
-  }
-
-  100% {
-    transform: translateY(0%)
-  }
-}
-
 
 .rin-stand img {
   float: left;
@@ -36,26 +22,7 @@
   width: auto;
   height: 320px;
   z-index: 420;
-  transform-origin: bottom center;
-  animation: rin-lean 5s infinite;
-  transform: translateX(-50%);
-  pointer-events: none;
 }
-
-@keyframes rin-lean {
-  0% {
-    transform: rotate(-5deg);
-  }
-
-  50% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(-5deg);
-  }
-}
-
 
 .sidebar-deco-offset:nth-child(1) a {
   margin-left: 30px;
@@ -112,8 +79,7 @@
 }
 
 /* phone gooners */
-@media only screen and (max-width: 1280px),
-(orientation: portrait) {
+@media only screen and (max-width: 1280px), (orientation: portrait) {
   .sidebar-name {
     display: none;
   }
@@ -147,8 +113,7 @@
   }
 }
 
-@media only screen and (max-width: 768px),
-(orientation: portrait) {
+@media only screen and (max-width: 768px), (orientation: portrait) {
   .marquee-buttons {
     display: none;
   }
@@ -204,7 +169,6 @@ body:after {
   0% {
     background-position: 0px 0px;
   }
-
   100% {
     background-position: 0px 4px;
   }
@@ -231,11 +195,9 @@ body:after {
   0% {
     background-position: 0px 0px, 0px 0px, 0px 0px;
   }
-
   50% {
     background-position: 5000px 5000px, 1000px 2000px, -1000px 1500px;
   }
-
   100% {
     background-position: 5000px 10000px, 2000px 4000px, -1000px 3000px;
   }
@@ -245,11 +207,9 @@ body:after {
   0% {
     background-position: 0px 0px, 0px 0px, 0px 0px;
   }
-
   50% {
     background-position: 5000px 5000px, 1000px 2000px, -1000px 1500px;
   }
-
   100% {
     background-position: 5000px 10000px, 2000px 4000px, -1000px 3000px;
   }
