@@ -5,7 +5,7 @@ import (
 	"eva/internal/page"
 	"eva/internal/page/processor"
 	"eva/templates"
-	"fmt"
+	"log"
 	"text/template"
 )
 
@@ -28,20 +28,20 @@ func Execute(config *config.Config) error {
 
 	is_channel_enabled, _ := config.GetAsBool("Instance.Channel.Enabled")
 
-	fmt.Println("[Magi] Starting!")
+	log.Println("[Magi] Starting!")
 
 	if is_channel_enabled {
 		manager.ResolveChannel()
-		fmt.Printf("[Magi] Channels: %v posts \n", len(manager.Channels))
+		log.Printf("[Magi] Channels: %v posts \n", len(manager.Channels))
 	} else {
 		manager.Channels = append(manager.Channels, page.EvaPage{})
 	}
 
 	manager.ResolvePage()
-	fmt.Printf("[Magi] Page: %v pages \n", len(manager.Pages))
+	log.Printf("[Magi] Page: %v pages \n", len(manager.Pages))
 
 	manager.ResolveNote()
-	fmt.Printf("[Magi] Notes: %v notes \n", len(manager.Notes))
+	log.Printf("[Magi] Notes: %v notes \n", len(manager.Notes))
 
 	// Exports
 	manager.ExportRSS()

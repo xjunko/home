@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"html/template"
 	"io"
+	"log"
 	"net/http"
 	"regexp"
 
@@ -114,7 +115,7 @@ func (spotify *SpotifyProcessor) GetTrack(url string) (Track, error) {
 
 		spotify.database.Create(&fetchedTrack)
 
-		fmt.Printf("[Spotify]: Fetched track: %s\n", fetchedTrack.Name)
+		log.Printf("[Spotify]: Fetched track: %s\n", fetchedTrack.Name)
 	}
 
 	return track, nil

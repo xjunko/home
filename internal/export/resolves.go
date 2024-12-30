@@ -2,7 +2,7 @@ package export
 
 import (
 	"eva/internal/page"
-	"fmt"
+	"log"
 	"path/filepath"
 	"sort"
 )
@@ -11,7 +11,7 @@ func (m *Magi) ResolvePage() {
 	files, err := filepath.Glob("templates/pages/*.md")
 
 	if err != nil {
-		fmt.Println("[Magi] Failed to resolve page!")
+		log.Println("[Magi] Failed to resolve page!")
 		return
 	}
 
@@ -19,7 +19,7 @@ func (m *Magi) ResolvePage() {
 		curPage := page.NewPage(m, file)
 
 		if err := curPage.Load(m.Processor); err != nil {
-			fmt.Printf("[Magi] Page failed to load: %v \n", err)
+			log.Printf("[Magi] Page failed to load: %v \n", err)
 			continue
 		}
 
@@ -33,7 +33,7 @@ func (m *Magi) ResolveNote() {
 	files, err := filepath.Glob("entries/notes/*.md")
 
 	if err != nil {
-		fmt.Println("[Magi] Failed to resolve Note!")
+		log.Println("[Magi] Failed to resolve Note!")
 		return
 	}
 
@@ -41,7 +41,7 @@ func (m *Magi) ResolveNote() {
 		curNote := page.NewPage(m, file)
 
 		if err := curNote.Load(m.Processor); err != nil {
-			fmt.Printf("[Magi] Note failed to load: %v \n", err)
+			log.Printf("[Magi] Note failed to load: %v \n", err)
 			continue
 		}
 
@@ -55,7 +55,7 @@ func (m *Magi) ResolveChannel() {
 	files, err := filepath.Glob("entries/channels/*.md")
 
 	if err != nil {
-		fmt.Println("[Magi] Failed to resolve channel!")
+		log.Println("[Magi] Failed to resolve channel!")
 		return
 	}
 
@@ -63,7 +63,7 @@ func (m *Magi) ResolveChannel() {
 		curPage := page.NewPage(m, file)
 
 		if err := curPage.Load(m.Processor); err != nil {
-			fmt.Printf("[Magi] Channel Posts failed to resolved: %v \n", err)
+			log.Printf("[Magi] Channel Posts failed to resolved: %v \n", err)
 			continue
 		}
 

@@ -3,6 +3,7 @@ package processor
 import (
 	"bytes"
 	"fmt"
+	"log"
 	"net/http"
 	"regexp"
 	"text/template"
@@ -61,7 +62,7 @@ func (youtube *YoutubeProcessor) getVideoInfo(videoID string) YoutubeInfo {
 	if len(info.ThumbnailURL) == 0 {
 		info = youtube.getVideoThumbnailFromID(videoID)
 		youtube.database.Create(&info)
-		fmt.Printf("[Youtube] Added %v into the database! \n", info.ID)
+		log.Printf("[Youtube] Added %v into the database! \n", info.ID)
 	}
 
 	return info

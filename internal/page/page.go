@@ -3,6 +3,7 @@ package page
 import (
 	"bytes"
 	"fmt"
+	"log"
 	"os"
 	"path/filepath"
 	"strconv"
@@ -136,14 +137,14 @@ func (p *EvaPage) GetContent() string {
 	withAllTemplate, err := p.Template.New(templateName).Parse(p.Content)
 
 	if err != nil {
-		fmt.Printf("[Page] Failed to parse the page content: %v", err)
+		log.Printf("[Page] Failed to parse the page content: %v", err)
 		return p.ToMarkdown()
 	}
 
 	var buf bytes.Buffer
 
 	if err := withAllTemplate.ExecuteTemplate(&buf, templateName, p.Exporter); err != nil {
-		fmt.Printf("[Page] Failed to execute the page content: %v", err)
+		log.Printf("[Page] Failed to execute the page content: %v", err)
 		return p.ToMarkdown()
 	}
 

@@ -3,6 +3,7 @@ package config
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -43,7 +44,7 @@ func (c *Config) GetAsBool(key string) (bool, bool) {
 
 func (c *Config) Load() error {
 	if _, err := os.Stat("config.json"); os.IsNotExist(err) {
-		fmt.Println("[Config] No configuration found, creating a default one.")
+		log.Println("[Config] No configuration found, creating a default one.")
 
 		if err := c.Save(); err != nil {
 			return fmt.Errorf("failed to save default config: %v", err)
