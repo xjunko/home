@@ -95,7 +95,7 @@ here lies a list of website of which i found interesting and cool.
 - [MG Anime Renders](https://a.mg-renders.net/)
     - collections of hq sfw/nsfw anime renders, great for editing.
 - [AIDN's WebGL Library](https://aidn.jp/contents/)
-    - fun website, check it out. 
+    - fun website, check it out.
     - made by the original nyan cat dude :>
 
 <!-- widgets -->

@@ -102,7 +102,9 @@ func isValidThumbnail(url string) bool {
 }
 
 func NewYoutubeProcessor(database *gorm.DB) (*YoutubeProcessor, error) {
-	database.AutoMigrate(&YoutubeInfo{})
+	if err := database.AutoMigrate(&YoutubeInfo{}); err != nil {
+		panic(err)
+	}
 
 	pattern := regexp.MustCompile(`https?://(?:www\.)?youtu(?:be\.com/watch\?v=|\.be/)(\S+)`)
 	return &YoutubeProcessor{pattern: pattern, database: database}, nil

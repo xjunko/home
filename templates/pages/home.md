@@ -49,7 +49,7 @@ if, for whatever reason, you need to get a hold of me quickly, contact thru emai
 <div style="display: flex; float: right;flex-direction: column;">
     <a href="/">
         <img style="float: right;" src="/static/imgs/buttons/junko.png">
-    </a> 
+    </a>
     <i>
     hotlinking is allowed!
     </i>

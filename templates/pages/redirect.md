@@ -79,10 +79,10 @@
 
             if (!found_the_shit) {
                 status_text.textContent = `Did not found post: #` + post_id;
-            } else {                
+            } else {
                 htmx.ajax('GET', `/chan/${page_id}.html`, {
-                    target: '#main-container', 
-                    swap: 'innerHTML' 
+                    target: '#main-container',
+                    swap: 'innerHTML'
                 });
 
 
@@ -107,7 +107,7 @@
                     }
                 });
 
-                
+
             }
 
         }

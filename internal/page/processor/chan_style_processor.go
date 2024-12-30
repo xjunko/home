@@ -25,11 +25,14 @@ func (p *ChanStyleProcessor) Process(text string) string {
 		}
 
 		// *chan styling
-		if startsWith(line, ">") && !startsWith(line, ">>") {
+		line = strings.TrimSpace(line)
+
+		switch line {
+		case ">":
 			results = append(results, "<a style='color: var(--green-text)'>\\"+line+"</a><br/>")
-		} else if startsWith(line, "<<") {
+		case "<<":
 			results = append(results, "<a style='color: var(--red-text)'>\\"+line[1:]+"</a><br/>")
-		} else {
+		default:
 			results = append(results, line)
 		}
 	}

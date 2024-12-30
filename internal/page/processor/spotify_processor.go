@@ -213,7 +213,9 @@ func (spotify *SpotifyProcessor) Process(text string) string {
 }
 
 func NewSpotifyProcessor(database *gorm.DB) (*SpotifyProcessor, error) {
-	database.AutoMigrate(&Track{})
+	if err := database.AutoMigrate(&Track{}); err != nil {
+		panic(err)
+	}
 
 	urlPattern := regexp.MustCompile(sptfyURLRe)
 	scriptPattern := regexp.MustCompile(sptfyScriptRe)
