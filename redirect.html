@@ -438,15 +438,30 @@ return;
 
 if (event.target.id === 'main-container') {
 const postElement = document.getElementById(post_id);
+
 if (postElement) {
 done = true;
-postElement.scrollIntoView({ behavior: 'smooth' });
 
-// Replace URL
-let url = new URL(window.location.href);
-url.hash = post_id;
+// Wait for all Images to load before we can scroll to the thing
+const images = event.target.querySelectorAll('img');
+var imagesLoaded = 0;
+var totalImages = images.length;
 
-window.history.replaceState({}, "", url.toString());
+if (totalImages == 0) {
+scrollToPost(post_id);
+return;
+}
+
+images.forEach((img) => {
+img.addEventListener("load", () => {
+imagesLoaded++;
+
+if (imagesLoaded == totalImages) {
+scrollToPost(post_id);
+return;
+}
+});
+});
 }
 }
 });
@@ -462,6 +477,18 @@ if (params.get("r")) {
 handle_common_redirect(params.get("r"));
 } else {
 handle_channel_redirect(params.get("id"));
+}
+
+function scrollToPost(post_id) {
+const postElement = document.getElementById(post_id);
+if (postElement) {
+postElement.scrollIntoView({ behavior: 'smooth' });
+
+// add post_id to #
+let url = new URL(window.location.href);
+url.hash = post_id;
+window.history.replaceState({}, "", url.toString());
+}
 }
 </script>
 
