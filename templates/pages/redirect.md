@@ -94,11 +94,17 @@
                     if (event.target.id === 'main-container') {
                         const postElement = document.getElementById(post_id);
                         if (postElement) {
+                            done = true;
                             postElement.scrollIntoView({ behavior: 'smooth' });
+
+                            // Replace URL
+                            let url = new URL(window.location.href);
+                            url.search = "";
+                            url.hash = post_id;
+
+                            window.history.replaceState({}, "", url.toString());
                         }
                     }
-
-                    done = true;
                 });
 
                 
