@@ -25,10 +25,12 @@ jobs:
     - name: Create folder
       run: |
           mkdir -p public
+          cp *.xml public/
           cp *.html public/
-          cp -r notes/ public/
+          cp -r note/ public/
           cp -r chan/ public/
           cp -r static/ public/
+          cp -r pages/ public/
           ls public/
 
 
