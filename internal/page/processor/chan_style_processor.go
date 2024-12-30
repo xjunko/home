@@ -25,13 +25,13 @@ func (p *ChanStyleProcessor) Process(text string) string {
 		}
 
 		// *chan styling
-		line = strings.TrimSpace(line)
+		trimmedLine := strings.TrimSpace(line)
 
 		switch {
-		case startsWith(line, ">"):
-			results = append(results, "<a style='color: var(--green-text)'>\\"+line+"</a><br/>")
-		case startsWith(line, "<<"):
-			results = append(results, "<a style='color: var(--red-text)'>\\"+line[1:]+"</a><br/>")
+		case startsWith(trimmedLine, ">"):
+			results = append(results, "<a style='color: var(--green-text)'>\\"+trimmedLine+"</a><br/>")
+		case startsWith(trimmedLine, "<<"):
+			results = append(results, "<a style='color: var(--red-text)'>\\"+trimmedLine[1:]+"</a><br/>")
 		default:
 			results = append(results, line)
 		}
