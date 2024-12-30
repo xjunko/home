@@ -6,7 +6,7 @@
     <channel>
         <title>junko's channel</title>
         <link>https://kafu.ovh</link>
-        <description>schizo ramblin</description>
+        <description>simple microblogging processor</description>
         <language>en-us</language>
         <copyright>Copyright 2023-2024, https://kafu.ovh</copyright>
         <generator>Eva/go</generator>
