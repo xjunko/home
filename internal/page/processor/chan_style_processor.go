@@ -14,6 +14,17 @@ func (p *ChanStyleProcessor) Process(text string) string {
 	results := make([]string, 0)
 
 	for _, line := range lines {
+		// Reference
+		if startsWith(line, ">>") {
+			postID := strings.TrimSpace(strings.Split(line, ">>")[1])
+
+			refHTML := "<a style='color: var(--red-text)' href='/redirect.html?id=" + postID + "'>" + line + "</a>"
+
+			results = append(results, refHTML)
+			continue
+		}
+
+		// *chan styling
 		if startsWith(line, ">") && !startsWith(line, ">>") {
 			results = append(results, "<a style='color: var(--green-text)'>\\"+line+"</a><br/>")
 		} else if startsWith(line, "<<") {
