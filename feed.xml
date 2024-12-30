@@ -64,7 +64,7 @@ a signed picture from [daidus](https://www.youtube.com/@Daidus) and [emirichu](h
 
 <div style="text-align: center">
 <video width="225px" height="400px" controls loop preload>
-<source src="https://hatsune-miku.has.rocks/r/TETO.mp4" type="video/mp4">
+    <source src="https://hatsune-miku.has.rocks/r/TETO.mp4" type="video/mp4"> 
 </video>
 
 cute teto car
@@ -181,7 +181,7 @@ also, check out their other stuff [[here]](https://www.ippotsk.com/) it's really
                 
                 <img src="https://hatsune-miku.has.rocks/r/monoga.mp4"> </img>
                 
-                today, i just rode about 200 kilometres worth of distance.
+                today, i just rode about 200 kilometres worth of distance. 
 
 it was nice driving around. bit scary though, doing all of that alone...
 
@@ -302,7 +302,7 @@ fill shit out, manually, on a piece of paper... what a shit bank.
             <description>
                 
                 
-i've been looking at my local train's map recently...
+i've been looking at my local train's map recently... 
 
 kinda cool how i can just take one and just end up at the other side of the country...
 
@@ -339,7 +339,7 @@ this working thing is great and all but i feel like im slaving myself here lmao
                 <img src="https://hatsune-miku.has.rocks/r/GS7UQDsaAAAFDaP.jpg"> </img>
                 
                 
-got myself a flip phone... because why not :pp
+got myself a flip phone... because why not :pp 
 
 i made a post about it [[HERE]](https://kafu.ovh/notes/buying-a-keitai), check it out!
 
@@ -382,13 +382,13 @@ honestly, i have all these knowledge but i never make people pay for it.
 
 it feels really weird to charge people for something as simple as formatting windows and installing the usual office programs (around 20$).
 
-do i just know too much (or too little, rather) or
+do i just know too much (or too little, rather) or 
 
 is this just how the real world works like, you get pay for what you know (and exploit those who dont),
 
 is my view on this is dark or what, i dont get it. maybe im just so accustomed to not receiving any kind of thanks or anything in return for helping people, who knows...
 
-my boss been telling me that i need to charge people for everything i do, dont be nice to them, you get what you pay for kinda deal... alright  ┐(´ー｀)┌
+my boss been telling me that i need to charge people for everything i do, dont be nice to them, you get what you pay for kinda deal... alright  ┐(´ー｀)┌ 
 
             </description>
         </item>
@@ -472,7 +472,7 @@ also, <br>
                 
                 hey look, i made the site look a little bit cooler.  <br>
 hope you liked it :DDD <br>
-also the index now has recent post preview!!
+also the index now has recent post preview!! 
 
 
             </description>
@@ -501,7 +501,7 @@ what changed: <br>
 <a style='color: var(--green-text)'>\>minor revamp throughout the codebase</a><br/>
 
 <a href='https://www.deviantart.com/blastssjpk/art/Kagamine-Rin-02-Pixel-Art-716748616'>
-<img src="https://hatsune-miku.has.rocks/r/kagamine_rin_02_pixel_art_by_blastssjpk_dbuqers.png" height="100px" style="float: left">
+    <img src="https://hatsune-miku.has.rocks/r/kagamine_rin_02_pixel_art_by_blastssjpk_dbuqers.png" height="100px" style="float: left">
 </a>
 
 
@@ -557,7 +557,7 @@ i didn't know joucho has her own cevio model... that's cool
                 <img src="https://hatsune-miku.has.rocks/r/cf.png"> </img>
                 
                 
-Last year:
+Last year: 
 <a style='color: var(--red-text)' href='/redirect.html?id=1671362755'>>>1671362755</a>
 <br>
 
@@ -582,7 +582,7 @@ fucking exams man, wish i could go but i guess not for this year.... <br>
                 
                 
 been thinking about my course recently, i feel like i just made a major mistake.
-maybe taking electronic engineering wasnt a great idea after all. don't get me wrong, i like it, it's just that... stuff happened and people did me dirty and that really killed my passion for this field, i'm thinking of changing my course to software engineering and do it the easy way since that's what i'm most familiar with....
+maybe taking electronic engineering wasnt a great idea after all. don't get me wrong, i like it, it's just that... stuff happened and people did me dirty and that really killed my passion for this field, i'm thinking of changing my course to software engineering and do it the easy way since that's what i'm most familiar with.... 
 
 <br>
 
@@ -605,7 +605,7 @@ for now, i just don't want to think about it....
                 
                 spotify finally did their job and fixed [[Aira's]](https://open.spotify.com/artist/0Myz4YQ9fIhJMHNUsqcLj9) spotify page.
 
-found some other bangers made by them cuz of that.
+found some other bangers made by them cuz of that. 
 
 <hr>
 
@@ -670,7 +670,7 @@ source code is available [[HERE]](https://github.com/xjunko/TypeT), feel free to
             <description>
                 
                 
-Continuation of
+Continuation of 
 <a style='color: var(--red-text)' href='/redirect.html?id=1700946181'>>>1700946181</a>
 
 <a style='color: var(--green-text)'>\>[[Vlang or: How I learned even open-source communities...]](https://asvln.com/rants/pathetic.html)</a><br/>
@@ -733,7 +733,7 @@ he pulled this crap on multiple things, like coursework, quizzes, exams and so o
 kinda sad that 2 of the big guys left. almost feels like the language itself is about to die, i hope not. <br/>
 the language is genuinely cool. while they overpromised lots of stuff, the language itself does work as a programming language and thats good enough for me. <br/>
 seems like its not for other people, oh well.  <br/>
-praying for my man l-m over there at [me.l-m.dev][l-m], he did a lot of work on the language's web assembly stuff recently :<<
+praying for my man l-m over there at [me.l-m.dev][l-m], he did a lot of work on the language's web assembly stuff recently :<< 
 
 
 [l-m]: https://me.l-m.dev/
@@ -882,13 +882,13 @@ sudo macchanger -r wlan0
 sudo networkctl up wlan0
 
 # Get the new macaddr value
-new_mac=$(ifconfig wlan0 | grep --color=never  -oE '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}')
+new_mac=$(ifconfig wlan0 | grep --color=never  -oE '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}')  
 
 # Activate the shit the shit.
 echo "Opening trial activator thingamajig."
 xdg-open "https://wifi.aeronet.com.my/login?username=T-${new_mac^^}"
 ```
-Turns out, my uni's *PAID* wifi trial didn't really check for mac addresses properly,
+Turns out, my uni's *PAID* wifi trial didn't really check for mac addresses properly, 
 so I can do goofy shit like this and get free wifi without paying. very cool.
 
             </description>
@@ -1055,12 +1055,12 @@ here's some inside joke that no one else will get, to be continued.
                 
                 
 <div>
-this is so meta lmao
-<a href="https://me.l-m.dev/?meta=1687746708">
-<img class="image-center" src="https://hatsune-miku.has.rocks/r/l-m.png">
-</a> <br/>
-<a style="color: var(--green-text)" href="https://me.l-m.dev">>><a style="color: var(--green-text);text-decoration: underline;" href="https://me.l-m.dev">https://me.l-m.dev</a> </a> <br/>
-check out their site too, amazing stuff there. <br/>
+    this is so meta lmao
+    <a href="https://me.l-m.dev/?meta=1687746708">
+        <img class="image-center" src="https://hatsune-miku.has.rocks/r/l-m.png">
+    </a> <br/>
+    <a style="color: var(--green-text)" href="https://me.l-m.dev">>><a style="color: var(--green-text);text-decoration: underline;" href="https://me.l-m.dev">https://me.l-m.dev</a> </a> <br/>
+    check out their site too, amazing stuff there. <br/>
 </div>
 
             </description>
@@ -1227,7 +1227,7 @@ absolute banger, god i love suisei voice...
 <a style='color: var(--green-text)'>\>4A, 2B</a><br/>
 lmao, i passed my fucking final year exam, decently too. <br>
 i totally was not expecting it to be this good tbh. <br>
-whatever it is that granted me this result, thank you.
+whatever it is that granted me this result, thank you. 
 
             </description>
         </item>
