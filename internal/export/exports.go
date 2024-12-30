@@ -3,7 +3,6 @@ package export
 import (
 	"fmt"
 	"os"
-	"strings"
 )
 
 func (m *Magi) ExportRSS() {
@@ -23,13 +22,24 @@ func (m *Magi) ExportRSS() {
 func (m *Magi) ExportPage() {
 	for _, currentPage := range m.Pages {
 		m.CurrentPage = &currentPage
-		m.Mode = "Normal"
+		m.Mode = "ContentOnly"
 
-		if strings.HasPrefix(currentPage.Metadata["tags"], "notes") {
-			m.Mode = "NoteList"
+		folderPrefix := "/pages/"
+
+		if currentPage.Metadata["tags"] == "notes" {
+			m.Mode = "ContentOnly-NoteList"
 		}
 
-		pageFile, err := os.OpenFile("dist"+currentPage.Metadata["route"], os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
+		if currentPage.Metadata["tags"] == "index" || currentPage.Metadata["tags"] == "internal.post_finder" {
+			folderPrefix = ""
+			m.Mode = "Normal"
+		}
+
+		if currentPage.Metadata["tags"] == "channel" {
+			folderPrefix = ""
+		}
+
+		pageFile, err := os.OpenFile("dist"+folderPrefix+currentPage.Metadata["route"], os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 
 		if err != nil {
 			fmt.Printf("[Magi] Failed to open destination page file: %v \n", err)
@@ -73,6 +83,24 @@ func (m *Magi) ExportNote() {
 	}
 }
 
+func (m *Magi) GetChannelPages() map[int][]string {
+	perPage := 20
+	totalPages := (len(m.Channels) / perPage) + 1
+
+	channelPages := make(map[int][]string)
+
+	for i := 0; i < totalPages; i++ {
+		channelPages[i+1] = make([]string, 0)
+	}
+
+	for i, currentPost := range m.Channels {
+		postPage := (i / perPage) + 1
+		channelPages[postPage] = append(channelPages[postPage], currentPost.ID)
+	}
+
+	return channelPages
+}
+
 func (m *Magi) ExportChannel() {
 	perPage := 20
 	totalPages := (len(m.Channels) / perPage) + 1
@@ -86,6 +114,7 @@ func (m *Magi) ExportChannel() {
 	m.Mode = "Channel"
 
 	for i := 0; i < totalPages; i++ {
+		m.Mode = "ContentOnly"
 		m.CurrentChannel = i
 
 		channelFile, err := os.OpenFile("dist/chan/"+fmt.Sprintf("%d", i+1)+".html", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)

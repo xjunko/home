@@ -31,6 +31,9 @@ func BindFunctions(templ *template.Template) {
 		"multiply": func(a, b int) int {
 			return a * b
 		},
+		"contains":  strings.Contains,
+		"hasPrefix": strings.HasPrefix,
+		"hasSuffix": strings.HasSuffix,
 	}
 
 	templ.Funcs(funcs)

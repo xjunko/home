@@ -2,14 +2,14 @@
 <div class="sidebar-container">
     <div class="sidebar">
         <!-- avatar -->
-        <a href="/">
+        <a hx-get="/pages/home.html" hx-target="#main-container" hx-swap="outerHTML">
             <div class="avatar">
                 <img src="../static/imgs/deco/rin_avatar.webp" alt="avatar"> </img>
             </div>
         </a>
 
         <!-- name -->
-        <a href="/">
+        <a>
             <img class="sidebar-name" src="../static/imgs/deco/rin_nameplate.webp"> </img>
         </a>
 
@@ -25,17 +25,16 @@
                 </li>
 
                 <li class="sidebar-deco-offset">
-                    <a href="/notes.html">notes</a>
+                    <a hx-get="/pages/notes.html" hx-target="#main-container" hx-swap="innerHTML">notes</a>
                 </li>
 
 
-
                 <li class="sidebar-deco-offset">
-                    <a href="/chan/index.html">channel</a>
+                    <a hx-get="/chan/1.html" hx-target="#main-container" hx-swap="innerHTML">channel</a>
                 </li>
 
                 <li class="sidebar-deco-offset">
-                    <a class=" " href="/stuff.html">links</a>
+                    <a hx-get="/pages/stuff.html" hx-target="#main-container" hx-swap="innerHTML">links</a>
                 </li>
 
                 <li class="quote">

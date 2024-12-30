@@ -11,7 +11,7 @@
 
 <div class="channel-container">
     {{ $Channels := .GetChannels }}
-    {{ range $currentIndex := loop $StartAt $EndAt }}
+    {{ range $currentIndex := loop $StartAt (sub $EndAt 1) }}
         {{ if ge $currentIndex (len $Channels) }}
             {{ break }}
         {{ end }}

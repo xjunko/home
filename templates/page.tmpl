@@ -1,25 +1,29 @@
 {{ $Config := .GetConfig }}
 {{ $CurrentPage := .GetCurrentPage }}
 
-{{ template "base/head" . }}
+{{ if eq (hasPrefix .Mode "ContentOnly") false }}
+    {{ template "base/head" . }}
 
-<!-- Event -->
-{{ template "decoration/events/christmas" . }}
+    <!-- Event -->
+    {{ template "decoration/events/christmas" . }}
 
-<!-- Sidebar -->
-{{ template "base/sidebar" . }}
+    <!-- Sidebar -->
+    {{ if eq (hasSuffix .Mode "Note") false }}
+        {{ template "base/sidebar" . }}
+    {{ end }}
+{{ end }}
 
 <!-- Generic -->
-{{ if ne .Mode "Note" }}
-<div class="content-container">
+{{ if or (ne .Mode "Note") (hasPrefix .Mode "ContentOnly") }}
+<div id="main-container" class="content-container">
     <div class="content">
         <!-- Common Content -->
         {{ $CurrentPage.GetContent }}
 
         <!-- Note List -->
-        {{if eq .Mode "NoteList"}}
+        {{ if hasSuffix .Mode "NoteList" }}
             {{ template "route/note/note-list" . }}
-        {{end}}
+        {{ end }}
 
         <!-- Version Footer -->
         {{ template "base/version" . }}
@@ -35,13 +39,14 @@
 </div>
 {{ end }}
 
- {{if eq .Mode "Note"}}
+{{if eq .Mode "Note"}}
     {{ template "route/note/post" . }}
 {{end}}
 
 
+{{ if eq (hasPrefix .Mode "ContentOnly") false }}
+    {{ template "decoration/discord-status" .}}
+    {{ template "decoration/music-player" . }}
 
-{{ template "decoration/discord-status" .}}
-{{ template "decoration/music-player" . }}
-
-{{ template "base/footer" . }}
+    {{ template "base/footer" . }}
+{{ end }}

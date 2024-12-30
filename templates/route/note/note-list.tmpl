@@ -4,7 +4,8 @@
     {{ range $index, $currentNote := .Notes }}
     <li>
         <a style="font-size: 1.7rem;text-decoration: none;border-bottom: 3px solid #F7208B;"
-            href="/note/{{ index $currentNote.Metadata "slog" }}.html">
+            href="/note/{{ index $currentNote.Metadata "slog" }}.html"
+            target="_blank">
             {{ index $currentNote.Metadata "title" }}
         </a>
         —
