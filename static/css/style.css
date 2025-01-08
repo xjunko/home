@@ -80,7 +80,7 @@ hr {
   border: 1px solid var(--outline-color);
 }
 
-.content img {
+.content img:not(.channel-media-mini)  {
   border: 1px solid var(--outline-color);
 }
 
