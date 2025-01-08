@@ -29,6 +29,8 @@ here lies a list of website of which i found interesting and cool.
 
 - [[(꒪ω꒪υ)]](https://fawnsnangels.neocities.org/)
     - a good friend of mine, cute website.
+- [[mystia's diary]](https://mystialorelei.neocities.org/)
+    - not much here, just ramblings and stuff about their life.
 - [[<u>l-m.dev</u>]](https://me.l-m.dev/)
     - _super cool compiler wizard guy, programming magickery, check it out!._
 - [[caffeine](https://caffeine.moe/)]
