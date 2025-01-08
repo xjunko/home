@@ -27,6 +27,27 @@
   }
 }
 
+.sidebar-shoutout {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  bottom: 100px;
+  margin: 0 auto;
+  transform: translateY(0%);
+  animation: sidebar-shoutout-intro 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes sidebar-shoutout-intro {
+   0% {
+    transform: translateY(-100%)
+  }
+
+  100% {
+    transform: translateY(0%)
+  }
+ 
+}
+
 
 .channel-post {
   animation: channel-post-intro 1s cubic-bezier(0.16, 1, 0.3, 1);
@@ -152,7 +173,7 @@
   }
 
   .rin-stand img {
-    display: none;
+    visibility: hidden; 
   }
 
   .sidebar-deco-offset a {
@@ -182,10 +203,18 @@
 
 @media only screen and (max-width: 768px),
 (orientation: portrait) {
+  .rin-stand img {
+    display: none;
+  }
+
   .marquee-buttons {
     display: none;
   }
 
+  .sidebar-shoutout {
+    display: none;
+  }
+  
   .sidebar-music {
     display: none;
   }
