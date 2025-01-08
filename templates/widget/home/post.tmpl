@@ -7,17 +7,23 @@
 <span class="channel-author">{{ index $LatestPost.Metadata "author" }}</span> {{ $LatestPost.GetSimpleFormattedPostDate }}
 <a class="channel-url no-underline" href="{{ .Config.Get "Instance.Domain" }}/redirect.html?id={{ $LatestPost.ID }}">[OPEN]</a>
 <br />
+
 {{ if (index $LatestPost.Metadata "thumbnail") }}
-file: <a class="channel-url" href="{{ index $LatestPost.Metadata "thumbnail" }}" target="_blank" rel="noopener noreffer">{{ index $LatestPost.Metadata "filename" }}</a> [file/{{ index $LatestPost.Metadata "mimetype" }}] <br />
-<a href="{{ index $LatestPost.Metadata "thumbnail" }}" target="_blank" rel="noopener noreffer">
+file: <a class="channel-url" href="{{ index $LatestPost.Metadata "thumbnail" }}" target="_blank"
+rel="noopener noreffer">{{ index $LatestPost.Metadata "filename" }}</a> [file/{{ index $LatestPost.Metadata "mimetype" }}] <br />
 {{ if eq (index $LatestPost.Metadata "thumbnail-type") "video" }}
-<video muted loop controls preload=metadata class="channel-media-mini"
-src="{{ index $LatestPost.Metadata "thumbnail" }}"></video>
+<a href="{{ index $LatestPost.Metadata "thumbnail" }}" target="_blank" rel="noopener noreffer">
+<video muted loop controls preload=metadata class="channel-media-mini" src="{{ index $LatestPost.Metadata "thumbnail" }}"></video>
+</a>
 {{ else }}
+<a href="{{ index $LatestPost.Metadata "thumbnail" }}" target="_blank" rel="noopener noreffer">
 <img loading=lazy class="channel-media-mini" src="{{ index $LatestPost.Metadata "thumbnail" }}">
-{{ end }}
 </a>
 {{ end }}
+
+
+{{ end }}
+
 {{ $LatestPost.GetContent }}
 </div>
 </div>

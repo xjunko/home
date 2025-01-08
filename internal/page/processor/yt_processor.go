@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"regexp"
+	"strings"
 	"text/template"
 
 	"gorm.io/gorm"
@@ -28,6 +29,10 @@ type YoutubeProcessor struct {
 
 func (youtube *YoutubeProcessor) Process(text string) string {
 	return youtube.pattern.ReplaceAllStringFunc(text, func(match string) string {
+		if strings.Contains(match, "#ignore") {
+			return match
+		}
+
 		videoID := youtube.extractVideoID(match)
 		videoInfo := youtube.getVideoInfo(videoID)
 

@@ -67,7 +67,12 @@ func liveFileWatcher(config *config.Config) {
 		panic(err)
 	}
 
-	log.Println("Watching for changes...")
+	log.Println("[Watcher] Running preemptively...")
+	if err := export.Execute(config); err != nil {
+		log.Panic(err)
+	}
+
+	log.Println("[Watcher] Watching for changes...")
 
 	<-make(chan struct{})
 }
@@ -96,5 +101,6 @@ func main() {
 		panic(err)
 	}
 
+	log.Println("[Watcher] Starting Eva...")
 	liveFileWatcher(config)
 }

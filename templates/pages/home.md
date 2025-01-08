@@ -39,7 +39,7 @@ if, for whatever reason, you need to get a hold of me quickly, contact thru emai
 ## recent post
 
 
-{{ template "widget/home/post" . }}
+{{- template "widget/home/post" . }}
 
 
 <br /><br />

@@ -3,9 +3,9 @@
         <span class="channel-author">{{ index .Metadata "author" }}</span> {{ .GetSimpleFormattedPostDate }}
         <a class="channel-url no-underline" href="#{{ .ID }}">#{{ .ID }}</a>
         <a class="channel-url no-underline" href="../redirect.html?id={{ .ID }}">[SHARE]</a>
-        <a class="channel-tags"
+        {{/* <a class="channel-tags"
             style="text-decoration: none; color: var(--text-light) !important">[{{ index .Metadata "tags" }}]
-        </a>
+        </a> */}}
         <br />
 
         {{ if gt (len (index .Metadata "thumbnail")) 0 }}

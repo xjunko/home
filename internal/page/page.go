@@ -17,7 +17,9 @@ import (
 )
 
 // Eva specific code
-var MARKDOWN = markdown.New(markdown.XHTMLOutput(false), markdown.HTML(true))
+var MARKDOWN = markdown.New(markdown.HTML(true),
+	markdown.XHTMLOutput(true),
+)
 
 func toMarkdown(content string) string {
 	return MARKDOWN.RenderToString([]byte(content))
