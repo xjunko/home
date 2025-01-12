@@ -41,6 +41,74 @@
                     <a class="no-link">Currently</a> <a id='discord-status' class="no-link blink-smooth">offline</a>.
                 </li>
 
+                <li id="pakb-webring">
+                    <script src="https://cdn.jsdelivr.net/gh/diamondburned/libwebring@nightly/dist/webring-element.js"
+                        type="module"></script>
+
+                     <style>
+                        .webring {
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        .ring-info a,
+                        .ring-body a {
+                            color: var(--text-color);
+                            text-decoration: none;
+                        }
+
+                        .ring-info a:hover,
+                        .ring-body a:hover {
+                            color: #DC143C;
+                            text-decoration: underline;
+                        }
+
+                        webring-element .ring-info,
+                        webring-element .ring-body {
+                            margin:0;
+                            text-align:center
+                        }
+
+                        webring-element .ring-info {
+                          font-size:.75em
+                        }
+
+                        webring-element[data-ring-name=""]>.ring-info {
+                         display:none
+                        }
+
+                        webring-element .ring-body {
+                            display:grid;
+                        }
+
+                        webring-element .ring-body a.left::before,
+                        webring-element .ring-body a.right::after {
+                          font-size:1.5em;
+                          line-height:0
+                        }
+                        webring-element .ring-body a.left {
+                          justify-self:self-start
+                        }
+
+                        webring-element .ring-body a.left::before {
+                           content:"←"
+                        }
+
+                        webring-element .ring-body a.right {
+                          justify-self:self-end
+                        }
+
+                        webring-element .ring-body a.right::after {
+                              content:"→"
+                        }
+
+                    </style>
+
+
+
+                    <webring-element name="junko" src="https://raw.githubusercontent.com/xjunko/webrings/master/webring.json" />
+                </li>
+
                 <li>
                     <div id="smallvocaring">
                         <script src="../static/scripts/vocaloid.webring.js"></script>
