@@ -96,11 +96,11 @@
 
 
 .sidebar-deco-offset:nth-child(1) a {
-  margin-left: 30px;
+  margin-left: 0px;
 }
 
 .sidebar-deco-offset:nth-child(2) a {
-  margin-left: 45px;
+  margin-left: 5px;
 }
 
 .sidebar-deco-offset:nth-child(3) a {
@@ -108,11 +108,11 @@
 }
 
 .sidebar-deco-offset:nth-child(4) a {
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 .sidebar-deco-offset:nth-child(5) a {
-  margin-left: 25px;
+  margin-left: 30px;
 }
 
 #discord-status {
