@@ -1,0 +1,276 @@
+
+
+
+
+
+
+<!-- The beginning of kafu.ovh V3 design -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- Title -->
+    <title>Buying a Keitai a.k.a Japanese Flip Phone | kafu.ovh</title>
+</head>
+
+<body>   
+
+
+    <div class="website-container center-container">
+        
+
+
+<link rel="stylesheet" href="/static/css/blog.css">
+
+<div class="window">
+    <div class="window-title blog-return">
+        <p> <a class="href href-left" href="/blog.html">return to index</a> </p>
+    </div>
+    <div class="window-content blog blog-read">
+        <a id="blog-header" class="blog-header">
+            <h1>Minimizing Life</h1>
+            <span>11 Jul 2024</span>
+        </a>
+        <h3 id="blog-caption"> Buying a Keitai a.k.a Japanese Flip Phone </h3>
+        <p id="blog-content">
+            <h1>Buying a Japanese Keitai</h1>
+<p><strong>The</strong> day has finally come, after working and getting my OWN salary, I finally have my own source of money that I can spend on without guilt. So, what’s the first thing I should get, a new furniture? PC upgrade maybe? Nope, it’s a fucking keitai (aka Japanese flip phone).</p>
+<a href="https://www.reddit.com/r/dumbphones/comments/18k5rj3/first_japanese_keitai/">
+<img src="https://hatsune-miku.has.rocks/r/keitai_fancy.png#right" style="width: 25%;">
+</a>
+<h2>Why flip phone?</h2>
+<p>Well, because I want to get off the internet, or rather, the social media part of it, I would love to goon and that other stuff still, and besides, my current phone is the recent <a href="https://www.gsmarena.com/xiaomi_poco_f5-12258.php">Poco F5</a>, that runs just about anything I throw at it, which is amazing but it’s not helping me reducing screen time just because of the fact that it’s so good at everything it does.</p>
+<p>While it is nice to have a somewhat powerful (Snapdragon 7+ Gen 2 12GB ram) phone, it’s really easy to get into that spiral of doing absolutely fucking nothing. For example, mindlessly scrolling on TikTok/Youtube Shorts for hours on end. I personally, don’t use TikTok (this started off as a joke, when the app was new, because <a href="https://hatsune-miku.has.rocks/prouodredditor.png">I was a proud redditor</a>), so I cant speak for that app, but Youtube Shorts, GOD, the amount of time it took me to realize that I was wasting my time, is just awful. I could be scrolling for hours before that part of my brain realizes that something was wrong and suddenly I gain back my awareness, it’s weird, I don’t like it.</p>
+<h2>So, how do I fix this?</h2>
+<p>Easy. Just get rid of the phone, or the “smart” part of it. This way it forces me to go using the desktop and waste time there, which has less (dangerous/addicting) effect on me because usually I’d end up doing code or some other boring shit, which is great!</p>
+<p>Now, I never had a flip phone before, mostly because when the time I have my own phone, it wasn’t a thing anymore, so I had to do some research!</p>
+<h2>Research</h2>
+<p>If you’ve spent any time researching “dumbphones”, there’s a high chance you’ll found the <a href="https://www.reddit.com/r/dumbphones/">r/dumbphones</a> and <a href="https://www.reddit.com/r/garaho/">r/garaho</a> subreddits, which are great! Considering the amount of resources that it has.</p>
+<p>Basically, I need a phone that can do:</p>
+<ul>
+<li>Phone Calls</li>
+<li>Texting (Whatsapp/Telegram would be nice)</li>
+<li>EMail and Internet Browsing (Optional because I have my PC/Laptop for this purpose.)</li>
+</ul>
+<a href="https://www.ebay.com.my/itm/204382636998">
+<img src="https://i.ebayimg.com/images/g/2xYAAOSwJkZl4~4x/s-l1200.jpg#right" style="width: 20%;">
+</a>
+<p>After hours of just looking around the internet, I decided to go with Sharp Aquos 601SH or Sharp Keitai 2. Unfortunately, there has been a whole lot of complaints from westerner people (those being on the USA and Europe) about the phone not supporting the bands required for their carrier but, fortunately, I live in Asia. Japanese Keitai tends to just work in Asia countries. So yeah, pretty cool.</p>
+<h2>Buying</h2>
+<p>Buying a Keitai is not exactly easy because you have to jump thru a lot of hoops to get it to you, but, again, fortunately, my Amazon equivalent for this country, Shopee, has it for sale, So I don’t need to use proxies or pay any of those expensive import/export tax, thank GOD.</p>
+<h2>Using</h2>
+<p>After waiting for a week for the phone to arrive (I swear, theyre not usually this long, at least in my region), it’s here.</p>
+<p><a>
+<img src="https://hatsune-miku.has.rocks/r/GS7UQDsaAAAFDaP.jpg#right" style="width: 50%">
+</a></p>
+<p>Now, the first thing you should do after getting a keitai is to give it a strap.</p>
+<p>Ok nice, now let’s get to the real thing, installing applications.
+<br><br><br></p>
+<h2>Installing Applications</h2>
+<p>So, how the hell are supposed to install apps into this, because the browser that my phone came with can’t download files.
+Easy, we use <a href="https://developer.android.com/tools/adb">ADB</a>.
+I'm using linux so all I had to do it to just run <code>sudo pacman -S android-tools</code> in the terminal and … that’s it :D.</p>
+<p>For windows folks, I guess you had to find a binary somewhere and then put it in your enviroment path (or just rawdog it inside the extracted folder like a maniac).</p>
+<p>Anyways going back to the phone, enable the developer options and the USB debugging options inside it, so that ADB can detect our device!</p>
+<p>After that, just run <code>adb install &lt;path/to/app.apk&gt;</code> with your apks.</p>
+<p>Here is the not-so-detailed list of what I installed:</p>
+<ul>
+<li><a href="https://f-droid.org/en/packages/com.aurora.store/">Aurora Store</a> <code>(Important!!! cuz we dont have google services installed)</code></li>
+<li><a href="https://f-droid.org/">F-droid</a></li>
+<li><a href="https://f-droid.org/en/packages/com.moez.QKSMS/">QKSMS</a></li>
+<li>Whatsapp</li>
+<li>Google 2FA <code>(Anon Login)</code></li>
+<li><a href="https://github.com/sspanak/tt9">Traditional T9</a></li>
+<li><a href="https://tachiyomi.en.uptodown.com/android/download/3581221">Tachiyomi</a> <code>(Super old version but supports CBZ archives!!)</code></li>
+<li>Firefox</li>
+<li>ZArchiver</li>
+<li><a href="https://f-droid.org/en/packages/org.schabi.newpipe/">NewPipe</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.musicplayer.blackplayerfree&amp;hl=en">Blackplayer</a></li>
+<li>Spotify Lite</li>
+<li>Twitter</li>
+<li><a href="https://github.com/Adamantcheese/Kuroba">Kuroba</a></li>
+</ul>
+<p>and… that should be all I needed. Funnily enough, the native email app that it came with just works with my email
+so no need for third party app there :D.</p>
+<h2>Optimizing Performance</h2>
+<p>The phone only has 1GB of ram, and most of it is being used by those silly japanese-region only apps like Emopa and the likes.</p>
+<p>Considering I can’t even use these, it’s better off to just disable them :D</p>
+<p>List of apps that I disabled (won’t affect phone usability in any way)</p>
+<table>
+<thead>
+<tr>
+<th>Package Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>com.android.dreams.phototable</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>com.android.inputmethod.latin</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>com.android.phasebeam</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>com.mobisystems.office</code></td>
+<td>Office Suit</td>
+</tr>
+<tr>
+<td><code>com.svox.pico</code></td>
+<td>TTS</td>
+</tr>
+<tr>
+<td><code>jp.co.sharp.android.copyhistorysh</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>jp.co.sharp.android.emopar</code></td>
+<td>Emopar</td>
+</tr>
+<tr>
+<td><code>jp.co.sharp.android.emopar.internalcontent</code></td>
+<td>Emopar content 1</td>
+</tr>
+<tr>
+<td><code>jp.co.sharp.android.emopar.internalcontent2</code></td>
+<td>Emopar content 2</td>
+</tr>
+<tr>
+<td><code>jp.co.sharp.android.nfphomesetter</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>jp.co.sharp.android.passnow</code></td>
+<td>PASSNOW</td>
+</tr>
+<tr>
+<td><code>jp.co.sharp.android.wallpaper.sougen</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>jp.co.softbank.mb.pim</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>jp.co.softbank.wispr.nfp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>jp.co.yahoo.android.apps.map.galaph</code></td>
+<td>Yahoo! Maps (JP only)</td>
+</tr>
+<tr>
+<td><code>jp.naver.line.android</code></td>
+<td>LINE (deprecated)</td>
+</tr>
+<tr>
+<td><code>jp.softbank.mb.addressbookdelivery</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>jp.softbank.mb.dmb</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>jp.softbank.mb.ichinaviclt</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>jp.softbank.mb.tetherAuthNfp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sharp.jp.android.makersiteappli</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Do note that application like SHSHOW can be use to download emoticons/wallpaper/sfx for your phone, so it’s partially useful, feel free to keep this one on.</strong></p>
+<h2>What works</h2>
+<p>So after all of this kerfuffle, what works and what not.</p>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMS</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Phone Calls</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>4G Connectivity</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Decent Camera</td>
+<td>✔️, has that shitty camera aesthetics if you’re into it</td>
+</tr>
+<tr>
+<td>Good Battery Lifetime</td>
+<td>✔️, VERY</td>
+</tr>
+<tr>
+<td>External Storage</td>
+<td>✔️, spec said 32GB only but it seems to work fine with 64gb SD Card</td>
+</tr>
+<tr>
+<td>Google Services</td>
+<td>❗ (Can work with MicroG)</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>❗</td>
+</tr>
+<tr>
+<td>Wired Headset</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h2>Camera Test</h2>
+<p>Here’s some picture I took with the camera.</p>
+<div style="text-align: center">
+<a>
+<a href="https://hatsune-miku.has.rocks/r/DSC_0033.JPG"> <img src="https://hatsune-miku.has.rocks/r/DSC_0033.JPG" style="width: 30%"> </a>
+<a href="https://hatsune-miku.has.rocks/r/DSC_0028.JPG"> <img src="https://hatsune-miku.has.rocks/r/DSC_0028.JPG" style="width: 30%"> </a>
+<a href="https://hatsune-miku.has.rocks/r/DSC_0018.JPG"> <img src="https://hatsune-miku.has.rocks/r/DSC_0018.JPG" style="width: 30%"> </a>
+</a>
+</div>
+<h2>Misc</h2>
+<p><a>
+<img src="https://hatsune-miku.has.rocks/r/GS7UQCdbIAA8iK9.jpg#center" style="width: 50%">
+</a></p>
+
+        </p>
+    </div>
+</div>
+    </div>
+
+
+
+    </body>
+</html>

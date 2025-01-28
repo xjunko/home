@@ -1,237 +1,371 @@
-/*
-    As for me, I always used to do things alone.
-    That’s why the thought of being a team… doesn’t always sit well with me.
-    With that said, if the rest of you feel really strongly about this, then maybe…I better do my part, too. Right?
-
-    inspired by microsounds.github.io and wowana.me
-*/
-
-@font-face {
-  font-family: Terminus;
-  src: url(../fonts/TerminusTTF.woff2);
-}
-
+/* ===== Root Variables ===== */
 :root {
-  --dark-color: #0c0c0c;
-  --bright-color: #111111;
+    --window-background: #ffffff;
+    --window-background-2: #000000;
 
-  --outline-color: #cbcbcb;
-  --sidebar-color: #000000;
+    --border-color: #1c1c1c;
+    --text-color-light: #ffffff;
+    --text-color-faint: #838383;
+    --text-color-dark: #000000;
+    --text-bg-hover: #000000;
 
-  --text-light: #ffffff;
-  --text-faint: #838383;
-  --text-dark: #000000;
-
-  --fonts: "Terminus", "Liberation Serif", "Times New Roman", "Times", serif,
-    "Dejima Mincho";
+    --background-color: rgb(212, 212, 212);
+    --background-color-window-hover: #000000;
+    --background-color-window: #ffffff;
 }
 
-html {
-  /* cool fonts to meh fonts */
-  font-family: var(--fonts);
-  font-size: 16px;
-
-  min-height: 100%;
-  background-color: var(--dark-color);
-  background: url("../imgs/sky.png") repeat,
-    linear-gradient(180deg, var(--dark-color), var(--bright-color));
-  background-blend-mode: screen, screen, normal;
-  background-size: auto, 20%, auto;
-
-  color: var(--outline-color);
-  scrollbar-color: var(--outline-color) #fff;
-  scrollbar-width: thin;
+/* ===== Global Styles ===== */
+* {
+    box-sizing: border-box;
+    color: var(--text-color-dark);
 }
+
 
 body {
-  display: flex;
-  margin: auto;
-  width: 1200px;
-  max-width: 100%;
+    background: var(--background-color);
+    font-family: "ArkPixel", "MS UI Gothic", sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    width: 900px;
+    margin: 10px auto 30px auto;
 }
 
-hr {
-  border-color: var(--text-faint);
+
+.website-container {
+    max-width: 100%;
 }
 
-/* main */
-.content-container {
-  padding: 1em;
+/* ===== Window Styles ===== */
+.window {
+    border: 1px solid var(--border-color);
+    background: var(--background-color-window);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.7);
 }
 
-.content {
-  max-width: 800px;
-  padding: 0 30px 10px 30px;
-  border-top: 5px double var(--outline-color);
-  background-color: #0000004d;
-  color: var(--text-light);
-  text-shadow: 2px 1px var(--text-dark);
+.window .window {
+    box-shadow: none;
 }
 
-.content p:not(.ignore p) {
-  hyphens: auto;
-  text-align: justify;
-  text-indent: 1em;
-  margin: 0;
+.window:hover {
+    border: 1px solid var(--window-background-2);
 }
 
-.content > img {
-  max-width: 100%;
-  border: 1px solid var(--outline-color);
+.window-title p {
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    background: var(--window-background);
+    border-bottom: 1px solid var(--border-color);
+    font-family: "Neue";
 }
 
-.content img {
-  border: 1px solid var(--outline-color);
+.window-title a {
+    text-decoration: none;
+    color: var(--text-color-dark);
 }
 
-.content > h3,
-.content > h2 {
-  margin: 0;
+.window-header {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    font-family: "Neue";
 }
 
-/* texts */
-
-/* blinking text */
-.blink {
-  animation: blink 0.8s step-end infinite;
+.window-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-.blink-smooth {
-  animation: blink 0.5s linear infinite;
+.window-header #domain {
+    text-align: center;
+    font-size: 4rem;
+    white-space: nowrap;
 }
 
-@keyframes blink {
-  50% {
-    opacity: 0.5;
-  }
+.window-header #char {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 150px;
+    transform: scaleX(-1);
 }
 
-/* email */
-.widget-email a {
-  font-size: 2rem;
+.window-button {
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+    width: 100%;
+    background: var(--window-background);
+    white-space: nowrap;
+    font-weight: bold;
+    border-top: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-/* webring buttons */
-.content li > img,
-.content a > img {
-  border: 2px solid var(--dark-color);
+.window-button a {
+    font-size: 20px;
+    color: var(--text-color-dark);
+    text-decoration: none;
+    padding: 6px 16px;
+    border-right: 1px solid var(--border-color);
 }
 
-.content li > img:hover,
-.content a > img:hover {
-  border: 2px solid var(--outline-color);
+.window-button a:first-child {
+    border-right: none;
 }
 
-/* sidebar */
-.sidebar-container {
-  padding: 1em;
-  font: 0.9em var(--fonts);
+.window-button a:last-child {
+    border-left: 1px solid var(--border-color);
 }
 
-.sidebar {
-  position: relative;
-  width: 290px;
-  background: var(--sidebar-color);
-  border: 0.1em solid var(--outline-color);
-  border-radius: 0.3em;
+.window-button a:hover {
+    background-color: var(--background-color-window-hover);
+    color: var(--text-color-light);
 }
 
-.sidebar > p,
-.sidebar > h1 {
-  text-align: center;
-  padding: 0 0;
-  margin: 0;
+/* ===== Grid Layout ===== */
+.website-grid {
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 16px;
 }
 
-.avatar > img {
-  border-radius: 0.3em 0.3em 0 0;
-  width: 290px;
-  height: 290px;
-  background-color: var(--sidebar-color);
+.website-grid #content,
+.website-grid #sidebar {
+    align-self: flex-start;
 }
 
-/* sidebar links */
-.links ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 0;
+.website-grid.website-blog {
+    grid-template-columns: 2fr 5fr;
 }
 
-.links ul li {
-  border-top: 0.1em solid var(--outline-color);
-  padding: 0.2em 0.4em;
+/* ===== Content Styles ===== */
+.window-content {
+    width: 100%;
+    padding: 4px;
+    line-height: 16px;
 }
 
-/* utils */
-.sidebar a:not(.no-link) {
-  color: var(--outline-color);
-  text-decoration: underline;
+#content .window-content {
+    padding: 10px;
 }
 
-.no-link,
-.sidebar a:hover {
-  color: var(--outline-color);
-  text-decoration: none;
+.window-content h1,
+.window-content h2,
+.window-content h3,
+.window-content h4,
+.window-content h5,
+.window-content h6 {
+    font-family: "Neue";
 }
 
-.center,
-.quote {
-  text-align: center;
+.window-content h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 10px 0;
 }
 
-.faint {
-  color: var(--text-faint);
+.window-content p,
+.window-content a {
+    margin: 8px 0;
+    hyphens: auto;
+    text-align: justify;
+    font-family: ArkPixel;
+    font-size: 14px;
+    font-weight: 100;
 }
 
-#discord-status,
-#discord-status-about {
-  font-weight: bold;
+.window-content p:not(.dont-blacken):any-link:hover,
+.window-content a:not(.dont-blacken):any-link:hover {
+    background-color: var(--text-bg-hover);
+    color: var(--text-color-light);
 }
 
-/* indents */
-.indent {
-  text-indent: 32px;
+.window-content h3,
+.window-content h4 {
+    margin: 4px 0;
 }
 
-/* links */
-a {
-  color: var(--outline-color);
-  text-decoration: none;
+.window-content.post-latest {
+    font-family: ArkPixel;
+    vertical-align: bottom;
+    font-size: 13px;
 }
 
-a:hover,
-a:hover > * {
-  text-shadow: 0 0 3px var(--text-faint);
+.window-content.post-latest a:first-child {
+    font-family: "Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    vertical-align: bottom;
+    font-style: normal;
+    color: #000;
+    padding-right: 4px;
 }
 
-/* buttons */
-.net-buttons {
-  text-indent: 1em;
+.window-content.post-latest a {
+    font-size: 15px;
 }
 
-.net-buttons img {
-  border: 2px solid var(--dark-color);
+.window-content.post-latest div {
+    max-height: 80px;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-.net-buttons:hover img {
-  border: 2px solid var(--outline-color);
+.window-content.post-latest div::-webkit-scrollbar {
+    display: none;
 }
 
-/* image flag */
+.window-content.blog h3 {
+    padding-bottom: 4px;
+}
+
+.window-content.blog div h2 {
+    display: inline;
+    font-size: 20px;
+}
+
+.window-content.blog div span::before {
+    content: "|";
+    margin-left: 4px;
+}
+
+#sidebar .window {
+    max-width: 210px;
+    margin-bottom: 8px;
+}
+
+/* ===== Link Styling ===== */
+.href {
+    text-decoration: none;
+    color: var(--text-color-dark);
+}
+
+.href:hover {
+    background: var(--background-color-window-hover);
+    color: var(--text-color-light);
+}
+
+.href-right {
+    text-decoration: none;
+}
+
+.href-right::after {
+    content: "→";
+    margin-left: -5px;
+}
+
+.href-left {
+    text-decoration: none;
+}
+
+.href-left::before {
+    content: "←";
+    margin-right: 5px;
+}
+
+
+/* ===== Utility Classes ===== */
+.center-container {
+    margin: 0 auto;
+}
+
+.margin-top-16 {
+    margin-top: 16px;
+}
+
+.list-no-space ul,
+.list-no-space li {
+    padding: 0;
+    margin: 0 0 4px 8px;
+    list-style-type: square;
+}
+
+.net-links * {
+    text-decoration: none;
+}
+
+/* ===== Effects ===== */
+img {
+    filter: grayscale(1);
+}
+
+img:hover {
+    filter: grayscale(0);
+}
+
+.blacken {
+    filter: grayscale(1);
+}
+
+.blacken:hover {
+    filter: grayscale(0);
+}
+
+.edgy {
+    padding: 8px;
+    color: var(--text-color-light);
+    background-color: var(--background-color-window-hover);
+}
+
+.hover-to-reveal {
+    background-color: var(--background-color-window-hover);
+    color: var(--background-color-window-hover);
+    padding: 0 8px;
+}
+
+.hover-to-reveal:hover {
+    color: var(--text-color-light);
+}
+
+.blog-link {
+    padding: 7px 10px;
+    display: block;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.caption {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ===== Image Direction ===== */
 img[src*="#left"] {
-  float: left;
+    float: left;
 }
 
 img[src*="#right"] {
-  float: right;
+    float: right;
 }
 
 img[src*="#center"] {
-  display: block;
-  margin: auto;
+    display: block;
+    margin: auto;
 }
 
-/* footer */
-.footer {
-  font-size: 4mm;
+/* ===== Grid Layout ===== */
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid .window {
+    height: 150px;
+    overflow: scroll;
+}
+
+.grid-justify {
+    display: flex;
+    justify-content: space-between;
 }

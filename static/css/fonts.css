@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Terminus;
+    src: url(../fonts/TerminusTTF.woff2);
+}
+
+@font-face {
+    font-family: 'ArkPixel';
+    src: url('../fonts/Ark/ark-pixel-12px-monospaced-ja.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Neue';
+    src: url('../fonts/Neue/NeueHaasDisplayBlack.ttf') format('truetype'),
+        url('../fonts/Neue/NeueHaasDisplayBlackItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue';
+    src: url('../fonts/Neue/NeueHaasDisplayMedium.ttf') format('truetype'),
+        url('../fonts/Neue/NeueHaasDisplayMediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue';
+    src: url('../fonts/Neue/NeueHaasDisplayXThin.ttf') format('truetype'),
+        url('../fonts/Neue/NeueHaasDisplayXThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue';
+    src: url('../fonts/Neue/NeueHaasDisplayBold.ttf') format('truetype'),
+        url('../fonts/Neue/NeueHaasDisplayBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue';
+    src: url('../fonts/Neue/NeueHaasDisplayLight.ttf') format('truetype'),
+        url('../fonts/Neue/NeueHaasDisplayLightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue';
+    src: url('../fonts/Neue/NeueHaasDisplayRoman.ttf') format('truetype'),
+        url('../fonts/Neue/NeueHaasDisplayRomanItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
