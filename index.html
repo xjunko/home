@@ -2,532 +2,207 @@
 
 
 
-    
 
 
+<!-- The beginning of kafu.ovh V3 design -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Meta(s) -->
+    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Embed Meta -->
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="home "| letter to the black world" />
-    <meta name="description" content="the main page." />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="junko" />
-    <meta property="og:title" content="home | letter to the black world" />
-    <meta property="og:description" content="the main page." />
-    <meta property="og:image" content="https://kafu.ovh/static/imgs/preview.png" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://kafu.ovh" />
-    <meta property="twitter:title" content="home | letter to the black world" />
-    <meta property="twitter:description" content="the main page." />
-    <meta property="twitter:image" content="https://kafu.ovh/static/imgs/preview.png" />
-
-
-    <!-- Stylesheet(s) and Icons -->
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/static/imgs/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/phone.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/deco.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/player.css">
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/css/fonts.css">
+        <link rel="stylesheet" href="/static/css/style.css">
 
     <!-- Title -->
-    <title>home | letter to the black world</title>
+    <title>home | kafu.ovh</title>
 </head>
 
-<body>
+<body>   
 
 
-    <!-- Event -->
     
+    <div class="website-container center-container">
+        <div id="intro" class="window">
+    <div class="window-title">
+        <a href="https://www.youtube.com/watch?v=9QLT1Aw_45s">
+            <p> antipathy world </p>
+        </a>
+    </div>
 
-    <!-- Sidebar -->
+    <div class="window-header">
+        <h1 id="domain"> kafu.ovh <a style="font-size: 16px; margin:0;padding:0;">[2025]</a> </h1>
+        <a href="https://www.youtube.com/channel/UCQ1U65-CQdIoZ2_NA4Z4F7A">
+            <img id="char" src="static/imgs/kafu-header.png" alt="kafu-header">
+        </a>
+
+        <div class="window-button">
+            <a href="/index.html">home</a>
+            <a href="/about.html">about</a>
+            <a href="/blog.html">blog</a>
+            <a href="/channel.html">@chan</a>
+            <a href="/net.html">net</a>
+        </div>
+        
+    </div>
+</div>
+    </div>
+
     
-        <!-- Sidebar stuff -->
-<div class="sidebar-container">
-    <div class="sidebar">
-        <!-- avatar -->
-        <a hx-get="/pages/home.html" hx-target="#main-container" hx-swap="outerHTML">
-            <div class="avatar">
-                <img src="../static/imgs/deco/rin_avatar.webp" alt="avatar"> </img>
+    <div class="website-grid">
+
+        
+        <div id="content" class="window">
+            <div class="window-title">
+                <p> home </p>
             </div>
-        </a>
 
-        <!-- name -->
-        <a>
-            <img class="sidebar-name" src="../static/imgs/deco/rin_nameplate.webp"> </img>
-        </a>
-
-        <!-- lists of stuff -->
-        <div class="links">
-            <ul>
-                <li class="sidebar-deco-offset">
-                    <a href="/redirect.html?r=github">github</a>
-                </li>
-
-                <li class="sidebar-deco-offset">
-                    <a href="/redirect.html?r=steam">steam</a>
-                </li>
-
-                <li class="sidebar-deco-offset">
-                    <a href="#" hx-get="/pages/notes.html" hx-target="#main-container" hx-swap="outerHTML">notes</a>
-                </li>
-
-
-                <li class="sidebar-deco-offset">
-                    <a href="#" hx-get="/chan/1.html" hx-target="#main-container" hx-swap="outerHTML">channel</a>
-                </li>
-
-                <li class="sidebar-deco-offset">
-                    <a href="#" hx-get="/pages/stuff.html" hx-target="#main-container" hx-swap="outerHTML">links</a>
-                </li>
-
-                <li class="quote">
-                    <a class="no-link">Currently</a> <a id='discord-status' class="no-link blink-smooth">offline</a>.
-                </li>
-
-                <li id="pakb-webring">
-                    <script src="https://cdn.jsdelivr.net/gh/diamondburned/libwebring@nightly/dist/webring-element.js"
-                        type="module"></script>
-
-                     <style>
-                        .webring {
-                            display: flex;
-                            justify-content: center;
-                        }
-
-                        .ring-info a,
-                        .ring-body a {
-                            color: var(--text-color);
-                            text-decoration: none;
-                        }
-
-                        .ring-info a:hover,
-                        .ring-body a:hover {
-                            color: #DC143C;
-                            text-decoration: underline;
-                        }
-
-                        webring-element .ring-info,
-                        webring-element .ring-body {
-                            margin:0;
-                            text-align:center
-                        }
-
-                        webring-element .ring-info {
-                          font-size: 1em
-                        }
-
-                        webring-element[data-ring-name=""]>.ring-info {
-                         display:none
-                        }
-
-                        webring-element .ring-body {
-                            display:grid;
-                        }
-
-                        webring-element .ring-body a.left::before,
-                        webring-element .ring-body a.right::after {
-                          font-size:1.5em;
-                          line-height:0
-                        }
-                        webring-element .ring-body a.left {
-                          justify-self:self-start
-                        }
-
-                        webring-element .ring-body a.left::before {
-                           content:"←"
-                        }
-
-                        webring-element .ring-body a.right {
-                          justify-self:self-end
-                        }
-
-                        webring-element .ring-body a.right::after {
-                              content:"→"
-                        }
-
-                    </style>
-
-
-
-                    <webring-element name="junko" src="https://raw.githubusercontent.com/xjunko/webrings/master/webring.json" />
-                </li>
-
-                <li>
-                    <div id="smallvocaring">
-                        <script src="../static/scripts/vocaloid.webring.js"></script>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="rin-stand">
-            <img src="../static/imgs/deco/rin_stand.webp" alt="rin">
-        </div>
-    </div>
-
-    <br>
-    <div class="sidebar-music">
-        <object type="image/svg+xml" data="https://lets-all-love-miku.vercel.app/spotify-lite">
-        </object>
-    </div>
-    <br>
-
-    <div class="marquee-buttons">
-    <marquee loop="infinite" scrollamount="5">
-        <img src="/static/imgs/buttons/eyecandy/bestvieweddesktop.gif">
-        <a href="https://firefox.com/">
-            <img src="/static/imgs/buttons/eyecandy/firefox.webp">
-        </a>
-        <img src="/static/imgs/buttons/eyecandy/microsoft.jpg">
-        <img src="/static/imgs/buttons/eyecandy/chrome.gif">
-        <img src="/static/imgs/buttons/eyecandy/html.gif">
-        <a href="https://www.kernel.org/">
-            <img src="/static/imgs/buttons/eyecandy/linux.png">
-        </a>
-        <img src="/static/imgs/buttons/eyecandy/web3.gif">
-        <img src="/static/imgs/buttons/eyecandy/freespeechforever.gif">
-        <img src="/static/imgs/buttons/eyecandy/bestvieweyes.gif">
-    </marquee>
-
-    <marquee loop="infinite" scrollamount="5" direction="right">
-        <img src="/static/imgs/buttons/eyecandy/miku.gif">
-        <img src="/static/imgs/buttons/eyecandy/vocaloid.gif">
-        <img src="/static/imgs/buttons/eyecandy/z3r0s.gif">
-        <img src="/static/imgs/buttons/eyecandy/ostan.gif">
-        <img src="/static/imgs/buttons/eyecandy/underwear.gif">
-
-        <a href="https://mikumiku.neocities.org/">
-            <img src="/static/imgs/buttons/eyecandy/mikumiku.gif">
-        </a>
-
-        <a href="https://ynoproject.net/">
-            <img src="/static/imgs/buttons/eyecandy/yumenikki.gif">
-        </a>
-
-        <a href="https://www.minecraft.net/en-us">
-            <img src="/static/imgs/buttons/eyecandy/minecraft.gif">
-        </a>
-
-        <a href="https://neocities.org/">
-            <img src="/static/imgs/buttons/eyecandy/neocitizensrock.gif">
-        </a>
-    </marquee>
-
-    <marquee loop="infinite" scrollamount="5" direction="left">
-         <a href="https://utsuho.rocks/"><img src="/static/imgs/buttons/utsuhorocks.png" alt=""></a>
-<a href="https://猫.移动/"><img src="/static/imgs/buttons/xn-neko-btn.gif" alt=""></a>
-<a href="https://archlinux.org/"><img src="/static/imgs/buttons/archlinux.gif" alt=""></a>
-<a href="http://lucky-ch.com"><img src="/static/imgs/buttons/konata.gif" alt="http://lucky-ch.com"></a>
-<a href="https://www.katawa-shoujo.com/about.php"><img src="/static/imgs/buttons/katawashoujo.jpg" alt=""></a>
-<a href="https://mariluu.hehe.moe"><img src="/static/imgs/buttons/mariluu.gif" alt="mariluu's site"></a>
-<a href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif" alt="https://dimden.dev/"></a>
-<a href="https://marisakirisame.net"><img src="https://marisakirisame.net/button.png" alt="marisakirisame.net"></a>
-<a href="https://vendicated.dev/"><img src="/static/imgs/buttons/vendicated.png" alt=""></a>
-<a href="https://insect.christmas/"><img src="/static/imgs/buttons/insect.gif" alt=""></a>
-<a href="https://chaotic.ninja/"><img src="https://chaotic.ninja/assets/img/banners/88x31/chaoticninja.gif" alt=""></a>
-<a href="https://libdb.so/"><img src="/static/imgs/buttons/d14.gif" alt=""></a>
-<a href="https://fauux.neocities.org/lovelain"><img src="/static/imgs/buttons/lain.png" alt=""></a>
-<a href="https://constellatory.net/"><img src="/static/imgs/buttons/const.png" alt=""></a>
-<a href="https://nightfall.city/"><img src="/static/imgs/buttons/nightfall.city.png" alt=""></a>
-<a href="https://zvava.org/"><img src="/static/imgs/buttons/zvava.org.png" alt=""></a>
-<a href="https://velzie.rip/"><img src="/static/imgs/buttons/velzie.rip.png" alt=""></a>
-<a href="https://melankorin.net/"><img src="https://melankorin.net/assets/img/buttons/button-1.gif" alt=""></a>
-<a href="https://nananet.neocities.org/home/"><img src="https://i.imgur.com/T74imCI.gif" alt=""></a>
-<a href="https://www.ippotsk.com/"><img src="/static/imgs/buttons/ippotsk.png" alt="" width="88" height="31"></a>
-<a href="https://aioi.neocities.org/"><img src="/static/imgs/buttons/aioi.gif" alt="" width="88" height="31"></a>
-<a href="https://mikufan3939.neocities.org/"><img src="/static/imgs/buttons/mikuhell2.png" alt="" width="88"
-        height="31"></a>
-<a href="https://moseni.neocities.org/"><img src="/static/imgs/buttons/moseni_button.gif" alt="" width="88"
-        height="31"></a>
-<a href="https://nimravidae.neocities.org/"><img src="/static/imgs/buttons/88x31_nimravidae.gif" alt=""></a>
-<a href="https://item64.neocities.org/"><img src="/static/imgs/buttons/item64.gif" alt=""></a>
-<a href="https://sillyivy.nekoweb.org/"><img src="/static/imgs/buttons/sillyivy.gif" alt=""></a>
-
-    </marquee>
-</div>
-
-
-    <div class="sidebar-shoutout"> <!-- because ublock kills it when its named ads -->
-        <iframe width="180" height="180" style="border:none" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
-    </div>
-</div>
-
-    
-
-
-<!-- Generic -->
-
-<div id="main-container" class="content-container">
-    <div class="content">
-        <!-- Common Content -->
-        <br />
-<h2>about</h2>
-<p>my name is junko, you can find me online as xjunko. i have a strong interest in eletronics, arcade rhythm game, programming and vocaloids!
-<br /><br /></p>
-<p>this website serves as more or less dumping ground of useless information. here, you may find how to contact me, crap i’ve written and things that you might find interesting.
-<br /><br /></p>
-<p>currently, the domain is <a href="https://kafu.ovh">kafu.ovh</a>, i’m broke so the domain <i>might</i> change from time to time.
-<br /><br /></p>
-<h2>contact me</h2>
-<p>i go by the name, <a id="discord-name" class="blink-smooth">rmhakurei</a>, on discord, feel free to message me.
-<br />
-Currently <a id='discord-status-about' class="blink-smooth">offline</a>.
-<br /><br /></p>
-<p>if, for whatever reason, you need to get a hold of me quickly, contact thru email instead:</p>
-<div class="center widget-email blink">
-    <a>
-        phony [at] kafu [dot] ovh
-    </a>
-</div>
-<br /><br />
-<h2>last note</h2>
-<div class="note-info">
-    <a href="/note/buying-a-keitai.html">
-        <h1 class="note-header">
-            Buying a Keitai a.k.a Japanese Flip Phone
-        </h1>
-    </a>
-    <hr>
-    <p style="color: var(--text-faint)">Posted on Thu, Jul 11nd, 2024 | 1153 words
-        |
-        ~5.44 minutes read
-    </p>
-    <hr>
-</div>
-<style>
-    :root {
-        --underline-color: #F7208B;
-    }
-
-    .note-info {
-        border: solid 2px var(--almost-dark);
-        padding: 10px 5px 5px 10px;
-    }
-
-    .note-info h1:hover {
-        background-color: var(--underline-color);
-        color: black;
-    }
-
-
-    .note-info h1 {
-        font-size: 1.5rem;
-    }
-
-    .note-info h1::before {
-        color: var(--underline-color);
-        content: '>> ';
-    }
-
-    .note-info h1:hover::before {
-        color: black;
-        content: '>> ';
-    }
-
-    .note-info hr {
-        color: var(--underline-color);
-    }
-
-    .note-info hr {
-        position: relative;
-        height: 5px;
-        overflow: hidden;
-        border: 0;
-        margin: 5px 0;
-
-    }
-
-    .note-info hr::after {
-        content: "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
-        position: absolute;
-        top: 0;
-        left: 0;
-        line-height: 5px;
-        width: 100%;
-        word-wrap: break-word;
-    }
-</style>
-<p><br /><br /></p>
-<h2>recent post</h2>
-<link rel="stylesheet" type="text/css" href="/static/css/channel.css">
-<div class="channel-post-mini" id="1737719865" style=''>
-<div class="ignore channel-content">
-<span class="channel-author">junko</span> 2025-01-24
-<a class="channel-url no-underline" href="https://kafu.ovh/redirect.html?id=1737719865">[OPEN]</a>
-<br />
-<p>file: <a class="channel-url" href="https://hatsune-miku.has.rocks/r/cunnysmoke.gif" target="_blank"
-rel="noopener noreffer">cunnysmoke.gif</a> [file/gif] <br /></p>
-<a href="https://hatsune-miku.has.rocks/r/cunnysmoke.gif" target="_blank" rel="noopener noreffer">
-<img loading=lazy class="channel-media-mini" src="https://hatsune-miku.has.rocks/r/cunnysmoke.gif">
-</a>
-<p>it took them a fucking week to refund the money, god i am so late with these dumb fuck payments.</p>
-<p>used my friend’s bank to pay it, im not using TNG shitty ass JomPay ever again.</p>
-<p>i just hope it works this time around, im so fucking stressed out because of it.</p>
-</div>
-</div>
-<p><br /><br /></p>
-<h2>this site</h2>
-<div style="display: flex; float: right;flex-direction: column;">
-    <a href="/">
-        <img style="float: right;" src="/static/imgs/buttons/junko.png">
-    </a>
-    <i>
-    hotlinking is allowed!
-    </i>
+            <div class="window-content">
+                <div class="grid-justify">
+<div>
+<h2> hello stranger </h2>
+<p>
+welcome to my silly little corner of the internet. i don't know how you got here, but i'm glad you did.
+you won't find anything of value here, but i hope you enjoy your stay. <br/><br/>
+feel free to look around, there might some cool stuff you might like!
+</p>
 </div>
 <div>
-    <textarea style="width: 60%; height: 50px;border: 1px solid var(--outline-color);background-color: var(--dark-color);color: var(--text-light);" readonly>
-<a href="https://kafu.ovh" target="_blank">
-    <img src="https://kafu.ovh/static/imgs/buttons/junko.png"/>
-</a></textarea>
+<img src="static/imgs/kafu-peace.png"
+height="100px"
+style="transform: scaleX(-1);scale: 1.5;position:relative;bottom: -5px;left:20px;pointer-events: none">
+</div>
+</div>
+<div class="grid">
+<div class="window">
+<div class="window-content">
+<h2> guestbook </h2>
+feeling a little bit chatty?
+wanted to say hi?
+maybe you just want to leave a message?
+a suggestion?
+a critique?
+<div style="text-align: right;position: relative;top: 30px;">
+<a class="href-right" href="https://xjunko.atabook.org/"> you can do that here </a>
+</div>
+</div>
+</div>
+<div class="window window-content blog" style="z-index: 2;">
+<h3> latest blog post </h3>
+<div>
+<h2> Minimizing Life </h2><span> 11 Jul 2024 </span>
+<p style="height: 50px;overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;">
+**The** day has finally come, after working and getting my OWN salary, I finally have my own source of money that I can spend on without guilt. So, what's the first thing I should get, a new furniture? PC upgrade maybe? Nope, it's a fucking keitai (aka Japanese flip phone).
+</p>
+<div style="text-align: right;position: relative;top: 2px;">
+<a class="href-right" href="/blog/buying-a-keitai.html"> read </a>
+</div>
+</div>
+</div>
+<div class="window window-content">
+<h2> inspo </h2>
+this website wouldn't exists without these cool fellas:
+<div style="padding-top: 10px; text-align: center;">
+<a href="https://melankorin.net/" title="this version of the website was mostly based of kori's melankorin.net">melankorin.net</a>
+<a href="https://microsounds.github.io/" title="was what got me into making personal websites again.">sentimental microsounds</a>
+<a href="https://utsuho.rocks/" title="was the website i was inspired on when i was first starting.">utsuho.rocks</a>
+</div>
+</div>
+<div class="window window-content webrings">
+<h2> webrings </h2>
+<div>
+<script src="https://cdn.jsdelivr.net/gh/diamondburned/libwebring@nightly/dist/webring-element.js" type="module"></script>
+<link rel="stylesheet" href="static/css/webring.css">
+<webring-element name="junko" src="https://raw.githubusercontent.com/xjunko/webrings/master/webring.json" style="" data-ring-name="PAKB" data-link-name="junko" data-left-link-name="zavents" data-right-link-name="mystia">
+</webring-element>
+</div>
+<div id="smallvocaring" class="blacken">
+<script src="../static/js/vocaloid.webring.js"></script>
+</div>
+</div>
 </div>
 
+            </div>
+        </div>
 
-        <!-- Note List -->
         
+         <div id="sidebar">
+            
 
-        <!-- Version Footer -->
-        <hr />
-<div class="footer" style="position: relative;">
-    <i>
-        ©2020-2024 xjunko <<a href="https://github.com/xjunko/home">@github/xjunko/home</a>> <br />
-            Powered by <a href="https://github.com/xjunko/home">Eva
-                v0.5.0 —
-                simple microblogging processor [go/latest]</a>
 
-            <a style="position: absolute; top: -5px; right: 0">
-                <img src="https://moecount.lolihouse.top/get/@xjunko" height="50" style="border: none;">
-            </a>
-    </i>
+<div class="window">
+    <div class="window-title">
+        <p> @chan </p>
+    </div>
+
+    <div class="window-content post-latest">
+        <a> junko </a> 24 Jan 2025
+        <div>
+            it took them a fucking week to refund the money, god i am so late with these dumb fuck payments.
+
+used my friend's bank to pay it, im not using TNG shitty ass JomPay ever again.
+
+i just hope it works this time around, im so fucking stressed out because of it.
+
+
+        </div>
+    </div>
 </div>
 
+
+<div class="window">
+    <div class="window-title">
+        <p> last listened </p>
     </div>
 
-    
+    <div class="window-content">
+        <object style="width: 200px; height: 50px;" type="image/svg+xml"
+            data="https://lets-all-love-miku.vercel.app/spotify-lite-white">
+        </object>
+    </div>
+</div>
 
-    <br> <br> <br>
-    <br> <br> <br>
+<div class="window">
+    <div class="window-title">
+        <p> this website </p>
+    </div>
+
+    <div class="window-content blacken">
+        <p style="text-align: center; padding-top: 4px; margin: 0;"> add me to your websites! hotlinking is allowed.
+        </p>
+        <div class="grid" style="padding-top: 8px;">
+            <img style="float: right;" src="/static/imgs/buttons/junko.png">
+            <textarea
+                style="width: 100px; height: 31px;border: 1px solid var(--border-color);font-size: 11px;resize: none;"
+                readonly="">
+<a href="https://kafu.ovh" target="_blank"><img src="https://kafu.ovh/static/imgs/buttons/junko.png"/></a>
+</textarea>
+        </div>
+    </div>
 </div>
 
 
-
-
-
-
-    <script type="text/javascript">
-    // fetch user data from api
-    api_endpoint = 'https://api.lanyard.rest/v1/users/736223131240497183';
-    req = new XMLHttpRequest();
-    req.open("GET", api_endpoint, true);
-    req.onload = function () {
-        if (this.status == 200) {
-            console.log("good!");
-            var data = JSON.parse(this.response).data;
-            var user = data.discord_user;
-            var status = data.discord_status;
-
-            // pfp then name
-            try {
-                var html_name = document.getElementById("discord-name");
-                var avatarUrl = "https://cdn.discordapp.com/avatars/" + user.id + "/" + user.avatar + ".png?size=40";
-
-                // Get request to the URL and see if it exists, if it returns 404, delete the element
-                var avatar_check = new XMLHttpRequest();
-                avatar_check.open("GET", avatarUrl, true);
-                avatar_check.onload = function () {
-                    if (this.status == 404) {
-                        html_name.innerHTML = "<i>" + user.username + "</i>";
-                    } else {
-                        html_name.innerHTML = "<img class='discord-avatar' src='" + avatarUrl + "'> <i>" + user.username + "</i>";
-                    }
-                };
-                avatar_check.send();
-
-            } catch {
-                console.log('[Discord] Failed to replace avatar component, probably doesnt exists...');
-            }
-
-
-
-            // online stat
-            var html_status = document.getElementById("discord-status");
-            var color = ""
-
-            switch (status) {
-                case 'online': html_status.text = "online"; color = "color: green;"; break;
-                case 'idle': html_status.text = "idling"; color = "color: yellow;"; break;
-                case 'dnd': html_status.text = "dnd"; color = "color: red;"; break;
-                case 'offline': html_status.text = "offline"; color = "color: gray;"; break;
-            }
-
-            try {
-                document.getElementById("discord-status-about").text = html_status.text;
-                document.getElementById("discord-status-about").style = color;
-            } catch {
-                console.log('[Discord] Failed to replace name component, probably doesnt exists...');
-            }
-
-            html_status.style = color;
-
-            console.log(html_status);
-        }
-    }
-
-    req.send();
-</script>
-
-    <div class="music-player">
-    <div class="music-control">
-        <a id="music-backward" onclick="prevTrack()">
-            <i class="player-icons">&#xe802;</i>
-        </a>
-
-        <a id="music-play" onclick="playpauseTrack()">
-            <i class="player-icons">&#xe800;</i>
-        </a>
-
-        <a id="music-forward" onclick="nextTrack()">
-            <i class="player-icons">&#xe801;</i>
-        </a>
+<div class="window">
+    <div class="window-title">
+        <p> promotions </p>
     </div>
 
-    <a id="split">|</a>
-
-    <div class="music-info" style="flex: 5;">
-        <a id="music-queue">1/1</a>
-        <a id="split">|</a>
-        <a id="music-duration">0:00 / 0:00</a>
-        <a id="split">|</a>
-        <a id="music-title" style="flex: 5;">MUSIC-TITLE</a>
+    <div class="window-content blacken">
+        <iframe width="200" height="200" style="border:none;" src="https://dimden.neocities.org/navlink/"
+            name="neolink"></iframe>
     </div>
-
-    <a id="split">|</a>
-
-    <div class="music-volume" style="flex: 0.5; padding-left: 5px;padding-right: 32px;">
-        <input type="range" id="music-volume" min="0" max="100" value="25" onchange="setVolume()" oninput="setVolume()">
-    </div>
-
-    <audio id="music" src="" crossorigin="anonymous"></audio>
 </div>
 
-<script src="../static/scripts/music.js"></script>
+        </div>
+    </div>
 
 
-    
-</body>
+
+    </body>
 </html>
-
-
