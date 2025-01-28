@@ -36,7 +36,7 @@ func (youtube *YoutubeProcessor) Process(text string) string {
 		videoID := youtube.extractVideoID(match)
 		videoInfo := youtube.getVideoInfo(videoID)
 
-		templateEngine, err := template.New("youtube.tmpl").ParseFiles("templates/widget/socials/youtube.tmpl")
+		templateEngine, err := template.New("youtube.tmpl").ParseFiles("templates/route-template/@chan/youtube.tmpl")
 
 		if err != nil {
 			return fmt.Sprintf("Error: %v", err)

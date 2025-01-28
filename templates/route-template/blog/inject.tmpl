@@ -1,0 +1,44 @@
+{{ $Config := .GetConfig }}
+{{ $CurrentPage := .GetCurrentPage }}
+
+<link rel="stylesheet" href="static/css/blog.css">
+
+<div class="website-grid website-blog">
+    <div id="sidebar" class="window">
+        <div class="window-title">
+            <p> <a class="href href-left" href="/index.html">go back</a> </p>
+        </div>
+        <div class="window-content" style="margin: 4px">
+            <div class="blog-sidebar">
+                <h1>{{ index $CurrentPage.Metadata "title"}}</h1>
+                <p>
+                    {{ index $CurrentPage.Metadata "description"}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog list content -->
+    <div id="content">
+        {{ range $index, $currentNote := .Notes }}
+        <div class="window">
+            <div class="window-content blog">
+                <a id="blog-header" class="blog-header" href='/blog/{{ index $currentNote.Metadata "slog" }}.html'>
+                    <h1>{{ index $currentNote.Metadata "shorttitle" }}</h1>
+                    <span>{{ $currentNote.GetFormattedPostDate }}</span>
+                </a>
+                <h3 id="blog-caption"> {{ index $currentNote.Metadata "title" }} </h3>
+                <p id="blog-content">
+                    {{ $currentNote.GetPreviewMarkdown }}
+                </p>
+                <div id="blog-open">
+                    <a class="href-right" style="text-align: right;"
+                        href='/blog/{{ index $currentNote.Metadata "slog" }}.html'>
+                        read more
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>

@@ -180,7 +180,7 @@ func (spotify *SpotifyProcessor) GetTrackFromURL(url string) (Track, error) {
 }
 
 func (spotify *SpotifyProcessor) HandleURL(url string) (string, error) {
-	templateEngine, err := template.New("spotify.tmpl").ParseFiles("templates/widget/socials/spotify.tmpl")
+	templateEngine, err := template.New("spotify.tmpl").ParseFiles("templates/route-template/@chan/spotify.tmpl")
 
 	if err != nil {
 		return "", err

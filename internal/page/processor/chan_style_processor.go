@@ -18,7 +18,7 @@ func (p *ChanStyleProcessor) Process(text string) string {
 		if startsWith(line, ">>") {
 			postID := strings.TrimSpace(strings.Split(line, ">>")[1])
 
-			refHTML := "<a style='color: var(--red-text)' href='/redirect.html?id=" + postID + "'>" + line + "</a>"
+			refHTML := "<a style='color: var(--red-text)' href='#" + postID + "'>" + line + "</a>"
 
 			results = append(results, refHTML)
 			continue

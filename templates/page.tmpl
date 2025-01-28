@@ -1,52 +1,45 @@
 {{ $Config := .GetConfig }}
 {{ $CurrentPage := .GetCurrentPage }}
 
-{{ if eq (hasPrefix .Mode "ContentOnly") false }}
-    {{ template "base/head" . }}
+{{ template "base/head" . }}   
 
-    <!-- Event -->
-    {{/* {{ template "decoration/events/christmas" . }} */}}
-
-    <!-- Sidebar -->
-    {{ if eq (hasSuffix .Mode "Note") false }}
-        {{ template "base/sidebar" . }}
-    {{ end }}
-{{ end }}
-
-<!-- Generic -->
-{{ if or (ne .Mode "Note") (hasPrefix .Mode "ContentOnly") }}
-<div id="main-container" class="content-container">
-    <div class="content">
-        <!-- Common Content -->
+{{ if eq (index $CurrentPage.Metadata "tags") "blog" }}
+    <div class="website-container center-container">
+        {{ template "route-template/blog/inject" . }}
+    </div>
+{{ else if eq (index $CurrentPage.Metadata "tags") "blog-read" }}
+    <div class="website-container center-container">
+        {{ template "route-template/blog/inject-read" . }}
+    </div>
+{{ else if eq (index $CurrentPage.Metadata "tags") "channel" }}
+    <div class="website-container center-container">
         {{ $CurrentPage.GetContent }}
-
-        <!-- Note List -->
-        {{ if hasSuffix .Mode "NoteList" }}
-            {{ template "route/note/note-list" . }}
-        {{ end }}
-
-        <!-- Version Footer -->
-        {{ template "base/version" . }}
+    </div>
+{{ else }}
+    {{/* Header */}}
+    <div class="website-container center-container">
+        {{ template "base/header" . }}
     </div>
 
-    {{ if eq (index $CurrentPage.Metadata "tags") "channel" }}
-        {{ template "route/channel/container" . }}
-        {{ template "route/channel/paging" . }}
-    {{end}}
+    {{/* Content Grid */}}
+    <div class="website-grid">
 
-    <br> <br> <br>
-    <br> <br> <br>
-</div>
+        {{/* Main Window */}}
+        <div id="content" class="window">
+            <div class="window-title">
+                <p> {{ index $CurrentPage.Metadata "title" }} </p>
+            </div>
+
+            <div class="window-content">
+                {{ $CurrentPage.GetContent }}
+            </div>
+        </div>
+
+        {{/* Sidebar */}}
+         <div id="sidebar">
+            {{ template "route-template/sidebar/inject" . }}
+        </div>
+    </div>
 {{ end }}
 
-{{if eq .Mode "Note"}}
-    {{ template "route/note/post" . }}
-{{end}}
-
-
-{{ if eq (hasPrefix .Mode "ContentOnly") false }}
-    {{ template "decoration/discord-status" .}}
-    {{ template "decoration/music-player" . }}
-
-    {{ template "base/footer" . }}
-{{ end }}
+{{ template "base/footer" . }}

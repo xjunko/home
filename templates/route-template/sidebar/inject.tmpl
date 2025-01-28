@@ -1,0 +1,60 @@
+{{ $CurrentPage := .GetCurrentPage }}
+{{ $LatestPost := index .Channels 0 }}
+
+<div class="window">
+    <div class="window-title">
+        <p> @chan </p>
+    </div>
+
+    <div class="window-content post-latest">
+        <a> {{ index $LatestPost.Metadata "author" }} </a> {{ $LatestPost.GetFormattedPostDate }}
+        <div>
+            {{ $LatestPost.GetPreviewRaw }}
+        </div>
+    </div>
+</div>
+
+
+<div class="window">
+    <div class="window-title">
+        <p> last listened </p>
+    </div>
+
+    <div class="window-content">
+        <object style="width: 200px; height: 50px;" type="image/svg+xml"
+            data="https://lets-all-love-miku.vercel.app/spotify-lite-white">
+        </object>
+    </div>
+</div>
+
+<div class="window">
+    <div class="window-title">
+        <p> this website </p>
+    </div>
+
+    <div class="window-content blacken">
+        <p style="text-align: center; padding-top: 4px; margin: 0;"> add me to your websites! hotlinking is allowed.
+        </p>
+        <div class="grid" style="padding-top: 8px;">
+            <img style="float: right;" src="/static/imgs/buttons/junko.png">
+            <textarea
+                style="width: 100px; height: 31px;border: 1px solid var(--border-color);font-size: 11px;resize: none;"
+                readonly="">
+<a href="https://kafu.ovh" target="_blank"><img src="https://kafu.ovh/static/imgs/buttons/junko.png"/></a>
+</textarea>
+        </div>
+    </div>
+</div>
+
+{{ if eq (index $CurrentPage.Metadata "title") "home" }}
+<div class="window">
+    <div class="window-title">
+        <p> promotions </p>
+    </div>
+
+    <div class="window-content blacken">
+        <iframe width="200" height="200" style="border:none;" src="https://dimden.neocities.org/navlink/"
+            name="neolink"></iframe>
+    </div>
+</div>
+{{ end }}

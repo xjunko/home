@@ -8,7 +8,7 @@ import (
 )
 
 func (m *Magi) ResolvePage() {
-	files, err := filepath.Glob("templates/pages/*.md")
+	files, err := filepath.Glob("templates/route/*.md")
 
 	if err != nil {
 		log.Println("[Magi] Failed to resolve page!")

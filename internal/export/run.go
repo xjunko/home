@@ -46,8 +46,8 @@ func Execute(config *config.Config) error {
 	// Exports
 	manager.ExportRSS()
 	manager.ExportPage()
-	manager.ExportNote()
-	manager.ExportChannel()
+	manager.ExportBlog()
+	// manager.ExportChannel() // For now, the design i was going for, is one page all posts.
 
 	return nil
 }

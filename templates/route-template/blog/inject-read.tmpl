@@ -1,0 +1,20 @@
+{{ $Config := .GetConfig }}
+{{ $CurrentPage := .GetCurrentPage }}
+
+<link rel="stylesheet" href="/static/css/blog.css">
+
+<div class="window">
+    <div class="window-title blog-return">
+        <p> <a class="href href-left" href="/blog.html">return to index</a> </p>
+    </div>
+    <div class="window-content blog blog-read">
+        <a id="blog-header" class="blog-header">
+            <h1>{{ index $CurrentPage.Metadata "shorttitle" }}</h1>
+            <span>{{ $CurrentPage.GetFormattedPostDate }}</span>
+        </a>
+        <h3 id="blog-caption"> {{ index $CurrentPage.Metadata "title" }} </h3>
+        <p id="blog-content">
+            {{ $CurrentPage.GetContent }}
+        </p>
+    </div>
+</div>

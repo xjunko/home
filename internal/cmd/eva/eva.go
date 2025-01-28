@@ -81,11 +81,11 @@ func main() {
 	config := config.NewConfig()
 
 	config.Expect("Instance.Name", "junko")
-	config.Expect("Instance.Type", "Eva")
-	config.Expect("Instance.Description", "simple microblogging processor")
-	config.Expect("Instance.Version", "0.5.0")
+	config.Expect("Instance.Type", "Rei")
+	config.Expect("Instance.Description", "antipathy world")
+	config.Expect("Instance.Version", "0.7.0-rei")
 
-	config.Expect("Instance.Domain", "https://kafu.ovh")
+	config.Expect("Instance.Domain", "kafu.ovh")
 
 	config.Expect("Instance.Channel.Enabled", true)
 	config.Expect("Instance.Channel.Media", true)

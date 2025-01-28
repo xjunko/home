@@ -1,0 +1,107 @@
+/* ===== Blog-specific ===== */
+/* Div */
+.blog {
+    display: flow-root;
+}
+
+.blog-read {
+    padding: 8px;
+}
+
+/* Button */
+.blog #blog-open {
+    display: flex;
+    justify-content: end;
+}
+
+/* Header */
+.blog-header {
+    padding: 8px;
+    display: block;
+    background: var(--window-background-2);
+    text-decoration: none;
+}
+
+.blog-header h1 {
+    color: var(--text-color-light);
+    display: inline;
+    font-family: "Neue";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 35px;
+    text-transform: lowercase;
+}
+
+.blog-header span {
+    color: var(--text-color-light);
+    font-family: "Neue";
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.blog-header span::before {
+    content: "|";
+    margin-right: 5px;
+}
+
+/* Content Styling */
+.blog code {
+    font-weight: 600;
+    font-family: "Neue";
+    background: var(--background-color-window-hover);
+    color: var(--text-color-light);
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.blog img {
+    padding: 8px;
+}
+
+.blog h1,
+.blog h2,
+.blog h3,
+.blog h4,
+.blog h5,
+.blog h6 {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 8px;
+    margin: 0;
+}
+
+.blog h1 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.blog p {
+    margin: 0;
+}
+
+.blog-return {
+    width: 120px;
+    border-right: 1px solid black;
+}
+
+
+/* Sidebar */
+.blog-sidebar h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.blog-sidebar p {
+    text-align: left;
+}
+
+.blog h3.caption {
+    font-size: 18px;
+    font-weight: 600;
+}

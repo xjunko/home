@@ -1,46 +1,29 @@
 {{ $Config := .Config }}
 {{ $CurrentPage := .CurrentPage }}
 
+<!-- The beginning of kafu.ovh V3 design -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Meta(s) -->
+    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Embed Meta -->
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="{{index $CurrentPage.Metadata "title" }} "| letter to the black world" />
-    <meta name="description" content="{{index $CurrentPage.Metadata "description" }}" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ $Config.Get "Instance.Name" }}" />
-    <meta property="og:title" content="{{index $CurrentPage.Metadata "title" }} | letter to the black world" />
-    <meta property="og:description" content="{{index $CurrentPage.Metadata "description" }}" />
-    <meta property="og:image" content="{{ .Config.Get "Instance.Domain" }}/static/imgs/preview.png" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="{{ .Config.Get "Instance.Domain" }}" />
-    <meta property="twitter:title" content="{{index $CurrentPage.Metadata "title" }} | letter to the black world" />
-    <meta property="twitter:description" content="{{index $CurrentPage.Metadata "description" }}" />
-    <meta property="twitter:image" content="{{ .Config.Get "Instance.Domain" }}/static/imgs/preview.png" />
-
-
-    <!-- Stylesheet(s) and Icons -->
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/static/imgs/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/phone.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/deco.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/player.css">
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/css/fonts.css">
+
+    {{- if eq (index $CurrentPage.Metadata "tags") "channel" }}
+        <link rel="stylesheet" href="/static/css/channel.css">
+    {{- else }}
+        <link rel="stylesheet" href="/static/css/style.css">
+    {{- end }}
 
     <!-- Title -->
-    <title>{{index $CurrentPage.Metadata "title" }} | letter to the black world</title>
+    <title>{{index $CurrentPage.Metadata "title" }} | kafu.ovh</title>
 </head>
 
 <body>

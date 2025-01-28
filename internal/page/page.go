@@ -38,6 +38,7 @@ var PREFIXES = []string{
 	"route",
 	// /note/*
 	"slog",
+	"shorttitle",
 	// /channel/*
 	"style",
 	"outline",
@@ -78,13 +79,18 @@ func (p *EvaPage) Load(curProcessor processor.IProcessor) error {
 	lines := strings.Split(string(content), "\n")
 
 	for _, line := range lines {
+		is_prefix := false
+
 		if strings.HasPrefix(line, PREFIX) {
 			for _, prefix := range PREFIXES {
 				if strings.HasPrefix(line, PREFIX+prefix) {
+					is_prefix = true
 					p.Metadata[prefix] = strings.Split(line, "=")[1]
 				}
 			}
-		} else {
+		}
+
+		if !is_prefix {
 			p.Content += line + "\n"
 		}
 	}
@@ -135,8 +141,21 @@ func (p *EvaPage) ToMarkdown() string {
 }
 
 func (p *EvaPage) GetContent() string {
+	lines := make([]string, 0)
+
+	for _, line := range strings.Split(p.RawContent, "\n") {
+		line = strings.TrimSpace(line)
+
+		// Skip some markdown content
+		if strings.HasPrefix(line, "@endpreview") {
+			continue
+		}
+
+		lines = append(lines, line)
+	}
+
 	templateName := "internal.page_" + p.ID
-	withAllTemplate, err := p.Template.New(templateName).Parse(p.Content)
+	withAllTemplate, err := p.Template.New(templateName).Parse(strings.Join(lines, "\n"))
 
 	if err != nil {
 		log.Printf("[Page] Failed to parse the page content: %v", err)
@@ -153,6 +172,33 @@ func (p *EvaPage) GetContent() string {
 	return toMarkdown(buf.String())
 }
 
+func (p *EvaPage) GetPreviewRaw() string {
+	// Usually for short-form content, no need to use template.
+	lines := make([]string, 0)
+
+	for _, line := range strings.Split(p.RawContent, "\n") {
+		line = strings.TrimSpace(line)
+
+		// Skip some markdown content
+		if strings.HasPrefix(line, "#") {
+			continue
+		}
+
+		// Custom trigger
+		if strings.HasPrefix(line, "@endpreview") {
+			break
+		}
+
+		lines = append(lines, line)
+	}
+
+	return strings.Join(lines, "\n")
+}
+
+func (p *EvaPage) GetPreviewMarkdown() string {
+	return toMarkdown(p.GetPreviewRaw())
+}
+
 func (p *EvaPage) GetType() EvaPageType {
 	if _, exists := p.Metadata["slog"]; exists {
 		return NOTE
@@ -162,7 +208,7 @@ func (p *EvaPage) GetType() EvaPageType {
 }
 
 func (p *EvaPage) GetFormattedPostDate() string {
-	return p.PostedAt.Format("Mon, Jan 2nd, 2006")
+	return p.PostedAt.Format("2 Jan 2006")
 }
 
 func (p *EvaPage) GetSimpleFormattedPostDate() string {

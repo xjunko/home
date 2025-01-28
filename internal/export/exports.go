@@ -23,24 +23,8 @@ func (m *Magi) ExportRSS() {
 func (m *Magi) ExportPage() {
 	for _, currentPage := range m.Pages {
 		m.CurrentPage = &currentPage
-		m.Mode = "ContentOnly"
 
-		folderPrefix := "/pages/"
-
-		if currentPage.Metadata["tags"] == "notes" {
-			m.Mode = "ContentOnly-NoteList"
-		}
-
-		if currentPage.Metadata["tags"] == "index" || currentPage.Metadata["tags"] == "internal.post_finder" {
-			folderPrefix = ""
-			m.Mode = "Normal"
-		}
-
-		if currentPage.Metadata["tags"] == "channel" {
-			folderPrefix = ""
-		}
-
-		pageFile, err := os.OpenFile("dist"+folderPrefix+currentPage.Metadata["route"], os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
+		pageFile, err := os.OpenFile("dist"+currentPage.Metadata["route"], os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 
 		if err != nil {
 			log.Printf("[Magi] Failed to open destination page file: %v \n", err)
@@ -60,25 +44,25 @@ func (m *Magi) ExportPage() {
 
 }
 
-func (m *Magi) ExportNote() {
+func (m *Magi) ExportBlog() {
 	for _, currentNote := range m.Notes {
 		m.CurrentPage = &currentNote
-		m.Mode = "Note"
+		m.CurrentPage.Metadata["tags"] = "blog-read"
 
-		noteFile, err := os.OpenFile("dist/note/"+currentNote.Metadata["slog"]+".html", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
+		noteFile, err := os.OpenFile("dist/blog/"+currentNote.Metadata["slog"]+".html", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 
 		if err != nil {
-			log.Printf("[Magi] Failed to open destination note file: %v \n", err)
+			log.Printf("[Magi] Failed to open destination blog file: %v \n", err)
 			return
 		}
 
 		if _, err := m.Template.New("note_" + currentNote.Metadata["slug"]).Parse(currentNote.Content); err != nil {
-			log.Printf("[Magi] Failed to parse note template: %v \n", err)
+			log.Printf("[Magi] Failed to parse blog template: %v \n", err)
 			return
 		}
 
 		if err := m.Template.ExecuteTemplate(noteFile, "page", m); err != nil {
-			log.Printf("[Magi] Failed to generate the note template: %v \n", err)
+			log.Printf("[Magi] Failed to generate the blog template: %v \n", err)
 			return
 		}
 	}
