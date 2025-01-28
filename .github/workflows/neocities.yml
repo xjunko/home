@@ -1,4 +1,4 @@
-name: Deploy to Neocities (Mirror)
+name: Deploy to Neocities and Nekoweb
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       with:
         node-version: lts/*
 
-    - name: Create folder
+    - name: Prepare enviroment
       run: |
           mkdir -p public
           cp *.xml public/
@@ -31,9 +31,19 @@ jobs:
           ls public/
 
 
-    - name: Deploy to neocities
+    - name: Neocities
       uses: bcomnes/deploy-to-neocities@v1
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: true
         dist_dir: public
+
+    - name: Deploy to Nekoweb
+      uses: mp-pinheiro/nekoweb-deploy@main
+      with:
+        API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
+        BUILD_DIR: './build'
+        DEPLOY_DIR: '/'
+        CLEANUP: 'False'
+        DELAY: '0.5'
+        NEKOWEB_PAGENAME: 'kafu'
