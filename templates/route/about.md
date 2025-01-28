@@ -47,6 +47,8 @@
                 I'm on these platforms:
                 <ul class="list-no-space" style="padding-top: 5px;">
                     <li>discord - rmhakurei</li>
+                    <li>last.fm - <a href="https://www.last.fm/user/FireRedz">here</a></li>
+                    <li>github - <a href="https://github.com/xjunko">xjunko</a></li>
                     <li>email - phony (at) kafu (dot) ovh</li>
                 </ul>
             </div>
