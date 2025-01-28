@@ -42,7 +42,7 @@ jobs:
       uses: mp-pinheiro/nekoweb-deploy@main
       with:
         API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
-        BUILD_DIR: './build'
+        BUILD_DIR: './public'
         DEPLOY_DIR: '/'
         CLEANUP: 'False'
         DELAY: '0.5'
