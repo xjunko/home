@@ -42,5 +42,5 @@ jobs:
       uses: deploy2nekoweb/deploy2nekoweb@v4
       with:
         nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
-        nekoweb-folder: '/'
+        nekoweb-folder: '/www'
         directory: 'public'
