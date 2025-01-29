@@ -60,24 +60,8 @@
                 title="was the website i was inspired on when i was first starting.">utsuho.rocks</a>
         </div>
     </div>
-    <div class="window window-content webrings">
+    <div class="window window-content webrings blacken">
         <h2> webrings </h2>
-        <div>
-            <script src="https://cdn.jsdelivr.net/gh/diamondburned/libwebring@nightly/dist/webring-element.js"
-                type="module"></script>
-            <link rel="stylesheet" href="static/css/webring.css">
-            <webring-element name="junko" src="https://raw.githubusercontent.com/xjunko/webrings/master/webring.json"
-                data-ring-name="PAKB" data-link-name="junko" data-left-link-name="zavents"
-                data-right-link-name="mystia">
-            </webring-element>
-        </div>
-        <div class="webring-nav-a">
-            <a href='https://webring.dinhe.net/prev/https://kafu.nekoweb.org'>previous</a>
-            <a href='https://webring.dinhe.net/'>[retronaut webring]</a>
-            <a href='https://webring.dinhe.net/next/https://kafu.nekoweb.org'>next</a>
-        </div>
-        <div id="smallvocaring" class="blacken">
-            <script src="../static/js/vocaloid.webring.js"></script>
-        </div>
+        {{- template "route-template/common/webrings" . }}
     </div>
 </div>

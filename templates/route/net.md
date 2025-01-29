@@ -5,6 +5,13 @@
 
 <div class="grid-justify">
     <div class="net-links">
+        <h2 class="edgy" style="margin: 0"> webrings </h2>
+        <div class="window">
+            <div class="window-content webrings blacken">
+                {{- template "route-template/common/webrings" . }}
+            </div>
+        </div>
+        <br>
         <h2 class="edgy" style="margin: 0"> friends </h2>
         <div class="window">
             <div class="window-content">
