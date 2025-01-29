@@ -22,7 +22,7 @@
         <span class="id"> No: 1 </span>
 
         this is where i post everything and anything, it's mostly random rambling and thoughts. <br>
-        please do excuse the swearings and other offensive i might say here.
+        please do excuse the swearings and other not-so-offensive stuff i _might_ say here.
 
     </div>
     <br>
