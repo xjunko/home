@@ -5,10 +5,13 @@
 
 <div class="grid-justify">
     <div class="net-links">
-        <h2 class="edgy" style="margin: 0"> webrings </h2>
+        <h2 class="edgy" style="margin: 0"> internet of things </h2>
         <div class="window">
-            <div class="window-content webrings blacken">
-                {{- template "route-template/common/webrings" . }}
+            <div class="window-content" style="text-align: center;">
+                <div class="window-content webrings">
+                    {{- template "route-template/common/webrings" . }}
+                </div>
+                {{- template "route-template/about/buttons" . }}
             </div>
         </div>
         <br>
