@@ -15,6 +15,11 @@
     <script src="../static/js/vocaloid.webring.js"></script>
 </div>
 <div id='touhou-ring' style="align-self: center;">
+    <script>
+        if (!window.location.hostname.includes("kafu.org")) {
+            document.getElementById("touhou-ring").style.display = "none";
+        }
+    </script>
     <script type="text/javascript"
         src="https://glassplanet.neocities.org/webring/touhou/onionring-variables.js"></script>
     <script type="text/javascript"
