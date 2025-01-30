@@ -380,3 +380,16 @@ img[src*="#center"] {
     display: flex;
     justify-content: space-between;
 }
+
+/* disable scrollbar overall (because chrome ruins it) */
+.window::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.window {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
