@@ -53,17 +53,11 @@ var PREFIXES = []string{
 
 
 ## preview
-![image](https://github.com/user-attachments/assets/c8d72a0a-4f7f-4323-9efc-89028b800b0f)
-![image](https://github.com/user-attachments/assets/f64ee4fb-4cc1-46e7-bef7-eae644219062)
-![image](https://github.com/user-attachments/assets/524b4bb3-4889-44fb-9d7d-0e875653b662)
-![image](https://github.com/user-attachments/assets/ca2076dd-63e8-4a1b-8300-e0d44ab35f28)
 
-<a style="text-align: center">
-<img src="https://github.com/user-attachments/assets/f1dc39f4-41c7-4f28-98fe-abddf0c9a237" height="500px">
-<img src="https://github.com/user-attachments/assets/efccb482-c24b-4a74-94d0-0b25bfd6ffc3" height="500px">
-<img src="https://github.com/user-attachments/assets/7b405eeb-ca3a-4f9c-a51d-85ad76a20f04" height="500px">
-<img src="https://github.com/user-attachments/assets/84b05d90-033e-4ff9-828a-8ee197a75e5b" height="500px">
-</a>
+![image](https://github.com/user-attachments/assets/adaf65d6-3edd-4c58-91ee-cc84a04351de)
+![image](https://github.com/user-attachments/assets/6f2132e5-80c4-4b94-9c27-dc264d73f31a)
+![image](https://github.com/user-attachments/assets/8da34082-dedc-4de5-8261-6a023ab6cfb7)
+![image](https://github.com/user-attachments/assets/aac20b10-f996-4b4b-b067-bb221eae9f3e)
 
 
 ## credits
