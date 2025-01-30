@@ -83,7 +83,7 @@
 }
 
 .blog-return {
-    width: 120px;
+    width: fit-content;
     border-right: 1px solid black;
 }
 

@@ -14,7 +14,7 @@
             feel free to look around, there might some cool stuff you might like!
         </p>
     </div>
-    <div>
+    <div id="kafu-home">
         <img src="static/imgs/kafu-peace.webp" height="100px"
             style="transform: scaleX(-1);scale: 1.5;position:relative;bottom: -5px;left:20px;pointer-events: none">
     </div>

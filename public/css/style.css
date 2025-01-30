@@ -393,3 +393,94 @@ img[src*="#center"] {
     scrollbar-width: none;
     /* Firefox */
 }
+
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        margin: 10px auto;
+        padding: 0 10px;
+    }
+
+    #kafu-home {
+        display: none;
+    }
+
+    .website-grid {
+        padding-top: 16px;
+        display: block;
+    }
+
+    .website-grid #content,
+    .website-grid #sidebar {
+        width: 100%;
+    }
+
+    .website-grid #sidebar {
+        margin-top: 16px;
+    }
+
+    .website-grid.website-blog {
+        display: block;
+    }
+
+    .window-header {
+        height: 100px;
+    }
+
+    .window-header #domain {
+        font-size: 2rem;
+    }
+
+    .window-header #char {
+        height: 100px;
+    }
+
+    .window-button a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .window-content h2 {
+        font-size: 24px;
+    }
+
+    .window-content p,
+    .window-content a {
+        font-size: 14px;
+    }
+
+    .window-content.post-latest a:first-child {
+        font-size: 15px;
+    }
+
+    .window-content.post-latest a {
+        font-size: 15px;
+    }
+
+    .window-content.blog div h2 {
+        font-size: 18px;
+    }
+
+    #sidebar .window {
+        max-width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .grid .window {
+        height: auto;
+    }
+
+    .grid-justify {
+        flex-direction: column;
+    }
+
+    .caption {
+        font-size: 16px;
+    }
+}
