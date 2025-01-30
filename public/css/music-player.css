@@ -1,0 +1,132 @@
+/* bottombar player stuff, awful styling. */
+
+@font-face {
+  font-family: "jk::player-icons";
+  src: url("../fonts/icons.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.player-icons {
+  font-family: "jk::player-icons";
+  font-style: normal;
+  font-weight: normal;
+  color: var(--text-color-dark);
+  user-select: none;
+}
+
+.music-player {
+  bottom: 0;
+  left: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  height: 32px;
+  background-color: var(--background-color-window);
+  border-top: 1px solid var(--border-color);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  overflow: hidden;
+}
+
+.music-player a {
+  color: var(--text-color-dark);
+  font-size: 1.2em;
+  text-align: center;
+  padding: 10px;
+}
+
+.music-info {
+  display: flex;
+  align-items: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: var(--background-color-window);
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: var(--border-color);
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid var(--border-color);
+  height: 10px;
+  width: 10px;
+  border-radius: 0px;
+  background: var(--border-color);
+  -webkit-appearance: none;
+  margin-top: -4px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: var(--border-color);
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: var(--border-color);
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid var(--border-color);
+  height: 10px;
+  width: 10px;
+  border-radius: 0px;
+  background: var(--border-color);
+}
+
+#music-title {
+  font-family: "Neue";
+  font-weight: 600;
+}
+
+/* phone */
+@media only screen and (max-width: 768px),
+(orientation: portrait) {
+  input[type="range"] {
+    display: none;
+  }
+
+  #split {
+    display: none;
+  }
+
+  #music-queue {
+    display: none;
+  }
+
+  #music-duration {
+    display: none;
+  }
+
+  .music-control a {
+    font-size: 1.5em;
+    padding: 5px;
+  }
+
+  .music-info a {
+    font-size: 3vw;
+  }
+}
