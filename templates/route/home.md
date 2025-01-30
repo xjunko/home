@@ -15,7 +15,7 @@
         </p>
     </div>
     <div>
-        <img src="static/imgs/kafu-peace.png" height="100px"
+        <img src="static/imgs/kafu-peace.webp" height="100px"
             style="transform: scaleX(-1);scale: 1.5;position:relative;bottom: -5px;left:20px;pointer-events: none">
     </div>
 </div>
