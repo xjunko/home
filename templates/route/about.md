@@ -62,10 +62,19 @@
                     {{ template "route-template/about/buttons" . }}
                 </div>
             </div>
-            <div class="window">
-                <div class="window-content" style="display: flex;align-items: center;justify-content: center;gap: 5px;">
-                    {{ template "route-template/about/nerd-stats" . }}
-                    {{ template "route-template/about/moon-phase" . }}
+            <div class="border">
+                <div class="window-content">
+                    <a href="https://dokodemo.neocities.org/">
+                        <img style="width: 100%" src="https://dokodemo.neocities.org/gamelounge/pokepi/suzuki.png">
+                    </a>
+                    <a href="https://www.theotaku.com/quizzes/view/2019/what_okami_character_are_you%3F">
+                        <img style="width: 100%" border="0" src="http://www.theotaku.com/guru_results/2019_Waka.jpg" alt="What Okami Character Are You?" />
+                        <br />
+                    </a>
+                    <div style="display: flex;align-items: center;justify-content: center;gap: 5px;">
+                        {{- template "route-template/about/nerd-stats" . }}
+                        {{- template "route-template/about/moon-phase" . }}
+                    </div>
                 </div>
             </div>
         </div>
