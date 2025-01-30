@@ -7,10 +7,12 @@
     <div class="website-container center-container">
         {{ template "route-template/blog/inject" . }}
     </div>
+    {{ template "route-template/common/araragi" . }}
 {{ else if eq (index $CurrentPage.Metadata "tags") "blog-read" }}
     <div class="website-container center-container">
         {{ template "route-template/blog/inject-read" . }}
     </div>
+    {{ template "route-template/common/araragi" . }}
 {{ else if eq (index $CurrentPage.Metadata "tags") "channel" }}
     <div class="website-container center-container">
         {{ $CurrentPage.GetContent }}
@@ -40,6 +42,8 @@
             {{ template "route-template/sidebar/inject" . }}
         </div>
     </div>
+
+    {{ template "route-template/common/araragi" . }}
 {{ end }}
 
 {{ template "base/footer" . }}

@@ -1,0 +1,19 @@
+{{ $CurrentPage := .GetCurrentPage }}
+
+{{ if eq (index $CurrentPage.Metadata "title") "home" }}
+<div id="ononoki" style="position: fixed;left: 0px;bottom: -10px;z-index: -1;">
+    <img src="/static/imgs/backgrounds/ononoki.webp" alt="Ononoki" height="450px" />
+</div>
+{{ else if eq (index $CurrentPage.Metadata "title") "net" }}
+<div id="araragi" style="position: fixed;left: 0px;bottom: -32px;z-index: -1;">
+    <img src="/static/imgs/backgrounds/araragi.webp" alt="Araragi" height="400px" />
+</div>
+{{ else if eq (index $CurrentPage.Metadata "title") "about" }}
+<div id="blog-bg" style="position: fixed;left: 0px;bottom: 0px;z-index: -1;">
+    <img src="/static/imgs/backgrounds/manga-cover.webp" alt="blog-bg" height="1080px" />
+</div>
+{{ else if eq (index $CurrentPage.Metadata "title") "blog" }}
+<div id="nadeko" style="position: fixed;left: 0px;bottom: 0px;z-index: -1;">
+    <img src="/static/imgs/backgrounds/nadeko.webp" alt="Nadeko" height="400px" />
+</div>
+{{ end }}
