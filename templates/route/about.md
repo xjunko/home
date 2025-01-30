@@ -89,6 +89,8 @@
                     - [Header Kafu](https://cevio.fandom.com/wiki/KAFU) by PALOW.
                     - [Home Kafu](https://www.pixiv.net/en/artworks/117194838) by
                     [落島](https://www.pixiv.net/en/users/93735034)
+                    - [Ononoki Index](https://dowman-s.tumblr.com/post/145993340985) by [dowman-s](https://dowman-s.tumblr.com/)
+                    - Araragi, Nadeko, Manga cover from the [Monogatari series](https://mangadex.org/title/4265c437-7d57-4d31-9b1d-0e574a07b7b7/bakemonogatari)
                 </p>
             </div>
         </div>
