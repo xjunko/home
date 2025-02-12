@@ -49,6 +49,10 @@ func (m *Magi) ResolveNote() {
 			m.Notes = append(m.Notes, *curNote)
 		}
 	}
+
+	sort.Slice(m.Notes, func(i, j int) bool {
+		return m.Notes[i].PostedAt.After(m.Notes[j].PostedAt)
+	})
 }
 
 func (m *Magi) ResolveChannel() {
