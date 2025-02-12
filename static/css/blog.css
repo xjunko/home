@@ -1,4 +1,10 @@
 /* ===== Blog-specific ===== */
+
+/* Window Spacing */
+.website-grid.website-blog div#content div.window {
+    margin-bottom: 24px;
+}
+
 /* Div */
 .blog {
     display: flow-root;

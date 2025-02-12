@@ -419,10 +419,15 @@ img[src*="#center"] {
 
     .website-grid #sidebar {
         margin-top: 16px;
+        margin-bottom: 24px;
     }
 
     .website-grid.website-blog {
         display: block;
+    }
+
+    .website-grid.website-blog div#content div.window {
+        margin-bottom: 0px;
     }
 
     .window-header {
