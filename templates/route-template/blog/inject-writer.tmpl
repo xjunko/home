@@ -1,0 +1,91 @@
+{{ $Config := .GetConfig }}
+{{ $CurrentPage := .GetCurrentPage }}
+
+<link rel="stylesheet" href="/static/css/blog.css">
+
+<div class="window">
+    <div class="window-title blog-return">
+        <p> <a class="href href-left" href="/blog.html">return to index</a> </p>
+    </div>
+    <div class="window-content blog blog-read">
+        <a id="blog-header" class="blog-header" style="text-align: center;">
+            <h1>Write - Go on, write something.</h1>
+        </a>
+        <p id="blog-content">
+        <form action="javascript:exportPage();">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" placeholder="junko" value="junko">
+
+            <label for="tags">Tags:</label>
+            <input type="text" id="tags" name="tags" placeholder="anime,youtube,song,etc">
+            <br>
+            <label for="thumbnail">Thumbnail:</label>
+            <input type="text" id="thumbnail" name="thumbnail" placeholder="URL to a thumbnail image/video">
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <hr>
+            <label for="content">Content:</label> <br>
+            <textarea id="content" name="content" placeholder="Write your content here..."
+                style="box-sizing: border-box; width: 100%; min-height: 400px;" required></textarea>
+
+            <br>
+            <input type="submit" value="Export">
+        </form>
+
+        </p>
+    </div>
+</div>
+
+<script>
+    function save(filename, data) {
+        const blob = new Blob([data], { type: 'text/csv' });
+        if (window.navigator.msSaveOrOpenBlob) {
+            window.navigator.msSaveBlob(blob, filename);
+        }
+        else {
+            const elem = window.document.createElement('a');
+            elem.href = window.URL.createObjectURL(blob);
+            elem.download = filename;
+            document.body.appendChild(elem);
+            elem.click();
+            document.body.removeChild(elem);
+        }
+    }
+
+    Date.prototype.toDateInputValue = (function () {
+        var local = new Date(this);
+        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+        return local.toJSON().slice(0, 10);
+    });
+
+    document.getElementById('date').value = new Date().toDateInputValue();
+
+    function exportPage() {
+        var author = document.getElementById("author").value;
+        var tags = document.getElementById("tags").value;
+        var thumbnail = document.getElementById("thumbnail").value;
+        var date = document.getElementById("date").value;
+        var content = document.getElementById("content").value;
+
+        if (author.length == 0) {
+            author = "junko";
+        }
+
+        if (tags.length == 0) {
+            tags = "update";
+        }
+
+        var result = `@author=${author}\n@tags=${tags}`;
+
+        if (thumbnail.length > 0) {
+            result += `\n@thumbnail=${thumbnail}`;
+        }
+
+        result += `\n${content}`;
+
+        console.log(result);
+        save(`${Math.floor(new Date(date).getTime() / 1000)}.md`, result);
+    }
+</script>

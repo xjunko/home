@@ -1,7 +1,7 @@
 {{ $Config := .GetConfig }}
 {{ $CurrentPage := .GetCurrentPage }}
 
-{{ template "base/head" . }}   
+{{ template "base/head" . }}
 
 {{ if eq (index $CurrentPage.Metadata "tags") "blog" }}
     <div class="website-container center-container">
@@ -11,6 +11,11 @@
 {{ else if eq (index $CurrentPage.Metadata "tags") "blog-read" }}
     <div class="website-container center-container">
         {{ template "route-template/blog/inject-read" . }}
+    </div>
+    {{ template "route-template/common/araragi" . }}
+{{ else if eq (index $CurrentPage.Metadata "tags") "blog-writer" }}
+    <div class="website-container center-container">
+        {{ template "route-template/blog/inject-writer" . }}
     </div>
     {{ template "route-template/common/araragi" . }}
 {{ else if eq (index $CurrentPage.Metadata "tags") "channel" }}
