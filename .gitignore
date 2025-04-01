@@ -27,3 +27,6 @@ dist/*
 web/entries/*
 *.db
 entries/*
+
+# sub-repo
+dist/*
