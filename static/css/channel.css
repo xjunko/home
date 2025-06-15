@@ -461,7 +461,8 @@ img[src*="#center"] {
 .youtube {
     position: relative;
     border: dashed 2px var(--red-text);
-    display: inline-block;
+    display: block;
+    width: 50% !important;
 }
 
 .youtube img {
