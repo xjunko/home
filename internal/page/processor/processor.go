@@ -24,7 +24,7 @@ func (p *Processor) InitializeProcessor() error {
 		p.processors = append(p.processors, chanProc)
 	}
 
-	if mediaProc, err := NewMediaProcessor(); err == nil {
+	if mediaProc, err := NewMediaProcessor(p.Database); err == nil {
 		p.processors = append(p.processors, mediaProc)
 	}
 
