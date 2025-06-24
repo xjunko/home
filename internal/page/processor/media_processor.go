@@ -160,11 +160,11 @@ func (p *MediaProcessor) Process(text string) string {
 
 		switch info.GetType() {
 		case Video:
-			return fmt.Sprintf("\n<video muted autoplay loop controls preload=metadata src=\"%s\"></video>\n", link)
+			return fmt.Sprintf("\n<video muted autoplay loop controls preload=metadata width=\"%d\" height=\"auto\" src=\"%s\"></video>\n", info.Width, link)
 		case Emoji:
 			return fmt.Sprintf("\n<img class=\"discord-emoji\" loading=lazy alt=\"\" src=\"%s?size=32&quality=lossless\">\n", link)
 		case Image:
-			return fmt.Sprintf("\n<img loading=lazy alt=\"\" src=\"%s\">\n", link)
+			return fmt.Sprintf("\n<img loading=lazy alt=\"\" width=\"%d\" height=\"auto\" src=\"%s\">\n", info.Width, link)
 		default:
 			panic(fmt.Sprintf("Unknown media type for URL: %s", link))
 		}
