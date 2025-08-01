@@ -5,7 +5,7 @@ on:
     branches:
       - build
 
-concurrency: # prevent concurrent deploys doing strange things
+concurrency:
   group: deploy-to-neocities
   cancel-in-progress: true
 
@@ -14,12 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: lts/*
+    - name: Checkout
+      uses: actions/checkout@v4
 
     - name: Prepare enviroment
       run: |
@@ -30,7 +26,6 @@ jobs:
           cp -r blog/ public/
           ls public/
 
-
     - name: Neocities
       uses: bcomnes/deploy-to-neocities@v1
       with:
@@ -39,8 +34,9 @@ jobs:
         dist_dir: public
 
     - name: Deploy to Nekoweb
-      uses: deploy2nekoweb/deploy2nekoweb@v4
+      uses: indiefellas/deploy2nekoweb@main
       with:
         nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
-        nekoweb-folder: '/www'
+        nekoweb-domain: 'kafu.nekoweb.org'
+        nekoweb-username: 'kafu'
         directory: 'public'
