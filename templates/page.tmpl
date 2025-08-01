@@ -18,7 +18,7 @@
         {{ template "route-template/blog/inject-writer" . }}
     </div>
     {{ template "route-template/common/araragi" . }}
-{{ else if eq (index $CurrentPage.Metadata "tags") "channel" }}
+{{ else if or (eq (index $CurrentPage.Metadata "tags") "channel") (eq (index $CurrentPage.Metadata "tags") "channel-like") }}
     <div class="website-container center-container">
         {{ $CurrentPage.GetContent }}
     </div>
