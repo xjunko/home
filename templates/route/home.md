@@ -60,7 +60,7 @@
                 title="was the website i was inspired on when i was first starting.">utsuho.rocks</a>
         </div>
     </div>
-    <div class="window window-content webrings blacken">
+    <div class="window window-content webrings blacken" style="height: 190px;">
         <h2> webrings </h2>
         {{- template "route-template/common/webrings" . }}
     </div>
