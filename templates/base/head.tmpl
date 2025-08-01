@@ -16,7 +16,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/static/css/fonts.css">
 
-    {{- if eq (index $CurrentPage.Metadata "tags") "channel" }}
+    {{- if or (eq (index $CurrentPage.Metadata "tags") "channel") (eq (index $CurrentPage.Metadata "tags") "channel-like") }}
         <link rel="stylesheet" href="/static/css/channel.css">
     {{- else }}
         <link rel="stylesheet" href="/static/css/style.css">
