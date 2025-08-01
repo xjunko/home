@@ -25,7 +25,6 @@
     color: var(--text-color-light);
 }
 
-
 body {
     background: var(--background-color);
     font-family: "ArkPixel", "MS UI Gothic", sans-serif;
@@ -558,5 +557,16 @@ body:after {
 
     100% {
         background-position: 0px 4px;
+    }
+}
+
+/* Mobile support */
+@media (max-width: 768px) {
+    body {
+        width: 95%;
+    }
+
+    .youtube-info {
+        font-size: 12px;
     }
 }
