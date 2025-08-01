@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="window-content">
     <div style="position: relative; bottom: 10px;">
 
-        <h3 style="text-align: center;">pictures of people doing mundane things in life with anime plushies.</h1>
+        <h3 style="text-align: center;">pictures of people doing mundane things in life with anime plushies.</h3>
 
     </div>
 </div>
