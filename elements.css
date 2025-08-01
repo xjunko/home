@@ -1,0 +1,58 @@
+/* for nekoweb.org */
+.site-box {
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 12px;
+    margin: 0;
+    background: white;
+    border: 1px solid black;
+}
+
+.site-box>a>p {
+    font-weight: bold;
+    color: black;
+    font-family: Monospace;
+    text-align: center;
+    background: white;
+    bottom: 152px;
+}
+
+.site-box>a>span {
+    padding-left: 5px;
+    padding-right: 5px;
+    visibility: visible;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    border-right: none;
+    border-bottom: none;
+    position: relative;
+    bottom: 2px;
+    left: 81px;
+    z-index: 1;
+}
+
+.site-box .sitefeature {
+    opacity: 0;
+    scale: 1.05;
+    top: 15px;
+    width: 170px;
+    overflow: hidden;
+}
+
+.site-box::after {
+    content: url(https://kafu.nekoweb.org/kafu.nekoweb.org/static/imgs/kafu-peace.webp);
+    position: relative;
+    width: 700px;
+    right: 175px;
+    bottom: 382px;
+    scale: 0.3;
+    pointer-events: none;
+    display: block;
+    overflow: hidden;
+    filter: grayscale(1);
+}
+
+.site-box {
+    filter: grayscale(1);
+}
