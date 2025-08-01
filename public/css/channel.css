@@ -187,16 +187,13 @@ h6 {
 
 .window-content .name {
     font-size: 18px;
+    color: white;
     display: inline;
 }
 
 .window-content .name-small {
     font-size: 14px;
     display: inline;
-}
-
-.window-content .date {
-    padding-left: 4px;
 }
 
 .window-content .post-image {
