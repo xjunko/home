@@ -7,6 +7,64 @@
         <description> i post pretty awful stuff here, please excuse my language. </description>
         <link> https://kafu.ovh </link>
         <item>
+            <title> post #1760832000 </title>
+            <description>spent the whole day today making a customized youtube app, it now supports two theme:
+
+- tennouji rina
+- hatsune miku
+
+awesome stuff
+
+            </description>
+            <link>kafu.ovh/channel.html?#1760832000</link>
+            <guid>post-1760832000</guid>
+            <pubDate>2025-10-19 08:00:00 +0800 +08</pubDate>
+        </item>
+        <item>
+            <title> post #1760572800 </title>
+            <description>broke my chu2, NOOOOO
+
+            </description>
+            <link>kafu.ovh/channel.html?#1760572800</link>
+            <guid>post-1760572800</guid>
+            <pubDate>2025-10-16 08:00:00 +0800 +08</pubDate>
+        </item>
+        <item>
+            <title> post #1759795200 </title>
+            <description>it has been a while since i posted anything here, was busy in life....
+
+
+            </description>
+            <link>kafu.ovh/channel.html?#1759795200</link>
+            <guid>post-1759795200</guid>
+            <pubDate>2025-10-07 08:00:00 +0800 +08</pubDate>
+        </item>
+        <item>
+            <title> post #1758672000 </title>
+            <description>these past few days i've been learning the **[[rust programming language]](https://rust-lang.org/)** because i was bored...
+
+it all started randomly not so long ago when i downloaded the PDF version of [[The Book]](https://doc.rust-lang.org/book/) and read the whole thing in one sitting, shit changed my mind about the language, i used to not like the language for reasons i dont remember anymore but its probably something stupid, eitherway, the day after that i started writing some rust and one thing leads to another and i rewrote the entirety of my discord bot.
+
+rewriting it isnt exactly easy BUT i got working and it was probably a thousand times faster than the python version.
+
+heres some baseline comparison between **_rust/serenity_** vs **_py/nextcord.py_**
+
+![](https://hatsune-miku.has.rocks/r/rust.png#left)
+![](https://hatsune-miku.has.rocks/r/py.png#left)
+
+shit is wayyyy lighter on memory and faster, you can say that it's blazingly fast!!!
+
+anyways, i dont have much of it documented so that's all i can show...
+
+you can check the source code [[here]](https://github.com/xjunko/moete-rs)
+
+
+            </description>
+            <link>kafu.ovh/channel.html?#1758672000</link>
+            <guid>post-1758672000</guid>
+            <pubDate>2025-09-24 08:00:00 +0800 +08</pubDate>
+        </item>
+        <item>
             <title> post #1754006400 </title>
             <description>...and welp, that's it, that's the end of my semester break 😭. <br>
 uni starts in like 4 days, fml!!! https://cdn.discordapp.com/emojis/1397920140317823046.png
