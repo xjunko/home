@@ -21,22 +21,20 @@
                 </p>
             </div>
             <div class="window-content" style="margin: 0">
-                I've been programming since I was a child, probably not the best thing to do growing up, but well, here
-                I am, years later down the line.
-                Early on, I mostly made awful games in <a
-                    href="https://www.clickteam.com/clickteam-fusion-2-5">Clickteam Fusion</a>.
-                Then, I started messing around with <a href="https://wordpress.com/">Wordpress</a>, the best thing I
-                created during that time was a clone of osu!'s <a href="https://circle-people.com/skins/">Circle
-                    People</a> skins website.
-                I don't have an archive of it anymore, but I'm sure it was awful. <br /> <br />
-                Then about sometimes in the late 2018, I started learning <a href="https://www.python.org/">Python</a>,
-                mostly because I wanted to make a clone of the osu!'s <a
-                    href="https://top.gg/bot/289066747443675143">owo</a> bot.
-                If you can't tell yet, I mostly make clones of things I like. It's the best way to learn, I think.
-                <br /> <br />
-                Now, I'm mostly able to use a lot of programming languages, except <a
-                    href="https://www.rust-lang.org/">Rust</a> (no hate). I just don't get the appeal of it, I'm sure
-                it's a great language, but I just don't see myself using it. Maybe I'll change my mind in the future.
+                I’ve been programming since I was a kid - probably not the healthiest hobby growing up, but hey, here I am years later, still doing it.
+                Back then, I spent most of my time making absolutely awful games in 
+                <a href="https://www.clickteam.com/clickteam-fusion-2-5">Clickteam Fusion</a>. 
+                Eventually, I moved on to <a href="https://wordpress.com/">WordPress</a>, where my proudest creation was a clone of osu!'s 
+                <a href="https://circle-people.com/skins/">Circle People</a> skins website. 
+                I don’t have it anymore (and honestly, that might be for the best), but it was fun while it lasted.
+                <br/><br/>
+                Sometime around late 2018, I started learning <a href="https://www.python.org/">Python</a> - mainly because I wanted to make my own version of the osu! <a href="https://top.gg/bot/289066747443675143">owo</a> bot. 
+                If you can’t tell by now, I have a habit of making clones of things I like. It’s honestly one of the best ways to learn.
+                <br/><br/>
+                These days, I’ve worked with quite a few programming languages. But back then, I just couldn’t get into 
+                <a href="https://www.rust-lang.org/">Rust</a> (no hate) - I knew it was good, I just didn’t see myself ever using it. I even said maybe I’d change my mind someday.
+                <br/><br/>
+                Well… that day finally came. I get it now. <a href="https://www.rust-lang.org/">Rust</a> has completely won me over, and it’s easily become one of my favorite programming languages.
             </div>
         </div>
         <br>
@@ -104,4 +102,5 @@
             </div>
         </div>
     </div>
+
 </div>
