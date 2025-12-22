@@ -13,7 +13,7 @@
                 </a>
                 <p style="margin-left: 10px; margin-top: 0;">
                     Wow, look who decided to show up, -is what I would say, but I doubt anyone would read this.
-                    Anyways, you can call me Junko, I'm the one who made this website. I'm currently a student that's
+                    Anyways, you can call me <i>Junko</i>, I'm the one who made this website. I'm currently a student that's
                     been making
                     whatever I feel like making. I'm not really good at anything, but I'm trying my best to improve.
                     <br> <br>
@@ -22,19 +22,27 @@
             </div>
             <div class="window-content" style="margin: 0">
                 I’ve been programming since I was a kid - probably not the healthiest hobby growing up, but hey, here I am years later, still doing it.
-                Back then, I spent most of my time making absolutely awful games in 
-                <a href="https://www.clickteam.com/clickteam-fusion-2-5">Clickteam Fusion</a>. 
-                Eventually, I moved on to <a href="https://wordpress.com/">WordPress</a>, where my proudest creation was a clone of osu!'s 
-                <a href="https://circle-people.com/skins/">Circle People</a> skins website. 
+                Back then, I spent most of my time making absolutely awful games in
+                <a href="https://www.clickteam.com/clickteam-fusion-2-5">Clickteam Fusion</a>.
+                Eventually, I moved on to <a href="https://wordpress.com/">WordPress</a>, where my proudest creation was a clone of osu!'s
+                <a href="https://circle-people.com/skins/">Circle People</a> skins website.
                 I don’t have it anymore (and honestly, that might be for the best), but it was fun while it lasted.
                 <br/><br/>
-                Sometime around late 2018, I started learning <a href="https://www.python.org/">Python</a> - mainly because I wanted to make my own version of the osu! <a href="https://top.gg/bot/289066747443675143">owo</a> bot. 
-                If you can’t tell by now, I have a habit of making clones of things I like. It’s honestly one of the best ways to learn.
+                Sometime around late 2018, I started learning <a href="https://www.python.org/">Python</a> - mainly because I wanted to make my own version of the osu! <a href="https://top.gg/bot/289066747443675143">owo</a> bot.
+                If you can’t tell by now, I have a habit of making clones of things I like. It’s honestly one of the best ways to learn, <i>I think</i>.
                 <br/><br/>
-                These days, I’ve worked with quite a few programming languages. But back then, I just couldn’t get into 
-                <a href="https://www.rust-lang.org/">Rust</a> (no hate) - I knew it was good, I just didn’t see myself ever using it. I even said maybe I’d change my mind someday.
-                <br/><br/>
-                Well… that day finally came. I get it now. <a href="https://www.rust-lang.org/">Rust</a> has completely won me over, and it’s easily become one of my favorite programming languages.
+                Here are some quick facts about me:
+                <ul>
+                    <li>I'm a big fan of Rhythm Games, here are some that I played quite frequently:</li>
+                        <ul>
+                            <li>maimai DX</li>
+                            <li>CHUNITHM</li>
+                            <li>Project Sekai</li>
+                            <li>osu!</li>
+                        </ul>
+                    <li>My favourite Voice Synth is <a href="https://www.youtube.com/@virtual_kaf">KAF</a>, if you can't tell already from the website.</li>
+                    <li>I also like listening to Music, recently I've been listening to <a href="https://www.youtube.com/@tn-shi">@tn-shi</a> a lot!</li>
+                </ul>
             </div>
         </div>
         <br>
