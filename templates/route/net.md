@@ -20,22 +20,9 @@
             <div class="window-content">
                 <ul class="list-no-space">
                     <li>
-                        <a href="https://fawnsnangels.neocities.org/">[(꒪ω꒪υ)]</a>
-                        <ul>
-                            <li> a good friend of mine, cute website. </li>
-                        </ul>
-                    </li>
-                    <li>
                         <a href="https://mystialorelei.neocities.org/">[Night Sparrow's Cry]</a>
                         <ul>
                             <li> mostly ramblings about cars and racing </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://muhsillythoughts.neocities.org/">[Arissa's blog]</a>
-                        <ul>
-                            <li> "i write about vocaloid and games and cats and whatever happens in my boring life"
-                            </li>
                         </ul>
                     </li>
                     <li>
@@ -45,7 +32,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="hhttps://l-m.dev/">[l-m.dev]</a>
+                        <a href="https://l-m.dev/">[l-m.dev]</a>
                         <ul>
                             <li> <i>super cool compiler wizard guy, programming magickery, check it out!.</i> </li>
                         </ul>
