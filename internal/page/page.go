@@ -196,7 +196,7 @@ func (p *EvaPage) GetPreviewRaw() string {
 }
 
 func (p *EvaPage) GetPreviewMarkdown() string {
-	return toMarkdown(p.GetPreviewRaw())
+	return strings.ReplaceAll(strings.ReplaceAll(toMarkdown(p.GetPreviewRaw()), "<p>", ""), "</p>", "")
 }
 
 func (p *EvaPage) GetType() EvaPageType {
