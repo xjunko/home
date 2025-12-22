@@ -52,3 +52,8 @@
     </div>
     {{ end }}
 </div>
+
+<br><br>
+<div id="lain" style="text-align: center; padding-top: 100px;">
+<img src="/static/imgs/channel/intheend_itdoesntevenmatter.gif" style="width: 50%; height: auto;">
+</div>
