@@ -9,7 +9,7 @@
     <div class="window-content post-latest">
         <a> {{ index $LatestPost.Metadata "author" }} </a> {{ $LatestPost.GetFormattedPostDate }}
         <div>
-            {{ $LatestPost.GetPreviewRaw }}
+            {{ $LatestPost.GetPreviewMarkdown }}
         </div>
     </div>
 </div>
