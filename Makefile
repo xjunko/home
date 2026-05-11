@@ -1,15 +1,16 @@
-BINARY_FILE=eva.bin
+.PHONY: run
+run:
+	bun run dev
 
-all: $(BINARY_FILE)
+.PHONY: build
+build:
+	bun run build
 
-$(BINARY_FILE):
-	@if [ ! -f $(BINARY_FILE) ]; then \
-		echo "Building $(BINARY_FILE)!"; \
-		go build -o $(BINARY_FILE) ./internal/cmd/eva/eva.go; \
-	fi
+.PHONY: clear
+clear:
+	rm -rf dist
 
-clean:
-	rm -f $(BINARY_FILE)
-
-run: $(BINARY_FILE)
-	./$(BINARY_FILE)
+.PHONY: prod-run
+prod-run: build
+	bun run build && \
+	python -m http.server --directory dist

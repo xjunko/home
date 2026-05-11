@@ -1,0 +1,23 @@
+---
+import { render } from "astro:content";
+import KFBlogPost from "../../layouts/KFBlogPost.astro";
+import { get_blog_posts } from "../../lib/utils";
+import type { BlogEntries } from "../../types";
+
+export async function getStaticPaths() {
+	const posts = await get_blog_posts();
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: post,
+	}));
+}
+
+type Props = BlogEntries;
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<KFBlogPost {...post.data}>
+  <Content />
+</KFBlogPost>

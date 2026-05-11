@@ -1,0 +1,72 @@
+---
+import "../../styles/fonts.css";
+import "../../styles/channel.css";
+
+import KFChannelPost from "../../components/@chan/KFChannelPost.astro";
+import KFHeader from "../../components/KFHeader.astro";
+import { get_channel_posts } from "../../lib/utils";
+
+const title = "channel";
+const description = "like 4chan but just me";
+const posts = await get_channel_posts();
+---
+
+<html lang="en">
+  <head>
+    <KFHeader title={title} description={description} />
+  </head>
+
+  <body>
+    <div class="website-container center-container">
+      <h1 style="text-align: center;">/b/ - Random</h1>
+      <br />
+
+      <a
+        class="href href-left"
+        style="position: absolute; top: 48px;"
+        href="/index.html">return</a
+      >
+
+      <hr />
+      <br />
+
+      <div class="window-content">
+        file: <a href="/imgs/kafu-avatar.webp">kafu-avatar.webp</a> (file/webp)
+        <div>
+          <img
+            class="post-image"
+            style="padding-top: 4px;"
+            src="/imgs/kafu-avatar.webp"
+          />
+        </div>
+        <br />
+        <div style="position: relative; bottom: 10px;">
+          <h4 class="title">main thread</h4>
+          <h4 class="name">junko</h4>
+          <span class="date">1/1/1970 12:00:00</span>
+          <span class="id">No: 1</span>
+          <br />
+
+          this is where i post everything and anything, it's mostly random
+          rambling and thoughts. <br />
+          please do excuse the swearings and other not-so-offensive stuff i _might_
+          say here.
+        </div>
+        <br />
+      </div>
+
+      <!-- posts -->
+      <div class="grid-justify" style="clear:both;padding-top: 8px;">
+        {posts.map((post) => <KFChannelPost post={post} />)}
+      </div>
+
+      <br /><br />
+      <div id="lain" style="text-align: center; padding-top: 100px;">
+        <img
+          src="/imgs/misc/intheend_itdoesntevenmatter.gif"
+          style="width: 50%; height: auto;"
+        />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+---
+import "../styles/global.css";
+import "../styles/blog.css";
+
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
+import KFDate from "../components/core/KFDate.astro";
+import KFHeader from "../components/KFHeader.astro";
+
+type Props = CollectionEntry<"blog_entries">["data"];
+
+const { author, date, slug, tagline, title, description, tags } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <KFHeader title={title} description={description} />
+  </head>
+
+  <body>
+    <div class="website-container center-container">
+      <div class="window">
+        <div class="window-title blog-return">
+          <p>
+            <a class="href href-left" href="/blog">return to index</a>
+          </p>
+        </div>
+        <div class="window-content blog blog-read">
+          <a id="blog-header" class="blog-header">
+            <h1>{tagline}</h1>
+            <span><KFDate date={date} /></span>
+          </a>
+          <h3 id="blog-caption">{title}</h3>
+          <p id="blog-content">
+            <slot />
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

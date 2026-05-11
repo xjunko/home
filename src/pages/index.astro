@@ -1,0 +1,129 @@
+---
+import "../styles/global.css";
+
+import KFDate from "../components/core/KFDate.astro";
+import KFMarkdown from "../components/core/KFMarkdown.astro";
+import KFHeader from "../components/KFHeader.astro";
+import KFMascot from "../components/KFMascot.astro";
+import KFNavigation from "../components/KFNavigation.astro";
+import KFSidebar from "../components/KFSidebar.astro";
+import KFWebrings from "../components/net/KFWebrings.astro";
+import { get_blog_posts, get_channel_posts } from "../lib/utils";
+import KFMusicPlayer from "../components/core/KFMusicPlayer.astro";
+
+const title = "home";
+const description = "the main page.";
+
+const recent_post = await get_blog_posts().then((posts) => posts[0]);
+---
+
+<html lang="en">
+  <head>
+    <KFHeader title={title} description={description} />
+  </head>
+
+  <body>
+    <KFNavigation />
+
+    <div class="website-grid">
+      <div id="content" class="window">
+        <div class="window-title">
+          <p>{title}</p>
+        </div>
+
+        <div class="window-content">
+          <!-- top -->
+          <div class="grid-justify">
+            <div>
+              <h2>hello stranger</h2>
+              <p>
+                welcome to my silly little corner of the internet. i don't know
+                how you got here, but i'm glad you did. you won't find anything
+                of value here, but i hope you enjoy your stay. <br /><br />
+                feel free to look around, there might be some cool stuff you might
+                like!
+              </p>
+            </div>
+            <div id="kafu-home">
+              <img
+                src="/imgs/kafu-peace.webp"
+                height="100px"
+                style="transform: scaleX(-1);scale: 1.5;position:relative;bottom: -5px;left:20px;pointer-events: none"
+              />
+            </div>
+          </div>
+
+          <!-- bottom -->
+          <div class="grid">
+            <!-- c1 -->
+            <div class="window window-content">
+              <h2>guestbook</h2>
+              feeling a little bit chatty? wanted to say hi? maybe you just want to
+              leave a message? a suggestion? a critique?
+              <div style="text-align: right;position: relative;top: 30px;">
+                <a class="href-right" href="https://xjunko.atabook.org/">
+                  you can do that here
+                </a>
+              </div>
+            </div>
+            <!-- c2 -->
+            <div class="window window-content blog" style="z-index: 2;">
+              <h3>latest blog post</h3>
+              <div>
+                <h2>{recent_post.data.tagline}</h2>
+                <span>&nbsp;<KFDate date={recent_post.data.date} /></span>
+
+                <p
+                  style="height: 50px;overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;"
+                >
+                  <KFMarkdown content={recent_post.preview} />
+                </p>
+
+                <div style="text-align: right;position: relative;top: 2px;">
+                  <a class="href-right" href="/blog/"> read </a>
+                </div>
+              </div>
+            </div>
+            <!-- c3 -->
+            <div class="window window-content">
+              <h2>inspo</h2>
+              this website wouldn't exists without these cool fellas:
+              <div style="padding-top: 10px; text-align: center;">
+                <a
+                  href="https://melankorin.net/"
+                  title="this version of the website was mostly based of kori's melankorin.net"
+                  >melankorin.net</a
+                >
+                <a
+                  href="https://microsounds.github.io/"
+                  title="was what got me into making personal websites again."
+                  >sentimental microsounds</a
+                >
+                <a
+                  href="https://utsuho.rocks/"
+                  title="was the website i was inspired on when i was first starting."
+                  >utsuho.rocks</a
+                >
+              </div>
+            </div>
+            <!-- webrings -->
+            <div
+              class="window window-content webrings blacken"
+              style="height: 190px;"
+            >
+              <h2>webrings</h2>
+              <KFWebrings />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sidebar">
+        <KFSidebar isHomePage={true} />
+      </div>
+    </div>
+
+    <KFMascot mascot="ononoki" />
+    <KFMusicPlayer />
+  </body>
+</html>

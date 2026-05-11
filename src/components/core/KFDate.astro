@@ -1,0 +1,20 @@
+---
+interface Props {
+	date: Date;
+	year_only?: boolean;
+}
+
+const { date, year_only } = Astro.props;
+---
+
+{
+  !year_only
+    ? date.toLocaleDateString("en-GB", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })
+    : date.toLocaleDateString("en-GB", {
+        year: "numeric",
+      })
+}
