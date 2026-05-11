@@ -9,5 +9,5 @@ export const DOMAIN = "https://kafu.ovh";
 export const YEAR = new Date().getFullYear();
 
 export const FEATURES = {
-  music_player: true,
+  music_player: false, // broken on prod
 };
