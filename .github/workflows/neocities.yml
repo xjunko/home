@@ -14,29 +14,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Prepare enviroment
-      run: |
+      - name: Prepare enviroment
+        run: |
           mkdir -p public
-          cp *.xml public/
           cp *.html public/
-          cp -r static/ public/
+          cp -r _astro/ public/
+          cp -r about/ public/
           cp -r blog/ public/
+          cp -r channel public/
+          cp -r fonts/ public/
+          cp -r imgs/ public/
+          cp -r net/ public/
+          cp -r scripts/ public/
           ls public/
 
-    - name: Neocities
-      uses: bcomnes/deploy-to-neocities@v1
-      with:
-        api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-        cleanup: true
-        dist_dir: public
+      - name: Neocities
+        uses: bcomnes/deploy-to-neocities@v1
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: true
+          dist_dir: public
 
-    - name: Deploy to Nekoweb
-      uses: indiefellas/deploy2nekoweb@main
-      with:
-        nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
-        nekoweb-domain: 'kafu.nekoweb.org'
-        nekoweb-username: 'kafu'
-        directory: 'public'
+      - name: Deploy to Nekoweb
+        uses: indiefellas/deploy2nekoweb@main
+        with:
+          nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
+          nekoweb-domain: "kafu.nekoweb.org"
+          nekoweb-username: "kafu"
+          directory: "public"
