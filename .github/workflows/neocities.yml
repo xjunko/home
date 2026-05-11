@@ -29,6 +29,7 @@ jobs:
           cp -r imgs/ public/
           cp -r net/ public/
           cp -r scripts/ public/
+          cp -r static/ public/
           ls public/
 
       - name: Neocities
