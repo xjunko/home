@@ -25,6 +25,8 @@ const { Content } = await render(post);
     post.data.thumbnail && 
     <br />
     <>file:</> <a href={post.data.thumbnail} target="_blank">{post.data.filename}</a> <>(file/{post.data.mimetype})</>
+    <br />
+    <img class="post-image" loading="lazy" src={post.data.thumbnail} /> 
     }
    
     <Content />
