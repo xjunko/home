@@ -18,7 +18,7 @@ const { Content } = await render(post);
       <KFDate date={post.data.date} />
     </span>
     <span class="id">
-      No: <a href="#">{post.id}</a>
+      No: <a href={`#${post.id}`} >{post.id}</a>
     </span>
     
     {
