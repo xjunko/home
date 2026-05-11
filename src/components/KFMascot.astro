@@ -1,0 +1,54 @@
+---
+import type { MascotID } from "../types";
+
+type Props = {
+	mascot: MascotID;
+};
+
+const { mascot } = Astro.props;
+---
+
+{
+  mascot === "cover" && (
+    <div
+      id="blog-bg"
+      style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: -1;"
+    >
+      <img
+        src="/imgs/backgrounds/manga-cover.webp"
+        alt="blog-bg"
+        style="width: 100%; height: 100%; object-fit: cover;"
+      />
+    </div>
+  )
+}
+
+{
+  mascot === "ononoki" && (
+    <div
+      id="ononoki"
+      style="position: fixed;left: 0px;bottom: -10px;z-index: -1;"
+    >
+      <img src="/imgs/backgrounds/ononoki.webp" alt="Ononoki" height="450px" />
+    </div>
+  )
+}
+
+{
+  mascot === "araragi" && (
+    <div
+      id="araragi"
+      style="position: fixed;left: 0px;bottom: -32px;z-index: -1;"
+    >
+      <img src="/imgs/backgrounds/araragi.webp" alt="Araragi" height="400px" />
+    </div>
+  )
+}
+
+{
+  mascot === "nadeko" && (
+    <div id="nadeko" style="position: fixed;left: 0px;bottom: 0px;z-index: -1;">
+      <img src="/imgs/backgrounds/nadeko.webp" alt="Nadeko" height="400px" />
+    </div>
+  )
+}

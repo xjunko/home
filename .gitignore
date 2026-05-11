@@ -1,33 +1,27 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+# build output
+dist/
+# generated types
+.astro/
 
-# Test binary, built with `go test -c`
-*.test
+# dependencies
+node_modules/
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
 
-# Go workspace file
-go.work
-go.work.sum
-
-# env file
+# environment variables
 .env
+.env.production
 
-# eva internals
-*.json
-dist/*
-web/entries/*
-*.db
-entries/*
-eva.bin
+# macOS-specific files
+.DS_Store
 
-# sub-repo
-dist/*
+# jetbrains setting folder
+.idea/
+
+# content
+src/content/*

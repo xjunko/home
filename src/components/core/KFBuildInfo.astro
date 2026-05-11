@@ -1,0 +1,17 @@
+---
+interface Props {
+  year_only?: boolean;
+}
+
+const current_date = new Date();
+const git_commit = import.meta.env.GIT_COMMIT_HASH || "unknown";
+const build_date = import.meta.env.BUILD_DATE || current_date.toISOString();
+---
+
+{
+  (
+    <>
+      Built at {build_date} [commit: {git_commit}]{" "}
+    </>
+  )
+}

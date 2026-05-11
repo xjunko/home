@@ -1,0 +1,11 @@
+---
+import { marked } from "marked";
+
+const { content } = Astro.props;
+
+const html = (await marked.parse(content))
+	.replace(/^<p>/, "")
+	.replace(/<\/p>\s*$/, "");
+---
+
+<Fragment set:html={html} />

@@ -4,53 +4,13 @@
 
 junko's homepage
 
-[![Go](https://img.shields.io/badge/Go-00ADD8?logo=Go&logoColor=white)](https://go.dev/)
+[![Astro](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff)](#)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff)](#)
 </h2>
 
-- heavy use of go's templating.
-- written with modularity in mind, albeit very customized to my own use.
+it's the website but completely rewritten from scratch in Astro w/ TypeScript.
 
 <br/>
-
-## internal
-
-### features
-- able to resolve `youtube` and `spotify` media internally w/o tracking user data.
-- templates everywhere, everything is templates.
-### pages
-- pages goes to `templates/pages/*.md` in markdown format
-- entries goes to `entries/**/*.md`
-	- supports `notes`,`channels`
-
-### usage
-### special token
-- `@` is used for metadata info.
-
-```go
-var PREFIX = "@"
-var PREFIXES = []string{
-	// Page Basic Info
-	"title",
-	"description",
-	"thumbnail",
-	// Page Data
-	"author",
-	"date",
-	"tags",
-	"route",
-	// /note/*
-	"slog",
-	// /channel/*
-	"style",
-	"outline",
-	"outline-style",
-	// Misc
-	"exclude",
-}
-```
-- is not case sensitive.
-- example: `@TITLE=THE MOTHERFUCKIN TITLE`
-
 
 ## preview
 

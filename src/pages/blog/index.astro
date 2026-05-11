@@ -1,0 +1,75 @@
+---
+import "../../styles/global.css";
+import "../../styles/blog.css";
+
+import KFDate from "../../components/core/KFDate.astro";
+import KFMarkdown from "../../components/core/KFMarkdown.astro";
+import KFHeader from "../../components/KFHeader.astro";
+import KFMascot from "../../components/KFMascot.astro";
+
+import { get_blog_posts } from "../../lib/utils";
+
+const posts = await get_blog_posts();
+---
+
+<html lang="en">
+  <head>
+    <KFHeader title="blog" />
+  </head>
+
+  <body>
+    <div class="website-container center-container">
+      <div class="website-grid website-blog">
+        <div id="sidebar" class="window">
+          <div class="window-title">
+            <p><a class="href href-left" href="/">go back</a></p>
+          </div>
+          <div class="window-content" style="margin: 4px">
+            <div class="blog-sidebar">
+              <h1>blog</h1>
+              <p>
+                junko's infodump, you might find something interesting here.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="content">
+          {
+            posts.map((post) => (
+              <div class="window">
+                <div class="window-content blog">
+                  <a
+                    id="blog-header"
+                    class="blog-header"
+                    href={`/blog/${post.id}`}
+                  >
+                    <h1>{post.data.tagline}</h1>
+                    <span>
+                      <KFDate date={post.data.date} />
+                    </span>
+                  </a>
+                  <h3 id="blog-caption">{post.data.title}</h3>
+                  <p id="blog-content">
+                    <KFMarkdown content={post.preview} />
+                  </p>
+                  <div id="blog-open">
+                    <a
+                      class="href-right"
+                      style="text-align: right"
+                      href={`/blog/${post.id}`}
+                    >
+                      read more
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <KFMascot mascot="nadeko" />
+  </body>
+</html>

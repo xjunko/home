@@ -1,0 +1,34 @@
+---
+import "../styles/fonts.css";
+import "../styles/channel.css";
+
+import KFHeader from "../components/KFHeader.astro";
+
+const title = "error";
+const description = "page not found";
+---
+
+<html lang="en">
+  <head>
+    <KFHeader title={title} description={description} />
+  </head>
+
+  <body>
+    <div class="website-container center-container">
+      <div id="lain" style="text-align: center; padding-top: 100px;">
+        <img
+          src="/imgs/misc/intheend_itdoesntevenmatter.gif"
+          style="width: 50%; height: auto;"
+        />
+      </div>
+
+      <div class="window-content" style="text-align: center">
+        page not found.
+      </div>
+      <br />
+
+      <hr />
+      <a class="href href-left" href="/index.html">return</a>
+    </div>
+  </body>
+</html>
