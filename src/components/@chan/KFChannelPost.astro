@@ -11,7 +11,7 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<div class="window">
+<div class="window" id={post.id}>
   <div class="window-content">
     <h3 class="name-small">{post.data.author}</h3>
     <span class="date">
@@ -26,7 +26,14 @@ const { Content } = await render(post);
     <br />
     <>file:</> <a href={post.data.thumbnail} target="_blank">{post.data.filename}</a> <>(file/{post.data.mimetype})</>
     <br />
-    <img class="post-image" loading="lazy" src={post.data.thumbnail} /> 
+    }
+
+    {
+      post.data.type === "video" ? (
+        <video muted loop controls preload="metadata" class="post-video" src={post.data.thumbnail} /> 
+      ) : (
+        <img class="post-image" loading="lazy" src={post.data.thumbnail} /> 
+      )
     }
    
     <Content />
