@@ -4,7 +4,7 @@ import type { ChannelEntries } from "../../types";
 import KFDate from "../core/KFDate.astro";
 
 type Props = {
-	post: ChannelEntries;
+  post: ChannelEntries;
 };
 
 const { post } = Astro.props;
@@ -18,24 +18,45 @@ const { Content } = await render(post);
       <KFDate date={post.data.date} />
     </span>
     <span class="id">
-      No: <a href={`#${post.id}`} >{post.id}</a>
+      No: <a href={`#${post.id}`}>{post.id}</a>
     </span>
-    
-    {
-    post.data.thumbnail && 
-    <br />
-    <>file:</> <a href={post.data.thumbnail} target="_blank">{post.data.filename}</a> <>(file/{post.data.mimetype})</>
-    <br />
-    }
 
     {
-      post.data.type === "video" ? (
-        <video muted loop controls preload="metadata" class="post-video" src={post.data.thumbnail} /> 
-      ) : (
-        <img class="post-image" loading="lazy" src={post.data.thumbnail} /> 
+      post.data.thumbnail && (
+        <>
+          {/* file info */}
+          <br />
+          <>file:</>{" "}
+          <a href={post.data.thumbnail} target="_blank">
+            {post.data.filename}
+          </a>{" "}
+          <>(file/{post.data.mimetype})</>
+          <br />
+          {/* media player */}
+          {post.data.type === "video" ? (
+            <>
+              <video
+                muted
+                loop
+                controls
+                preload="metadata"
+                class="post-video"
+                src={post.data.thumbnail}
+              />
+            </>
+          ) : (
+            <>
+              <img
+                class="post-image"
+                loading="lazy"
+                src={post.data.thumbnail}
+              />
+            </>
+          )}
+        </>
       )
     }
-   
+
     <Content />
   </div>
 </div>
