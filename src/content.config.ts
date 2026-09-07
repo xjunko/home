@@ -2,7 +2,18 @@ import { defineCollection, type RenderResult, render } from "astro:content";
 import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 
-function _parse_unix_date(val: unknown): Date {
+function _parse_unix_or_normal_date(val: unknown): Date {
+  // dd-mm-yyyy
+  if (typeof val === "string") {
+    const match = val.match(/^(\d{2})-(\d{2})-(\d{4})$/);
+
+    if (match) {
+      const [, day, month, year] = match;
+      return new Date(Number(year), Number(month) - 1, Number(day));
+    }
+  }
+
+  // unix timestamps
   if (typeof val === "string" || typeof val === "number") {
     const num = Number(val);
     if (!Number.isNaN(num)) {
@@ -59,10 +70,10 @@ function _get_filename(path?: string) {
 
 const blog_entries = defineCollection({
   loader: glob({ base: "./src/content/blog", pattern: "**/**/*.md" }),
-  schema: ({}) =>
+  schema: ({ }) =>
     z.object({
       author: z.string(),
-      date: z.preprocess(_parse_unix_date, z.date()),
+      date: z.preprocess(_parse_unix_or_normal_date, z.date()),
       slug: z.string(),
       tagline: z.string(),
       title: z.string(),
@@ -76,7 +87,7 @@ const channel_entries = defineCollection({
   schema: z
     .object({
       author: z.string(),
-      date: z.preprocess(_parse_unix_date, z.date()),
+      date: z.preprocess(_parse_unix_or_normal_date, z.date()),
       tags: z.preprocess(_parse_tags, z.array(z.string()).default([])),
       thumbnail: z.string().optional(),
     })
