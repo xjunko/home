@@ -1,3 +1,7 @@
+.PHONY: setup
+setup:
+	bun install
+
 .PHONY: run
 run:
 	bun run dev
