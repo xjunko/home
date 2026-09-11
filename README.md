@@ -1,3 +1,5 @@
+
+
 <img src="https://media1.tenor.com/m/UEE0HU83IQcAAAAC/zombieland-saga-junko-konno.gif"  height="200" align="right" style="float: right; margin: 0 10px 0 0;">
 
 <h2 align="center">
@@ -21,4 +23,4 @@ it's the website but completely rewritten from scratch in Astro w/ TypeScript.
 
 
 ## credits
-- spotify resolver is taken from [[l'm blog]](https://github.com/l1mey112/me.l-m.dev/blob/main/src/spotify/main.v)
+- spotify resolver is taken from [l'm blog](https://github.com/l1mey112/me.l-m.dev/blob/main/src/spotify/main.v)
