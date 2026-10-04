@@ -78,7 +78,7 @@ const recent_channel = await get_channel_posts().then((posts) => posts[0]);
                 <p>piclog</p>
             </div>
 
-            <div class="window-content">
+            <div class="window-content" style="text-align: center;">
                 <a href="https://piclog.blue/profile.php?id=883">
                     <img
                         src="https://piclog.blue/latest.php?id=883"
@@ -93,9 +93,25 @@ const recent_channel = await get_channel_posts().then((posts) => posts[0]);
                 <p> promotions </p>
             </div>
 
-            <div class="window-content blacken">
+            <div class="window-content blacken" style="text-align: center;">
                 <iframe width="200" height="200" style="border:none;" src="https://dimden.neocities.org/navlink/"
                     name="neolink"></iframe>
+            </div>
+        </div>
+
+        <div class="window">
+            <div class="window-title">
+                <p>webtiles</p>
+            </div>
+
+            <div class="window-content blacken" style="height: 210px; text-align: center; overflow: hidden;">
+                <iframe src="https://webtiles.kicya.net/e/kafu.nekoweb.org" 
+                    width="250" 
+                    height="270" 
+                    frameborder="0"
+                    style="border:none;scale:0.75; position: absolute;left: -20px;top: -30px;"
+                    >
+                </iframe>
             </div>
         </div>
     ) : null
