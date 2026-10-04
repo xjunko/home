@@ -1,3 +1,12 @@
+.PHONY: default
+default:
+	@echo "Available Targets:"
+	@echo "  - setup      // Install dependencies"
+	@echo "  - run        // Run the development server"
+	@echo "  - build      // Build the project"
+	@echo "  - clear      // Clear the build directory"
+	@echo "  - prod-run   // Run the production server"
+
 .PHONY: setup
 setup:
 	bun install
