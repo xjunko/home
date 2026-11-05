@@ -285,35 +285,6 @@ h6 {
   font-size: 15px;
 }
 
-.window-content.post-latest .post-latest-scroll {
-  max-height: 80px;
-  overflow: hidden;
-  position: relative;
-}
-
-.window-content.post-latest .post-latest-scroll-inner {
-  animation: post-latest-scroll 12s linear infinite;
-  will-change: transform;
-}
-
-.window-content.post-latest
-  .post-latest-scroll:hover
-  .post-latest-scroll-inner {
-  animation-play-state: paused;
-}
-
-@keyframes post-latest-scroll {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(calc(-100% + 80px));
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .window-content.blog h3 {
   padding-bottom: 4px;
 }

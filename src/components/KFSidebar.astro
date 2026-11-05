@@ -16,14 +16,13 @@ const recent_channel = await get_channel_posts().then((posts) => posts[0]);
     <div class="window-content post-latest">
         <a>{recent_channel.data.author}</a> <KFDate date={recent_channel.data.date} />
         <div class="post-latest-scroll">
-            <div class="post-latest-scroll-inner">
-                <KFMarkdown content={recent_channel.body ?? "No content available."} />
-            </div>
+            <KFMarkdown content={recent_channel.body ?? "No content available."} />
         </div>
     </div>
 </div>
 
-<div class="window">
+<!-- TODO: backport discord status -->
+<!-- <div class="window">
     <div class="window-title">
         <p>status (wip™)</p>
     </div>
@@ -31,7 +30,7 @@ const recent_channel = await get_channel_posts().then((posts) => posts[0]);
     <div class="window-content" style="overflow: hidden;">
         <p style="text-align: center">borked.</p>
     </div>
-</div>
+</div> -->
 
 <div class="window">
     <div class="window-title">
