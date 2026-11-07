@@ -211,6 +211,10 @@ h6 {
   max-width: 25% !important;
 }
 
+.window-content p {
+  margin: 0 !important;
+}
+
 .window-content img {
   max-width: 100% !important;
 }
