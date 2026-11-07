@@ -18,7 +18,9 @@ const recent_channel = await get_channel_posts().then((posts) => posts[0]);
     <div class="window-content post-latest">
         <a>{recent_channel.data.author}</a> <KFDate date={recent_channel.data.date} />
         <div class="post-latest-scroll">
-            <KFMarkdown content={recent_channel.body ?? "No content available."} />
+            <div class="post-latest-scroll-inner">
+                <KFMarkdown content={recent_channel.body ?? "No content available."}/>
+            </div>
         </div>
     </div>
 </div>

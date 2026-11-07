@@ -219,12 +219,19 @@ body {
 
 .window-content.post-latest .post-latest-scroll {
 	max-height: 80px;
-	overflow: hidden;
+	overflow: scroll;
 	position: relative;
 }
 
+
+.window-content.post-latest div.post-latest-scroll p {
+	margin: 0;
+	text-align: left;
+	text-justify: unset;
+}
+
 .window-content.post-latest .post-latest-scroll-inner {
-	animation: post-latest-scroll 12s linear infinite;
+	animation: post-latest-scroll 30s linear infinite;
 	will-change: transform;
 }
 
@@ -411,6 +418,12 @@ img[src*="#center"] {
 .window {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+}
+
+/* Shiki  */
+.astro-code,
+.astro-code span {
+	font-family: "ArkPixel", monospace !important;
 }
 
 /* ===== QOL ===== */
