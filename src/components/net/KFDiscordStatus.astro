@@ -1,0 +1,74 @@
+<div class="window">
+    <div class="window-title">
+        <p>status</p>
+    </div>
+
+    <div
+        id="status-content"
+        class="window-content"
+        style="overflow: hidden; display: none;"
+    >
+        <div class="status-row">
+            <img id="discord-avatar" src="#" alt="avatar" />
+            <p id="discord-status">loading!</p>
+        </div>
+    </div>
+
+    <style>
+        .status-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .status-row img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .status-row p {
+            margin: 0;
+        }
+    </style>
+
+    <script>
+        const avatarEl = document.getElementById(
+            "discord-avatar",
+        ) as HTMLImageElement | null;
+
+        const statusEl = document.getElementById("discord-status");
+
+        const contentEl = document.getElementById("status-content");
+
+        async function fetchStatus() {
+            try {
+                const res = await fetch(
+                    "https://api.lanyard.rest/v1/users/736223131240497183",
+                );
+                const json = await res.json();
+
+                if (!json.success) throw new Error("lanyard failed");
+
+                const { discord_status, discord_user } = json.data;
+
+                if (statusEl) {
+                    statusEl.innerHTML = `@${discord_user.username}<br>${discord_status}`;
+                }
+
+                if (avatarEl) {
+                    avatarEl.src = discord_user.avatar
+                        ? `https://cdn.discordapp.com/avatars/${discord_user.id}/${discord_user.avatar}.png?size=64`
+                        : "https://cdn.discordapp.com/embed/avatars/0.png";
+                }
+            } catch {
+                if (statusEl) statusEl.textContent = "failed to load :(";
+            } finally {
+                if (contentEl) contentEl.style.display = "block";
+            }
+        }
+
+        fetchStatus();
+        setInterval(fetchStatus, 30000);
+    </script>
+</div>
