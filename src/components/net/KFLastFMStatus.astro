@@ -1,0 +1,126 @@
+<div class="window">
+    <div class="window-title">
+        <p>listening</p>
+    </div>
+
+    <div
+        id="lastfm-content"
+        class="window-content"
+        style="overflow: hidden; display: none;"
+    >
+        <div class="status-row">
+            <img id="lastfm-art" src="#" alt="album art" />
+            <div class="status-text">
+                <a id="lastfm-track" href="#" target="_blank" rel="noopener">
+                    loading!
+                </a>
+                <p id="lastfm-artist"></p>
+                <p id="lastfm-status"></p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .status-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .status-row img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .status-text {
+            text-align: left;
+            min-width: 0;
+        }
+
+        .status-text p {
+            margin: 0;
+        }
+
+        #lastfm-status {
+            opacity: 0.7;
+            font-size: 0.85em;
+        }
+    </style>
+
+    <script>
+        import { LASTFM_USER, LASTFM_KEY } from "../../const";
+
+        const artEl = document.getElementById(
+            "lastfm-art",
+        ) as HTMLImageElement | null;
+
+        const trackEl = document.getElementById(
+            "lastfm-track",
+        ) as HTMLAnchorElement | null;
+
+        const artistEl = document.getElementById("lastfm-artist");
+        const statusEl = document.getElementById("lastfm-status");
+        const contentEl = document.getElementById("lastfm-content");
+
+        const FALLBACK_ART =
+            "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png";
+
+        function timeAgo(uts: number) {
+            const s = Math.floor(Date.now() / 1000) - uts;
+            if (s < 60) return "just now";
+            if (s < 3600) return `${Math.floor(s / 60)}m ago`;
+            if (s < 86400) return `${Math.floor(s / 3600)}h ago`;
+            return `${Math.floor(s / 86400)}d ago`;
+        }
+
+        async function fetchTrack() {
+            if (artEl) {
+                artEl.style.display = "none";
+            }
+
+            try {
+                const url =
+                    "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks" +
+                    `&user=${LASTFM_USER}&api_key=${LASTFM_KEY}&format=json&limit=1`;
+
+                const res = await fetch(url);
+                const json = await res.json();
+
+                const raw = json?.recenttracks?.track;
+                const track = Array.isArray(raw) ? raw[0] : raw;
+                if (!track) throw new Error("no tracks");
+
+                const nowPlaying = track["@attr"]?.nowplaying === "true";
+                // images: small, medium, large, extralarge
+                const art = track.image?.find((i: any) => i.size === "large")?.[
+                    "#text"
+                ];
+
+                if (trackEl) {
+                    trackEl.textContent = track.name;
+                    trackEl.href = track.url;
+                }
+                if (artistEl) artistEl.textContent = track.artist["#text"];
+                if (statusEl) {
+                    statusEl.textContent = nowPlaying
+                        ? "now playing"
+                        : `last played ${timeAgo(Number(track.date.uts))}`;
+                }
+                if (artEl) {
+                    artEl.src = art || FALLBACK_ART;
+                    artEl.style.display = "block";
+                }
+            } catch {
+                if (trackEl) trackEl.textContent = "failed to load :(";
+                if (artistEl) artistEl.textContent = "";
+                if (statusEl) statusEl.textContent = "";
+            } finally {
+                if (contentEl) contentEl.style.display = "block";
+            }
+        }
+
+        fetchTrack();
+        setInterval(fetchTrack, 30000);
+    </script>
+</div>
