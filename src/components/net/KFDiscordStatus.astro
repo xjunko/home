@@ -33,6 +33,8 @@
     </style>
 
     <script>
+        import { DISCORD_USER } from "../../const";
+
         const avatarEl = document.getElementById(
             "discord-avatar",
         ) as HTMLImageElement | null;
@@ -44,7 +46,7 @@
         async function fetchStatus() {
             try {
                 const res = await fetch(
-                    "https://api.lanyard.rest/v1/users/736223131240497183",
+                    `https://api.lanyard.rest/v1/users/${DISCORD_USER}`,
                 );
                 const json = await res.json();
 
