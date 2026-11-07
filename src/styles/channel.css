@@ -502,7 +502,7 @@ img[src*="#center"] {
 body:before {
   content: "";
   position: fixed;
-  opacity: 1;
+  opacity: 0.4;
   left: 0;
   top: 0;
   width: 100%;
@@ -525,7 +525,7 @@ body:after {
   position: fixed;
   left: 0;
   top: 0;
-  opacity: 0.9;
+  opacity: 0.3;
   width: 100%;
   height: 100%;
   pointer-events: none;
@@ -547,6 +547,20 @@ body:after {
   100% {
     background-position: 0px 4px;
   }
+}
+
+
+/* Shiki  */
+.astro-code,
+.astro-code span {
+  font-family: "ArkPixel", monospace !important;
+}
+
+.astro-code {
+  margin: 8px;
+  padding: 8px;
+  background-color: var(--background-color) !important;
+  border: var(--text-color-faint) 1px dashed;
 }
 
 /* lain */
