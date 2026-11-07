@@ -127,6 +127,12 @@ body {
 	color: var(--text-color-light);
 }
 
+/* ===== Fake Layout ===== */
+.website-no-grid {
+	padding-top: 32px;
+	display: block;
+}
+
 /* ===== Grid Layout ===== */
 .website-grid {
 	padding-top: 32px;
@@ -222,9 +228,7 @@ body {
 	will-change: transform;
 }
 
-.window-content.post-latest
-	.post-latest-scroll:hover
-	.post-latest-scroll-inner {
+.window-content.post-latest .post-latest-scroll:hover .post-latest-scroll-inner {
 	animation-play-state: paused;
 }
 
@@ -232,9 +236,11 @@ body {
 	0% {
 		transform: translateY(0);
 	}
+
 	50% {
 		transform: translateY(calc(-100% + 80px));
 	}
+
 	100% {
 		transform: translateY(0);
 	}
