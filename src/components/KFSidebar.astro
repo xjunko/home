@@ -1,11 +1,13 @@
 ---
-import { get_blog_posts, get_channel_posts } from "../lib/utils";
+import { get_channel_posts } from "../lib/utils";
 import KFDate from "./core/KFDate.astro";
 import KFMarkdown from "./core/KFMarkdown.astro";
+import KFLastFMStatus from "./net/KFLastFMStatus.astro";
 
 const { isHomePage } = Astro.props;
 
 const recent_channel = await get_channel_posts().then((posts) => posts[0]);
+
 ---
 
 <div class="window">
@@ -21,17 +23,10 @@ const recent_channel = await get_channel_posts().then((posts) => posts[0]);
     </div>
 </div>
 
-<!-- TODO: backport discord status -->
-<!-- <div class="window">
-    <div class="window-title">
-        <p>status (wip™)</p>
-    </div>
+<!-- lastfm status -->
+ <KFLastFMStatus/>
 
-    <div class="window-content" style="overflow: hidden;">
-        <p style="text-align: center">borked.</p>
-    </div>
-</div> -->
-
+<!-- website link -->
 <div class="window">
     <div class="window-title">
         <p>this website</p>
@@ -70,6 +65,7 @@ const recent_channel = await get_channel_posts().then((posts) => posts[0]);
     </div>
 </div>
 
+<!-- we only show the full-sidebar on homepage -->
 {
     isHomePage ? (
         <div class="window">
@@ -86,7 +82,7 @@ const recent_channel = await get_channel_posts().then((posts) => posts[0]);
                 </a>
             </div>
         </div>
-
+        
         <div class="window">
             <div class="window-title">
                 <p> promotions </p>
