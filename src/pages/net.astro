@@ -4,7 +4,6 @@ import "../styles/global.css";
 import KFHeader from "../components/KFHeader.astro";
 import KFMascot from "../components/KFMascot.astro";
 import KFNavigation from "../components/KFNavigation.astro";
-import KFSidebar from "../components/KFSidebar.astro";
 
 import KFWebButtons from "../components/net/KFWebButtons.astro";
 import KFWebrings from "../components/net/KFWebrings.astro";
@@ -22,7 +21,7 @@ const description = "internet of things.";
   <body>
     <KFNavigation />
 
-    <div class="website-grid">
+    <div class="website-no-grid">
       <div id="content" class="window">
         <div class="window-title">
           <p>{title}</p>
@@ -264,9 +263,6 @@ const description = "internet of things.";
             </div>
           </div>
         </div>
-      </div>
-      <div id="sidebar">
-        <KFSidebar isHomePage={true} />
       </div>
     </div>
 

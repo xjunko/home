@@ -4,7 +4,6 @@ import "../styles/global.css";
 import KFHeader from "../components/KFHeader.astro";
 import KFMascot from "../components/KFMascot.astro";
 import KFNavigation from "../components/KFNavigation.astro";
-import KFSidebar from "../components/KFSidebar.astro";
 import KFMoonPhase from "../components/net/KFMoonPhase.astro";
 import KFNerdStats from "../components/net/KFNerdStats.astro";
 import KFWebButtons from "../components/net/KFWebButtons.astro";
@@ -23,7 +22,7 @@ const description = "about me.";
   <body>
     <KFNavigation />
 
-    <div class="website-grid">
+    <div class="website-no-grid">
       <div id="content" class="window">
         <div class="window-title">
           <p>{title}</p>
@@ -280,9 +279,6 @@ const description = "about me.";
             </div>
           </div>
         </div>
-      </div>
-      <div id="sidebar">
-        <KFSidebar isHomePage={true} />
       </div>
     </div>
 
