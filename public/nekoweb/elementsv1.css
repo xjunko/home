@@ -1,0 +1,53 @@
+.site-box {
+  background: white;
+  border: 2px solid gray;
+}
+
+.site-box .sitefeature {
+  visibility: hidden;
+}
+
+.site-box:hover {
+  transform: scale(0.95);
+  filter: saturate(100%);
+  border: 2px solid black;
+}
+
+.site-box>a>p {
+  color: black;
+  font: 700 14px Arial;
+  text-transform: uppercase;
+  margin: 0;
+  left: -40px;
+  top: -145px;
+  z-index: 1000;
+}
+
+.site-box>a>span {
+  display: none;
+}
+
+.site-box .follow {
+  color: black;
+  font: 9px;
+  font-weight: 900;
+  right: -21px;
+  bottom: -86px;
+  cursor: crosshair;
+}
+
+.site-box::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+
+  background-image: url(//kafu.nekoweb.org/imgs/kafu-peace.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* Position */
+  right: -0px;
+  top: 2px;
+}
